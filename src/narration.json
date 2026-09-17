@@ -1,0 +1,126 @@
+{
+  "enabled": false,
+  "voice": "male, middle-aged, low pitch",
+  "language": "pt",
+  "speed": 1.12,
+  "referenceText": "Cada pessoa vive o seu próprio tempo, e nenhum caminho precisa ser igual ao outro.",
+  "volume": 0.85,
+  "duckMusicTo": 0.42,
+  "note": "Fonte única da narração. `frame` é onde a fala começa (30 fps). A voz é clonada de public/audio/vo/_voice-ref.wav, gerado uma vez só — apagar esse arquivo re-sorteia a voz do filme inteiro. Regerar com tools/generate-narration.py.",
+  "lines": [
+    {
+      "id": "01-as-vezes",
+      "frame": 44,
+      "text": "Às vezes...",
+      "durationInFrames": 36
+    },
+    {
+      "id": "02-todo-mundo",
+      "frame": 98,
+      "text": "parece que todo mundo está avançando.",
+      "durationInFrames": 63
+    },
+    {
+      "id": "03-voce-pensa",
+      "frame": 226,
+      "text": "E você começa a pensar...",
+      "durationInFrames": 49
+    },
+    {
+      "id": "04-atrasado",
+      "frame": 288,
+      "text": "Estou atrasado?",
+      "durationInFrames": 42
+    },
+    {
+      "id": "05-nao",
+      "frame": 388,
+      "text": "Não.",
+      "durationInFrames": 28
+    },
+    {
+      "id": "06-sua-fase",
+      "frame": 490,
+      "text": "Você está vivendo a sua fase.",
+      "durationInFrames": 52
+    },
+    {
+      "id": "07-comecar",
+      "frame": 574,
+      "text": "Há fases para começar.",
+      "durationInFrames": 49
+    },
+    {
+      "id": "08-aprender",
+      "frame": 656,
+      "text": "Fases para aprender.",
+      "durationInFrames": 49
+    },
+    {
+      "id": "09-perder",
+      "frame": 738,
+      "text": "Fases para perder.",
+      "durationInFrames": 45
+    },
+    {
+      "id": "10-recomecar",
+      "frame": 816,
+      "text": "E fases para recomeçar.",
+      "durationInFrames": 50
+    },
+    {
+      "id": "11-caminho",
+      "frame": 926,
+      "text": "Nem todo caminho precisa parecer igual.",
+      "durationInFrames": 76
+    },
+    {
+      "id": "12-seu-tempo",
+      "frame": 1026,
+      "text": "O seu tempo também não.",
+      "durationInFrames": 56
+    },
+    {
+      "id": "13-calma",
+      "frame": 1120,
+      "text": "Tenha calma.",
+      "durationInFrames": 39
+    },
+    {
+      "id": "14-precisa-fazer",
+      "frame": 1210,
+      "text": "Continue fazendo o que você precisa fazer.",
+      "durationInFrames": 79
+    },
+    {
+      "id": "15-construindo",
+      "frame": 1308,
+      "text": "Continue construindo.",
+      "durationInFrames": 48
+    },
+    {
+      "id": "16-aprendendo",
+      "frame": 1374,
+      "text": "Continue aprendendo.",
+      "durationInFrames": 50
+    },
+    {
+      "id": "17-nao-atrasado",
+      "frame": 1462,
+      "text": "Você não está atrasado.",
+      "durationInFrames": 52
+    },
+    {
+      "id": "18-a-caminho",
+      "frame": 1554,
+      "text": "Você está a caminho.",
+      "durationInFrames": 49
+    },
+    {
+      "id": "19-continue",
+      "frame": 1630,
+      "text": "Continue.",
+      "durationInFrames": 36
+    }
+  ]
+}

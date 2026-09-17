@@ -1,0 +1,129 @@
+{
+  "enabled": false,
+  "voice": "male, middle-aged, low pitch",
+  "language": "pt",
+  "speed": 1.22,
+  "referenceText": "Cada pessoa vive o seu próprio tempo, e nenhum caminho precisa ser igual ao outro.",
+  "volume": 0.9,
+  "duckMusicTo": 0.38,
+  "note": "Fonte única da narração de ComecePequeno. `frame` é onde a fala começa (30 fps). A voz é clonada de public/audio/vo/_voice-ref.wav — a MESMA referência do LifePhases, de propósito: um só locutor no projeto inteiro. Clipes em public/audio/vo-comece-pequeno/. Regerar com NARRATION_JSON=src/narration-comece-pequeno.json VO_DIR=public/audio/vo-comece-pequeno tools/vs/.venv/Scripts/python.exe -u tools/generate-narration.py",
+  "lines": [
+    {
+      "id": "01-em-2013",
+      "frame": 40,
+      "text": "Em dois mil e treze, o Nubank começou com uma equipe pequena e apenas doze cartões.",
+      "durationInFrames": 123
+    },
+    {
+      "id": "02-hoje-conhece",
+      "frame": 225,
+      "text": "Hoje, você provavelmente conhece o nome.",
+      "durationInFrames": 63
+    },
+    {
+      "id": "03-mercado",
+      "frame": 380,
+      "text": "A ideia era enfrentar um mercado dominado por grandes bancos.",
+      "durationInFrames": 93
+    },
+    {
+      "id": "04-nao-daria-certo",
+      "frame": 520,
+      "text": "E muita gente achou que aquilo não daria certo.",
+      "durationInFrames": 71
+    },
+    {
+      "id": "05-continuaram",
+      "frame": 690,
+      "text": "Mas eles continuaram.",
+      "durationInFrames": 45
+    },
+    {
+      "id": "06-um-cliente",
+      "frame": 765,
+      "text": "Primeiro veio um cliente.",
+      "durationInFrames": 48
+    },
+    {
+      "id": "07-depois-outro",
+      "frame": 840,
+      "text": "Depois, outro.",
+      "durationInFrames": 37
+    },
+    {
+      "id": "08-e-outro",
+      "frame": 895,
+      "text": "E outro.",
+      "durationInFrames": 32
+    },
+    {
+      "id": "09-comecar-crescer",
+      "frame": 945,
+      "text": "Até aquilo que parecia pequeno começar a crescer.",
+      "durationInFrames": 75
+    },
+    {
+      "id": "10-licao",
+      "frame": 1065,
+      "text": "E talvez essa seja uma lição que você possa usar na sua própria vida.",
+      "durationInFrames": 140,
+      "grupo": "g2-abertura-licao"
+    },
+    {
+      "id": "11-nao-precisa",
+      "frame": 1220,
+      "text": "Você não precisa ganhar muito para começar a cuidar melhor do seu dinheiro.",
+      "durationInFrames": 160,
+      "grupo": "g2-abertura-licao"
+    },
+    {
+      "id": "12-pode-comecar",
+      "frame": 1400,
+      "text": "Pode começar pequeno.",
+      "durationInFrames": 55,
+      "grupo": "g3-lista"
+    },
+    {
+      "id": "13-guardar",
+      "frame": 1470,
+      "text": "Guardar um pouco.",
+      "durationInFrames": 48,
+      "grupo": "g3-lista"
+    },
+    {
+      "id": "14-aprender",
+      "frame": 1533,
+      "text": "Aprender.",
+      "durationInFrames": 32,
+      "grupo": "g3-lista"
+    },
+    {
+      "id": "15-divida",
+      "frame": 1580,
+      "text": "Evitar uma dívida desnecessária.",
+      "durationInFrames": 82,
+      "grupo": "g3-lista"
+    },
+    {
+      "id": "16-investir",
+      "frame": 1672,
+      "text": "Investir em você.",
+      "durationInFrames": 52,
+      "grupo": "g3-lista"
+    },
+    {
+      "id": "17-dinheiro-assim",
+      "frame": 1760,
+      "text": "Porque o dinheiro também funciona assim.",
+      "durationInFrames": 92,
+      "grupo": "g4-final"
+    },
+    {
+      "id": "18-grandes-result",
+      "frame": 1900,
+      "text": "Grandes resultados normalmente começam com pequenas decisões repetidas por muito tempo.",
+      "durationInFrames": 180,
+      "grupo": "g4-final"
+    }
+  ]
+}
