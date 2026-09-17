@@ -64,7 +64,14 @@ const parse = (): ImageEntry[] => {
 		if (typeof item !== "object" || item === null) continue;
 		const rec = item as Record<string, unknown>;
 		const arquivo = rec.arquivo;
-		const cena = Number(rec.cena);
+		// The manifest has been seen writing this as either a bare number (3) or
+		// a folder-style string ("cena3") — accept both rather than silently
+		// dropping every image because of a formatting mismatch.
+		const cenaRaw = rec.cena;
+		const cena =
+			typeof cenaRaw === "string"
+				? Number(cenaRaw.replace(/[^0-9]/g, ""))
+				: Number(cenaRaw);
 		if (typeof arquivo !== "string" || arquivo.length === 0) continue;
 		if (!Number.isFinite(cena) || cena < 1) continue;
 		if (isBrandMark(arquivo)) continue;
@@ -88,8 +95,11 @@ const ENTRIES = parse();
 
 const BASE = "images/comece-pequeno";
 
+// `arquivo` already comes as "cenaN/filename.ext" (the manifest writes the
+// folder into the name), so it is joined onto BASE as-is — prefixing another
+// "cenaN/" on top of it doubled the path and 404'd every single image.
 const toSceneImage = (e: ImageEntry): SceneImage => ({
-	src: `${BASE}/cena${e.cena}/${e.arquivo}`,
+	src: `${BASE}/${e.arquivo}`,
 	natureza: e.natureza,
 	isRecord: e.natureza === "registro",
 	autor: e.autor,
