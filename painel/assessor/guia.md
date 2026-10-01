@@ -13,3 +13,5 @@
 - O prompt detalha como tem que ser a IMAGEM (linha "Imagem:" no fim): o que aparece, luz, sombra, fundo e clima — para o Jev montar a arte mais perto do que eu quero.
 
 - O prompt pode crescer quanto for necessário para descrever a imagem: cena, objetos, enquadramento, composição, luz, fundo, hierarquia e relação entre os elementos. Preserve todos os detalhes visuais ao salvar e aprender com as avaliações.
+
+- Cada assunto tem três direções visuais guardadas: a primeira segue a imagem principal pedida e as outras duas mantêm a mensagem com composição, formato da solução e tratamentos distintos. Nunca gerar três artes praticamente iguais.

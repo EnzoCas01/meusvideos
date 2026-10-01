@@ -56,12 +56,15 @@ function assessorAbastece() {
   if (abastecendo || anterior.tentar_em > Date.now()) return;
   abastecendo = true;
   gravaAbastecimento({rodando: true, inicio: Date.now()});
+  const retomaAprendizado = fs.existsSync(`${ROOT}/painel/assessor/.aprendizado.pendente`);
+  if (retomaAprendizado) fs.writeFileSync(`${ROOT}/painel/assessor/.aprendendo`, String(Date.now()));
   const ch = spawn("python3", [`${ROOT}/tools/assessor.py`, "--abastecer"], {cwd: ROOT, stdio: ["ignore", "pipe", "pipe"]});
   let saida = "", erro = "", terminou = false;
   ch.stdout.on("data", b => { saida = (saida + b).slice(-2000); });
   ch.stderr.on("data", b => { erro = (erro + b).slice(-2000); });
   const fim = (code, msg = "") => {
     if (terminou) return; terminou = true; abastecendo = false;
+    if (retomaAprendizado && aprendendo === 0) try { fs.unlinkSync(`${ROOT}/painel/assessor/.aprendendo`); } catch {}
     if (code === 0) { gravaAbastecimento({rodando: false, fim: Date.now(), resultado: saida.trim()}); return; }
     const detalhe = msg || erro.split("\n").filter(Boolean).at(-1) || "Não foi possível repor os prompts.";
     let tentar = Date.now() + 15 * 60_000;
@@ -650,7 +653,7 @@ http.createServer(async (req, res) => {
     let guia = ""; try { guia = fs.readFileSync(`${ASS}/guia.md`, "utf8"); } catch {}
     let aprendizado = ""; try { aprendizado = fs.readFileSync(`${ASS}/aprendizado.md`, "utf8"); } catch {}
     const est = assLe("estoque.json", {});
-    return json(res, 200, { guia, aprendizado, abastecimento: estadoAbastecimento(), aprendendo: fs.existsSync(`${ASS}/.aprendendo`), estoque: { post: (est.post || []).length, carrossel: (est.carrossel || []).length },
+    return json(res, 200, { guia, aprendizado, modelo_assessor: assLe("provedor-atual.json", {}), abastecimento: estadoAbastecimento(), aprendendo: fs.existsSync(`${ASS}/.aprendendo`), estoque: { post: (est.post || []).length, carrossel: (est.carrossel || []).length },
       regras: assLe("regras.json", []), exemplos: assLe("exemplos.json", []) });
   }
   if (req.method === "POST" && p === "/api/assessor/guia") { const b = await readBody(req); fs.mkdirSync(ASS, { recursive: true }); fs.writeFileSync(`${ASS}/guia.md`, String(b.texto || "").slice(0, 20000)); return json(res, 200, { ok: true }); }

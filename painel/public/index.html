@@ -767,6 +767,7 @@ async function carregaAssessor() {
       ? esc(d.aprendizado.trim()).replace(/^## (.+)$/gm, '<b style="color:var(--ac,#f5b301)">$1</b>').replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\*(.+?)\*/g, '<i class="mut">$1</i>')
       : "Ainda não aprendeu nada: avalie alguns prompts com 👍/👎 e um motivo.";
     $("#assAprendendo").textContent = d.aprendendo ? "· aprendendo com a sua última avaliação…" : "";
+    if (d.modelo_assessor?.modelo) $("#assAprendendo").textContent += ` · ${d.modelo_assessor.modelo}${d.modelo_assessor.reserva ? " (reserva do Claude)" : ""}`;
     $("#assEstoque").textContent = `Prontos no estoque do botão 🎯 AlvoManage: ${d.estoque.post} post(s) · ${d.estoque.carrossel} carrossel(éis)${d.aprendendo ? " — ajustando com a sua última lição…" : ""}`;
     if (d.abastecimento?.rodando) $("#assEstoque").textContent += " — preparando mais prompts…";
     if (d.abastecimento?.erro) $("#assEstoque").textContent += ` — reposição pausada: ${d.abastecimento.erro}. Nova tentativa às ${new Date(d.abastecimento.tentar_em).toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"})}.`;

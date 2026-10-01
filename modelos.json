@@ -1,0 +1,168 @@
+{
+  "agentes": {
+    "diretor": "claude-opus",
+    "motion": "glm-flash",
+    "revisor": "glm-flash",
+    "narracao": "deepseek-flash",
+    "som": "deepseek-flash",
+    "imagem": "deepseek-flash",
+    "render": "deepseek-flash",
+    "olho": "deepseek-flash",
+    "assistente": "glm-flash",
+    "instagram-legenda": "deepseek-flash",
+    "assessor": "claude-opus"
+  },
+  "perfis": {
+    "glm-flash": {
+      "provedor": "glm",
+      "modelo": "glm-5.3-flash",
+      "esforco": "medium"
+    },
+    "deepseek-flash": {
+      "provedor": "deepseek",
+      "modelo": "deepseek-v4-flash"
+    },
+    "claude-sonnet": {
+      "provedor": "anthropic",
+      "modelo": "claude-sonnet-5",
+      "esforco": "medium"
+    },
+    "claude-opus": {
+      "provedor": "anthropic",
+      "modelo": "claude-opus-5-5",
+      "esforco": "medium"
+    },
+    "glm-47-flash": {
+      "provedor": "glm",
+      "modelo": "glm-4.7-flash"
+    },
+    "glm-45-flash": {
+      "provedor": "glm",
+      "modelo": "glm-4.5-flash"
+    },
+    "glm-47-flashx": {
+      "provedor": "glm",
+      "modelo": "glm-4.7-flashx"
+    },
+    "claude-haiku": {
+      "provedor": "anthropic",
+      "modelo": "claude-haiku-4-5-20251001",
+      "esforco": "medium"
+    },
+    "gpt-6.1-sol": {
+      "provedor": "codex",
+      "modelo": "gpt-6.1-sol",
+      "esforco": "medium"
+    }
+  },
+  "_precos": "US$ por 1 milhão de tokens, tabela oficial de cada provedor (conferida em 22/09/2026). 'assinatura' = sai do plano do Claude, sem cobrança por token; o painel mostra o equivalente de API só como referência.",
+  "precos": {
+    "glm-5.3-flash": {
+      "entrada": 0.15,
+      "cache": 0.03,
+      "saida": 0.5
+    },
+    "deepseek-v4-flash": {
+      "entrada": 0.3,
+      "cache": 0.006,
+      "saida": 1.2,
+      "fora_do_pico": 0.5,
+      "pico_utc": [
+        [
+          1,
+          4
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      "pico_dias": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "claude-sonnet-5": {
+      "assinatura": true
+    },
+    "claude-opus-5-5": {
+      "assinatura": true
+    },
+    "glm-4.7-flash": {
+      "entrada": 0,
+      "cache": 0,
+      "saida": 0
+    },
+    "glm-4.5-flash": {
+      "entrada": 0,
+      "cache": 0,
+      "saida": 0
+    },
+    "glm-4.7-flashx": {
+      "entrada": 0.07,
+      "cache": 0.01,
+      "saida": 0.4
+    },
+    "claude-haiku-4-5-20251001": {
+      "assinatura": true
+    },
+    "typesafe/jev-1.13": {
+      "entrada": 0.042,
+      "cache": 0,
+      "saida": 0
+    },
+    "gpt-6.1-sol": {
+      "assinatura": true
+    }
+  },
+  "provedores": {
+    "glm": {
+      "url": "https://api.z.ai/api/anthropic",
+      "segredo": "/root/secrets/glm.env",
+      "variavel": "GLM_API_KEY"
+    },
+    "deepseek": {
+      "url": "https://api.deepseek.com/anthropic",
+      "segredo": "/root/secrets/deepseek.env",
+      "variavel": "DEEPSEEK_API_KEY"
+    },
+    "anthropic": {},
+    "codex": {
+      "autenticacao": "assinatura ChatGPT via codex login"
+    }
+  },
+  "escadas": {
+    "diretor": [
+      "claude-sonnet",
+      "claude-opus"
+    ],
+    "imagem": [
+      "deepseek-flash"
+    ],
+    "narracao": [
+      "deepseek-flash",
+      "glm-flash"
+    ],
+    "motion": [
+      "glm-flash"
+    ],
+    "som": [
+      "glm-47-flash",
+      "deepseek-flash"
+    ],
+    "olho": [
+      "deepseek-flash",
+      "glm-flash"
+    ]
+  },
+  "_escadas": "Do mais barato ao mais forte. O orquestrador começa no degrau que a triagem do Jev indicar e sobe um degrau quando a entrega falha na conferência do código. Só o diretor pode usar Claude (é quem decide/planeja); os demais agentes nunca sobem para Claude — o teto deles é glm-5.3-flash (perfil glm-flash), o modelo mais forte que têm disponível. glm-4.7-flash (grátis) NÃO enxerga imagem: só em tarefa de texto.",
+  "_assessor": "Claude Opus principal; falha ou limite ativa GPT-6.1 Sol via Codex pela assinatura, com o mesmo guia, histórico e perfil. Arte continua com Jev.",
+  "reservas": {
+    "assessor": [
+      "gpt-6.1-sol"
+    ]
+  }
+}

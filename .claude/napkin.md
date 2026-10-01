@@ -7,6 +7,9 @@
 - Each item includes date + "Do instead".
 
 ## Execution & Validation (Highest Priority)
+1. **[2026-10-01] Assessor tem reserva pela assinatura do Codex**
+   Do instead: mantenha Claude principal e GPT-6.1 Sol em `modelos.json → reservas.assessor`; use o mesmo histórico e perfil, registre o modelo ativo e retome avaliações pendentes após falha.
+
 1. **[2026-09-29] O Jev decide, mas não escreve texto livre**
    Do instead: use `choice`, `score` e `noul` para direção; componha copy por regras/templates somente com fatos do briefing.
 

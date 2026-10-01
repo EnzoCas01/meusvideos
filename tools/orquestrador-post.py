@@ -119,6 +119,7 @@ PEDIDOS_EXPLICITOS = [
 PEDIDOS_GENERICOS = [("luz", r"\bluz\b|\bluzes\b|ilumina|brilhant"), ("sombra", r"\bsombra")]
 sys.path.insert(0, str(RAIZ / "tools"))
 from fotos import fotos_para  # noqa: E402  biblioteca de fotos + busca pelo DeepSeek (Pexels/Pixabay)
+from direcoes_visuais import direcoes_do_prompt
 from vocab_arte import VOCAB, SEM_FOTO, escolhas_visuais  # noqa: E402  mesmas frases que o assessor escreve no bloco Imagem
 # A foto é sempre um PEDAÇO da arte; o resto é o fundo na cor da marca (pedido do Enzo: nada de foto no fundo inteiro).
 FOTO_LAYOUTS = {
@@ -667,7 +668,8 @@ def main():
     status("Jev lendo o pedido e decidindo a direção de arte")
     etapa("decisao", "post: Jev criando direção de arte completa")
     diz("Jev interpretando o briefing e dirigindo a arte")
-    d, a = decide(briefing)
+    direcoes = direcoes_do_prompt(VISUAL)
+    d, a = decide(TEXTO_POST + "\nImagem:\n" + direcoes[0][0])
     if FORMATO == "post" and "|" not in TEXTO_POST:
         bs = [conteudo_do_briefing(TEXTO_POST, d)]
     else:
@@ -683,8 +685,8 @@ def main():
     else:
         fixos = ()
     # O que o pedido diz com todas as letras vale nas 3 versões; "com luz"/"com sombra" sem dizer qual: o Jev escolhe, mas nunca "nenhuma".
-    alvo, fixos, obrig = sem_acentos(VISUAL or briefing), list(fixos), []
-    for campo, valor in escolhas_visuais(VISUAL or briefing).items():
+    alvo, fixos, obrig = sem_acentos(direcoes[0][0] or briefing), list(fixos), []
+    for campo, valor in direcoes[0][1].items():
         if campo in d and campo not in fixos:
             d[campo] = valor
             fixos.append(campo)
@@ -711,6 +713,11 @@ def main():
 
     def prepara(n):
         """Uma versão: o Jev decide slide a slide se entra foto (nenhum, alguns ou todos); sem foto, ícone."""
+        visual_n, direcao_n = direcoes[n - 1]
+        def linha_n(rotulo):
+            m = re.search(rf"(?im)^[ \-•*]*{rotulo}\s*:\s*(.+)$", visual_n)
+            return m[1].strip() if m else ""
+        foto_n, icone_n = linha_n("Foto"), linha_n("[ÍI]cone")
         bsn = textos[n - 1]
         tema_car = bsn[0][0] if len(bsn) > 1 else ""
         fotos_slide, icones, logs = [], [], []
@@ -718,31 +725,31 @@ def main():
             pref = f"Versão {n}" + (f" · slide {i + 1}" if len(bsn) > 1 else "") + ": "
             assunto_i = f"{t}. {s_}" + (f" (slide {i + 1} de um carrossel sobre: {tema_car})" if tema_car else "")
             log_i = []
-            sem_foto = sem_acentos(FOTO_PEDIDA).startswith(SEM_FOTO)
-            busca = (FOTO_PEDIDA if len(bsn) == 1 else f"{assunto_i}. Foto pedida: {FOTO_PEDIDA}") if FOTO_PEDIDA and not sem_foto \
-                else assunto_i + (f". Imagem pedida: {VISUAL}" if VISUAL else "")
-            fs = [] if sem_foto else fotos_para(busca, jev, log_i, JOB / "fotos", 1, lambda m, pref=pref: status(pref + m), forcar=bool(FOTO_PEDIDA))
+            sem_foto = sem_acentos(foto_n).startswith(SEM_FOTO)
+            busca = (foto_n if len(bsn) == 1 else f"{assunto_i}. Foto pedida: {foto_n}") if foto_n and not sem_foto \
+                else assunto_i + (f". Imagem pedida: {visual_n}" if visual_n else "")
+            fs = [] if sem_foto else fotos_para(busca, jev, log_i, JOB / "fotos", 1, lambda m, pref=pref: status(pref + m), forcar=bool(foto_n))
             logs += [{**e, "versao": n, "slide": i + 1} for e in log_i]
             if fs:
                 status(pref + "Jev decidindo onde e como entra a foto")
-                af, _ = jev({"post_subject_in_portuguese": f"{t}. {s_}", "photo_description": fs[0]["descricao"], "wanted_look_in_portuguese": VISUAL},
+                af, _ = jev({"post_subject_in_portuguese": f"{t}. {s_}", "photo_description": fs[0]["descricao"], "wanted_look_in_portuguese": visual_n},
                             etapa=f"versão {n}{' slide ' + str(i + 1) if len(bsn) > 1 else ''}: onde e efeito da foto", perguntas={
                     "foto_layout": {"type": "choice", "instructions": "Where should this photo go? It is always only a PART of the post; the rest is the brand colour background with the text.", "criteria": FOTO_LAYOUTS},
                     "foto_efeito": {"type": "choice", "instructions": "Which treatment makes this photo look best in this post?", "criteria": FOTO_EFEITOS}})
                 lay = (af or {}).get("foto_layout", {}).get("choice")
                 ef = (af or {}).get("foto_efeito", {}).get("choice")
-                v_ = sem_acentos(VISUAL)  # posição/tratamento escritos no prompt vencem a escolha do Jev
-                lay = escolhas_visuais(VISUAL).get("foto_layout", lay)
-                ef = escolhas_visuais(VISUAL).get("foto_efeito", ef)
+                v_ = sem_acentos(visual_n)  # posição/tratamento escritos no prompt vencem a escolha do Jev
+                lay = direcao_n.get("foto_layout", lay)
+                ef = direcao_n.get("foto_efeito", ef)
                 fotos_slide.append({"foto": fs[0]["caminho"], "foto_id": fs[0]["id"], "foto_layout": lay if lay in FOTO_LAYOUTS else "topo_cartao",
                                     "foto_efeito": ef if ef in FOTO_EFEITOS else "nenhum"})
                 icones.append(None)
             else:
-                if FOTO_PEDIDA and re.search(r"nunca [ií]cone|sem [ií]cone|somente foto", FOTO_PEDIDA, re.I):
+                if foto_n and re.search(r"nunca [ií]cone|sem [ií]cone|somente foto", foto_n, re.I):
                     raise RuntimeError("Não encontrei uma foto fiel à cena pedida. Como o prompt proíbe ícone, ajuste a cena ou adicione uma foto à biblioteca.")
                 fotos_slide.append(None)
                 status(pref + "Jev escolhendo o ícone")
-                icones.append(escolhe_icone(f"{ICONE_PEDIDO} (post: {t})" if ICONE_PEDIDO and len(bsn) == 1 else f"{t}. {s_}"))
+                icones.append(escolhe_icone(f"{icone_n} (post: {t})" if icone_n and len(bsn) == 1 else f"{t}. {s_}"))
         return bsn, fotos_slide, icones, logs
 
     with ThreadPoolExecutor(VERSOES) as ex:  # as 3 versões se preparam ao mesmo tempo (é quase tudo espera de rede)
@@ -753,7 +760,10 @@ def main():
     jpgs = []
     for n, v in enumerate(variantes(d, a, fixos, obrig), start=1):
         bsn, fotos_slide, icone, _ = prep[n - 1]
-        v["fotos_slide"], v["fixos"] = fotos_slide, fixos
+        v.update(direcoes[n - 1][1])
+        v["fotos_slide"], v["fixos"] = fotos_slide, tuple(set(fixos) | set(direcoes[n - 1][1]))
+        if n > 1 and not separa_visual(PEDIDO["prompt"])[1]:
+            v["composicao"] = ["icone_topo", "visual_lateral", "icone_baixo"][n - 1]
         v["foto_layout"] = ", ".join(f"{k + 1}:{x['foto_layout']}" for k, x in enumerate(fotos_slide) if x) or None
         status(f"Montando a versão {n} de {VERSOES}")
         REGISTRO.append(f"- versão {n}: tema={v['tema']}, receita={v['receita']}, decoração={v['decoracao']}, fundo={v['fundo_estilo']}, luz={v['luz']}, sombra={v['sombra']}, solução={v['solucao']}")
@@ -766,7 +776,7 @@ def main():
         raise RuntimeError("nenhuma imagem foi gerada")
 
     (JOB / "entrega.json").write_text(json.dumps({"peca": spec["peca"], "sx": spec["sx"], "formato": FORMATO, "versoes": VERSOES, "arquivos": jpgs}, ensure_ascii=False, indent=1))
-    extra = f"\n\n{VERSOES} versões: a 1ª é a escolha do Jev; as outras usam a 2ª e a 3ª opção dele."
+    extra = f"\n\n{VERSOES} versões: a 1ª é a escolha do Jev; cada uma segue uma direção visual própria, mantendo a mesma mensagem."
     print(f"**{spec['peca']}** · {FORMATO} · {len(jpgs)} imagem(ns) · {(time.time() - t0) / 60:.1f} min\n\n" + "\n".join(REGISTRO) + extra)
 
 

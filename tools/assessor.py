@@ -27,6 +27,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 PASTA = Path(os.environ.get("ASSESSOR_PASTA", RAIZ / "painel/assessor"))  # testes apontam para outro lugar
 sys.path.insert(0, str(RAIZ / "tools"))
 from fotos import aprova, deepseek, _json_de  # noqa: E402
+from direcoes_visuais import tres_imagens
 from vocab_arte import VOCAB, SEM_FOTO  # noqa: E402
 
 # Recursos reais do AlvoManage (levantados do código do preview; nomes de tela ainda não conferidos na interface).
@@ -147,22 +148,8 @@ def le(nome, padrao):
 
 
 def escreve(sistema, pedido):
-    """Texto do modelo do agente 'assessor' (modelos.json). Claude = assinatura (custo 0 aqui); outro provedor = DeepSeek."""
-    cfg = json.loads((RAIZ / "modelos.json").read_text())
-    perfil = cfg["perfis"][cfg["agentes"].get("assessor", "deepseek-flash")]
-    if perfil.get("provedor") != "anthropic":
-        return deepseek(sistema, pedido, max_tokens=8000)
-    env = {k: v for k, v in os.environ.items() if k not in ("ANTHROPIC_BASE_URL", "ANTHROPIC_AUTH_TOKEN", "ANTHROPIC_API_KEY")}
-    cmd = ["claude", "-p", "--model", perfil["modelo"], "--system-prompt", sistema, "--tools", "", "--setting-sources", "",
-           "--no-session-persistence", "--output-format", "json"] + (["--effort", perfil["esforco"]] if perfil.get("esforco") else [])
-    r = subprocess.run(cmd, input=pedido, capture_output=True, text=True, env=env, cwd=tempfile.gettempdir(), timeout=900)
-    try:
-        d = json.loads(r.stdout)
-    except ValueError:
-        raise RuntimeError(f"assessor ({perfil['modelo']}) não respondeu: {(r.stderr or r.stdout)[-300:]}")
-    if d.get("is_error"):
-        raise RuntimeError(f"assessor ({perfil['modelo']}): {str(d.get('result'))[:300]}")
-    return d.get("result", ""), 0.0
+    from assessor_modelos import escreve_com_reserva
+    return escreve_com_reserva(RAIZ, PASTA, sistema, pedido)
 
 
 def jev(state, perguntas, etapa=""):
@@ -176,18 +163,26 @@ def jev(state, perguntas, etapa=""):
 
 
 def monta(item, modo):
-    fim = bloco_imagem(item.get("imagem"))
+    imagens = tres_imagens(item.get("imagem"), item.get("variacoes_visuais") or [])
+    item["variacoes_visuais"] = imagens
+    fim = bloco_imagem(imagens[0])
+    for i, img in enumerate(imagens[1:], 2):
+        fim += bloco_imagem(img).replace("\nImagem:\n", f"\nImagem versão {i}:\n", 1)
     selo = str(item.get("selo") or "").strip().replace('"', "")[:28]
     pontos = [str(x).strip().replace('"', "")[:40] for x in (item.get("pontos") or []) if str(x).strip()][:3]
     extra = (f'\nSelo: "{selo}"' if selo else "") + ("\nPontos: " + " | ".join(f'"{x}"' for x in pontos) if pontos else "")
-    fim = extra + fim
     if modo == "carrossel":
         sl = [s for s in item.get("slides", []) if s.get("frase")]
-        return " || ".join(f"{s['frase'].strip()} | {s.get('legenda', '').strip()}" for s in sl) + fim if 2 <= len(sl) <= 6 else ""
-    if not item.get("titulo"):
-        return ""
-    return (f'Título: "{item["titulo"].strip()}"\nSubtítulo: "{item.get("subtitulo", "").strip()}"\n'
-            f'Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre {item.get("contexto", "o sistema")}.' + fim)
+        if not 2 <= len(sl) <= 6:
+            return ""
+        texto = " || ".join(f"{s['frase'].strip()} | {s.get('legenda', '').strip()}" for s in sl)
+    else:
+        if not item.get("titulo"):
+            return ""
+        texto = (f'Título: "{item["titulo"].strip()}"\nSubtítulo: "{item.get("subtitulo", "").strip()}"\n'
+                 f'Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre {item.get("contexto", "o sistema")}.')
+    item["prompts_versoes"] = [texto + extra + bloco_imagem(img) for img in imagens]
+    return texto + extra + fim
 
 
 def historico(limite=None):
@@ -280,8 +275,8 @@ FORMATO_IMAGEM = ('"imagem": {"foto": "...", "icone": "...", "clima": "...", "po
                   '"estilo_icone": "<chave>", "fundo": "<chave>", "luz": "<chave>", "sombra": "<chave>", "destaque": "<chave>", '
                   '"enfeite": "<chave>", "desenho": "<chave>", "texto": "<chave>", "solucao": "<chave>", "composicao": "<chave>", "extras": ["<detalhes adicionais de cena e intenção; posicionamentos devem usar as opções executáveis acima>"]}')
 FORMATO = {"post": '{"contexto": "<assunto em 2-5 palavras>", "titulo": "...", "subtitulo": "...", "selo": "<1-2 palavras ou vazio>", '
-                    '"pontos": ["<até 3 informações curtas, até 28 letras cada>"], ' + FORMATO_IMAGEM + '}',
-           "carrossel": '{"contexto": "<assunto em 2-5 palavras>", "slides": [{"frase": "...", "legenda": "..."}], ' + FORMATO_IMAGEM + '}'}
+                    '"pontos": ["<até 3 informações curtas, até 28 letras cada>"], ' + FORMATO_IMAGEM + ', "variacoes_visuais": [' + FORMATO_IMAGEM.removeprefix('"imagem": ') + ', ' + FORMATO_IMAGEM.removeprefix('"imagem": ') + ', ' + FORMATO_IMAGEM.removeprefix('"imagem": ') + ']}',
+           "carrossel": '{"contexto": "<assunto em 2-5 palavras>", "slides": [{"frase": "...", "legenda": "..."}], ' + FORMATO_IMAGEM + ', "variacoes_visuais": [' + FORMATO_IMAGEM.removeprefix('"imagem": ') + ', ' + FORMATO_IMAGEM.removeprefix('"imagem": ') + ', ' + FORMATO_IMAGEM.removeprefix('"imagem": ') + ']}'}
 
 
 def sistema_redator():
@@ -296,6 +291,7 @@ def sistema_redator():
             "Também fale de COISAS GRANDES: as novidades e a INTELIGÊNCIA ARTIFICIAL dentro do sistema, o que muda no negócio — não só perguntas sobre acontecimentos do balcão. "
             "O que todo sistema tem nunca é novidade. A descrição da IMAGEM tem que ser detalhada e combinar com a mensagem. "
             "Você tem LIBERDADE para acrescentar ao prompt o que o Enzo ensinou e a lista não cobre (campo \"extras\" da imagem, selo, pontos) e deixá-lo tão longo quanto precisar. "
+            "Para cada assunto, escreva três direções de arte no campo variacoes_visuais: mesma mensagem, três composições e efeitos distintos. Nunca entregue três artes com o mesmo formato. Cada objeto segue o formato de imagem. "
             "Use só os FATOS do produto; nunca invente número, preço ou recurso. Responda só JSON.\n\n"
             f"GUIA DO DONO:\n{guia}\n\nPERFIL APRENDIDO:\n{perfil or '- (nenhum ainda)'}\n\n"
             f"APROVADOS PELO ENZO:\n{linhas(bons) or '- (nenhum ainda)'}\n\nREPROVADOS PELO ENZO:\n{linhas(ruins) or '- (nenhum ainda)'}\n\n"
@@ -402,9 +398,9 @@ def abastecer():
         if not ok:
             return "já estava abastecendo"
         # A atualização de direção visual revisa o estoque existente antes de repor.
-        if le("estoque.json", {}).get("direcao_versao", 0) < 2:
+        if le("estoque.json", {}).get("direcao_versao", 0) < 3:
             revisar_estoque()
-            estoque_muda(lambda e: e.update(direcao_versao=2))
+            estoque_muda(lambda e: e.update(direcao_versao=3))
         feitos = 0
         for modo, alvo in ALVO_ESTOQUE.items():
             vazios = 0
@@ -441,14 +437,18 @@ def proximo(modo):
         return x
     x = estoque_muda(tira)
     restam = len(le("estoque.json", {}).get(modo, []))
-    return {"prompt": x["prompt"], "contexto": x["contexto"], "restam": restam} if x else {"vazio": True}
+    if not x:
+        return {"vazio": True}
+    if x.get("item"):
+        x["prompt"] = monta(x["item"], modo)
+    return {"prompt": x["prompt"], "contexto": x["contexto"], "restam": restam, "variacoes_visuais": (x.get("item") or {}).get("variacoes_visuais", []), "prompts_versoes": (x.get("item") or {}).get("prompts_versoes", [])}
 
 
 def revisar_estoque():
     """Depois de uma lição: o assessor EDITA os prompts prontos para seguir o perfil novo (só o necessário);
     o que virou assunto proibido sai. O Jev confere de novo; o que ele reprovar sai e o abastecer repõe."""
     e = estoque_muda(lambda e: e)
-    lista = [{"id": x["id"], "modo": m, **x["item"]} for m in ("post", "carrossel") for x in e[m] if x.get("item")]
+    lista = [{"id": x["id"], "modo": m, **{k: v for k, v in x["item"].items() if k != "prompts_versoes"}} for m in ("post", "carrossel") for x in e[m] if x.get("item")]
     if not lista:
         return "estoque vazio"
     def revisa(parte):
@@ -462,7 +462,7 @@ def revisar_estoque():
         corpo, _ = escreve(sistema_redator(), pedido)
         return [x for x in _json_de(corpo).get("itens", []) if isinstance(x, dict)]
     with ThreadPoolExecutor(3) as ex:  # 30 prontos de uma vez deixa a resposta grande demais: partes de 10
-        partes = list(ex.map(revisa, [lista[i:i + 10] for i in range(0, len(lista), 10)]))
+        partes = list(ex.map(revisa, [lista[i:i + 3] for i in range(0, len(lista), 3)]))
     volta = {x.get("id"): x for p_ in partes for x in p_}
     editados, sai = [], set()
     for x in lista:
@@ -487,6 +487,7 @@ def revisar_estoque():
             sai.add(pid)
 
     def aplica(e):
+        e["direcao_versao"] = 3
         for m in ("post", "carrossel"):
             e[m] = [{**x, **novos.get(x["id"], {})} for x in e[m] if x["id"] not in sai]  # o que foi entregue nesse meio-tempo já saiu
     estoque_muda(aplica)
