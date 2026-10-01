@@ -1,0 +1,1151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0d10">
+<title>Painel de Vídeos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0c0d10; --bg2:#101216; --card:#15171c; --card2:#1b1e25; --line:#262a33; --line2:#323743;
+  --tx:#eceef3; --mut:#8b93a4; --ac:#e8b04a; --ac2:#f3c66b; --acbg:rgba(232,176,74,.09);
+  --ok:#4cc38a; --er:#e5484d;
+  --r:14px; --r-sm:9px;
+  --f-disp:"Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
+  --f-body:"Instrument Sans", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, monospace;
+  --gut:clamp(12px, 2.2vw, 28px);
+}
+* { box-sizing:border-box; }
+[hidden] { display:none !important; }
+html { -webkit-text-size-adjust:100%; }
+body {
+  margin:0; min-height:100vh; color:var(--tx); font:15px/1.5 var(--f-body);
+  background:
+    radial-gradient(900px 420px at 12% -120px, rgba(232,176,74,.10), transparent 70%),
+    radial-gradient(700px 380px at 100% 0, rgba(76,195,138,.035), transparent 70%),
+    var(--bg);
+  background-attachment:fixed;
+}
+body::before { /* grão de filme discreto */
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+main { position:relative; z-index:1; width:100%; padding:0 var(--gut) calc(24px + env(safe-area-inset-bottom)); }
+::selection { background:var(--ac); color:#111; }
+
+/* ---------- topo ---------- */
+.top {
+  position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:14px;
+  margin:0 calc(-1 * var(--gut)) 18px; padding:12px var(--gut);
+  background:rgba(12,13,16,.78); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.brand { display:flex; align-items:center; gap:10px; flex:1 0 auto; }
+.brand h1 { font:800 20px/1 var(--f-disp); letter-spacing:-.02em; margin:0; white-space:nowrap; }
+.brand h1 span { color:var(--ac); }
+.tally { width:10px; height:10px; border-radius:50%; background:var(--ac); box-shadow:0 0 0 4px rgba(232,176,74,.16), 0 0 18px rgba(232,176,74,.6); flex:none; }
+#resumoTopo { min-width:0; flex:0 1 auto; font:500 12.5px var(--f-mono); color:var(--mut); padding:6px 12px; border:1px solid var(--line); border-radius:99px; background:var(--bg2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+/* ---------- layout: 2 colunas de ponta a ponta no computador ---------- */
+.layout { display:grid; gap:var(--gut); grid-template-columns:minmax(0, 1fr); align-items:start; }  /* minmax(0): conteúdo largo não estica a tela do celular */
+@media (min-width:1000px) {
+  .layout { grid-template-columns:minmax(400px, 34%) minmax(0, 1fr); }
+  .side { position:sticky; top:78px; max-height:calc(100vh - 96px); overflow-y:auto; padding-right:4px; scrollbar-width:thin; scrollbar-color:var(--line2) transparent; }
+}
+@media (min-width:1700px) { .layout { grid-template-columns:minmax(460px, 30%) minmax(0, 1fr); } }
+
+.sec-head { display:flex; align-items:center; gap:10px; margin:0 0 12px; }
+h2 { font:700 12px/1 var(--f-body); text-transform:uppercase; letter-spacing:.12em; color:var(--mut); margin:0; }
+h2.big { font:700 22px/1.1 var(--f-disp); text-transform:none; letter-spacing:-.02em; color:var(--tx); }
+.count { font:600 12px var(--f-mono); color:var(--ac); background:var(--acbg); border:1px solid rgba(232,176,74,.25); border-radius:99px; padding:2px 9px; }
+
+/* ---------- cartões ---------- */
+.card { background:linear-gradient(180deg, var(--card2), var(--card) 120px); border:1px solid var(--line); border-radius:var(--r); padding:18px; margin-bottom:14px; box-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 12px 32px -18px rgba(0,0,0,.7); }
+.compose { border-color:rgba(232,176,74,.22); }
+.compose .card-title { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.compose .card-title b { font:700 18px var(--f-disp); letter-spacing:-.01em; }
+textarea, input[type=text], input[type=password] { width:100%; background:var(--bg); color:var(--tx); border:1px solid var(--line); border-radius:var(--r-sm); padding:11px 12px; font:inherit; transition:border-color .15s, box-shadow .15s; }
+textarea:focus, input:focus { outline:none; border-color:var(--ac); box-shadow:0 0 0 3px rgba(232,176,74,.15); }
+textarea::placeholder, input::placeholder { color:#5f6676; }
+textarea { min-height:96px; resize:vertical; }
+label.lbl { display:block; font-size:12px; font-weight:600; color:var(--mut); margin:14px 0 6px; letter-spacing:.02em; }
+.prompt-block + .prompt-block { border-top:1px dashed var(--line2); padding-top:18px; margin-top:18px; }
+
+/* modos = controle segmentado */
+.modos { display:grid; grid-template-columns:repeat(4, 1fr); gap:4px; padding:4px; margin-bottom:12px; background:var(--bg); border:1px solid var(--line); border-radius:12px; }
+.modos .chip { border:0; border-radius:9px; text-align:center; padding:8px 4px; font-weight:600; font-size:13px; background:transparent; color:var(--mut); white-space:nowrap; transition:background .15s, color .15s; }
+.modos .chip:hover { color:var(--tx); }
+.modos .chip.sel { background:var(--ac); color:#15120a; box-shadow:0 4px 14px -4px rgba(232,176,74,.55); }
+
+.styles { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:6px; }
+.style-card { display:flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:9px; padding:4px 8px 4px 4px; cursor:pointer; background:var(--bg); min-width:0; transition:border-color .15s, background .15s; }
+.style-card:hover { border-color:var(--line2); }
+.style-card video { width:18px; height:32px; object-fit:cover; border-radius:6px; background:#000; display:block; flex:none; }
+.style-card b { font-size:12.5px; font-weight:600; display:block; }
+.style-card small { display:none; }
+.style-card.sel { border-color:var(--ac); background:var(--acbg); }
+.drop { display:flex; align-items:center; gap:10px; border:1.5px dashed var(--line2); border-radius:11px; padding:12px 14px; font-size:13.5px; color:var(--mut); cursor:pointer; transition:border-color .15s, background .15s; }
+.drop:hover { border-color:var(--ac); background:var(--acbg); color:var(--tx); }
+.drop input { display:none; }
+.drop .nome { overflow-wrap:anywhere; }
+.drop .x { margin-left:auto; }
+
+/* ---------- botões ---------- */
+button, .btn { display:inline-flex; align-items:center; justify-content:center; gap:6px; background:var(--ac); color:#15120a; border:1px solid transparent; border-radius:10px; padding:9px 16px; font:600 14px/1.2 var(--f-body); cursor:pointer; transition:transform .08s, background .15s, border-color .15s, color .15s; text-decoration:none; }
+button:hover, .btn:hover { background:var(--ac2); }
+button:active { transform:translateY(1px); }
+button.sec, .btn.sec { background:transparent; color:var(--tx); border-color:var(--line2); }
+button.sec:hover, .btn.sec:hover { border-color:var(--mut); background:rgba(255,255,255,.03); }
+button.dan { background:transparent; color:var(--er); border-color:#4a2527; }
+button.dan:hover { background:rgba(229,72,77,.08); border-color:var(--er); }
+button.mini, .btn.mini { padding:6px 12px; font-size:13px; border-radius:9px; }
+button:disabled { opacity:.5; cursor:default; transform:none; }
+#gerar { width:100%; order:9; min-height:46px; padding:11px 26px; font-size:15px; font-weight:700; box-shadow:0 8px 24px -10px rgba(232,176,74,.7); }
+.actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:18px; padding-top:16px; border-top:1px solid var(--line); }
+.check { display:inline-flex; align-items:center; gap:8px; font-size:13.5px; color:var(--mut); cursor:pointer; }
+.check input { width:17px; height:17px; accent-color:var(--ac); margin:0; }
+.note { margin:12px 0 0; font-size:12.5px; color:var(--mut); line-height:1.5; }
+
+.row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.sp { flex:1; }
+.mut { color:var(--mut); font-size:13px; }
+a { color:var(--ac); text-decoration:none; } a:hover { text-decoration:underline; }
+
+/* logo */
+.logo-row { display:flex; align-items:center; gap:10px; }
+.logo-card { padding:10px 12px; }
+.logo-prev { width:40px; height:40px; border-radius:9px; border:1px dashed var(--line2); background:var(--bg); display:grid; place-items:center; flex:none; overflow:hidden; color:#4b5160; font-size:22px; }
+.logo-prev img { width:100%; height:100%; object-fit:contain; }
+.logo-prev:has(img[style*="block"]) { border-style:solid; }
+.logo-prev:has(img[style*="block"]) .ph { display:none; }
+
+/* ---------- lista de vídeos ---------- */
+#jobs { display:grid; gap:14px; grid-template-columns:1fr; }
+@media (min-width:1500px) { #jobs { grid-template-columns:repeat(2, minmax(0,1fr)); align-items:start; } }
+#jobs > .card { margin:0; position:relative; overflow:hidden; animation:rise .35s ease both; }
+#jobs > .card::before { content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--line2); }
+#jobs > .card.running::before { background:var(--ac); box-shadow:0 0 14px var(--ac); }
+#jobs > .card.done::before { background:var(--ok); }
+#jobs > .card.failed::before, #jobs > .card.canceled::before { background:var(--er); }
+@keyframes rise { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+.job-title { font:600 15.5px/1.35 var(--f-body); flex:1; min-width:0; overflow-wrap:anywhere; }
+.tag { font-size:12px; font-weight:500; padding:3px 9px; border-radius:99px; border:1px solid var(--line); color:var(--mut); white-space:nowrap; background:var(--bg2); }
+.tag.ok { color:var(--ok); border-color:#23533d; background:rgba(76,195,138,.07); }
+.tag.er { color:var(--er); border-color:#4a2527; background:rgba(229,72,77,.07); }
+.tag.ac { color:var(--ac); border-color:#5a4520; background:var(--acbg); }
+.card.running .tag.ac::before { content:""; display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--ac); margin-right:6px; vertical-align:1px; animation:blink 1.2s infinite; }
+@keyframes blink { 50% { opacity:.25; } }
+.bar { height:8px; background:var(--bg); border:1px solid var(--line); border-radius:99px; overflow:hidden; margin:14px 0 8px; }
+.bar > i { display:block; height:100%; background:linear-gradient(90deg, #b8822a, var(--ac), var(--ac2)); transition:width .6s; border-radius:99px; }
+.running .bar > i { background-size:200% 100%; animation:flow 2s linear infinite; background-image:linear-gradient(90deg, #b8822a, var(--ac2), #b8822a); }
+@keyframes flow { to { background-position:-200% 0; } }
+.done .bar > i { background:var(--ok); } .failed .bar > i, .canceled .bar > i { background:var(--er); }
+[data-desde], .bar + .row span:first-child { font-family:var(--f-mono); font-size:12px; }
+video.player { display:block; width:100%; max-height:min(560px, 70vh); border-radius:11px; background:#000; margin-top:14px; border:1px solid var(--line); }
+table { width:100%; border-collapse:collapse; font-size:12.5px; font-variant-numeric:tabular-nums; }
+td, th { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { color:var(--mut); font-weight:500; font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; }
+th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align:left; }
+tr.total td { font-weight:700; border-bottom:0; color:var(--ac); }
+.tbl { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.box { background:var(--bg2); border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin-top:12px; }
+.box h3 { margin:0 0 8px; font-size:13.5px; font-weight:600; }
+.box textarea { min-height:70px; }
+details summary { cursor:pointer; list-style-position:inside; }
+details summary::marker { color:var(--mut); }
+pre { white-space:pre-wrap; font:12.5px/1.55 var(--f-mono); margin:8px 0 0; color:#cfd3dc; overflow-wrap:anywhere; }
+.agora { margin-top:10px; font-size:13px; background:var(--bg); border:1px solid var(--line); border-left:2px solid var(--ac); border-radius:9px; padding:8px 12px; color:#cfd3dc; overflow-wrap:anywhere; }
+.agora b { color:var(--ac); font-weight:600; margin-right:4px; font-family:var(--f-mono); font-size:12px; }
+.ia { border:1px solid #5a4520; background:linear-gradient(180deg, rgba(232,176,74,.08), rgba(232,176,74,.02)); border-radius:12px; padding:14px; margin:10px 0; }
+.ia h4 { margin:0 0 8px; font:700 15px var(--f-disp); }
+.ia .q { margin:14px 0 6px; font-size:14px; }
+.ia input[type=text] { margin-top:4px; }
+.chips { display:flex; gap:6px; flex-wrap:wrap; margin:4px 0; }
+.chip { border:1px solid var(--line); border-radius:99px; padding:5px 12px; font-size:13px; cursor:pointer; background:var(--bg); transition:border-color .15s, color .15s; user-select:none; }
+.chip:hover { border-color:var(--line2); }
+.chip.sel { border-color:var(--ac); color:var(--ac); background:var(--acbg); }
+.opc { border:1px solid var(--line); border-radius:11px; padding:12px; margin-top:10px; background:var(--bg); }
+.opc.best { border-color:var(--ac); box-shadow:0 0 0 3px rgba(232,176,74,.08); }
+.opc pre { max-height:220px; overflow:auto; }
+.prompt-block[data-modo=cortes] .so-video, .prompt-block[data-modo=cortes] .so-texto, .prompt-block[data-modo=post] .so-video, .prompt-block[data-modo=carrossel] .so-video, .prompt-block[data-modo=post] .so-drop, .prompt-block[data-modo=carrossel] .so-drop, .prompt-block:not([data-modo=cortes]) .so-cortes, .prompt-block[data-modo=video] .so-post, .prompt-block[data-modo=cortes] .so-post { display:none; }
+.cortes { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px, 1fr)); gap:12px; margin-top:14px; }
+.cortes video { width:100%; aspect-ratio:9/16; border-radius:10px; background:#000; display:block; border:1px solid var(--line); }
+.cortes img { width:100%; height:auto; border-radius:10px; background:#000; display:block; border:1px solid var(--line); }
+.versao-tit { font:600 12px var(--f-mono); color:var(--ac); margin:16px 0 -6px; text-transform:uppercase; letter-spacing:.08em; }
+.versoes.car.lado { grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:18px 22px; }
+.deck { position:relative; aspect-ratio:4/5; width:calc(100% - 34px); margin-top:12px; touch-action:pan-y; }
+.deck img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:10px; border:1px solid var(--line2); background:#000; cursor:pointer;
+  transform-origin:right center; transform:translateX(calc(var(--k) * 15px)) scale(calc(1 - var(--k) * .07)); z-index:calc(10 - var(--k));
+  filter:brightness(calc(1 - var(--k) * .28)); box-shadow:-10px 12px 28px -12px rgba(0,0,0,.85); transition:transform .35s cubic-bezier(.2,.8,.2,1), filter .35s; }
+.deck-nav { display:flex; align-items:center; gap:8px; margin-top:10px; }
+.deck-nav button { min-width:38px; font-size:17px; line-height:1; }
+.deck-pos { font:600 12px var(--f-mono); color:var(--mut); }
+.versoes.lado { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; }
+.versoes.lado .cortes { grid-template-columns:1fr; }
+@media (min-width:1500px) { .versoes.lado { max-width:900px; } }
+.cortes b { display:block; font-size:13px; margin-top:6px; }
+.slot-foot button.on-boa, .rate button.on-boa { background:#1c3a2c; color:var(--ok); border-color:#23533d; }
+.slot-foot button.on-ruim, .rate button.on-ruim { background:#3a1d1f; color:var(--er); border-color:#4a2527; }
+#jobs > p.mut { text-align:center; padding:48px 16px; border:1px dashed var(--line2); border-radius:var(--r); }
+
+/* ---------- abas ---------- */
+.abas { display:inline-flex; gap:4px; padding:4px; background:var(--bg); border:1px solid var(--line); border-radius:12px; max-width:100%; overflow-x:auto; scrollbar-width:none; }  /* 6 abas não cabem no celular: rolam */
+.abas .aba { flex:none; }
+.aba { background:transparent; color:var(--mut); border:0; border-radius:9px; padding:8px 16px; font-weight:600; }
+.aba:hover { background:rgba(255,255,255,.04); color:var(--tx); }
+.aba.sel { background:var(--card2); color:var(--tx); box-shadow:0 0 0 1px var(--line2); }
+.aba .count { margin-left:6px; }
+.aba-sec { display:none; } .aba-sec.sel { display:block; }
+
+/* ---------- aba Jev ---------- */
+.jev-card { background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:16px; margin-bottom:14px; }
+.jev-top { display:flex; gap:14px; align-items:flex-start; }
+.jev-top .thumbs { display:flex; gap:6px; flex:none; }
+.jev-top .thumbs img { width:64px; height:80px; object-fit:cover; border-radius:6px; border:1px solid var(--line); background:#000; }
+.jev-call { margin-top:14px; border-top:1px solid var(--line); padding-top:12px; }
+.jev-call h4 { margin:0 0 10px; font:600 13px var(--f-mono); color:var(--ac); text-transform:uppercase; letter-spacing:.06em; }
+.jev-qs { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:10px; }
+.jev-q { background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:10px 12px; font-size:12.5px; }
+.jev-q .qn { display:flex; flex-wrap:wrap; gap:6px; align-items:baseline; margin-bottom:6px; }
+.jev-q .qn b { font-size:13px; flex:1; }
+.jev-q .ins { color:var(--mut); font-size:11.5px; margin-bottom:8px; }
+.pb { display:grid; grid-template-columns:minmax(0,1fr) 44px; gap:6px; align-items:center; margin:3px 0; }
+.pb .nm { position:relative; padding:2px 6px; border-radius:5px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; z-index:0; }
+.pb .nm i { position:absolute; inset:0 auto 0 0; background:rgba(255,255,255,.06); z-index:-1; }
+.pb.win .nm { color:var(--ac); font-weight:600; } .pb.win .nm i { background:rgba(232,176,74,.18); }
+.pb .pc { text-align:right; font:12px var(--f-mono); color:var(--mut); }
+.jev-q.baixa { border-color:#4a2527; }
+@media (max-width:640px) { .jev-top { flex-direction:column; } }
+
+/* ---------- aba Fotos ---------- */
+.fotos-grade { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:12px; }
+.foto-card { background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
+.foto-card img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:#000; }
+.foto-card .fc { padding:10px; display:flex; flex-direction:column; gap:6px; flex:1; }
+.foto-card textarea { min-height:60px; font-size:13px; padding:8px; }
+.foto-card .org { font-size:11.5px; color:var(--mut); overflow-wrap:anywhere; }
+
+/* ---------- mesa: 3 quadrados escuros onde a criação aparece ---------- */
+.mesa { background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:16px; }
+.mesa-info { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:14px; min-height:22px; }
+.mesa-info .rot { font:600 11.5px var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--ac); }
+.mesa-info .tit { font-weight:600; color:var(--tx); overflow-wrap:anywhere; flex:1; min-width:0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.slots { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; }
+.slots.um { grid-template-columns:1fr; }
+.slot-wrap { min-width:0; }
+.slot { position:relative; aspect-ratio:1; background:#000; border:1px solid var(--line2); border-radius:12px; overflow:hidden; display:grid; place-items:center; }
+.slots.um .slot { aspect-ratio:auto; height:min(70vh, 640px); }
+.slot::before, .slot::after { content:""; position:absolute; width:18px; height:18px; border:2px solid rgba(232,176,74,.35); pointer-events:none; z-index:20; }
+.slot::before { top:10px; left:10px; border-right:0; border-bottom:0; }
+.slot::after { bottom:10px; right:10px; border-left:0; border-top:0; }
+.slot > img, .slot > video, .slot > a > img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block; background:#000; }
+.slot .vazio { text-align:center; color:#434956; font:600 12px var(--f-mono); letter-spacing:.1em; text-transform:uppercase; }
+.slot .vazio i { display:block; font:800 40px var(--f-disp); font-style:normal; color:#22262e; margin-bottom:4px; letter-spacing:0; }
+.slot.criando { background:radial-gradient(circle at 50% 50%, #17130a, #000 70%); border-color:rgba(232,176,74,.35); }
+.slot.criando .vazio { color:var(--ac); }
+.slot.criando .vazio i { color:rgba(232,176,74,.5); animation:blink 1.2s infinite; }
+.slot.criando::marker { display:none; }
+.slot .varre { position:absolute; inset:0; background:linear-gradient(100deg, transparent 30%, rgba(232,176,74,.10) 50%, transparent 70%); background-size:250% 100%; animation:flow 1.8s linear infinite; }
+.slot .deck { position:absolute; top:7%; bottom:7%; left:50%; width:auto; height:86%; aspect-ratio:4/5; margin:0; transform:translateX(-58%); }
+.slot-foot { display:flex; align-items:center; gap:8px; margin-top:8px; min-height:30px; font-size:13px; }
+.slot-foot .deck-nav { margin:0; flex:1; }
+.mesa-acoes { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:16px; padding-top:14px; border-top:1px solid var(--line); }
+.bloco { background:rgba(255,255,255,.015); border:1px solid var(--line); border-radius:var(--r); padding:14px; }
+#alvoBtn { border-color:rgba(232,176,74,.4); color:var(--ac); }
+@media (max-width:640px) {
+  .mesa { padding:12px; }
+  .slots:not(.um) { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:10px; margin:0 -12px; padding:0 12px 4px; scrollbar-width:none; }
+  .slots:not(.um) .slot-wrap { flex:0 0 78%; scroll-snap-align:center; }
+  .mesa-acoes > button { flex:1; }
+  .bloco { padding:0; border:0; background:none; }
+}
+
+/* ---------- login ---------- */
+#login { min-height:100vh; display:grid; place-items:center; padding:24px 0; }
+#login .card { width:100%; max-width:380px; padding:28px; }
+#login .brand { margin-bottom:22px; }
+#login h1 { font-size:24px; }
+#login button { width:100%; margin-top:14px; padding:12px; font-size:15px; }
+#loginErr { min-height:1em; margin:10px 0 0; color:var(--er); }
+
+/* ---------- celular ---------- */
+@media (max-width:640px) {
+  body { font-size:15px; }
+  .top { padding:10px var(--gut); margin-bottom:14px; }
+  .brand h1 { font-size:16px; }
+  .brand { gap:8px; }
+  #resumoTopo { font-size:11px; padding:5px 9px; max-width:52vw; }
+  .card { padding:14px; border-radius:12px; }
+  textarea, input[type=text], input[type=password] { font-size:16px; } /* evita zoom do iPhone */
+  .modos { grid-template-columns:repeat(2, 1fr); }
+  .modos .chip { padding:10px 4px; }
+  button, .btn { min-height:40px; }
+  button.mini, .btn.mini { min-height:36px; }
+  .actions > * { flex:1 1 auto; }
+  .actions .sp { display:none; }
+  .cortes { grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
+  h2.big { font-size:19px; }
+  .job-title { font-size:15px; flex-basis:100%; }
+  .tag { font-size:11.5px; }
+}
+@media (prefers-reduced-motion:reduce) { *, *::before { animation:none !important; transition:none !important; } }
+</style>
+</head>
+<body>
+<main>
+<div id="login" hidden>
+  <div class="card">
+    <div class="brand"><span class="tally"></span><h1>Painel de <span>Vídeos</span></h1></div>
+    <label class="lbl" for="senha">Senha</label>
+    <input id="senha" type="password" placeholder="Digite a senha" autocomplete="current-password" style="font-size:16px">
+    <p id="loginErr" class="mut"></p>
+    <button id="entrar">Entrar</button>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <header class="top">
+    <div class="brand"><span class="tally"></span><h1>Painel de <span>Vídeos</span></h1></div>
+    <span id="resumoTopo"></span>
+  </header>
+  <div class="layout">
+    <aside class="side">
+      <section class="card logo-card">
+        <div class="logo-row">
+          <div class="logo-prev"><span class="ph">◎</span><img id="logoImg" alt="logo" style="display:none"></div>
+          <div style="flex:1;min-width:0"><b style="font-size:13.5px">Logo da marca</b> <span class="mut" id="logoEstado" style="font-size:12px;display:block">…</span></div>
+          <label class="btn sec mini" style="cursor:pointer" title="Enquanto ativa, entra em toda criação — post, carrossel ou vídeo"><input type="file" id="logoFile" accept="image/png,image/jpeg,image/svg+xml,image/webp" hidden>Enviar</label>
+          <button class="dan mini" id="logoRemover" hidden>Remover</button>
+        </div>
+        <div class="row" id="logoTamRow" style="margin-top:10px" hidden>
+          <span class="mut" style="font-size:12.5px">Tamanho</span>
+          <input type="range" id="logoTam" min="40" max="320" step="5" value="90" style="flex:1;accent-color:var(--ac)">
+          <span class="mut" id="logoTamV" style="font:12px var(--f-mono);min-width:44px">90px</span>
+        </div>
+        <p class="mut" id="logoTamEstado" style="margin:4px 0 0;font-size:12px"></p>
+      </section>
+      <section class="card compose">
+        <div class="card-title"><b>Novo pedido</b></div>
+        <div id="prompts"></div>
+        <div class="actions">
+          <button class="sec" id="mais">+ Outro pedido</button>
+          <label class="check"><input type="checkbox" id="auto"> Enviar no WhatsApp ao terminar</label>
+          <span class="sp"></span>
+          <button id="gerar">Gerar</button>
+        </div>
+        <p class="note">Vídeos seguem pela fila. Posts e carrosséis são criados diretamente: descreva objetivo, oferta, estilo, cores e elementos; o Jev dirige a arte usando a biblioteca.</p>
+      </section>
+    </aside>
+    <section class="feed">
+      <div class="sec-head"><div class="abas"><button type="button" class="aba sel" data-aba="criar">Criar</button><button type="button" class="aba" data-aba="criacoes">Criações<span class="count" id="nCriacoes">0</span></button><button type="button" class="aba" data-aba="jev">Jev</button><button type="button" class="aba" data-aba="instagram">Instagram</button><button type="button" class="aba" data-aba="fotos">Fotos</button><button type="button" class="aba" data-aba="assessor">Assessor</button></div><span class="sp"></span></div>
+      <div class="aba-sec sel" id="aba-criar">
+        <div class="mesa">
+          <div class="mesa-info" id="mesaInfo"></div>
+          <div class="slots" id="slots"></div>
+          <div class="mesa-acoes" id="mesaAcoes" hidden>
+            <button type="button" class="sec" id="mesaLimpar">Limpar</button>
+            <button type="button" class="dan" id="mesaNaoGostei">Não gostei</button>
+            <span class="sp"></span><span class="mut" id="mesaDica"></span>
+          </div>
+        </div>
+      </div>
+      <div class="aba-sec" id="aba-jev">
+        <div class="sec-head"><span class="mut sp">Como o Jev decidiu cada post e carrossel: o código faz perguntas de múltipla escolha, o Jev dá uma nota a cada opção e a de maior nota vence. Abaixo de 50% de confiança, o código usa um padrão seguro. A versão 1 usa as escolhas dele; a 2 e a 3 usam a 2ª e a 3ª opção em tema, receita e decoração, com fundos diferentes.</span><button class="sec mini" id="jevAtualizar">Atualizar</button></div>
+        <div id="jevLista"></div>
+      </div>
+      <div class="aba-sec" id="aba-instagram">
+        <div class="card" style="padding:18px;margin-bottom:14px">
+          <h2 class="big">Contas do Instagram por projeto</h2>
+          <p class="mut">Cadastre o token no terminal. Ele fica fora do repositório e nunca aparece no painel. Depois escolha o projeto ao criar um post ou carrossel.</p>
+          <code>cd /root/documentos/projetos/meusvideos &amp;&amp; python3 tools/instagram-credentials.py add</code>
+          <p class="mut">O comando pede o ID da conta e o token de forma privada. Esta etapa cadastra a conexão; publicar pelo Instagram será configurado depois.</p>
+          <button class="sec mini" id="igAtualizar">Atualizar lista</button>
+        </div>
+        <div id="igProjetos" class="bloco"></div>
+        <div id="igComposer" class="card" style="padding:18px;margin-top:14px" hidden>
+          <div class="row"><h2 class="big sp">Agendar publicação</h2><button type="button" class="sec mini" id="igFechar">Fechar</button></div>
+          <p class="mut">Escolha os slides, confira a prévia e revise a legenda antes de agendar. Este fluxo publica imagens de feed 1:1 ou 4:5.</p>
+          <div id="igPreview" class="cortes"></div>
+          <label class="lbl">Conta do Instagram</label><select id="igConta" style="width:100%;padding:10px;background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:9px"></select>
+          <label class="lbl">Título para identificar no painel</label><input type="text" id="igTitulo" maxlength="100" style="width:100%" placeholder="Ex.: promoção de setembro">
+          <label class="lbl">Descrição que será publicada</label><textarea id="igDescricao" maxlength="2200" style="min-height:160px" placeholder="A legenda do Instagram aparece aqui. Você pode editar tudo."></textarea>
+          <div class="row"><button type="button" class="sec mini" id="igGerarLegenda">✨ Gerar título e descrição com DeepSeek</button><span class="mut" id="igLegendaEstado"></span></div>
+          <label class="lbl">Data e hora da publicação (horário deste dispositivo)</label><input type="datetime-local" id="igQuando" style="width:100%;padding:10px;background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:9px">
+          <div class="row" style="margin-top:12px"><span class="mut sp" id="igAgendarEstado"></span><button type="button" id="igAgendar">Agendar publicação</button></div>
+        </div>
+        <div class="sec-head" style="margin-top:18px"><h2 class="big sp">Agendados</h2><button class="sec mini" id="igAgendaAtualizar">Atualizar</button></div>
+        <div id="igAgenda"></div>
+      </div>
+      <div class="aba-sec" id="aba-fotos">
+        <div class="mesa" style="margin-bottom:14px">
+          <div class="mesa-info"><span class="rot">Biblioteca de fotos</span><span class="mut">O Jev escolhe a foto de cada post pela descrição. Se nenhuma servir, o DeepSeek procura uma foto real grátis (Pexels/Pixabay) e ela entra aqui.</span></div>
+          <div class="row" style="align-items:flex-end">
+            <div style="flex:1;min-width:220px"><label class="lbl" style="margin-top:0">O que aparece na foto?</label><input type="text" id="fotoDesc" placeholder="Ex.: técnico trocando a tela de um celular na bancada"></div>
+            <label class="btn" style="cursor:pointer"><input type="file" id="fotoFile" accept="image/jpeg,image/png,image/webp" hidden>Enviar foto</label>
+          </div>
+          <p class="mut" id="fotoEstado" style="margin:8px 0 0"></p>
+        </div>
+        <div class="fotos-grade" id="fotosLista"></div>
+      </div>
+      <div class="aba-sec" id="aba-assessor">
+        <div class="mesa" style="margin-bottom:14px">
+          <div class="mesa-info"><span class="rot">Assessor de prompts</span><span class="mut">Escreve prompts no seu estilo (texto + como deve ser a imagem). A cada 👍/👎 com motivo, o assessor relê tudo que você já avaliou e reescreve o que aprendeu. O Jev confere cada prompt e depois cria a imagem. 👍 manda para o botão AlvoManage.</span></div>
+          <div class="row" style="align-items:flex-end">
+            <div class="chips" id="assModo"><span class="chip sel" data-m="post">🖼️ Post</span><span class="chip" data-m="carrossel">🎠 Carrossel</span></div>
+            <input type="text" id="assTema" placeholder="Sobre o quê? (opcional — em branco = assuntos variados)" style="flex:1;min-width:200px">
+            <select id="assN" style="background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:9px"><option>5</option><option selected>10</option><option>15</option></select>
+            <button id="assGerar">Gerar prompts</button>
+          </div>
+          <p class="mut" id="assEstoque" style="margin:8px 0 0"></p>
+          <p class="mut" id="assEstado" style="margin:8px 0 0"></p>
+          <div id="assRes"></div>
+        </div>
+        <div class="bloco" style="display:grid;gap:14px">
+          <div><h2 style="margin-bottom:8px">Seu guia</h2><textarea id="assGuia" style="min-height:220px;font-size:13.5px"></textarea>
+            <div class="row" style="margin-top:6px"><span class="mut sp">Escreva do seu jeito o que quer e o que não quer. Uma regra por linha, começando com "-".</span><button class="sec mini" id="assGuiaSalvar">Salvar guia</button></div></div>
+          <div><h2 style="margin-bottom:8px">O que o assessor aprendeu <span class="mut" id="assAprendendo" style="font-size:13px;font-weight:400"></span></h2>
+            <div id="assAprendizado" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:13.5px;line-height:1.5;border:1px solid var(--line);border-radius:10px;padding:10px 12px;max-height:420px;overflow:auto"></div></div>
+          <div><h2 style="margin-bottom:8px">Seus comentários</h2><div id="assRegras" class="mut"></div></div>
+          <div><h2 style="margin-bottom:8px">Exemplos</h2>
+            <textarea id="assExTexto" placeholder="Cole um post (título e subtítulo, ou o texto do carrossel) que você achou bom ou ruim"></textarea>
+            <div class="row" style="margin-top:6px"><div class="chips" id="assExBom"><span class="chip sel" data-b="1">👍 Bom</span><span class="chip" data-b="0">👎 Ruim</span></div>
+              <input type="text" id="assExMotivo" placeholder="Por quê? (uma frase)" style="flex:1;min-width:180px"><button class="sec mini" id="assExAdd">Adicionar exemplo</button></div>
+            <div id="assExemplos" style="margin-top:10px"></div></div>
+        </div>
+      </div>
+      <div class="aba-sec" id="aba-criacoes">
+        <div class="sec-head"><span class="mut sp">Tudo o que já foi criado fica salvo aqui.</span><button class="dan mini" id="limpar">Apagar os que falharam</button></div>
+        <div class="bloco"><div id="jobs"></div></div>
+      </div>
+    </section>
+  </div>
+</div>
+</main>
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const LS = { get: (k) => { try { return localStorage.getItem(k); } catch { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch {} } };
+const fmt = (n) => Math.round(n).toLocaleString("pt-BR");
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const mb = (b) => (b / 1048576).toFixed(1) + " MB";
+const dur = (a, b) => { const s = Math.round(((b || Date.now()) - a) / 1000); return `${Math.floor(s / 60)}min ${s % 60}s`; };
+const usd = (v) => v >= 0.01 ? "US$ " + v.toFixed(2).replace(".", ",") : v > 0 ? "US$ " + v.toFixed(4).replace(".", ",") : "US$ 0";
+
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  if (r.status === 401) { showLogin(); throw new Error("login"); }
+  const d = await r.json();
+  if (!r.ok) { alert(d.erro || "Erro"); throw new Error(d.erro); }
+  return d;
+}
+function showLogin() { $("#login").hidden = false; $("#app").hidden = true; $("#senha").focus(); }
+$("#entrar").onclick = async () => {
+  const r = await fetch("api/login", { method: "POST", body: JSON.stringify({ senha: $("#senha").value }) });
+  const d = await r.json();
+  if (d.ok) start(); else $("#loginErr").textContent = d.erro;
+};
+$("#senha").onkeydown = (e) => { if (e.key === "Enter") $("#entrar").click(); };
+
+// ---------- novo vídeo ----------
+const ESTILOS_CORTE = [["bold_pop", "Destaque (palavra cresce e fica amarela)"], ["karaoke_fill", "Karaokê"], ["clean_lower", "Discreta embaixo"], ["boxed", "Em caixa"]];
+const CAPTION_STYLES = [
+  ["rapido", "Rápida", "1 a 3 palavras, grandes"],
+  ["karaoke", "Karaokê", "palavra falada em destaque"],
+  ["simples", "Simples", "frase inteira, sem efeito"],
+];
+let igProjects = [];
+async function carregaInstagram() {
+  try { igProjects = await api("api/instagram/projects"); } catch { igProjects = []; }
+  $("#igProjetos").innerHTML = igProjects.length ? igProjects.map((p) => `<div class="card" style="padding:14px;margin-bottom:8px"><b>${esc(p.project)}</b><span class="mut"> · ${p.verified ? `conexão validada${p.username ? ` com @${esc(p.username)}` : ""}` : p.hasAccountId ? "token e ID cadastrados" : "falta o ID da conta"}</span></div>`).join("") : `<p class="mut">Nenhum projeto cadastrado ainda.</p>`;
+  document.querySelectorAll(".ig-project").forEach((sel) => {
+    const old = sel.value;
+    sel.innerHTML = `<option value="">Sem projeto do Instagram</option>` + igProjects.map((p) => `<option value="${esc(p.project)}">${esc(p.project)}${p.hasAccountId ? "" : " (falta ID)"}</option>`).join("");
+    if (igProjects.some((p) => p.project === old)) sel.value = old;
+  });
+}
+$("#igAtualizar").onclick = carregaInstagram;
+function addPrompt() {
+  const n = $("#prompts").children.length + 1;
+  const w = document.createElement("div");
+  w.className = "prompt-block"; w.dataset.style = "karaoke"; w.dataset.modo = "post"; w.dataset.estilo = "bold_pop"; w.dataset.formato = "feed";
+  w.innerHTML = `<div class="modos"><span class="chip sel" data-modo="post">🖼️ Post</span><span class="chip" data-modo="carrossel">🎠 Carrossel</span><span class="chip" data-modo="video">🎬 Vídeo</span><span class="chip" data-modo="cortes">✂️ Cortes de live</span></div>
+    <div class="row"><span class="mut sp">Pedido ${n}</span><button type="button" class="sec mini alvo-btn so-post">🎯 AlvoManage</button><button type="button" class="sec mini ia-abrir so-video">✨ Montar com IA</button></div>
+    <div class="mut alvo-ctx so-post" style="margin:-2px 0 6px"></div>
+    <div class="chips so-post formatos" style="margin:0 0 8px"><span class="chip sel" data-formato="feed">⬜ Feed 1:1</span><span class="chip" data-formato="stories">📱 Stories 9:16</span></div>
+    <label class="lbl so-post">Projeto do Instagram</label><select class="ig-project so-post" style="width:100%;padding:9px;margin-bottom:8px;background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:9px"><option value="">Sem projeto do Instagram</option>${igProjects.map((p) => `<option value="${esc(p.project)}">${esc(p.project)}${p.hasAccountId ? "" : " (falta ID)"}</option>`).join("")}</select>
+    <div class="ia-box so-video"></div>
+    <textarea class="so-texto" placeholder="O que você quer no vídeo ${n}? (com vídeo anexado, pode deixar em branco)"></textarea>
+    <div class="so-cortes">
+      <p class="mut" style="margin:0 0 6px">Envie a live (ou qualquer vídeo longo com gente falando). A IA acha os melhores momentos — quantos valerem a pena — e devolve os cortes verticais 9:16, com legenda e enquadrando quem está falando.</p>
+      <input type="text" class="cortes-nome" placeholder="Nome para achar depois (opcional). Ex.: Live de sexta">
+      <label class="lbl">Legenda dos cortes</label>
+      <div class="chips">${ESTILOS_CORTE.map(([v, nome]) => `<span class="chip${v === "bold_pop" ? " sel" : ""}" data-estilo="${v}">${nome}</span>`).join("")}</div>
+    </div>
+    <label class="lbl so-video">Legenda</label>
+    <div class="styles so-video">${CAPTION_STYLES.map(([v, nome, d]) => `<div class="style-card${v === "karaoke" ? " sel" : ""}" data-v="${v}">
+      <video src="previews/${v}.mp4" autoplay loop muted playsinline></video><div><b>${nome}</b><small>${d}</small></div></div>`).join("")}</div>
+    <label class="lbl"><span class="so-video">Seu vídeo para editar (opcional)</span><span class="so-cortes">A live (obrigatório — até 2 GB)</span><span class="so-post">Escreva como um briefing: objetivo, produto ou serviço, oferta, estilo, cores, elementos e chamada. O Jev interpreta e dirige a composição; o texto inteiro não será colocado na arte.</span></label>
+    <label class="drop so-drop"><input type="file" accept="video/*"><span class="nome">📎 Escolher vídeo…</span><button type="button" class="sec mini x" hidden>Remover</button></label>`;
+  const PH = {
+    video: `O que você quer no vídeo ${n}? (com vídeo anexado, pode deixar em branco)`,
+    post: `Descreva o post ${n}. Ex.: promoção de limpeza de pele, 20% nesta semana, elegante, tons claros, folhas discretas e chamada para agendar.`,
+    carrossel: `As frases do carrossel ${n} — suas palavras. Separe cada slide com || : frase 1 | legenda || frase 2 | legenda. O Jev escolhe o resto.`,
+    cortes: "",
+  };
+  w.querySelector(":scope > textarea").placeholder = PH.post;
+  w.querySelectorAll(`.chip[data-modo]`).forEach((c) => (c.onclick = () => {
+    w.dataset.modo = c.dataset.modo;
+    w.querySelectorAll(`.chip[data-modo]`).forEach((o) => o.classList.toggle("sel", o === c));
+    w.querySelector(":scope > textarea").placeholder = PH[c.dataset.modo] || "";
+  }));
+  w.querySelectorAll(`.chip[data-formato]`).forEach((c) => (c.onclick = () => {
+    w.dataset.formato = c.dataset.formato;
+    w.querySelectorAll(`.chip[data-formato]`).forEach((o) => o.classList.toggle("sel", o === c));
+  }));
+  w.querySelectorAll(`.chip[data-estilo]`).forEach((c) => (c.onclick = () => {
+    w.dataset.estilo = c.dataset.estilo;
+    w.querySelectorAll(`.chip[data-estilo]`).forEach((o) => o.classList.toggle("sel", o === c));
+  }));
+  w.querySelectorAll(".style-card").forEach((c) => c.onclick = () => {
+    w.dataset.style = c.dataset.v;
+    w.querySelectorAll(".style-card").forEach((o) => o.classList.toggle("sel", o === c));
+  });
+  const file = $("input[type=file]", w), nome = $(".nome", w), x = $(".x", w);
+  file.onchange = () => {
+    const f = file.files[0]; if (!f) return;
+    delete w.dataset.bruto; w.dataset.enviando = "1"; x.hidden = true;
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "api/upload?nome=" + encodeURIComponent(f.name));
+    xhr.upload.onprogress = (e) => { nome.textContent = `⏫ ${f.name} — ${Math.round(e.loaded / e.total * 100)}%`; };
+    xhr.onload = () => {
+      delete w.dataset.enviando;
+      const d = JSON.parse(xhr.responseText || "{}");
+      if (xhr.status === 200) { w.dataset.bruto = d.arquivo; nome.textContent = `✅ ${f.name} (${mb(d.tamanho)})`; x.hidden = false; }
+      else { nome.textContent = `❌ ${d.erro || "falhou o envio"}`; file.value = ""; }
+    };
+    xhr.onerror = () => { delete w.dataset.enviando; nome.textContent = "❌ falhou o envio (conexão)"; file.value = ""; };
+    xhr.send(f);
+  };
+  x.onclick = (e) => { e.preventDefault(); delete w.dataset.bruto; file.value = ""; nome.textContent = "📎 Escolher vídeo…"; x.hidden = true; };
+  $(".ia-abrir", w).onclick = () => montarComIA(w);
+  $(".alvo-btn", w).onclick = () => promptAlvo(w);
+  $("#prompts").append(w);
+}
+
+// ---------- AlvoManage: prompt pronto, cada clique um contexto diferente (ordem embaralhada guardada no navegador) ----------
+// área de cada prompt, para o "não gostei" trazer um de OUTRO assunto
+const AREAS = [["financeiro", /caixa|fluxo|contas a receber|fiado|lucr|dinheiro|financ|cr[eé]dito|desconto/i], ["estoque", /estoque|prateleira|cota[cç][aã]o|importa|transfer[eê]ncia|pe[cç]as/i],
+  ["os", /\bOS\b|ordem de servi|or[cç]amento|garantia|bancada|risco|conserto|hist[oó]rico|acompanha|assist[eê]ncia/i], ["vendas", /PDV|venda|balc[aã]o|cupom|troca|devolu/i],
+  ["agenda", /agenda|lembrete|hor[aá]rio/i], ["equipe", /comiss[aã]o|equipe|t[eé]cnico|operador/i], ["lojas", /v[aá]rias lojas|duas lojas|mais de uma loja/i]];
+const areaDe = (x) => (AREAS.find(([, re]) => re.test(x.contexto + " " + x.prompt)) || ["geral"])[0];
+// 🎯 AlvoManage: o assessor deixa prompts PRONTOS num estoque (e edita os prontos quando aprende algo); o clique só tira o próximo.
+// Estoque vazio: avisa a reposição; nunca entrega silenciosamente um prompt antigo sem direção visual.
+async function promptAlvo(w) {
+  const modo = w.dataset.modo === "carrossel" ? "carrossel" : "post", ctx = $(".alvo-ctx", w), ta = w.querySelector(":scope > textarea");
+  const btn = $(".alvo-btn", w);
+  let item = null, nota = "", falha = "";
+  btn.disabled = true;
+  try {
+    const d = await api("api/assessor/proximo", { method: "POST", body: JSON.stringify({ modo }) });
+    if (!d.vazio) { item = d; nota = `${d.restam} pronto(s) no estoque${d.aprendendo ? " · ajustando os prontos com a sua última lição" : ""}`; }
+    else falha = d.abastecimento?.erro ? `Reposição pausada: ${d.abastecimento.erro}` : "O assessor está preparando o estoque. Tente novamente em instantes.";
+  } catch (e) { falha = e.message; }
+  btn.disabled = false;
+  if (!item) { ctx.textContent = falha || "O estoque está sendo reposto."; return; }
+  ta.value = item.prompt; delete w.dataset.alvo;
+  ta.style.height = "auto"; ta.style.height = Math.min(ta.scrollHeight + 4, 560) + "px";  // prompt detalhado: mostra o bloco Imagem inteiro
+  ctx.innerHTML = `🎯 ${esc(item.contexto)} — ${esc(nota)} · clique de novo para outro <button type="button" class="dan mini alvo-ruim" style="margin-left:6px">👎 Não gostei do prompt</button>`;
+  $(".alvo-ruim", w).onclick = async () => {
+    const motivo = prompt("O que não gostou nesse prompt? (o assessor aprende e ajusta os prompts prontos)");
+    if (motivo === null) return;
+    if (motivo.trim()) await api("api/assessor/avaliar", { method: "POST", body: JSON.stringify({ prompt: item.prompt, contexto: item.contexto, modo, nota: "ruim", motivo }) });
+    ta.value = ""; promptAlvo(w);
+  };
+}
+// lista pronta (painel/alvomanage-prompts.json): reserva para quando o assessor não responder
+async function promptBanco(w, evitarArea) {
+  const modo = w.dataset.modo === "carrossel" ? "carrossel" : "post";
+  let banco; try { banco = await api("api/alvomanage"); } catch { return; }
+  const lista = banco[modo] || [];
+  if (!lista.length) return alert(`Todos os prompts do AlvoManage de ${modo} já foram usados.`);
+  const k = "painel.alvo." + modo, livres = new Set(lista.map((x) => x.id));
+  let fila = []; try { fila = JSON.parse(LS.get(k) || "[]").filter((id) => livres.has(id) && id !== w.dataset.alvo); } catch {}
+  if (!fila.length) fila = lista.map((x) => x.id).filter((id) => id !== w.dataset.alvo || lista.length === 1).sort(() => Math.random() - 0.5);
+  let pos = evitarArea ? fila.findIndex((id) => { const x = lista.find((y) => y.id === id); return x && areaDe(x) !== evitarArea; }) : 0;
+  if (pos < 0) pos = 0;
+  const sorteado = fila.splice(pos, 1)[0], item = lista.find((x) => x.id === sorteado); LS.set(k, JSON.stringify(fila));
+  const ta = w.querySelector(":scope > textarea");
+  ta.value = item.prompt; w.dataset.alvo = item.id;
+  ta.oninput = () => { if (!ta.value.trim()) { delete w.dataset.alvo; $(".alvo-ctx", w).textContent = ""; } };
+  $(".alvo-ctx", w).innerHTML = `🎯 ${esc(item.contexto)} — ${lista.length} ainda não usados · clique de novo para outro <button type="button" class="dan mini alvo-ruim" style="margin-left:6px">👎 Não gostei do prompt</button>`;
+  // não gostei: some da lista para sempre e já carrega outro
+  $(".alvo-ruim", w).onclick = async () => {
+    const id = w.dataset.alvo; if (!id) return;
+    const motivo = prompt("O que não gostou nesse prompt? (opcional — ensina o assessor)");
+    if (motivo === null) return;
+    await api("api/alvomanage/descartar", { method: "POST", body: JSON.stringify({ id, motivo }) });
+    ta.value = ""; delete w.dataset.alvo;
+    promptBanco(w, areaDe(item));  // o próximo vem de outro assunto
+  };
+}
+
+// ---------- assistente: IA da assinatura pergunta, escreve 3 prompts; o Jev escolhe (julgando em inglês) ----------
+async function montarComIA(w) {
+  const box = $(".ia-box", w), alvo = w.querySelector(":scope > textarea");
+  const carregando = (t) => (box.innerHTML = `<div class="ia"><span class="mut">⏳ ${t}</span></div>`);
+  let sessao = null;
+  box.innerHTML = `<div class="ia"><h4>✨ Montar o prompt com IA</h4>
+    <textarea class="ia-ideia" placeholder="Escreva sua ideia, um exemplo de como quer o vídeo, ou cole um roteiro.">${esc(alvo.value)}</textarea>
+    <div class="row" style="margin-top:6px"><span class="mut sp">A IA estrutura a sua ideia e conversa com você, rodada por rodada, até o prompt ficar completo para os agentes.</span>
+    <button type="button" class="sec mini ia-fechar">Fechar</button><button type="button" class="mini ia-ir">Começar</button></div></div>`;
+  $(".ia-fechar", box).onclick = () => (box.innerHTML = "");
+  const respostasDaTela = () => Object.fromEntries([...box.querySelectorAll("input[data-r]")].map((i) => [i.dataset.r, i.value.trim()]));
+  const livreDaTela = () => ($(".ia-livre", box)?.value || "").trim();
+
+  function mostraRodada(r) {
+    box.innerHTML = `<div class="ia"><h4>✨ Rodada ${r.rodada}${r.pronto ? " — a IA acha que está tudo definido" : ""}</h4>
+      ${r.entendi ? `<div class="mut">${esc(r.entendi)}</div>` : ""}
+      <details open class="opc"><summary><b>Como o vídeo está ficando</b></summary><pre>${esc(r.estrutura || "")}</pre></details>
+      ${r.perguntas.map((q) => `<div class="q"><b>${esc(q.pergunta)}</b></div>
+        <div class="chips">${(q.sugestoes || []).map((s) => `<span class="chip" data-q="${esc(q.id)}">${esc(s)}</span>`).join("")}</div>
+        <input type="text" data-r="${esc(q.id)}" placeholder="ou responda do seu jeito (em branco = a IA decide)">`).join("")}
+      <label class="lbl">Quer mudar ou acrescentar algo? (a IA vai perguntar em cima disso)</label>
+      <textarea class="ia-livre" placeholder="Ex.: troca a abertura por…, tira a parte de…, coloca uma cena de…"></textarea>
+      <div class="row" style="margin-top:8px"><button type="button" class="sec mini ia-fechar">Fechar</button><span class="sp"></span>
+        <button type="button" class="${r.pronto ? "sec " : ""}mini ia-continuar">Responder e continuar</button>
+        <button type="button" class="${r.pronto ? "" : "sec "}mini ia-gerar">Gerar prompt final</button></div></div>`;
+    box.querySelectorAll(".chip").forEach((c) => (c.onclick = () => {
+      box.querySelectorAll(`.chip[data-q="${c.dataset.q}"]`).forEach((o) => o.classList.toggle("sel", o === c));
+      $(`input[data-r="${c.dataset.q}"]`, box).value = c.textContent;
+    }));
+    $(".ia-fechar", box).onclick = () => (box.innerHTML = "");
+    $(".ia-continuar", box).onclick = async () => {
+      const body = JSON.stringify({ sessao, respostas: respostasDaTela(), livre: livreDaTela() });
+      carregando("A IA está atualizando o vídeo com o que você respondeu… (uns 20 segundos)");
+      try { mostraRodada(await api("api/assistente/rodada", { method: "POST", body })); } catch { box.innerHTML = ""; }
+    };
+    $(".ia-gerar", box).onclick = async () => {
+      const body = JSON.stringify({ sessao, respostas: respostasDaTela(), livre: livreDaTela() });
+      carregando("Montando o prompt completo para os agentes em 3 versões, e o Jev escolhendo a melhor… (1 a 2 minutos)");
+      try { mostraOpcoes(await api("api/assistente/prompts", { method: "POST", body })); } catch { box.innerHTML = ""; }
+    };
+  }
+
+  function mostraOpcoes(r) {
+    const j = r.jev || {};
+    const aviso = j.indisponivel ? "O Jev não respondeu: a escolha é sua."
+      : j.incerto ? `O Jev ficou em dúvida (confiança ${Math.round(j.confianca * 100)}%): marquei a de melhor nota, mas vale você ler as três.`
+      : `Escolha do Jev com confiança ${Math.round(j.confianca * 100)}%.`;
+    box.innerHTML = `<div class="ia"><h4>✨ Prompt completo para os agentes, em 3 versões — ${esc(aviso)}</h4>
+      ${r.opcoes.map((o) => `<div class="opc ${o.id === r.escolhida ? "best" : ""}">
+        <div class="row"><b class="sp">${o.id === r.escolhida ? "⭐ " : ""}${esc(o.titulo)}</b>
+          ${o.nota ? `<span class="tag">fiel ao que você decidiu ${o.nota.fiel.toFixed(1)}/2</span><span class="tag">completo ${o.nota.completo.toFixed(1)}/2</span><span class="tag ${o.nota.inventa >= 0.5 ? "er" : ""}">inventou fato ${Math.round(o.nota.inventa * 100)}%</span>` : ""}
+          ${o.duracao_s ? `<span class="tag">${o.duracao_s} s</span>` : ""}${j.probabilidades ? `<span class="tag">Jev ${Math.round((j.probabilidades[o.id] || 0) * 100)}%</span>` : ""}</div>
+        <div class="mut" style="margin:4px 0">${esc(o.abordagem || "")}</div>
+        <details><summary class="mut">Ver o prompt completo</summary><pre>${esc(o.prompt)}</pre></details>
+        <div class="row" style="margin-top:6px"><span class="sp"></span><button type="button" class="mini ${o.id === r.escolhida ? "" : "sec"}" data-usar="${o.id}">Usar este prompt</button></div></div>`).join("")}
+      ${r.gosto?.length ? `<details class="opc"><summary><b>🧠 O que aprendi do seu gosto para vídeos de ${esc(r.tipo)}</b> <span class="mut">(uso nas próximas conversas)</span></summary><ul>${r.gosto.map((g) => `<li>${esc(g)}</li>`).join("")}</ul></details>` : ""}
+      <div class="row" style="margin-top:8px"><span class="mut sp">Depois de usar, você ainda pode editar o texto antes de gerar.</span><button type="button" class="sec mini ia-fechar">Fechar</button></div></div>`;
+    $(".ia-fechar", box).onclick = () => (box.innerHTML = "");
+    box.querySelectorAll("[data-usar]").forEach((b) => (b.onclick = () => {
+      alvo.value = r.opcoes.find((o) => o.id === b.dataset.usar).prompt;
+      box.innerHTML = ""; alvo.focus();
+    }));
+  }
+
+  $(".ia-ir", box).onclick = async () => {
+    const texto = $(".ia-ideia", box).value.trim();
+    if (texto.length < 10) return alert("Escreva um pouco mais da sua ideia.");
+    carregando("A IA está estruturando a sua ideia… (uns 20 segundos)");
+    try { const r = await api("api/assistente/perguntas", { method: "POST", body: JSON.stringify({ texto }) }); sessao = r.sessao; mostraRodada(r); } catch { box.innerHTML = ""; }
+  };
+}
+
+$("#mais").onclick = addPrompt;
+$("#gerar").onclick = async () => {
+  const blocks = [...$("#prompts").children];
+  if (blocks.some((w) => w.dataset.enviando)) return alert("Espere o vídeo terminar de enviar.");
+  if (blocks.some((w) => w.dataset.modo === "cortes" && !w.dataset.bruto)) return alert("Nos cortes, envie a live primeiro.");
+  if (blocks.some((w) => (w.dataset.modo === "post" || w.dataset.modo === "carrossel") && !w.querySelector(":scope > textarea").value.trim())) return alert("Escreva o que você quer no post/carrossel.");
+  const items = blocks.map((w) => w.dataset.modo === "cortes"
+    ? { modo: "cortes", prompt: $(".cortes-nome", w).value.trim(), cortes: { estilo: w.dataset.estilo }, brutos: [w.dataset.bruto] }
+    : { modo: w.dataset.modo, prompt: w.querySelector(":scope > textarea").value.trim(), captionStyle: w.dataset.style, brutos: w.dataset.bruto ? [w.dataset.bruto] : [], ...(w.dataset.alvo?.startsWith(w.dataset.modo + ":") ? { alvo: w.dataset.alvo } : {}), formato: w.dataset.formato, project: $(".ig-project", w).value })
+    .filter((it) => it.prompt || it.brutos.length);
+  if (!items.length) return;
+  const faltando = items.flatMap((it) => it.prompt.match(/\[[^\]\n]{2,40}\]/g) || []);
+  if (faltando.length && !confirm(`O pedido ainda tem campo para preencher: ${[...new Set(faltando)].join(", ")}.\nGerar assim mesmo?`)) return;
+  const diretos = items.filter((it) => it.modo === "post" || it.modo === "carrossel");
+  const fila = items.filter((it) => it.modo !== "post" && it.modo !== "carrossel");
+  const botao = $("#gerar"), texto = botao.textContent;
+  botao.disabled = true;
+  criando = diretos.length ? (diretos.some((d) => d.modo === "carrossel") ? "carrossel" : "imagem") : ""; if (criando) palco(ultimos);
+  document.querySelector('.aba[data-aba="criar"]').click();
+  botao.textContent = diretos.length ? "Criando imagem…" : "Enviando…";
+  try {
+    const ids = [];
+    if (diretos.length) ids.push(...((await api("api/posts/direto", { method: "POST", body: JSON.stringify({ items: diretos, autoSend: $("#auto").checked }) })).ids || []));
+    if (fila.length) ids.push(...((await api("api/jobs", { method: "POST", body: JSON.stringify({ items: fila, autoSend: $("#auto").checked }) })).ids || []));
+    if (ids.length) guardaMesa(ids);
+    $("#prompts").innerHTML = ""; addPrompt(); poll(true);
+  } finally { botao.disabled = false; botao.textContent = texto; criando = ""; palco(ultimos); }
+};
+$("#limpar").onclick = async () => {
+  if (!confirm("Apagar da lista (e do disco) todos os vídeos que falharam ou foram cancelados?")) return;
+  const d = await api("api/limpar-falhos", { method: "POST" }); poll(true); alert(`${d.apagados} apagado(s).`);
+};
+
+// ---------- aba Jev ----------
+const pct = (v) => Math.round((v || 0) * 100) + "%";
+function jevQuestao(nome, q) {
+  const r = q.resposta || {}, probs = Object.entries(r.probabilities || {}).sort((a, b) => b[1] - a[1]).slice(0, 5);
+  const baixa = r.confidence != null && r.confidence < 0.5 && r.type === "choice";
+  const corpo = probs.length ? probs.map(([o, v]) => `<div class="pb ${o === r.choice ? "win" : ""}"><span class="nm"><i style="width:${pct(v)}"></i>${esc(o)}</span><span class="pc">${pct(v)}</span></div>`).join("")
+    : `<div class="mut">${esc(r.type === "noul" ? `sim/não: ${pct(r.noul)} de "sim"` : JSON.stringify(r).slice(0, 160))}</div>`;
+  return `<div class="jev-q ${baixa ? "baixa" : ""}"><div class="qn"><b>${esc(nome)}</b>${r.confidence != null ? `<span class="tag ${baixa ? "er" : ""}">confiança ${pct(r.confidence)}</span>` : ""}</div>
+    <div class="ins">${esc(q.instrucao || "")}</div>${corpo}${baixa ? `<div class="mut" style="margin-top:6px;color:var(--er)">Confiança baixa: o código usou o padrão.</div>` : ""}</div>`;
+}
+function jevCard(j) {
+  const d = j.jev, ch = d.chamadas || [], ms = ch.reduce((s, c) => s + (c.ms || 0), 0), custo = ch.reduce((s, c) => s + (c.custo || 0), 0);
+  return `<div class="jev-card"><div class="jev-top"><div class="thumbs">${(j.slides || []).map((f) => `<img src="files/${j.id}/slides/${f}" alt="" loading="lazy">`).join("")}</div>
+    <div style="flex:1;min-width:0"><div class="row"><span class="tag">${j.modo === "carrossel" ? "Carrossel" : "Post"}</span><span class="mut">${new Date(j.createdAt).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" })}</span>
+      <span class="tag">${ch.length} pergunta(s) ao Jev</span><span class="tag">${(ms / 1000).toFixed(1).replace(".", ",")} s</span><span class="tag">${usd(custo)}</span></div>
+      <div style="margin-top:6px;font-weight:600;overflow-wrap:anywhere">${esc((d.pedido || j.prompt).slice(0, 260))}</div></div></div>
+    ${ch.map((c, i) => `<div class="jev-call"><h4>${i + 1}. ${esc(c.etapa)} · ${((c.ms || 0) / 1000).toFixed(1).replace(".", ",")} s${c.erro ? ` · <span style="color:var(--er)">${esc(c.erro)}</span>` : ""}</h4>
+      <div class="jev-qs">${Object.entries(c.perguntas || {}).map(([k, q]) => jevQuestao(k, q)).join("")}</div></div>`).join("")}
+    ${d.fotos?.length ? `<div class="jev-call"><h4>Fotos</h4>${d.fotos.map((f) => (f.slide && f.decisao ? `<div style="margin-top:8px;font-weight:600">Slide ${f.slide}</div>` : "") + (f.decisao ? `<div class="mut">Jev: <b>${esc(f.decisao)}</b> (${pct(f.jev)} de "a foto mostra o assunto")</div>`
+      : f.biblioteca ? `<div class="mut">Das suas fotos (escolha do Jev): ${esc(f.descricao)}</div>`
+      : f.erro ? `<div class="mut" style="color:var(--er)">Busca falhou: ${esc(f.erro)}</div>`
+      : `<div class="mut">Busca ${f.tentativa} (DeepSeek): “${esc(f.busca)}” · ${f.resultados} fotos achadas · ${f.fotos?.length ? `✅ ${f.fotos.length} foto(s) aprovada(s)` : "❌ nenhuma mostrava exatamente o assunto"}${f.motivo ? ` — ${esc(f.motivo)}` : ""}${f.notas?.length ? ` · melhores notas: ${f.notas.join(", ")} (entra acima de 5; 5 cravado o Jev decide)` : ""} · ${usd(f.custo || 0)}</div>${(f.conferidas || []).map((c) => `<div class="mut" style="margin-left:14px">↳ Jev conferiu “${esc(c.descricao)}”: ${c.aprovada ? "✅ mostra o assunto" : "❌ não mostra exatamente — ficou fora"} (${pct(c.jev)})</div>`).join("")}`)).join("")}</div>` : ""}
+    ${d.versoes?.length ? `<div class="jev-call"><h4>O que cada versão usou</h4><div class="tbl"><table><tr><th>Versão</th><th>Fundo</th><th>Ícone</th><th>Enfeite</th><th>Destaque</th><th>Foto</th></tr>${d.versoes.map((v) => `<tr><td>${v.n}</td><td>${esc(v.fundo_estilo || "")}</td><td>${esc(v.icone_estilo || "—")}</td><td>${esc(v.enfeite || "—")}</td><td>${esc(v.destaque || "—")}</td><td>${esc(v.foto_layout ? v.foto_layout + " · " + (v.foto_efeito || "") : "—")}</td></tr>`).join("")}</table></div></div>` : ""}
+  </div>`;
+}
+async function carregaJev() {
+  try { const l = await api("api/jev"); $("#jevLista").innerHTML = l.map(jevCard).join("") || `<p class="mut">Nenhuma criação com registro do Jev ainda. Os registros começam nos posts e carrosséis gerados a partir de agora.</p>`; } catch {}
+}
+$("#jevAtualizar").onclick = carregaJev;
+
+// ---------- aba Fotos ----------
+async function carregaFotos() {
+  try {
+    const l = await api("api/fotos");
+    $("#fotosLista").innerHTML = l.map((f) => `<div class="foto-card"><a href="foto/${f.arquivo.split("/").pop()}" target="_blank"><img src="foto/${f.arquivo.split("/").pop()}" alt="" loading="lazy"></a>
+      <div class="fc"><textarea data-foto="${f.id}">${esc(f.descricao)}</textarea>
+        <div class="org">${esc(f.origem?.startsWith("http") ? (f.credito || "banco de fotos") + " · busca: " + (f.busca || "") : f.origem || "")}</div>
+        <div class="row"><button class="sec mini" data-salvafoto="${f.id}">Salvar descrição</button><span class="sp"></span><button class="dan mini" data-tirafoto="${f.id}">Remover</button></div></div></div>`).join("")
+      || `<p class="mut">Nenhuma foto ainda. Envie as suas ou gere um post: quando o DeepSeek achar uma foto, ela aparece aqui.</p>`;
+  } catch {}
+}
+document.addEventListener("click", async (e) => {
+  const sv = e.target.closest("[data-salvafoto]"), rm = e.target.closest("[data-tirafoto]");
+  if (sv) { await api(`api/fotos/${sv.dataset.salvafoto}/descricao`, { method: "POST", body: JSON.stringify({ descricao: $(`textarea[data-foto="${sv.dataset.salvafoto}"]`).value }) }); sv.textContent = "Salvo ✓"; }
+  if (rm && confirm("Remover esta foto da biblioteca?")) { await api(`api/fotos/${rm.dataset.tirafoto}/remover`, { method: "POST" }); carregaFotos(); }
+});
+$("#fotoFile").addEventListener("change", () => {
+  const f = $("#fotoFile").files[0], d = $("#fotoDesc").value.trim(); if (!f) return;
+  if (d.length < 5) { $("#fotoFile").value = ""; return alert("Escreva antes o que aparece na foto: o Jev escolhe pela descrição."); }
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", `api/fotos?nome=${encodeURIComponent(f.name)}&descricao=${encodeURIComponent(d)}`);
+  xhr.upload.onprogress = (ev) => ($("#fotoEstado").textContent = `Enviando… ${Math.round(ev.loaded / ev.total * 100)}%`);
+  xhr.onload = () => { const r = JSON.parse(xhr.responseText || "{}"); $("#fotoEstado").textContent = xhr.status === 200 ? "Foto salva ✓" : "❌ " + (r.erro || "falhou"); $("#fotoFile").value = ""; if (xhr.status === 200) $("#fotoDesc").value = ""; carregaFotos(); };
+  xhr.send(f);
+});
+
+// ---------- Assessor de prompts ----------
+let assModo = "post";
+const chipsUm = (sel, attr, cb) => document.querySelectorAll(`${sel} .chip`).forEach((c) => (c.onclick = () => {
+  document.querySelectorAll(`${sel} .chip`).forEach((o) => o.classList.toggle("sel", o === c)); cb(c.dataset[attr]); }));
+chipsUm("#assModo", "m", (v) => (assModo = v));
+let assBom = true; chipsUm("#assExBom", "b", (v) => (assBom = v === "1"));
+async function carregaAssessor() {
+  try {
+    const d = await api("api/assessor");
+    if (document.activeElement !== $("#assGuia")) $("#assGuia").value = d.guia;
+    $("#assAprendizado").innerHTML = d.aprendizado  // markdown simples do perfil: ## título, **negrito**, *exemplo*
+      ? esc(d.aprendizado.trim()).replace(/^## (.+)$/gm, '<b style="color:var(--ac,#f5b301)">$1</b>').replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\*(.+?)\*/g, '<i class="mut">$1</i>')
+      : "Ainda não aprendeu nada: avalie alguns prompts com 👍/👎 e um motivo.";
+    $("#assAprendendo").textContent = d.aprendendo ? "· aprendendo com a sua última avaliação…" : "";
+    $("#assEstoque").textContent = `Prontos no estoque do botão 🎯 AlvoManage: ${d.estoque.post} post(s) · ${d.estoque.carrossel} carrossel(éis)${d.aprendendo ? " — ajustando com a sua última lição…" : ""}`;
+    if (d.abastecimento?.rodando) $("#assEstoque").textContent += " — preparando mais prompts…";
+    if (d.abastecimento?.erro) $("#assEstoque").textContent += ` — reposição pausada: ${d.abastecimento.erro}. Nova tentativa às ${new Date(d.abastecimento.tentar_em).toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"})}.`;
+
+    $("#assRegras").innerHTML = d.regras.length ? d.regras.map((r, i) => `<div class="row" style="border-bottom:1px solid var(--line);padding:6px 0"><span class="sp" style="color:var(--tx)">${esc(r.regra)}</span><button class="dan mini" data-tiraregra="${i}">✕</button></div>`).join("")
+      : "Nenhuma ainda. Cada 👍/👎 com motivo vira uma regra aqui.";
+    $("#assExemplos").innerHTML = d.exemplos.map((e, i) => `<div class="row" style="border-bottom:1px solid var(--line);padding:6px 0;align-items:flex-start"><span class="tag ${e.bom ? "ok" : "er"}">${e.bom ? "👍" : "👎"}</span>
+      <span class="sp" style="font-size:13px;overflow-wrap:anywhere">${esc(e.texto.slice(0, 220))}${e.motivo ? `<br><span class="mut">por quê: ${esc(e.motivo)}</span>` : ""}</span><button class="dan mini" data-tiraex="${i}">✕</button></div>`).join("");
+  } catch {}
+}
+$("#assGuiaSalvar").onclick = async () => { await api("api/assessor/guia", { method: "POST", body: JSON.stringify({ texto: $("#assGuia").value }) }); $("#assGuiaSalvar").textContent = "Salvo ✓"; setTimeout(() => ($("#assGuiaSalvar").textContent = "Salvar guia"), 1500); };
+$("#assExAdd").onclick = async () => {
+  await api("api/assessor/exemplo", { method: "POST", body: JSON.stringify({ texto: $("#assExTexto").value, bom: assBom, motivo: $("#assExMotivo").value }) });
+  $("#assExTexto").value = ""; $("#assExMotivo").value = ""; carregaAssessor();
+};
+const assResultados = [];
+$("#assGerar").onclick = async () => {
+  const b = $("#assGerar"); b.disabled = true; $("#assEstado").textContent = "O assessor está escrevendo e o Jev está conferindo… (uns 10 a 40 segundos)"; $("#assRes").innerHTML = "";
+  try {
+    const d = await api("api/assessor/gerar", { method: "POST", body: JSON.stringify({ modo: assModo, tema: $("#assTema").value, n: +$("#assN").value }) });
+    assResultados.length = 0; assResultados.push(...d.prompts.map((p) => ({ ...p, modo: assModo })));
+    $("#assEstado").textContent = `${d.prompts.length} aprovado(s) pelo Jev${d.reprovados ? ` · ${d.reprovados} descartado(s) por não seguir o guia` : ""} · ${usd(d.custo || 0)}`;
+    $("#assRes").innerHTML = assResultados.map((p, i) => `<div class="opc" id="assp-${i}"><div class="row"><b class="sp">${esc(p.contexto || "")}</b><span class="tag">Jev ${pct(p.nota)}</span></div>
+      <pre style="margin-top:6px;max-height:none">${esc(p.prompt.replace(/\s*Post do Instagram do AlvoManage[^\n]*/, "").replaceAll(" || ", "\n"))}</pre>
+      <div class="row" style="margin-top:6px"><button class="mini" data-assusar="${i}">Usar agora</button><span class="sp"></span><button class="sec mini" data-assboa="${i}">👍 Bom</button><button class="dan mini" data-assruim="${i}">👎 Ruim</button></div></div>`).join("");
+  } catch (e) { $("#assEstado").textContent = e.message === "login" ? "Entre de novo e gere outra vez." : `Não deu certo: ${e.message}`; } finally { b.disabled = false; }
+};
+document.addEventListener("click", async (e) => {
+  const el = (a) => e.target.closest(`[${a}]`);
+  let x;
+  if ((x = el("data-tiraregra"))) { await api("api/assessor/regra/remover", { method: "POST", body: JSON.stringify({ i: +x.dataset.tiraregra }) }); carregaAssessor(); }
+  if ((x = el("data-tiraex"))) { await api("api/assessor/exemplo/remover", { method: "POST", body: JSON.stringify({ i: +x.dataset.tiraex }) }); carregaAssessor(); }
+  if ((x = el("data-assusar"))) {
+    const p = assResultados[+x.dataset.assusar], w = $("#prompts .prompt-block");
+    w.querySelector(`.chip[data-modo="${p.modo}"]`)?.click();
+    w.querySelector(":scope > textarea").value = p.prompt; delete w.dataset.alvo;
+    document.querySelector('.aba[data-aba="criar"]').click(); window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  const av = el("data-assboa") || el("data-assruim");
+  if (av) {
+    const boa = av.hasAttribute("data-assboa"), i = +(av.dataset.assboa ?? av.dataset.assruim), p = assResultados[i];
+    const motivo = prompt(boa ? "O que ficou bom? (opcional — vira regra)" : "O que ficou ruim? (uma frase — vira regra)");
+    if (motivo === null || (!boa && !motivo.trim())) return;
+    await api("api/assessor/avaliar", { method: "POST", body: JSON.stringify({ prompt: p.prompt, contexto: p.contexto, modo: p.modo, nota: boa ? "boa" : "ruim", motivo }) });
+    $(`#assp-${i}`).style.opacity = ".45"; $(`#assp-${i}`).querySelector(".row:last-child").innerHTML = `<span class="mut">${boa ? "👍 guardado no botão AlvoManage" : "👎 anotado"}${motivo.trim() ? " · virou regra" : ""}</span>`;
+    carregaAssessor();
+  }
+});
+
+// ---------- lista ----------
+const STATUS = { queued: ["Na fila", ""], running: ["Fazendo", "ac"], done: ["Pronto", "ok"], failed: ["Falhou", "er"], canceled: ["Cancelado", "er"] };
+function custo(j) {
+  const t = j.tokens; if (!t?.agentes?.length) return "";
+  const rows = t.agentes.map((a) => `<tr><td>${esc(a.agente)}</td><td>${esc(a.modelo)}</td><td>${fmt(a.entrada)}</td><td>${fmt(a.cache)}</td><td>${fmt(a.saida)}</td>
+    <td>${a.semPreco ? "sem preço" : a.assinatura ? `assinatura<br><span class="mut">≈ ${usd(a.equivApi)} API</span>` : usd(a.custo)}</td></tr>`).join("");
+  return `<div class="box"><h3>Custo real: ${usd(t.total)}${t.equivApi ? ` <span class="mut">+ Claude na assinatura (≈ ${usd(t.equivApi)} se fosse API)</span>` : ""}</h3>
+    <div class="tbl"><table><tr><th>Agente</th><th>Modelo</th><th>Entrada</th><th>Cache</th><th>Saída</th><th>Custo</th></tr>${rows}
+    <tr class="total"><td>Total</td><td></td><td>${fmt(t.agentes.reduce((s, a) => s + a.entrada, 0))}</td><td>${fmt(t.agentes.reduce((s, a) => s + a.cache, 0))}</td><td>${fmt(t.agentes.reduce((s, a) => s + a.saida, 0))}</td><td>${usd(t.total)}</td></tr></table></div>
+    <div class="mut" style="margin-top:4px">Tokens pelo preço oficial de cada modelo (DeepSeek mais barato fora do horário de pico).</div></div>`;
+}
+function posPronto(j) {
+  if (j.status !== "done") return "";
+  const av = j.avaliacao, post = j.modo === "post" || j.modo === "carrossel", nv = post ? versoes(j).filter(([v]) => v).length : 0;
+  return `<div class="box"><h3>${j.modo === "post" || j.modo === "carrossel" ? "Editar esta arte" : "Editar este vídeo"}</h3>
+      <textarea data-k="ed-${j.id}" placeholder="Escreva o que mudar. Ex.: troque a música, deixe a legenda maior, corte o começo…"></textarea>
+      <div class="row" style="margin-top:6px"><span class="mut sp">Gera uma nova versão; esta continua salva.</span><button class="mini" onclick="editar('${j.id}')">Pedir edição</button></div></div>
+    <div class="box rate"><h3>Avaliar (opcional — ${post ? "ensina o assessor: o próximo prompt já leva isso em conta" : "ensina os agentes"})</h3>
+      ${av ? `<div class="mut">Sua avaliação: <b style="color:var(${av.nota === "boa" ? "--ok" : "--er"})">${av.nota === "boa" ? "👍 Bom" : "👎 Ruim"}</b>${av.texto ? ` — ${esc(av.texto)}` : ""}${av.versao ? ` · versão ${av.versao}` : ""}${av.agente ? ` <span class="tag">lição enviada ao ${esc(av.agente)}</span>` : ""}</div>` : ""}
+      <div class="row" style="margin-top:6px">
+        <button class="sec mini ${av?.nota === "boa" ? "on-boa" : ""}" onclick="marca('${j.id}','boa')">👍 Bom</button>
+        <button class="sec mini ${av?.nota === "ruim" ? "on-ruim" : ""}" onclick="marca('${j.id}','ruim')">👎 Ruim</button></div>
+      ${nv > 1 ? `<div class="chips" style="margin-top:6px"><span class="mut" style="align-self:center">Sobre qual versão?</span>${["", ...Array.from({ length: nv }, (_, i) => String(i + 1))]
+        .map((v) => `<span class="chip ${(versaoAval[j.id] ?? "") === v ? "sel" : ""}" onclick="escolheVersao('${j.id}','${v}',this)">${v ? `Versão ${v}` : "Todas"}</span>`).join("")}</div>` : ""}
+      <div id="av-${j.id}" hidden style="margin-top:6px"><textarea data-k="av-${j.id}"></textarea>
+        <div class="row" style="margin-top:6px"><span class="sp"></span><button class="mini" onclick="avaliar('${j.id}')">Salvar avaliação</button></div></div></div>`;
+}
+// slides/v1-slide-01.png → [["1", [arquivos]], ...]; post antigo (sem prefixo) = 1 versão
+function versoes(j) {
+  const g = new Map();
+  for (const f of (j.files || []).filter((f) => f.name.startsWith("slides/"))) {
+    const v = (/^slides\/v(\d+)-/.exec(f.name) || [, ""])[1];
+    if (!g.has(v)) g.set(v, []);
+    g.get(v).push(f);
+  }
+  return [...g];
+}
+function galeria(j) {
+  const vs = versoes(j), url = (f) => `files/${j.id}/${f.name}?v=${j.redesenhadoEm || 0}`;
+  const grade = (fs) => `<div class="cortes">${fs.map((f) => `<div><a href="${url(f)}" target="_blank"><img src="${url(f)}" alt="" loading="lazy"></a><div><a href="${url(f)}&dl=1">⬇ baixar</a></div></div>`).join("")}</div>`;
+  // carrossel: slide 1 na frente, os outros empilhados atrás; toque/seta/arrasto passa
+  const pilha = (fs) => `<div class="deck">${fs.map((f, k) => `<img src="${url(f)}" alt="" loading="lazy" style="--k:${k}">`).join("")}</div>
+    <div class="deck-nav"><button type="button" class="sec mini" data-gira="-1">‹</button><span class="deck-pos">1 / ${fs.length}</span><button type="button" class="sec mini" data-gira="1">›</button><span class="sp"></span><a class="deck-dl" href="${url(fs[0])}&dl=1">⬇ baixar</a></div>`;
+  const car = j.modo === "carrossel";
+  return `<div class="versoes${vs.length > 1 ? " lado" : ""}${car ? " car" : ""}">` + vs.map(([v, fs]) => `<div class="versao"${car ? ` data-i="0"` : ""}>${vs.length > 1 ? `<div class="versao-tit">Versão ${esc(v)}</div>` : ""}${car ? pilha(fs) : grade(fs)}<div class="row" style="margin-top:8px"><button type="button" class="mini" data-ig-job="${j.id}" data-ig-version="${esc(v)}">📅 Agendar ${car ? "carrossel" : "imagem"}</button></div></div>`).join("") + "</div>";
+}
+let igChoice = null;
+let igCaptionSeq = 0;
+const igChosenNames = () => [...document.querySelectorAll("#igPreview input:checked")].map((i) => i.value);
+async function abreAgendamento(jobId, version) {
+  const job = ultimos.find((j) => j.id === jobId);
+  const group = job && versoes(job).find(([v]) => v === version);
+  if (!group) return alert("Imagens não encontradas.");
+  if (job.formato === "stories") return alert("Esta arte é 9:16. O agendamento atual aceita imagens de feed 1:1 ou 4:5.");
+  await carregaInstagram();
+  igCaptionSeq++;
+  igChoice = {jobId, names: group[1].map((f) => f.name.replace(/^slides\//, ""))};
+  document.querySelector('.aba[data-aba="instagram"]').click();
+  $("#igComposer").hidden = false;
+  $("#igPreview").innerHTML = group[1].map((f) => `<label style="display:block;min-width:150px"><img src="files/${jobId}/${f.name}" alt="Prévia da imagem" style="width:100%;max-width:220px;display:block;border-radius:9px"><input type="checkbox" value="${esc(f.name.replace(/^slides\//, ""))}" checked> Incluir</label>`).join("");
+  $("#igConta").innerHTML = igProjects.filter((p) => p.verified && p.hasAccountId).map((p) => `<option value="${esc(p.project)}">@${esc(p.username || p.project)}</option>`).join("");
+  if (job.project && igProjects.some((p) => p.project === job.project && p.verified)) $("#igConta").value = job.project;
+  $("#igTitulo").value = ""; $("#igDescricao").value = "";
+  const d = new Date(Date.now() + 86400_000);
+  $("#igQuando").value = new Date(d.getTime() - d.getTimezoneOffset() * 60_000).toISOString().slice(0, 16);
+  $("#igLegendaEstado").textContent = ""; $("#igAgendarEstado").textContent = "";
+  $("#igGerarLegenda").disabled = false;
+  $("#igComposer").scrollIntoView({behavior: "smooth", block: "start"});
+  $("#igGerarLegenda").click();
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-ig-job]");
+  if (b) abreAgendamento(b.dataset.igJob, b.dataset.igVersion);
+});
+$("#igFechar").onclick = () => { igCaptionSeq++; $("#igComposer").hidden = true; igChoice = null; };
+$("#igPreview").onchange = () => { igCaptionSeq++; $("#igGerarLegenda").disabled = false; $("#igLegendaEstado").textContent = "Seleção alterada. Gere a legenda novamente ou revise o texto manualmente."; };
+$("#igGerarLegenda").onclick = async () => {
+  if (!igChoice) return;
+  const names = igChosenNames(); if (!names.length) return alert("Escolha pelo menos uma imagem.");
+  const seq = ++igCaptionSeq, jobId = igChoice.jobId;
+  const btn = $("#igGerarLegenda"); btn.disabled = true; $("#igLegendaEstado").textContent = "DeepSeek lendo a imagem…";
+  try {
+    const d = await api("api/instagram/caption", {method: "POST", body: JSON.stringify({jobId, names})});
+    if (seq !== igCaptionSeq) return;
+    $("#igTitulo").value = d.title; $("#igDescricao").value = d.description;
+    $("#igLegendaEstado").textContent = "Sugestão pronta. Revise antes de agendar.";
+  } catch (e) { if (seq === igCaptionSeq) $("#igLegendaEstado").textContent = `Não consegui gerar: ${e.message || e}. Escreva a legenda manualmente.`; }
+  finally { if (seq === igCaptionSeq) btn.disabled = false; }
+};
+$("#igAgendar").onclick = async () => {
+  if (!igChoice) return;
+  const names = igChosenNames(), local = $("#igQuando").value;
+  if (!names.length || !$("#igConta").value || !local || !$("#igTitulo").value.trim() || !$("#igDescricao").value.trim()) return alert("Escolha imagem, conta, data, título e descrição.");
+  const when = new Date(local);
+  if (when.getTime() < Date.now() + 30_000) return alert("Escolha um horário futuro.");
+  if (!confirm(`Agendar ${names.length} imagem(ns) para ${when.toLocaleString("pt-BR")} em @${$("#igConta").selectedOptions[0].textContent.replace(/^@/, "")}?`)) return;
+  const btn = $("#igAgendar"); btn.disabled = true; $("#igAgendarEstado").textContent = "Salvando agendamento…";
+  try {
+    await api("api/instagram/schedule", {method: "POST", body: JSON.stringify({jobId: igChoice.jobId, names, project: $("#igConta").value,
+      title: $("#igTitulo").value.trim(), description: $("#igDescricao").value.trim(), publishAt: when.toISOString()})});
+    $("#igComposer").hidden = true; igChoice = null; await carregaAgenda();
+  } catch (e) { $("#igAgendarEstado").textContent = e.message || "Falha ao agendar."; }
+  finally { btn.disabled = false; }
+};
+async function carregaAgenda() {
+  try {
+    const rows = await api("api/instagram/schedule");
+    const status = {scheduled: "Agendado", publishing: "Publicando", published: "Publicado", failed: "Falhou", needs_review: "Conferir na conta", canceled: "Cancelado"};
+    $("#igAgenda").innerHTML = rows.length ? rows.map((e) => `<div class="card" style="padding:14px;margin-bottom:10px"><div class="row"><img src="api/instagram/schedule/${e.id}/image/1" alt="Prévia" style="width:80px;max-height:100px;object-fit:contain;border-radius:6px"><div class="sp"><b>${esc(e.title)}</b><div class="mut">@${esc(e.username || e.project)} · ${esc(status[e.status] || e.status)} · ${new Date(e.publishAt).toLocaleString("pt-BR")}${e.imageCount > 1 ? ` · ${e.imageCount} imagens` : ""}</div></div>${e.status === "scheduled" ? `<button class="dan mini" data-ig-cancel="${e.id}">Cancelar</button>` : ""}</div><details style="margin-top:8px"><summary class="mut">Descrição</summary><pre>${esc(e.description)}</pre></details>${e.error ? `<p class="mut">${esc(e.error)}</p>` : ""}${e.permalink ? `<a href="${esc(e.permalink)}" target="_blank" rel="noopener">Ver no Instagram</a>` : ""}</div>`).join("") : `<p class="mut">Nenhuma publicação agendada ainda.</p>`;
+  } catch { $("#igAgenda").innerHTML = `<p class="mut">Não consegui carregar os agendamentos.</p>`; }
+}
+$("#igAgendaAtualizar").onclick = carregaAgenda;
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-ig-cancel]");
+  if (!b || !confirm("Cancelar esta publicação agendada?")) return;
+  try { await api(`api/instagram/schedule/${b.dataset.igCancel}/cancel`, {method: "POST"}); await carregaAgenda(); }
+  catch (error) { alert(error.message || "Não consegui cancelar."); }
+});
+function gira(versao, d) {
+  const imgs = [...versao.querySelectorAll(".deck img")], n = imgs.length; if (n < 2) return;
+  const i = ((+versao.dataset.i || 0) + d + n) % n;
+  versao.dataset.i = i;
+  imgs.forEach((im, k) => im.style.setProperty("--k", (k - i + n) % n));
+  $(".deck-pos", versao).textContent = `${i + 1} / ${n}`;
+  $(".deck-dl", versao).href = imgs[i].getAttribute("src").split("?")[0] + "?dl=1";
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-gira]"), im = e.target.closest(".deck img");
+  if (b) gira(b.closest(".versao"), +b.dataset.gira); else if (im) gira(im.closest(".versao"), 1);
+});
+let toqueX = null;
+document.addEventListener("touchstart", (e) => { toqueX = e.target.closest(".deck") ? e.touches[0].clientX : null; }, { passive: true });
+document.addEventListener("touchend", (e) => {
+  if (toqueX == null) return;
+  const dx = e.changedTouches[0].clientX - toqueX; toqueX = null;
+  if (Math.abs(dx) > 40) { e.preventDefault(); gira(e.target.closest(".versao"), dx < 0 ? 1 : -1); }
+});
+function card(j) {
+  const [st, cls] = STATUS[j.status] || [j.status, ""];
+  const files = (j.files || []).filter((f) => !f.name.startsWith("slides/")).map((f) => `<a href="files/${j.id}/${f.name}?dl=1">⬇ ${esc(f.name)}</a> <span class="mut">${mb(f.size)}</span>`).join(" · ");
+  const acts = [];
+  if (j.status === "queued" || j.status === "running") acts.push(`<button class="sec mini" onclick="act('${j.id}','cancel')">Cancelar</button>`);
+  if (j.status === "done") acts.push(`<button class="mini" onclick="act('${j.id}','send')" ${j.send === "enviando" ? "disabled" : ""}>${j.send === "enviado" ? "Reenviar WhatsApp" : "Enviar WhatsApp"}</button>`);
+  if (j.status === "done" && (j.modo === "post" || j.modo === "carrossel")) acts.push(`<button class="mini" onclick="act('${j.id}','outra')">🔄 Outra versão</button>`);
+  if (j.status !== "running") acts.push(`<button class="dan mini" onclick="apagar('${j.id}')">Apagar</button>`);
+  const cortes = j.lista || [];
+  const cap = j.modo === "cortes" ? `${(ESTILOS_CORTE.find(([v]) => v === j.cortes?.estilo) || [, "?"])[1]}${cortes.length ? ` · ${cortes.length} cortes` : ""}`
+    : j.modo === "post" ? `🖼️ Post · ${versoes(j).length > 1 ? versoes(j).length + " versões" : "1 imagem"}`
+    : j.modo === "carrossel" ? `🎠 Carrossel · ${versoes(j).length > 1 ? versoes(j).length + " versões de " : ""}${versoes(j)[0]?.[1].length || 0} slides`
+    : (CAPTION_STYLES.find(([v]) => v === j.captionStyle) || [, "?"])[1];
+  return `<div class="card ${j.status}">
+    <div class="row"><span class="job-title">${j.parentId ? "✏️ Edição: " : ""}${j.modo === "cortes" && j.prompt !== "✂️ Cortes da live" ? "✂️ " : ""}${esc(j.prompt.slice(0, 160))}</span><span class="tag ${cls}">${esc(st)}</span></div>
+    <div class="row mut" style="margin-top:4px"><span>${j.modo === "post" || j.modo === "carrossel" ? "Formato:" : "Legenda:"} ${esc(cap)}</span>${j.project ? `<span class="tag">Instagram: ${esc(j.project)}</span>` : ""}${cortes[0]?.layout === "tela+rosto" ? `<span class="tag">🖥️ tela em cima + rosto embaixo</span>` : ""}${j.brutos?.length && j.modo !== "cortes" ? `<span class="tag">🎥 vídeo seu</span>` : ""}${j.send ? `<span class="tag">WhatsApp: ${esc(j.send)}</span>` : ""}${j.avaliacao ? `<span class="tag ${j.avaliacao.nota === "boa" ? "ok" : "er"}">${j.avaliacao.nota === "boa" ? "👍" : "👎"} avaliado</span>` : ""}</div>
+    ${j.modo === "post" || j.modo === "carrossel" ? `<div class="row mut"><span>${esc(j.stage)}</span><span class="sp"></span>${acts.join("")}</div>` : `<div class="bar"><i style="width:${j.progress || 0}%"></i></div><div class="row mut"><span>${esc(j.stage)} · ${j.progress || 0}%</span>${j.startedAt ? `<span ${j.status === "running" ? `data-desde="${j.startedAt}"` : ""}>${dur(j.startedAt, j.endedAt)}</span>` : ""}<span class="sp"></span>${acts.join("")}</div>`}
+    ${j.agora ? `<div class="agora"><b>agora · ${esc(j.agora.agente)}</b> ${esc(j.agora.texto)} <span class="mut">(há ${j.agora.ha < 60 ? j.agora.ha + "s" : Math.floor(j.agora.ha / 60) + "min"})</span></div>` : ""}
+    ${j.status === "done" && j.files?.some((f) => f.name === "video.mp4") ? `<video class="player" controls preload="metadata" src="files/${j.id}/video.mp4"></video>` : ""}
+    ${j.status === "done" && (j.modo === "post" || j.modo === "carrossel") ? galeria(j) : ""}
+    ${cortes.length ? `<div class="cortes">${cortes.map((c) => `<div><video controls preload="metadata" src="files/${j.id}/${c.arquivo}#t=0.5"></video>
+      <b>${esc(c.titulo || c.arquivo)}</b><span class="mut">${c.duracao_s ? c.duracao_s + " s" : ""}${c.jev != null ? ` · Jev ${Math.round(c.jev * 100)}%${c.jev < 0.6 ? " ⚠️ em dúvida" : " ✅"}` : ""}</span>
+      <div><a href="files/${j.id}/${c.arquivo}?dl=1">⬇ baixar</a></div></div>`).join("")}</div>` : ""}
+    ${files ? `<div class="mut" style="margin-top:8px">${files}</div>` : ""}
+    ${j.modelos ? `<details class="box"><summary><b>Modelos escolhidos pelo Jev</b> <span class="mut">(antes de começar, conforme o pedido)</span></summary><div class="tbl"><table><tr><th>Agente</th><th>Trabalho</th><th>Modelo</th><th>Esforço</th></tr>${j.modelos.map((m) => `<tr><td>${esc(m.agente)}</td><td>${esc(m.nivel)}</td><td>${esc(m.perfil)}</td><td>${esc(m.esforco)}</td></tr>`).join("")}</table></div><div class="mut" style="margin-top:4px">Se a entrega de um agente falhar na conferência, ele é refeito um degrau acima.</div></details>` : ""}
+    ${custo(j)}
+    ${j.modo === "cortes" ? "" : posPronto(j)}
+    ${j.resumo ? `<details style="margin-top:10px"><summary class="mut">Resumo</summary><pre>${esc(j.resumo)}</pre></details>` : ""}
+  </div>`;
+}
+async function act(id, what) { await api(`api/jobs/${id}/${what}`, { method: "POST" }); poll(true); }
+async function apagar(id) { if (confirm("Apagar este vídeo da lista e do disco?")) act(id, "delete"); }
+async function editar(id) {
+  const t = $(`[data-k="ed-${id}"]`).value.trim(); if (!t) return alert("Escreva o que mudar.");
+  await api(`api/jobs/${id}/editar`, { method: "POST", body: JSON.stringify({ texto: t }) });
+  rascunhos[`ed-${id}`] = ""; poll(true); alert("Edição na fila. Aparece como um novo card no topo.");
+}
+document.addEventListener("click", async (e) => {  // voto da tela Criar (por versão)
+  const b = e.target.closest("[data-voto]"); if (!b) return;
+  const nota = b.dataset.voto, v = +b.dataset.vv;
+  const texto = prompt(nota === "boa" ? `O que você gostou na versão ${v}? (opcional — o assessor aprende)` : `O que não gostou na versão ${v}? (o assessor aprende e evita)`);
+  if (texto === null || (nota === "ruim" && !texto.trim())) return;
+  try { await api(`api/jobs/${b.dataset.vj}/avaliar`, { method: "POST", body: JSON.stringify({ nota, texto: texto.trim(), versao: v }) }); } catch { return; }
+  mesaKey = ""; poll(true);
+});
+const versaoAval = {};  // id do post -> versão avaliada ("" = todas); sobrevive à atualização da lista
+function escolheVersao(id, v, el) {
+  versaoAval[id] = v;
+  el.parentElement.querySelectorAll(".chip").forEach((c) => c.classList.toggle("sel", c === el));
+}
+function marca(id, nota) {
+  const box = $(`#av-${id}`), ta = $("textarea", box);
+  box.hidden = false; box.dataset.nota = nota;
+  ta.placeholder = nota === "boa" ? "O que ficou bom? (opcional)" : "O que ficou ruim? (obrigatório — os agentes vão evitar isso)";
+  ta.focus();
+}
+async function avaliar(id) {
+  const box = $(`#av-${id}`), texto = $("textarea", box).value.trim(), nota = box.dataset.nota;
+  if (nota === "ruim" && !texto) return alert("Escreva o que ficou ruim.");
+  await api(`api/jobs/${id}/avaliar`, { method: "POST", body: JSON.stringify({ nota, texto, versao: +(versaoAval[id] || 0) || null }) });
+  rascunhos[`av-${id}`] = ""; poll(true);
+}
+
+// mesa: mostra só a criação atual (a mais nova depois do último Limpar); o resto fica na aba Criações
+let ultimos = [], criando = "", mesaKey = "";
+let meus = []; try { meus = JSON.parse(LS.get("painel.mesa") || "[]"); } catch {}
+const guardaMesa = (ids) => { meus = ids; LS.set("painel.mesa", JSON.stringify(ids)); mesaKey = ""; palco(ultimos); };
+// na mesa só aparece o que ESTE navegador acabou de gerar; o resto fica na aba Criações
+const atual = (jobs) => jobs.find((j) => meus.includes(j.id));
+function limparMesa() { guardaMesa([]); }
+function vaziosHtml(n, txt) { return Array.from({ length: n }, (_, k) => `<div class="slot-wrap"><div class="slot ${txt ? "criando" : ""}">${txt ? `<div class="varre"></div>` : ""}<div class="vazio"><i>${k + 1}</i>${txt ? esc(txt) : "vazio"}</div></div><div class="slot-foot"></div></div>`).join(""); }
+function palco(jobs) {
+  const j = atual(jobs);
+  const key = criando + "|" + (j ? [j.id, j.status, j.stage, j.progress, j.files?.length, j.redesenhadoEm, JSON.stringify(j.votos || {})].join(":") : "");
+  if (key === mesaKey) return;
+  mesaKey = key;
+  const slots = $("#slots"), info = $("#mesaInfo"), acoes = $("#mesaAcoes");
+  slots.className = "slots"; acoes.hidden = true;
+  if (!j) {
+    slots.innerHTML = vaziosHtml(3, criando ? `criando ${criando}…` : "");
+    info.innerHTML = criando ? `<span class="rot">● Criando agora</span><span class="mut">O Jev está montando as 3 versões.</span>` : `<span class="rot">Pronto para criar</span><span class="mut">Escreva o pedido e clique em Gerar: o resultado aparece nestes quadrados.</span>`;
+    return;
+  }
+  const tipo = j.modo === "post" ? "Post" : j.modo === "carrossel" ? "Carrossel" : j.modo === "cortes" ? "Cortes de live" : "Vídeo";
+  info.innerHTML = `<span class="rot">${j.status === "done" ? "Pronto" : j.status === "running" || j.status === "queued" ? "● Criando agora" : "Não deu certo"} · ${tipo}</span><span class="tit">${esc(j.prompt.slice(0, 220))}</span>`;
+  if (j.status === "queued" || j.status === "running") {
+    const um = j.modo === "video";
+    slots.classList.toggle("um", um);
+    slots.innerHTML = vaziosHtml(um ? 1 : 3, `${j.stage || "criando"}${um ? ` · ${j.progress || 0}%` : ""}`);
+    return;
+  }
+  acoes.hidden = false;
+  $("#mesaDica").textContent = j.status === "done" ? "Limpar guarda na aba Criações · Não gostei apaga" : "";
+  if (j.status !== "done") { slots.innerHTML = vaziosHtml(3, ""); info.innerHTML += `<div class="mut" style="flex-basis:100%">${esc(j.stage || "")}</div>`; return; }
+  const url = (f) => `files/${j.id}/${f.name}?v=${j.redesenhadoEm || 0}${imgV}`, vs = versoes(j);
+  if (j.modo === "post" || j.modo === "carrossel") {
+    // 👍/👎 por versão, ao lado do baixar: ensina o assessor (vai com o prompt e o que esta versão usou)
+    const voto = (k) => { const n = (j.votos || {})[k + 1];
+      return `<button type="button" class="sec mini ${n === "boa" ? "on-boa" : ""}" data-voto="boa" data-vj="${j.id}" data-vv="${k + 1}" title="Gostei desta versão">👍</button><button type="button" class="sec mini ${n === "ruim" ? "on-ruim" : ""}" data-voto="ruim" data-vj="${j.id}" data-vv="${k + 1}" title="Não gostei desta versão">👎</button>`; };
+    slots.innerHTML = [0, 1, 2].map((k) => {
+      const v = vs[k]; if (!v) return vaziosHtml(1, "").replace(">1<", `>${k + 1}<`);
+      const fs = v[1];
+      if (j.modo === "post") return `<div class="slot-wrap"><div class="slot"><a href="${url(fs[0])}" target="_blank"><img src="${url(fs[0])}" alt=""></a></div><div class="slot-foot"><span class="mut">Versão ${k + 1}</span><span class="sp"></span>${voto(k)}<a href="${url(fs[0])}&dl=1">⬇ baixar</a></div></div>`;
+      return `<div class="slot-wrap versao" data-i="0"><div class="slot"><div class="deck">${fs.map((f, n) => `<img src="${url(f)}" alt="" style="--k:${n}">`).join("")}</div></div>
+        <div class="slot-foot"><div class="deck-nav"><button type="button" class="sec mini" data-gira="-1">‹</button><span class="deck-pos">1 / ${fs.length}</span><button type="button" class="sec mini" data-gira="1">›</button><span class="sp"></span>${voto(k)}<a class="deck-dl" href="${url(fs[0])}&dl=1">⬇ baixar</a></div></div></div>`;
+    }).join("");
+    return;
+  }
+  if (j.modo === "cortes") {
+    const cs = (j.lista || []).slice(0, 3);
+    slots.innerHTML = [0, 1, 2].map((k) => cs[k] ? `<div class="slot-wrap"><div class="slot"><video controls preload="metadata" playsinline src="files/${j.id}/${cs[k].arquivo}#t=0.5"></video></div><div class="slot-foot"><span class="mut">${esc(cs[k].titulo || "")}</span><span class="sp"></span><a href="files/${j.id}/${cs[k].arquivo}?dl=1">⬇</a></div></div>` : vaziosHtml(1, "")).join("");
+    return;
+  }
+  slots.classList.add("um");
+  slots.innerHTML = `<div class="slot-wrap"><div class="slot"><video controls preload="metadata" playsinline src="files/${j.id}/video.mp4"></video></div><div class="slot-foot"><span class="sp"></span><a href="files/${j.id}/video.mp4?dl=1">⬇ baixar vídeo</a></div></div>`;
+}
+// Limpar = aprovado: fica salvo e o prompt do AlvoManage usado nele é gasto
+$("#mesaLimpar").onclick = async () => { try { await api("api/alvomanage/gastar", { method: "POST", body: JSON.stringify({ ids: meus }) }); } catch {} limparMesa(); };
+$("#mesaNaoGostei").onclick = async () => {
+  const j = atual(ultimos); if (!j) return;
+  await api(`api/jobs/${j.id}/delete`, { method: "POST" });
+  limparMesa(); poll(true);
+};
+document.querySelectorAll(".aba").forEach((b) => (b.onclick = () => {
+  document.querySelectorAll(".aba").forEach((o) => o.classList.toggle("sel", o === b));
+  document.querySelectorAll(".aba-sec").forEach((o) => o.classList.toggle("sel", o.id === "aba-" + b.dataset.aba));
+  if (b.dataset.aba === "jev") carregaJev();
+  if (b.dataset.aba === "instagram") { carregaInstagram(); carregaAgenda(); }
+  if (b.dataset.aba === "fotos") carregaFotos();
+  if (b.dataset.aba === "assessor") carregaAssessor();
+}));
+
+// re-render sem perder o que está sendo digitado nem interromper o player
+const rascunhos = {};
+let busy = false, last = "";
+async function poll(force) {
+  if (busy || $("#app").hidden) return;
+  busy = true;
+  try {
+    const jobs = await api("api/jobs");
+    ultimos = jobs; palco(jobs); $("#nCriacoes").textContent = jobs.length;
+    const tot = jobs.reduce((s, j) => s + (j.tokens?.total || 0), 0);
+    $("#resumoTopo").textContent = `${jobs.filter((j) => j.status === "done").length} prontos · custo total ${usd(tot)}`;
+    const sig = JSON.stringify(jobs.map((j) => [j.id, j.status, j.stage, j.progress, j.send, j.files?.length, j.avaliacao?.em, Math.round((j.tokens?.total || 0) * 1000), j.agora?.texto, j.agora && Math.floor(j.agora.ha / 30)]));
+    const digitando = document.activeElement?.closest?.("#jobs") && document.activeElement.tagName === "TEXTAREA";
+    if ((force || sig !== last) && !digitando) {
+      document.querySelectorAll("#jobs textarea[data-k]").forEach((t) => (rascunhos[t.dataset.k] = t.value));
+      const abertos = [...document.querySelectorAll("#jobs [id^=av-]:not([hidden])")].map((b) => [b.id, b.dataset.nota]);
+      $("#jobs").innerHTML = jobs.map(card).join("") || `<p class="mut">Nenhuma criação ainda.</p>`;
+      document.querySelectorAll("#jobs textarea[data-k]").forEach((t) => (t.value = rascunhos[t.dataset.k] || ""));
+      for (const [id, nota] of abertos) { const b = document.getElementById(id); if (b) { b.hidden = false; b.dataset.nota = nota; } }
+      last = sig;
+    }
+  } catch {} finally { busy = false; }
+}
+async function pollLogo() {
+  try {
+    const d = await api("api/logo");
+    $("#logoEstado").textContent = d.tem ? "ativa — entra em toda criação" : "nenhuma ainda";
+    $("#logoRemover").hidden = !d.tem; $("#logoTamRow").hidden = !d.tem;
+    const i = $("#logoImg");
+    if (d.tem) { i.src = "logo.img?t=" + Date.now(); i.style.display = "block"; } else { i.style.display = "none"; }
+  } catch {}
+}
+$("#logoFile").addEventListener("change", () => {
+  const f = $("#logoFile").files[0]; if (!f) return;
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "api/logo?nome=" + encodeURIComponent(f.name));
+  xhr.onload = () => { pollLogo(); alert(xhr.status === 200 ? "Logo salva" : "Erro ao salvar a logo"); };
+  xhr.onerror = () => alert("Falha no envio da logo");
+  xhr.send(f);
+});
+$("#logoRemover").addEventListener("click", async () => {
+  if (!confirm("Remover a logo? As criações passam a sair sem ela.")) return;
+  await api("api/logo/remover", { method: "POST" }); pollLogo();
+});
+// tamanho da logo: salva e já redesenha o que está nos quadrados (sem chamar Jev/DeepSeek de novo)
+let imgV = 0;
+api("api/config").then((c) => { $("#logoTam").value = c.logo_px || 90; $("#logoTamV").textContent = `${c.logo_px || 90}px`; }).catch(() => {});
+$("#logoTam").oninput = () => ($("#logoTamV").textContent = `${$("#logoTam").value}px`);
+$("#logoTam").onchange = async () => {
+  await api("api/config", { method: "POST", body: JSON.stringify({ logo_px: +$("#logoTam").value }) });
+  const j = atual(ultimos);
+  if (!j || j.status !== "done" || (j.modo !== "post" && j.modo !== "carrossel")) return ($("#logoTamEstado").textContent = "Salvo: vale para as próximas criações.");
+  $("#logoTamEstado").textContent = "Refazendo as imagens da tela com a logo nova…";
+  try { await api(`api/jobs/${j.id}/redesenhar`, { method: "POST" }); $("#logoTamEstado").textContent = "Pronto ✓ (vale também para as próximas)"; }
+  catch { $("#logoTamEstado").textContent = "Não consegui refazer agora."; }
+  imgV = Date.now(); mesaKey = ""; poll(true);
+};
+function start() { $("#login").hidden = true; $("#app").hidden = false; if (!$("#prompts").children.length) addPrompt(); poll(true); pollLogo(); carregaInstagram(); }
+setInterval(poll, 3000);
+setInterval(() => document.querySelectorAll("[data-desde]").forEach((e) => (e.textContent = dur(+e.dataset.desde))), 1000);
+(async () => { try { await api("api/jobs"); start(); } catch { showLogin(); } })();
+</script>
+</body>
+</html>
