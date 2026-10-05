@@ -1,0 +1,52 @@
+{
+ "formato": "post",
+ "peca": "PostBmc",
+ "sx": "mipifb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 275,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Erro comum: o dono vira digitador da loja",
+     "objetivo": "venda",
+     "receita": "editorial_organico",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "produto",
+     "decoracao_posicao": "lateral",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "linha",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "seta",
+     "luz": "brilho_canto",
+     "sombra": "nenhuma",
+     "solucao": "faixa",
+     "composicao": "visual_lateral",
+     "selo": "Com IA",
+     "pontos": [
+      "Chegou caixa de mercadoria?",
+      "Tira a foto do produto",
+      "A IA preenche o cadastro"
+     ],
+     "fundo_estilo": "faixa_lateral",
+     "fundo_var": 0.155,
+     "subtitulo": "No AlvoManage, você tira a foto do produto e a IA preenche o cadastro.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuoubmc49198/fotos/188971d490.jpg",
+     "foto_id": "188971d490",
+     "foto_layout": "arco",
+     "foto_efeito": "contraste"
+    }
+   }
+  }
+ ]
+}

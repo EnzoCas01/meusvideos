@@ -1,0 +1,37 @@
+{
+ "formato": "post",
+ "peca": "PostDnro",
+ "sx": "cfklba",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "marca",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Ainda preenche OS no caderno?",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "moldura",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "gradiente",
+     "foto": "/root/documentos/projetos/meusvideos/public/fotos/3096cfa227.jpg",
+     "foto_layout": "circulo",
+     "foto_efeito": "nenhum",
+     "subtitulo": "No AlvoManage, a OS é digital e sai impressa com os dados da sua loja."
+    }
+   }
+  }
+ ]
+}

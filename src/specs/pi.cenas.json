@@ -1,0 +1,20 @@
+[
+ {
+  "n": 1,
+  "from": 0,
+  "durationInFrames": 60,
+  "visual": "layout post_layout_1"
+ },
+ {
+  "n": 2,
+  "from": 60,
+  "durationInFrames": 60,
+  "visual": "layout post_layout_2"
+ },
+ {
+  "n": 3,
+  "from": 120,
+  "durationInFrames": 60,
+  "visual": "texto texto_titulo · cta texto_cta"
+ }
+]

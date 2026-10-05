@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostRz",
+ "sx": "hheapc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Onde está cada aparelho?",
+     "objetivo": "venda",
+     "receita": "oferta_impacto",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "clientes",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "preenchido",
+     "enfeite": "seta",
+     "fundo_estilo": "circulos",
+     "fundo_var": 0.3,
+     "subtitulo": "Com AlvoManage, você vê em uma tela: em andamento, aguardando peça, pronto.",
+     "icone": "devices-search"
+    }
+   }
+  }
+ ]
+}

@@ -15,3 +15,7 @@ O anel em volta de "fase" completava depois do início do fade da cena. Tecnicam
 ## 2026-09-16 — O que eu não consigo verificar
 Não ouço o áudio nem assisto ao vídeo em movimento. Consigo medir duração, streams, sobreposição de falas e enquadramento por still. Não julgo pronúncia, mixagem, nem a sensação do ritmo.
 **Por quê:** o usuário reclamou do ritmo lento e da troca de voz — dois problemas reais que nenhuma checagem minha pegaria. Diga sempre, com todas as letras, o que ficou fora da verificação, em vez de deixar implícito que está tudo aprovado.
+
+## 2026-09-21 — Reprovar imagem embaçada
+Ao conferir frames, qualquer foto desfocada (inclusive cópia borrada de fundo atrás de inset) reprova, a menos que haja texto por cima dela naquela cena. Extrair still de cada cena de foto e olhar.
+**Por quê:** regra do Enzo, repetida; ver CLAUDE.md ("Imagem NUNCA aparece embaçada").

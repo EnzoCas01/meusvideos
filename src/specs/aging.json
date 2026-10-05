@@ -1,0 +1,93 @@
+{
+ "formato": "post",
+ "peca": "PostD",
+ "sx": "aging",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "escuro_clean",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "escuro_clean",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "INSTAGRAM DO ALVOMANAGE",
+     "receita": "informativo_modular",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "grade",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "cta": "CONHEÇA"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "tema": "luxo_dourado",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "INSTAGRAM DO ALVOMANAGE",
+     "receita": "oferta_impacto",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "grade",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "cta": "CONHEÇA"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "tema": "energia_viva",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "INSTAGRAM DO ALVOMANAGE",
+     "receita": "premium_moldura",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "grade",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "cta": "CONHEÇA"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "tema": "editorial_claro",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "INSTAGRAM DO ALVOMANAGE",
+     "receita": "energia_geometrica",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "grade",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "cta": "CONHEÇA"
+    }
+   }
+  }
+ ]
+}

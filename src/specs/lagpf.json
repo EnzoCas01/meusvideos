@@ -1,0 +1,61 @@
+{
+ "formato": "post",
+ "peca": "PostGwmm",
+ "sx": "lagpf",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "escuro_clean",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "escuro_clean",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Quem aparece todos os dias vence",
+     "subtitulo": "constância é o caminho",
+     "cta": "Segue o canal"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "tema": "luxo_dourado",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Quem aparece todos os dias vence",
+     "subtitulo": "constância é o caminho",
+     "cta": "Segue o canal"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "tema": "energia_viva",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Quem aparece todos os dias vence",
+     "subtitulo": "constância é o caminho",
+     "cta": "Segue o canal"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "tema": "editorial_claro",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Quem aparece todos os dias vence",
+     "subtitulo": "constância é o caminho",
+     "cta": "Segue o canal"
+    }
+   }
+  }
+ ]
+}

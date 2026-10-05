@@ -1,0 +1,43 @@
+{
+ "formato": "post",
+ "peca": "PostUlxp",
+ "sx": "mpmglb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 275,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Antes de dizer ‘não tem",
+     "objetivo": "venda",
+     "receita": "premium_moldura",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "grade",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "cantos",
+     "luz": "brilho_canto",
+     "sombra": "forte",
+     "solucao": "cartao",
+     "composicao": "visual_lateral",
+     "fundo_estilo": "duas_cores",
+     "fundo_var": 0.97,
+     "subtitulo": "Consulte cada unidade separadamente ou veja suas lojas juntas e transfira o estoque entre unidades.",
+     "icone": "transfer-in"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "icone",
+  "tipo": "icone",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["todos"],
+  "descricao": "Ícone de traço (lucide, licença ISC) do catálogo embutido. O nome é escolhido pelo Jev; a lista completa de nomes e categorias está em icones.json na pasta do componente.",
+  "uso_recomendado": ["elemento decorativo do post", "ícone que representa a ideia do texto", "acento visual"],
+  "duracao_recomendada": "peça inteira",
+  "parametros": {
+    "nome": {"tipo": "string", "descricao": "Nome do ícone (ver icones.json)", "obrigatorio": true},
+    "cor": {"tipo": "cor", "descricao": "Cor do traço (padrão: accent do tema)", "obrigatorio": false},
+    "tamanho": {"tipo": "numero", "descricao": "Largura em px", "obrigatorio": false},
+    "grossura": {"tipo": "numero", "descricao": "Espessura do traço (padrão 1.8)", "obrigatorio": false}
+  }
+}

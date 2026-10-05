@@ -1,0 +1,37 @@
+{
+ "formato": "post",
+ "peca": "PostFqb",
+ "sx": "pkmeoc",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "marca",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Desconto no balcão com controle",
+     "objetivo": "venda",
+     "receita": "oferta_impacto",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "oferta",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "invertido",
+     "foto": "/root/documentos/projetos/meusvideos/public/fotos/02a5206f53.jpg",
+     "foto_layout": "recorte_diagonal",
+     "foto_efeito": "nenhum",
+     "subtitulo": "No AlvoManage, todo desconto fica registrado na venda."
+    }
+   }
+  }
+ ]
+}

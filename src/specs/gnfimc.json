@@ -1,0 +1,44 @@
+{
+ "formato": "post",
+ "peca": "PostBbo",
+ "sx": "gnfimc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Abra a OS sem digitar o modelo do celular",
+     "objetivo": "venda",
+     "receita": "editorial_organico",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "cantos_opostos",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "preenchido",
+     "enfeite": "brilhos",
+     "luz": "holofote",
+     "sombra": "suave",
+     "fundo_estilo": "brilho",
+     "fundo_var": 0.276,
+     "subtitulo": "Com AlvoManage, uma foto do aparelho já preenche a OS automaticamente.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuosbb8od001/fotos/2a00695c30.jpg",
+     "foto_id": "2a00695c30",
+     "foto_layout": "recorte_diagonal",
+     "foto_efeito": "duotone_marca"
+    }
+   }
+  }
+ ]
+}

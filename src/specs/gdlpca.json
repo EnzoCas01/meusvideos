@@ -1,0 +1,124 @@
+{
+ "formato": "post",
+ "peca": "PostU",
+ "sx": "gdlpca",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "marca",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Você sabia?",
+     "objetivo": "educativo",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "gradiente",
+     "foto": "/root/documentos/projetos/meusvideos/public/fotos/d1b8608622.jpg",
+     "foto_layout": "polaroid",
+     "foto_efeito": "nenhum",
+     "subtitulo": "4 coisas que o AlvoManage faz"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Identifica o aparelho por foto",
+     "objetivo": "educativo",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "gradiente",
+     "subtitulo": "E ajuda a preencher a OS",
+     "icone": "devices-question",
+     "etiqueta": "2 / 5"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Vira aplicativo",
+     "objetivo": "educativo",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "gradiente",
+     "subtitulo": "Instalado pelo navegador",
+     "icone": "browser",
+     "etiqueta": "3 / 5"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Lembra o cliente",
+     "objetivo": "educativo",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "gradiente",
+     "subtitulo": "Do horário agendado",
+     "icone": "calendar-clock",
+     "etiqueta": "4 / 5"
+    }
+   }
+  },
+  {
+   "n": 5,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Calcula comissão",
+     "objetivo": "educativo",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "gradiente",
+     "subtitulo": "De cada operador",
+     "icone": "currency-real",
+     "etiqueta": "5 / 5"
+    }
+   }
+  }
+ ]
+}

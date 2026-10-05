@@ -1,0 +1,44 @@
+{
+ "formato": "post",
+ "peca": "PostBbo",
+ "sx": "gnfimb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Cansado de cliente que não sabe o modelo?",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "cantos_opostos",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "brilhos",
+     "luz": "holofote",
+     "sombra": "suave",
+     "fundo_estilo": "brilho",
+     "fundo_var": 0.087,
+     "subtitulo": "No AlvoManage, foto do aparelho identifica o modelo e preenche a OS.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuosbb8od001/fotos/e02eba031b.jpg",
+     "foto_id": "e02eba031b",
+     "foto_layout": "recorte_diagonal",
+     "foto_efeito": "duotone_marca"
+    }
+   }
+  }
+ ]
+}

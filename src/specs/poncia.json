@@ -1,0 +1,41 @@
+{
+ "formato": "post",
+ "peca": "PostZwvc",
+ "sx": "poncia",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Qual das suas lojas vende mais? Você chuta?",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "nenhum",
+     "luz": "brilho_canto",
+     "sombra": "suave",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.444,
+     "subtitulo": "No AlvoManage, você vê cada loja separada ou todas juntas, no mesmo sistema.",
+     "icone": "chart-bar"
+    }
+   }
+  }
+ ]
+}

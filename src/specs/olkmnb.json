@@ -1,0 +1,37 @@
+{
+ "formato": "post",
+ "peca": "PostFl",
+ "sx": "olkmnb",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "marca",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Cadastre o aparelho com uma foto",
+     "objetivo": "venda",
+     "receita": "premium_moldura",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "dividido",
+     "foto": "/root/documentos/projetos/meusvideos/public/fotos/1aac82d9d0.jpg",
+     "foto_layout": "circulo",
+     "foto_efeito": "nenhum",
+     "subtitulo": "O AlvoManage identifica o modelo pela foto e ajuda a preencher a OS."
+    }
+   }
+  }
+ ]
+}

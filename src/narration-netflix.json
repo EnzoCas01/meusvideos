@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "engine": "edge-tts",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+14%",
+  "pitch": "-6Hz",
+  "ellipsisPauseMs": 380,
+  "language": "pt",
+  "volume": 0.95,
+  "duckMusicTo": 0.4,
+  "headFrames": 8,
+  "note": "Fonte única da narração de Netflix (série 'Você sabia'). `frame` é onde a fala começa (30 fps) = fim da anterior + gapAfter da anterior. Clipes em public/audio/vo-netflix/. Regerar com python3 tools/generate-narration-edge.py src/narration-netflix.json public/audio/vo-netflix (o guard do projeto não libera prefixo de variáveis nem -u; o script dá flush em todo print).",
+  "lines": [
+    {"id": "01-gancho", "frame": 8, "gapAfter": 14, "text": "Você sabia que a Netflix começou enviando DVDs pelo correio?", "durationInFrames": 121},
+    {"id": "02-comeco", "frame": 143, "gapAfter": 5, "text": "Em mil novecentos e noventa e sete, a empresa foi fundada. No ano seguinte, começou a alugar DVDs pela internet, entregues em envelopes vermelhos.", "durationInFrames": 280},
+    {"id": "03-problema", "frame": 428, "gapAfter": 14, "text": "Mas o aluguel tradicional tinha multas, datas de devolução e pouca conveniência. Então, a Netflix mudou as regras.", "durationInFrames": 241},
+    {"id": "04-assinatura", "frame": 683, "gapAfter": 5, "text": "Em mil novecentos e noventa e nove, lançou uma assinatura sem datas de devolução e sem multas por atraso. Em dois mil e três, já eram um milhão de assinantes.", "durationInFrames": 285},
+    {"id": "05-pergunta", "frame": 973, "gapAfter": 14, "text": "E se o próximo jeito de assistir a um filme não fosse pelo correio? E sim pela internet?", "durationInFrames": 170},
+    {"id": "06-streaming", "frame": 1157, "gapAfter": 5, "text": "Em dois mil e sete, a Netflix começou a oferecer streaming, sem abandonar os DVDs. Naquele ano, a receita passou de um bilhão de dólares pela primeira vez.", "durationInFrames": 263},
+    {"id": "07-originais", "frame": 1425, "gapAfter": 14, "text": "Mas a Netflix ainda não tinha terminado de mudar. Em dois mil e treze, começou a produzir suas próprias séries.", "durationInFrames": 216},
+    {"id": "08-mundo", "frame": 1655, "gapAfter": 5, "text": "Mas ainda faltava o mundo. Em janeiro de dois mil e dezesseis, a Netflix lançou seu serviço em mais de cento e trinta novos países de uma só vez. Naquele ano, chegou a quase noventa e quatro milhões de assinantes.", "durationInFrames": 388},
+    {"id": "09-transformacao", "frame": 2048, "gapAfter": 14, "text": "Foi assim que a Netflix deixou de ser só uma locadora de DVDs. Primeiro, mudou a forma de alugar. Depois, a de assistir. E então passou a produzir as próprias histórias.", "durationInFrames": 362},
+    {"id": "10-final", "frame": 2424, "gapAfter": 0, "text": "A maior mudança da Netflix não foi apenas o streaming. Foi a capacidade de se reinventar.", "durationInFrames": 178}
+  ]
+}

@@ -1,0 +1,35 @@
+{
+ "formato": "post",
+ "peca": "PostMnf",
+ "sx": "bmpbeb",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Comprando peça sem comparar preço?",
+     "objetivo": "educativo",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "dividido",
+     "subtitulo": "Faça a cotação com os fornecedores antes de fechar a compra.",
+     "icone": "shopping-cart-search"
+    }
+   }
+  }
+ ]
+}

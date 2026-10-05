@@ -1,0 +1,20 @@
+{
+  "id": "alvomanage",
+  "nome": "AlvoManage",
+  "_": "Brand Kit: o Jev trabalha dentro dele. cores por modo (escuro é o principal: a logo foi feita para fundo escuro; no claro o 'Alvo' branco vira a cor do texto sozinho). telas = screenshots REAIS do sistema (arquivo, descricao, alvos {nome:[fx,fy]} em frações da imagem).",
+  "logo": "public/brand/logo.png",
+  "modos": ["escuro", "claro"],
+  "cores": {
+    "escuro": {"fundo": "#071A33", "fundo2": "#0C2A52", "texto": "#FFFFFF", "suave": "#A9BCD6", "destaque": "#2EA3FF", "destaque2": "#F5C518", "marca": "#1D5FA8", "cartao": "#FFFFFF"},
+    "claro": {"fundo": "#F4F8FD", "fundo2": "#E3EEFB", "texto": "#0B1B33", "suave": "#4A5B75", "destaque": "#0386E8", "destaque2": "#E0A800", "marca": "#FFE27A", "cartao": "#FFFFFF"}
+  },
+  "pares": ["geometrico_forte", "saas_moderno", "impacto_condensado"],
+  "par_padrao": "geometrico_forte",
+  "raio": 18,
+  "sombra": 2,
+  "botao": "pilula",
+  "destaque": "marcador",
+  "fotografia": "Foto real de assistência técnica: bancada, mãos consertando celular, balcão de atendimento. Nunca banco de imagem posado.",
+  "estilo": "SaaS editorial moderno, confiante, para DONO de assistência técnica; azul da marca com toque amarelo da seta da logo.",
+  "telas": []
+}

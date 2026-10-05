@@ -1,0 +1,41 @@
+{
+ "formato": "post",
+ "peca": "PostPr",
+ "sx": "fjmecc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "E se o WhatsApp estivesse no sistema?",
+     "objetivo": "venda",
+     "receita": "editorial_organico",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "preenchido",
+     "enfeite": "seta",
+     "luz": "bokeh",
+     "sombra": "brilho",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.175,
+     "subtitulo": "No AlvoManage, você acompanha as mensagens da loja num só lugar.",
+     "icone": "messages"
+    }
+   }
+  }
+ ]
+}

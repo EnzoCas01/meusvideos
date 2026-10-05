@@ -504,7 +504,8 @@ function criaPostDireto(item, autoSend) {
   fs.mkdirSync(dir, {recursive: true});
   job.dir = dir;
   job.formato = item.formato === "stories" ? "stories" : "feed";  // Stories 9:16 ou Feed 1:1
-  fs.writeFileSync(`${dir}/pedido.json`, JSON.stringify({id: job.id, modo: job.modo, prompt: job.prompt, formato: job.formato, project: job.project || null}, null, 1));
+  job.motor = item.motor === "editorial" ? "editorial" : "classico";  // chave do painel: motor clássico (padrão) ou editorial (tools/design)
+  fs.writeFileSync(`${dir}/pedido.json`, JSON.stringify({id: job.id, modo: job.modo, prompt: job.prompt, formato: job.formato, motor: job.motor, project: job.project || null}, null, 1));
   jobs.push(job);
   save();
   filaPosts = filaPosts.then(() => rodaPostDireto(job)).catch(() => {});
@@ -728,6 +729,46 @@ http.createServer(async (req, res) => {
     save(); startNext();
     return json(res, 200, { criados: items.length, ids });
   }
+  // ---------- chat flutuante de treino: conversa → assunto (guia), regra (aprendizado) e captura de telas do sistema ----------
+  if (req.method === "POST" && p === "/api/treino") {
+    const b = await readBody(req), ASS = `${ROOT}/painel/assessor`;
+    const msgs = (Array.isArray(b.mensagens) ? b.mensagens : []).slice(-12).map((m) => ({ de: m.de === "ia" ? "ia" : "enzo", texto: String(m.texto || "").slice(0, 2000) }));
+    if (!msgs.length || msgs.at(-1).de !== "enzo") return json(res, 400, { erro: "escreva uma mensagem" });
+    const guia = (() => { try { return fs.readFileSync(`${ASS}/guia.md`, "utf8"); } catch { return ""; } })();
+    const regras = (lerJson(`${ASS}/regras.json`) || []).slice(-25).map((r) => `- ${r.regra}`).join("\n");
+    const telas = (lerJson(`${ROOT}/painel/telas/telas.json`) || []).map((t) => `- id ${t.id} · ${t.rota} → "${t.nome_na_tela}" · ${t.usar ? "EM USO nos posts" : "não usada"}`).join("\n");
+    try {
+      const r = extraiJson(await roda(`${ROOT}/tools/agente.sh`, ["treinador",
+        `GUIA ATUAL:\n${guia}\n\nREGRAS APRENDIDAS (últimas):\n${regras || "(nenhuma)"}\n\nCATÁLOGO DE TELAS:\n${telas || "(vazio)"}\n\nCONVERSA:\n${msgs.map((m) => `${m.de === "ia" ? "Assistente" : "Enzo"}: ${m.texto}`).join("\n")}`],
+        { env: { ...process.env, AGENTE_ESFORCO: "low" }, timeout: 120000 }));
+      const feito = []; let proposta = null;
+      for (const a of (Array.isArray(r.acoes) ? r.acoes : []).slice(0, 4)) {
+        const texto = String(a.texto || "").trim().slice(0, 600);
+        if (a.tipo === "assunto" && texto) {
+          fs.mkdirSync(ASS, { recursive: true }); fs.appendFileSync(`${ASS}/guia.md`, `\n- ASSUNTO (pedido do Enzo no chat, ${new Date().toISOString().slice(0, 10)}): ${texto}\n`);
+          feito.push({ tipo: "assunto", texto });
+        } else if (a.tipo === "regra" && texto) {
+          const l = lerJson(`${ASS}/regras.json`) || []; l.push({ regra: texto, origem: "chat", em: Math.floor(Date.now() / 1000) });
+          fs.writeFileSync(`${ASS}/regras.json`, JSON.stringify(l, null, 1)); assessorAprende();
+          feito.push({ tipo: "regra", texto });
+        } else if (a.tipo === "criar") {  // só PROPÕE: o painel mostra e o Enzo aprova antes de criar
+          const prompt = String(a.prompt || "").trim().slice(0, 4000);
+          if (prompt.length >= 10 && !proposta) proposta = { modo: a.modo === "carrossel" ? "carrossel" : "post", motor: a.motor === "classico" ? "classico" : "editorial", formato: a.formato === "stories" ? "stories" : "feed", prompt };
+        } else if (a.tipo === "usar") {  // aprova/tira telas do catálogo para entrar nos posts do Editorial
+          const f = `${ROOT}/painel/telas/telas.json`, l = lerJson(f) || [], ids = (Array.isArray(a.ids) ? a.ids : []).map(String), usar = a.usar !== false;
+          const tocadas = l.filter((t) => ids.includes(t.id)); if (!tocadas.length) continue;
+          tocadas.forEach((t) => { t.usar = usar; if (texto) t.descricao = texto; });
+          fs.writeFileSync(f, JSON.stringify(l, null, 1)); feito.push({ tipo: "usar", texto: `${usar ? "vai usar" : "não usa mais"}: ${tocadas.map((t) => t.nome_na_tela).join(", ")}` });
+        } else if (a.tipo === "capturar") {
+          const rotas = (Array.isArray(a.rotas) ? a.rotas : []).map(String).filter((x) => /^\/administrativo(\/[a-z0-9-]+){0,3}$/.test(x)).slice(0, 8);
+          if (!rotas.length) continue;
+          spawn("/root/documentos/operacao/alvomanage/screenshot/capturar-telas.sh", rotas, { stdio: "ignore", detached: true }).unref();
+          feito.push({ tipo: "capturar", texto: rotas.join(", ") });
+        }
+      }
+      return json(res, 200, { resposta: String(r.resposta || "").slice(0, 2000), feito, proposta });
+    } catch (e) { return json(res, 502, { erro: `treinador: ${e.message}` }); }
+  }
   if (req.method === "POST" && /^\/api\/assistente\/(perguntas|rodada|prompts)$/.test(p)) {
     const b = await readBody(req);
     try {
@@ -763,7 +804,7 @@ http.createServer(async (req, res) => {
       jobs.push({ id: novoId(), parentId: job.id, modo: job.modo, prompt: texto, captionStyle: job.captionStyle, autoSend: job.autoSend, status: "queued", stage: "Na fila (edição)", progress: 0, createdAt: Date.now() });
     } else if (m[2] === "outra") {
       if (job.status !== "done" || (job.modo !== "post" && job.modo !== "carrossel")) return json(res, 400, { erro: "outra versão só vale para post/carrossel pronto" });
-      const novo = criaPostDireto({modo: job.modo, prompt: job.prompt, alvo: job.alvo, formato: job.formato, project: job.project}, job.autoSend);
+      const novo = criaPostDireto({modo: job.modo, prompt: job.prompt, alvo: job.alvo, formato: job.formato, motor: job.motor, project: job.project}, job.autoSend);
       novo.parentId = job.id;
     } else {
       const nota = b.nota === "boa" ? "boa" : b.nota === "ruim" ? "ruim" : null, texto = String(b.texto || "").trim();

@@ -1,0 +1,156 @@
+[
+ {
+  "id": "os-nova",
+  "rota": "/administrativo/os/nova",
+  "nome_na_tela": "Nova Ordem de Serviço",
+  "arquivo": "os-nova.png",
+  "capturada_em": "2026-10-02T14:39:16.056643Z"
+ },
+ {
+  "id": "os-agendamento",
+  "rota": "/administrativo/os/agendamento",
+  "nome_na_tela": "Agendamento",
+  "arquivo": "os-agendamento.png",
+  "capturada_em": "2026-10-02T14:39:27.193988Z"
+ },
+ {
+  "id": "os-historico",
+  "rota": "/administrativo/os/historico",
+  "nome_na_tela": "Ordens de Serviço",
+  "arquivo": "os-historico.png",
+  "capturada_em": "2026-10-02T14:39:32.631841Z"
+ },
+ {
+  "id": "cadastro-funcionarios",
+  "rota": "/administrativo/cadastro/funcionarios",
+  "nome_na_tela": "Funcionários",
+  "arquivo": "cadastro-funcionarios.png",
+  "capturada_em": "2026-10-02T14:39:49.622028Z"
+ },
+ {
+  "id": "cadastro-fornecedores",
+  "rota": "/administrativo/cadastro/fornecedores",
+  "nome_na_tela": "Fornecedores",
+  "arquivo": "cadastro-fornecedores.png",
+  "capturada_em": "2026-10-02T14:39:55.071476Z"
+ },
+ {
+  "id": "estoque-pedidos",
+  "rota": "/administrativo/estoque/pedidos",
+  "nome_na_tela": "Compras",
+  "arquivo": "estoque-pedidos.png",
+  "capturada_em": "2026-10-02T14:40:12.789351Z"
+ },
+ {
+  "id": "financeiro-caixa",
+  "rota": "/administrativo/financeiro/caixa",
+  "nome_na_tela": "Caixa",
+  "arquivo": "financeiro-caixa.png",
+  "capturada_em": "2026-10-02T14:40:18.822044Z"
+ },
+ {
+  "id": "financeiro-receber",
+  "rota": "/administrativo/financeiro/receber",
+  "nome_na_tela": "Contas a Receber",
+  "arquivo": "financeiro-receber.png",
+  "capturada_em": "2026-10-02T14:40:24.226486Z"
+ },
+ {
+  "id": "financeiro-pagar",
+  "rota": "/administrativo/financeiro/pagar",
+  "nome_na_tela": "Contas a Pagar",
+  "arquivo": "financeiro-pagar.png",
+  "capturada_em": "2026-10-02T14:40:29.740086Z"
+ },
+ {
+  "id": "financeiro-fluxo-caixa",
+  "rota": "/administrativo/financeiro/fluxo-caixa",
+  "nome_na_tela": "Fluxo de Caixa",
+  "arquivo": "financeiro-fluxo-caixa.png",
+  "capturada_em": "2026-10-02T14:40:35.280626Z"
+ },
+ {
+  "id": "whatsapp",
+  "rota": "/administrativo/whatsapp",
+  "nome_na_tela": "WhatsApp",
+  "arquivo": "whatsapp.png",
+  "capturada_em": "2026-10-02T14:40:47.900436Z"
+ },
+ {
+  "id": "configuracao-situacoes",
+  "rota": "/administrativo/configuracao/situacoes",
+  "nome_na_tela": "Situações",
+  "arquivo": "configuracao-situacoes.png",
+  "capturada_em": "2026-10-02T14:40:53.388018Z"
+ },
+ {
+  "id": "configuracao-loja",
+  "rota": "/administrativo/configuracao/loja",
+  "nome_na_tela": "Suas Lojas",
+  "arquivo": "configuracao-loja.png",
+  "capturada_em": "2026-10-02T14:40:59.027222Z"
+ },
+ {
+  "id": "configuracao-meu-plano",
+  "rota": "/administrativo/configuracao/meu-plano",
+  "nome_na_tela": "Assinatura",
+  "arquivo": "configuracao-meu-plano.png",
+  "capturada_em": "2026-10-02T14:41:05.061798Z"
+ },
+ {
+  "id": "cadastro-clientes",
+  "rota": "/administrativo/cadastro/clientes",
+  "nome_na_tela": "Clientes",
+  "arquivo": "cadastro-clientes.png",
+  "capturada_em": "2026-10-02T15:08:42.484945+00:00"
+ },
+ {
+  "id": "produtos",
+  "rota": "/administrativo/produtos",
+  "nome_na_tela": "Gestão de Produtos",
+  "arquivo": "produtos.png",
+  "capturada_em": "2026-10-02T15:08:48.039620+00:00"
+ },
+ {
+  "id": "estoque-movimentacoes",
+  "rota": "/administrativo/estoque/movimentacoes",
+  "nome_na_tela": "Movimentações de Estoque",
+  "arquivo": "estoque-movimentacoes.png",
+  "capturada_em": "2026-10-02T15:08:53.332182+00:00"
+ },
+ {
+  "id": "vendas-pdv",
+  "rota": "/administrativo/vendas/pdv",
+  "nome_na_tela": "PDV",
+  "arquivo": "vendas-pdv.png",
+  "capturada_em": "2026-10-02T15:08:59.304320+00:00"
+ },
+ {
+  "id": "visao-geral",
+  "rota": "/administrativo",
+  "nome_na_tela": "Todas as Lojas",
+  "arquivo": "visao-geral.png",
+  "capturada_em": "2026-10-02T15:09:05.507166+00:00"
+ },
+ {
+  "id": "relatorio",
+  "rota": "/administrativo/relatorio",
+  "nome_na_tela": "Relatório de Vendas",
+  "arquivo": "relatorio.png",
+  "capturada_em": "2026-10-02T15:09:11.629932+00:00"
+ },
+ {
+  "id": "os-dashboard",
+  "rota": "/administrativo/os/dashboard",
+  "nome_na_tela": "Últimas Ordens de Serviço",
+  "arquivo": "os-dashboard.png",
+  "capturada_em": "2026-10-02T15:09:17.053182+00:00"
+ },
+ {
+  "id": "os-orcamentos",
+  "rota": "/administrativo/os/orcamentos",
+  "nome_na_tela": "Orçamentos",
+  "arquivo": "os-orcamentos.png",
+  "capturada_em": "2026-10-02T17:06:27.905386+00:00"
+ }
+]

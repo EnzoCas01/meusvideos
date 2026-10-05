@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostFvqa",
+ "sx": "bmddbc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "verde_negocio",
+ "logo": false,
+ "logo_px": 90,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "verde_negocio",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Sua loja configurada em 5 passos",
+     "objetivo": "educativo",
+     "receita": "editorial_organico",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "loja",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "faixa_lateral",
+     "fundo_var": 0.708,
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuoefvqa8564/fotos/80983f5a0c.jpg",
+     "foto_layout": "metade_superior",
+     "foto_efeito": "escurecer",
+     "subtitulo": "Os Primeiros Passos do AlvoManage guiam a configuração."
+    }
+   }
+  }
+ ]
+}

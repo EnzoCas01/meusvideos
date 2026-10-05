@@ -1,0 +1,15 @@
+{
+  "id": "texto_titulo",
+  "tipo": "texto_impacto",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["cinematico", "luxo", "motivacional", "informacional"],
+  "descricao": "Texto de impacto curto (data, nome, número), grande, centralizado no terço escolhido, com sombra para ler sobre qualquer foto.",
+  "uso_recomendado": ["frases de impacto", "gancho inicial", "datas e números-chave", "nomes"],
+  "duracao_recomendada": "1-3 s",
+  "parametros": {
+    "texto": {"tipo": "string", "descricao": "O texto (1-3 palavras)", "obrigatorio": true},
+    "posicao": {"tipo": "string", "descricao": "topo | centro | baixo", "obrigatorio": false},
+    "tamanho": {"tipo": "numero", "descricao": "Tamanho da fonte em px", "obrigatorio": false},
+    "cor": {"tipo": "cor", "descricao": "Cor do texto (padrão: tema)", "obrigatorio": false}
+  }
+}

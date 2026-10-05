@@ -1,0 +1,23 @@
+{
+  "id": "post_design",
+  "tipo": "layout_post",
+  "formatos": ["1:1", "4:5"],
+  "estilos": ["motivacional", "luxo", "informacional", "cinematico"],
+  "descricao": "Sistema de pôster dirigido pelo Jev: receitas de oferta, editorial, premium, energia, informação e frase; alinhamento, hierarquia, decoração vetorial, ícone controlado, título, apoio e CTA. O logo ativo entra pelo motor.",
+  "uso_recomendado": ["frases e citações", "posts motivacionais", "dicas rápidas", "identidade de marca"],
+  "duracao_recomendada": "post estático",
+  "parametros": {
+    "frase": {"tipo": "string", "descricao": "A frase principal (palavras do Enzo)", "obrigatorio": true},
+    "subtitulo": {"tipo": "string", "descricao": "Linha de apoio", "obrigatorio": false},
+    "cta": {"tipo": "string", "descricao": "Texto do botão", "obrigatorio": false},
+    "icone": {"tipo": "string", "descricao": "Nome do ícone (ver componente icone / icones.json)", "obrigatorio": false},
+    "receita": {"tipo": "string", "descricao": "oferta_impacto | editorial_organico | premium_moldura | energia_geometrica | informativo_modular | frase_autoral", "obrigatorio": false},
+    "alinhamento": {"tipo": "string", "descricao": "esquerda | centro | assimetrico", "obrigatorio": false},
+    "decoracao": {"tipo": "string", "descricao": "folhagem | arcos | geometria | moldura | brilho | grade | nenhuma", "obrigatorio": false},
+    "decoracao_posicao": {"tipo": "string", "descricao": "cantos_opostos | topo | lateral | fundo", "obrigatorio": false},
+    "decoracao_intensidade": {"tipo": "string", "descricao": "discreta | media | marcante", "obrigatorio": false},
+    "icone_escala": {"tipo": "string", "descricao": "micro | discreto | protagonista, sempre limitado pelo componente", "obrigatorio": false},
+    "fundo": {"tipo": "cor", "descricao": "Cor de fundo (padrão: tema)", "obrigatorio": false},
+    "cor_botao": {"tipo": "cor", "descricao": "Cor do botão", "obrigatorio": false}
+  }
+}

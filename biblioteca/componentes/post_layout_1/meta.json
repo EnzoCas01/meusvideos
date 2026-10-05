@@ -1,0 +1,17 @@
+{
+  "id": "post_layout_1",
+  "tipo": "layout_post",
+  "formatos": ["1:1", "4:5"],
+  "estilos": ["informacional", "motivacional", "cinematico"],
+  "descricao": "Post completo: título grande no topo, subtítulo, botão de CTA e imagem cobrindo a metade de baixo com gradiente de legibilidade.",
+  "uso_recomendado": ["posts de anúncio", "dicas", "chamadas para ação", "posts institucionais"],
+  "duracao_recomendada": "post estático",
+  "parametros": {
+    "titulo": {"tipo": "string", "descricao": "Título principal", "obrigatorio": true},
+    "subtitulo": {"tipo": "string", "descricao": "Linha de apoio sob o título", "obrigatorio": false},
+    "cta": {"tipo": "string", "descricao": "Texto do botão (ex.: Saiba mais)", "obrigatorio": false},
+    "arquivo": {"tipo": "imagem", "descricao": "Imagem da metade de baixo (relativo a public/)", "obrigatorio": true},
+    "cor_botao": {"tipo": "cor", "descricao": "Cor do botão (padrão: tema)", "obrigatorio": false},
+    "cor_botao_texto": {"tipo": "cor", "descricao": "Cor do texto do botão", "obrigatorio": false}
+  }
+}

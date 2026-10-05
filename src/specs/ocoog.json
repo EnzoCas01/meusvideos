@@ -1,0 +1,57 @@
+{
+ "formato": "post",
+ "peca": "PostKouc",
+ "sx": "ocoog",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "escuro_clean",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "escuro_clean",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "**Sua assistência técnica, sob controle.**\n\n**Tenha tudo o que você precisa para administrar sua assistência técnica em um só lugar.**\n\nOrdens de serviço • Clientes • Estoque • Vendas • Financeiro\n\n**Conheça o AlvoManage**",
+     "icone": "wrench"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "tema": "luxo_dourado",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "**Sua assistência técnica, sob controle.**\n\n**Tenha tudo o que você precisa para administrar sua assistência técnica em um só lugar.**\n\nOrdens de serviço • Clientes • Estoque • Vendas • Financeiro\n\n**Conheça o AlvoManage**",
+     "icone": "wrench"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "tema": "energia_viva",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "**Sua assistência técnica, sob controle.**\n\n**Tenha tudo o que você precisa para administrar sua assistência técnica em um só lugar.**\n\nOrdens de serviço • Clientes • Estoque • Vendas • Financeiro\n\n**Conheça o AlvoManage**",
+     "icone": "wrench"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "tema": "editorial_claro",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "**Sua assistência técnica, sob controle.**\n\n**Tenha tudo o que você precisa para administrar sua assistência técnica em um só lugar.**\n\nOrdens de serviço • Clientes • Estoque • Vendas • Financeiro\n\n**Conheça o AlvoManage**",
+     "icone": "wrench"
+    }
+   }
+  }
+ ]
+}

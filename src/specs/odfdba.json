@@ -1,0 +1,48 @@
+{
+ "formato": "post",
+ "peca": "PostForm",
+ "sx": "odfdba",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 275,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Sua loja conversa com você",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "minimalista",
+     "hierarquia": "assunto",
+     "decoracao": "nenhuma",
+     "decoracao_posicao": "cantos_opostos",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "nenhum",
+     "luz": "nenhuma",
+     "sombra": "nenhuma",
+     "solucao": "faixa",
+     "composicao": "icone_topo",
+     "selo": "COM IA",
+     "pontos": [
+      "Pergunte sobre vendas",
+      "Controle e Comando"
+     ],
+     "fundo_estilo": "solido",
+     "fundo_var": 0.119,
+     "subtitulo": "No AlvoManage, a IA responde sobre as vendas.",
+     "icone": "device-mobile-message"
+    }
+   }
+  }
+ ]
+}

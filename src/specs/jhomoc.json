@@ -1,0 +1,34 @@
+{
+ "formato": "post",
+ "peca": "PostEjl",
+ "sx": "jhomoc",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "editorial_claro",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "editorial_claro",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "20% OFF",
+     "receita": "editorial_organico",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "oferta",
+     "decoracao": "brilho",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "subtitulo": "Condição especial",
+     "cta": "AGENDE SEU HORÁRIO"
+    }
+   }
+  }
+ ]
+}

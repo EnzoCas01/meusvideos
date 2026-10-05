@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostIhd",
+ "sx": "bklpfc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 295,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "OS, PDV, estoque e caixa conversando",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "estoque",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "linha",
+     "icone_estilo": "preenchido",
+     "enfeite": "seta",
+     "fundo_estilo": "duas_cores",
+     "fundo_var": 0.084,
+     "subtitulo": "No AlvoManage, uma venda ou entrega atualiza tudo de uma vez.",
+     "icone": "shopping-cart-cog"
+    }
+   }
+  }
+ ]
+}

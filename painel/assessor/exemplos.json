@@ -1,0 +1,952 @@
+[
+ {
+  "texto": "Título: \"OS, PDV, estoque e caixa conversando\" Subtítulo: \"No AlvoManage, uma venda ou entrega atualiza tudo de uma vez.\"",
+  "bom": false,
+  "motivo": "lista de recursos com metáfora vaga; o dono não se enxerga ali"
+ },
+ {
+  "texto": "Título: \"Vendeu a última capinha e o estoque nem piscou?\" Subtítulo: \"No AlvoManage, a venda no balcão já dá baixa no estoque na hora.\"",
+  "bom": true,
+  "motivo": "cena real da loja, dor clara e o que muda"
+ },
+ {
+  "texto": "Título: \"Anotou o conserto no papel de novo?\" Subtítulo: \"No AlvoManage, a OS sai impressa com os dados da sua loja, sem caderninho.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre caneta e papel na bancada.",
+  "bom": true,
+  "motivo": "Isso e um dor de quem trabalha sem sistema"
+ },
+ {
+  "texto": "Título: \"Cliente liga o dia inteiro: 'já ficou?'\" Subtítulo: \"No AlvoManage, o cliente vê o andamento da OS pelo celular, sem te ligar.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre cliente ligando o dia todo.",
+  "bom": true,
+  "motivo": "Extao isso e um dor real"
+ },
+ {
+  "texto": "Título: \"Orçamento parado esperando o cliente\" Subtítulo: \"No AlvoManage, o cliente aprova ou recusa o orçamento pelo celular na hora.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre orçamento esperando resposta.",
+  "bom": true,
+  "motivo": "Isso mostra uma dor real"
+ },
+ {
+  "texto": "Título: \"Cliente diz que o risco não estava lá?\" Subtítulo: \"No AlvoManage, as fotos do aparelho ficam salvas na OS desde a entrada.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre aparelho entregue sem prova.",
+  "bom": true,
+  "motivo": "Muito bom Dor real do dia adia"
+ },
+ {
+  "texto": "Título: \"O fiado tá no caderno e ninguém acha?\" Subtítulo: \"No AlvoManage, contas a receber ficam com vencimento e valor anotados certinho.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre fiado anotado no caderno.",
+  "bom": true,
+  "motivo": "Muito bom mostra que o sistema tem controle de tudo e uma dor real"
+ },
+ {
+  "texto": "Título: \"Voltou dizendo que tá na garantia\" Subtítulo: \"No AlvoManage, a garantia fica registrada na OS e você confere na hora.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre garantia sem comprovar.",
+  "bom": false,
+  "motivo": "Todo sistema tem garantia então nao e relevnte"
+ },
+ {
+  "texto": "Título: \"Vendeu e só descobriu que acabou depois?\" Subtítulo: \"No AlvoManage, a venda no balcão dá baixa no estoque na mesma hora.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre produto que acabou e você.",
+  "bom": false,
+  "motivo": "Todo sistema tem isso"
+ },
+ {
+  "texto": "Título: \"Peça encomendada que caiu no esquecimento\" Subtítulo: \"No AlvoManage, cotação com fornecedores e status aguardando peça na mão.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre peça encomendada esquecida.",
+  "bom": false,
+  "motivo": "Esse topco e legal mais pode meljorar a forma de falar pode ser mais afiado"
+ },
+ {
+  "texto": "Título: \"Pronto e o cliente não vem buscar\" Subtítulo: \"No AlvoManage, você lembra o cliente pela agenda e pelo WhatsApp da loja.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre cliente não aparece buscar.",
+  "bom": false,
+  "motivo": "Legal mais pode melhorar"
+ },
+ {
+  "texto": "Título: \"Fechar o caixa no escuro é uma dor\" Subtítulo: \"No AlvoManage, a entrega da OS entra no caixa e o dia fecha redondo.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre fechar o caixa no fim do dia.",
+  "bom": false,
+  "motivo": "Todo sistema tem iss melhorar a mensagem"
+ },
+ {
+  "texto": "Anotou o conserto no papel de novo? | Caderninho na bancada é dor antiga. || Cliente quer saber quanto vai custar | Você some pra calcular no papel. || No AlvoManage o orçamento sai por link | O cliente aprova ou recusa pelo celular. || Aprovado, você já começa o serviço | Sem esperar voltar na loja pra decidir. || Sem papel amassado na bancada | Tudo fica salvo dentro da OS.",
+  "bom": false,
+  "motivo": "Deixa mais afiado"
+ },
+ {
+  "texto": "Cliente liga o dia inteiro: 'já ficou?' | Você para o serviço pra atender. || A bancada trava com tanta ligação | Quem conserta não pode virar telefone. || No AlvoManage o cliente vê o status | Link de acompanhamento no celular dele. || Você trabalha sem interrupção | Pronto, aguardando peça, em andamento. || O telefone volta a tocar só pra vender | Dia mais rendido na bancada.",
+  "bom": true,
+  "motivo": "Legal"
+ },
+ {
+  "texto": "Cliente diz que o risco não estava lá? | Sem foto, vira palavra contra palavra. || Você jura que entrou impecável | Mas não tem como provar. || No AlvoManage a foto fica na OS | Registrada na hora da entrada. || Risco, trinca e detalhe tudo guardado | Abre a OS e mostra pro cliente. || Conversa resolve na hora | Sem prejuízo que não era seu.",
+  "bom": true,
+  "motivo": "Muito bom"
+ },
+ {
+  "texto": "O fiado tá no caderno e ninguém acha? | Folheia tudo pra achar um nome. || Vencido e sem cobrar, vira prejuízo | Dinheiro que não volta pro caixa. || No AlvoManage o fiado tem vencimento | Valor e data anotados certinho. || Você abre e sabe quem tá devendo | Sem caderno, sem esquecimento. || Cobrança certa, caixa mais cheio | Contas a receber no controle.",
+  "bom": false,
+  "motivo": "Deixa mais afiado"
+ },
+ {
+  "texto": "Fim do dia e o caixa não bate | Você refaz a conta três vezes. || Venda no balcão e OS misturadas | Ninguém sabe o que entrou. || No AlvoManage a entrega vai pro caixa | A OS entrega e o valor entra na hora. || Abertura, movimentos e fechamento | Tudo registrado na mesma tela. || Você fecha o dia sem dor de cabeça | E sabe quanto sobrou de verdade.",
+  "bom": false,
+  "motivo": "Ja falei deixa mais afiado tdo sistema tem isso"
+ },
+ {
+  "texto": "Pronto e o cliente não vem buscar? | Aparelho parado ocupando a bancada. || Você liga e ele não atende | E o serviço fica sem receber. || No AlvoManage o WhatsApp é da loja | Lembrete vai direto pro cliente. || A agenda avisa a hora de chamar | Sem depender da sua memória. || Aparelho sai, dinheiro entra | Bancada livre pro próximo conserto.",
+  "bom": false,
+  "motivo": "Errraod nao sei da onde puxou essa informação"
+ },
+ {
+  "texto": "Encomendou a peça e ela sumiu? | Cliente esperando e você sem resposta. || Ninguém sabe em qual fornecedor | Anotado em algum lugar que ninguém acha. || No AlvoManage a OS fica aguardando peça | Status claro na bancada. || Cotação com fornecedor na mão | Você compara e decide rápido. || Chegou a peça, já retoma o serviço | Cliente avisado e conserto andando.",
+  "bom": false,
+  "motivo": "Muit bos s menssagem mais deixa melhor de entender"
+ },
+ {
+  "texto": "Vendeu a última capinha e ninguém viu? | O estoque continua dizendo que tem. || Cliente pede e você não tem | Venda perdida na frente dele. || No AlvoManage a venda baixa na hora | O PDV e o estoque na mesma tela. || Você sabe o que tem de verdade | Antes de prometer pro cliente. || Repõe o que vendeu e não trava | Loja nunca fica sem o que gira.",
+  "bom": false,
+  "motivo": "iss todo sistema tem"
+ },
+ {
+  "texto": "Abriu a segunda loja e virou bagunça? | Estoque de uma some pra outra. || Você não sabe o que tem em cada uma | Liga de uma pra outra pra perguntar. || No AlvoManage você vê as lojas juntas | Ou separadas, do jeito que quiser. || Transferência de estoque entre lojas | Peça que saiu de uma entrou na outra. || Você comanda as duas do celular | Sem estar no balcão de cada uma.",
+  "bom": false,
+  "motivo": "iss e inrelevante como voce esta explicando"
+ },
+ {
+  "texto": "Dois aparelhos iguais e a OS trocada? | Você olha e não sabe qual é de quem. || Entrega errada e cliente irritado | Prejuízo e fama ruim na loja. || No AlvoManage a foto identifica a OS | Bate o olho e sabe qual aparelho é. || Entrada, conserto e entrega certos | Sem confundir o do vizinho. || Cliente leva o dele, sem erro | Confiança que faz voltar.",
+  "bom": true,
+  "motivo": "LEgal"
+ },
+ {
+  "texto": "Orçamento parado esperando resposta | O cliente some e o serviço fica travado || Você liga, ele não atende | Aparelho parado, bancada ocupada à toa || No AlvoManage vai por link | O cliente aprova ou recusa pelo celular || Aprovou, você já começa | Sem esperar ele voltar na loja || Recusou, bancada liberada | Você não perde tempo com quem não quer",
+  "bom": false,
+  "motivo": "Se o cliente nao atende nao vai mudar nada fla pelo zap nao tem logica"
+ },
+ {
+  "texto": "Título: \"Funcionário novo te liga a cada OS?\"\nSubtítulo: \"No AlvoManage, um assistente tira as dúvidas na própria tela do sistema.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre assistente na tela.\nImagem:\n- Foto: dono de assistência técnica num lugar fora da loja (mesa de restaurante ou fila de banco), olhando para o celular que toca na mão com cara de cansado. Em cima da mesa tem um prato pela metade. Luz natural de fim de tarde vindo de lado, sombra marcada no rosto e fundo desfocado com tons escuros\n- Posição da foto: foto polaroide\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo degradê\n- Luz: vinheta escura\n- Sombra: sombra forte\n- Destaque: sublinhado no título\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: tenso: o dono não consegue sair da loja nem de longe",
+  "bom": false,
+  "motivo": "A solução nao tem que ser sempre dentro desse bloquinho em baixo ele tem que ficar em alguns lugares melhores e diferente porue esses bloquinho parece uma descrição que e chato ler"
+ },
+ {
+  "texto": "Título: \"Fim do mês e briga pela comissão?\"\nSubtítulo: \"No AlvoManage, cada venda fica no nome de quem vendeu e a comissão sai por operador.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre comissão por operador.\nImagem:\n- Foto: dois vendedores de loja de celular em pé atrás do balcão, um apontando para um caderno aberto cheio de rabiscos e o outro de braços cruzados com cara fechada; vitrine de capinhas e acessórios desfocada ao fundo; foto em ângulo de frente, na altura do balcão; luz fria de loja vindo de cima, sombra marcada no rosto dos dois\n- Posição da foto: foto com corte diagonal\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo degradê\n- Luz: vinheta escura\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: textura granulada\n- Desenho: grupo de clientes desenhado\n- Texto: texto centralizado\n- Clima: tenso: discussão na equipe por causa de dinheiro sem prova de quem vendeu",
+  "bom": false,
+  "motivo": "Imagem muito vazia tem que melhrar nesse pormpt ou em algo no jev",
+  "origem": "arte",
+  "versao": 1,
+  "texto_da_versao": "Fim do mês e briga pela comissão? | No AlvoManage, cada venda fica no nome de quem vendeu e a comissão sai por operador.",
+  "arte": [
+   {
+    "n": 1,
+    "tema": "marca",
+    "receita": "energia_geometrica",
+    "decoracao": "clientes",
+    "fundo_estilo": "gradiente",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque": "peso",
+    "icone_estilo": "preenchido",
+    "enfeite": "granulado",
+    "luz": "vinheta",
+    "sombra": "forte"
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Fim do mês e briga pela comissão?\"\nSubtítulo: \"No AlvoManage, cada venda fica no nome de quem vendeu e a comissão sai por operador.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre comissão por operador.\nImagem:\n- Foto: dois vendedores de loja de celular em pé atrás do balcão, um apontando para um caderno aberto cheio de rabiscos e o outro de braços cruzados com cara fechada; vitrine de capinhas e acessórios desfocada ao fundo; foto em ângulo de frente, na altura do balcão; luz fria de loja vindo de cima, sombra marcada no rosto dos dois\n- Posição da foto: foto com corte diagonal\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo degradê\n- Luz: vinheta escura\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: textura granulada\n- Desenho: grupo de clientes desenhado\n- Texto: texto centralizado\n- Clima: tenso: discussão na equipe por causa de dinheiro sem prova de quem vendeu",
+  "bom": false,
+  "motivo": "Mesmo umagem muito vazia e seguindo o padrão do 1 e isso nunca pode acontecer sempre tem que ser diferentes padroes para entender melhor",
+  "origem": "arte",
+  "versao": 2,
+  "texto_da_versao": "Cansado de confusão na comissão? | No AlvoManage, cada venda fica no nome de quem vendeu e a comissão sai por operador.",
+  "arte": [
+   {
+    "n": 2,
+    "tema": "marca",
+    "receita": "frase_autoral",
+    "decoracao": "clientes",
+    "fundo_estilo": "gradiente",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque": "peso",
+    "icone_estilo": "marca_dagua",
+    "enfeite": "granulado",
+    "luz": "vinheta",
+    "sombra": "forte"
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Fim do mês e briga pela comissão?\"\nSubtítulo: \"No AlvoManage, cada venda fica no nome de quem vendeu e a comissão sai por operador.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre comissão por operador.\nImagem:\n- Foto: dois vendedores de loja de celular em pé atrás do balcão, um apontando para um caderno aberto cheio de rabiscos e o outro de braços cruzados com cara fechada; vitrine de capinhas e acessórios desfocada ao fundo; foto em ângulo de frente, na altura do balcão; luz fria de loja vindo de cima, sombra marcada no rosto dos dois\n- Posição da foto: foto com corte diagonal\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo degradê\n- Luz: vinheta escura\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: textura granulada\n- Desenho: grupo de clientes desenhado\n- Texto: texto centralizado\n- Clima: tenso: discussão na equipe por causa de dinheiro sem prova de quem vendeu",
+  "bom": false,
+  "motivo": "O mesmo que o 1 e 2 melhora",
+  "origem": "arte",
+  "versao": 3,
+  "texto_da_versao": "Sabe quanto cada operador vendeu? | No AlvoManage, cada venda fica no nome de quem vendeu e a comissão sai por operador.",
+  "arte": [
+   {
+    "n": 3,
+    "tema": "marca",
+    "receita": "informativo_modular",
+    "decoracao": "clientes",
+    "fundo_estilo": "gradiente",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque": "peso",
+    "icone_estilo": "selo_quadrado",
+    "enfeite": "granulado",
+    "luz": "vinheta",
+    "sombra": "forte"
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Fim do mês e a equipe briga por comissão?\"\nSubtítulo: \"No AlvoManage, a comissão sai separada por operador. Acabou a conta no caderno.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre comissão por operador.\nImagem:\n- Foto: Dois vendedores jovens com a camiseta da loja atrás do balcão. Um aponta para um caderno aberto e cheio de rabiscos, o outro está de braços cruzados e cara fechada. Celulares expostos na vitrine ao fundo. Luz quente de fim de dia entrando de lado e marcando sombra nos rostos.\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto escurecida\n- Fundo: fundo degradê\n- Luz: vinheta escura\n- Sombra: sombra forte\n- Destaque: subtítulo em etiqueta\n- Enfeite: cantoneiras\n- Desenho: sem desenho\n- Texto: texto centralizado\n- Clima: tenso: clima pesado na equipe por causa de dinheiro",
+  "bom": false,
+  "motivo": "Isso nao e um prompt digino para postar melhora e preocura mais informaçoes interressantes sobre  o sisyema"
+ },
+ {
+  "texto": "Título: \"Cliente não sabe o modelo do próprio celular?\"\nSubtítulo: \"No AlvoManage, uma foto do aparelho ajuda a preencher a OS.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre identificar aparelho por foto.\nImagem:\n- Foto: Balcão de assistência técnica na altura dos olhos. O cliente encolhe os ombros com o celular de tela trincada na mão. Do outro lado, o técnico segura a caneta parada sobre uma ficha em branco, com cara de dúvida. Ferramentas desfocadas ao fundo, luz branca de luminária vindo de cima e fundo escuro.\n- Posição da foto: foto em círculo\n- Tratamento da foto: foto natural\n- Fundo: fundo com brilho no centro\n- Luz: luz de holofote\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: estrelinhas\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: curiosidade: uma dúvida chata do balcão resolvida de um jeito que surpreende",
+  "bom": false,
+  "motivo": "Ja gerou esse pormpt outras variedades"
+ },
+ {
+  "texto": "Título: \"Técnico saiu e levou o zap dos clientes?\"\nSubtítulo: \"No AlvoManage, o cliente fala com o WhatsApp da loja, conectado ao sistema.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre WhatsApp da loja conectado.\nImagem:\n- Foto: Foto grande, ocupando boa parte da arte. Não trocar a foto por ícone. Um funcionário jovem, de mochila nas costas, sai pela porta da assistência técnica mexendo no próprio celular, com uma conversa de WhatsApp aberta. Em primeiro plano, desfocado, o dono olha para ele de trás do balcão. Na bancada ficam aparelhos esperando conserto, com etiquetas. Luz fria de fluorescente dentro da loja e claridade da rua na porta. Ao lado vai um celular desenhado com a conversa no WhatsApp da loja. O subtítulo fica escrito junto desse celular, e não numa caixa no rodapé.\n- Posição da foto: foto na metade de cima\n- Tratamento da foto: foto escurecida\n- Fundo: faixa diagonal em cima\n- Luz: vinheta escura\n- Sombra: sombra forte\n- Destaque: subtítulo colorido\n- Enfeite: sem enfeite\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: tenso: as conversas com os clientes indo embora no bolso de outra pessoa",
+  "bom": false,
+  "motivo": "Nao tem nexo esse prompt"
+ },
+ {
+  "texto": "Título: \"Cadê a capinha que eu deixei aqui?\"\nSubtítulo: \"No AlvoManage, a foto da entrada mostra como o aparelho chegou, com ou sem capinha.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre foto prova acessório na entrada.\nImagem:\n- Foto: Foto grande, ocupando boa parte da arte. Não trocar a foto por ícone. No balcão de uma assistência técnica, em primeiro plano, a mão do cliente aponta irritada para um celular sem capinha em cima do balcão. Do outro lado, o dono olha confuso, com a mão aberta, como quem diz 'não veio com capinha'. Ao fundo, fora de foco, fica uma prateleira de capinhas penduradas. A câmera fica na altura do balcão e pega os dois lados da discussão, com luz lateral de fim de tarde entrando pela vitrine. Ao lado vai um celular desenhado mostrando a foto da entrada salva na OS, com o aparelho sem capinha. O subtítulo fica escrito junto dele, e não numa caixa no rodapé.\n- Posição da foto: foto na metade de cima\n- Tratamento da foto: foto natural\n- Fundo: faixa diagonal embaixo\n- Luz: brilho no canto\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: seta desenhada\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: tenso: é a palavra do cliente contra a sua",
+  "bom": false,
+  "motivo": "Imagem vazia e as outras dus imanegs tem uma linha que nao ficou legou talves fique em uotras imagens",
+  "origem": "arte",
+  "versao": 2,
+  "texto_da_versao": "O que a foto de entrada revela? | No AlvoManage, a foto da entrada mostra como o aparelho chegou, com ou sem capinha.",
+  "arte": [
+   {
+    "n": 2,
+    "tema": "marca",
+    "receita": "informativo_modular",
+    "decoracao": "celular",
+    "fundo_estilo": "dividido_baixo",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque": "peso",
+    "icone_estilo": "preenchido",
+    "enfeite": "seta",
+    "luz": "brilho_canto",
+    "sombra": "forte"
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Cadê a capinha que eu deixei aqui?\"\nSubtítulo: \"No AlvoManage, a foto da entrada mostra como o aparelho chegou, com ou sem capinha.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre foto prova acessório na entrada.\nImagem:\n- Foto: Foto grande, ocupando boa parte da arte. Não trocar a foto por ícone. No balcão de uma assistência técnica, em primeiro plano, a mão do cliente aponta irritada para um celular sem capinha em cima do balcão. Do outro lado, o dono olha confuso, com a mão aberta, como quem diz 'não veio com capinha'. Ao fundo, fora de foco, fica uma prateleira de capinhas penduradas. A câmera fica na altura do balcão e pega os dois lados da discussão, com luz lateral de fim de tarde entrando pela vitrine. Ao lado vai um celular desenhado mostrando a foto da entrada salva na OS, com o aparelho sem capinha. O subtítulo fica escrito junto dele, e não numa caixa no rodapé.\n- Posição da foto: foto na metade de cima\n- Tratamento da foto: foto natural\n- Fundo: faixa diagonal embaixo\n- Luz: brilho no canto\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: seta desenhada\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: tenso: é a palavra do cliente contra a sua",
+  "bom": false,
+  "motivo": "Ficou legal a sombra mais essa fonte com combras nas letras nao achei legal nao talvez outro model de letra u sem fonte ou alguma letras ou frazes com destaque fique bom e sempre coloca no prompt e analisa para que os icones nao fica em cima da logo icones ou imagens",
+  "origem": "arte",
+  "versao": 1,
+  "texto_da_versao": "Cadê a capinha que eu deixei aqui? | No AlvoManage, a foto da entrada mostra como o aparelho chegou, com ou sem capinha.",
+  "arte": [
+   {
+    "n": 1,
+    "tema": "marca",
+    "receita": "editorial_organico",
+    "decoracao": "celular",
+    "fundo_estilo": "dividido_baixo",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque": "peso",
+    "icone_estilo": "circulo_suave",
+    "enfeite": "seta",
+    "luz": "brilho_canto",
+    "sombra": "forte",
+    "foto_layout": "1:metade_superior"
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Cadê a capinha que eu deixei aqui?\"\nSubtítulo: \"No AlvoManage, a foto da entrada mostra como o aparelho chegou, com ou sem capinha.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre foto prova acessório na entrada.\nImagem:\n- Foto: Foto grande, ocupando boa parte da arte. Não trocar a foto por ícone. No balcão de uma assistência técnica, em primeiro plano, a mão do cliente aponta irritada para um celular sem capinha em cima do balcão. Do outro lado, o dono olha confuso, com a mão aberta, como quem diz 'não veio com capinha'. Ao fundo, fora de foco, fica uma prateleira de capinhas penduradas. A câmera fica na altura do balcão e pega os dois lados da discussão, com luz lateral de fim de tarde entrando pela vitrine. Ao lado vai um celular desenhado mostrando a foto da entrada salva na OS, com o aparelho sem capinha. O subtítulo fica escrito junto dele, e não numa caixa no rodapé.\n- Posição da foto: foto na metade de cima\n- Tratamento da foto: foto natural\n- Fundo: faixa diagonal embaixo\n- Luz: brilho no canto\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: seta desenhada\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: tenso: é a palavra do cliente contra a sua",
+  "bom": false,
+  "motivo": "Imagem vazia sem informação NÂO GOSTEI",
+  "origem": "arte",
+  "versao": 3,
+  "texto_da_versao": "Proteja-se com a foto de entrada | No AlvoManage, a foto da entrada mostra como o aparelho chegou, com ou sem capinha.",
+  "arte": [
+   {
+    "n": 3,
+    "tema": "marca",
+    "receita": "energia_geometrica",
+    "decoracao": "celular",
+    "fundo_estilo": "dividido_baixo",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque": "peso",
+    "icone_estilo": "brilho",
+    "enfeite": "seta",
+    "luz": "brilho_canto",
+    "sombra": "forte"
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Erro comum: o dono vira digitador da loja\"\nSubtítulo: \"No AlvoManage, você tira a foto do produto e a IA preenche o cadastro.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre cadastro de produto por foto.\nSelo: \"Com IA\"\nPontos: \"Chegou caixa de mercadoria?\" | \"Tira a foto do produto\" | \"A IA preenche o cadastro\"\nImagem:\n- Foto: Foto grande ocupando boa parte da arte, nunca ícone. Loja de celular fechada à noite, com a porta de enrolar meio abaixada ao fundo. O dono está sentado no balcão, com cara de cansado e a mão na testa, digitando num notebook. Ao lado tem uma caixa de papelão aberta e transbordando de capinhas, películas e carregadores ainda no plástico. Em volta ficam pilhas de produtos esperando cadastro e um copo de café pela metade. A câmera pega de lado, na altura do balcão. A única luz é a de uma luminária quente em cima do balcão, com sombra forte no rosto e no resto da loja.\n- Solução: solução em faixa\n- Posição da foto: foto em arco\n- Tratamento da foto: foto com contraste forte\n- Fundo: faixa lateral\n- Luz: brilho no canto\n- Sombra: sombra forte\n- Destaque: sublinhado no título\n- Enfeite: seta desenhada\n- Desenho: pedestal de produto\n- Texto: texto centralizado\n- Clima: cansaço: o dono perdendo a noite digitando o que a IA faria por ele\n- Na faixa lateral, um pedestal de produto desenhado com uma capinha em cima e o contorno de uma câmera de celular 'fotografando', mostrando o caminho foto → cadastro preenchido\n- A seta sai da caixa de papelão da foto e aponta para o pedestal, ficando só no espaço livre, sem cobrir o rosto do dono nem a logo\n- A solução vai numa faixa larga ao lado do desenho, ligada a ele, e não num bloquinho no rodapé\n- Os 3 pontos aparecem em sequência, como passos 1, 2 e 3, ao longo da faixa lateral\n- Sublinhado só na palavra 'digitador' do título; letra limpa, sem sombra nas letras e sem título extra forte\n- Não inventar número de produtos nem tempo economizado\n- Sem vinheta escura, sem degradê e sem faixa diagonal",
+  "bom": true,
+  "motivo": "Gstei do novo formato parece que preecheu mais show",
+  "origem": "arte",
+  "versao": 1,
+  "texto_da_versao": "Erro comum: o dono vira digitador da loja | No AlvoManage, você tira a foto do produto e a IA preenche o cadastro.",
+  "arte": [
+   {
+    "n": 1,
+    "tema": "marca",
+    "decoracao": "produto",
+    "fundo_estilo": "faixa_lateral",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "linha",
+    "icone_estilo": "circulo_suave",
+    "enfeite": "seta",
+    "luz": "brilho_canto",
+    "sombra": "nenhuma",
+    "solucao": "faixa",
+    "composicao": "visual_lateral",
+    "foto_layout": "arco",
+    "foto_efeito": "contraste",
+    "destaque": "linha",
+    "slides": [
+     {
+      "decoracao": "produto",
+      "fundo_estilo": "faixa_lateral",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "linha",
+      "icone_estilo": "circulo_suave",
+      "enfeite": "seta",
+      "luz": "brilho_canto",
+      "sombra": "nenhuma",
+      "solucao": "faixa",
+      "composicao": "visual_lateral",
+      "foto_layout": "arco",
+      "foto_efeito": "contraste",
+      "destaque": "linha"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Erro comum: o dono vira digitador da loja\"\nSubtítulo: \"No AlvoManage, você tira a foto do produto e a IA preenche o cadastro.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre cadastro de produto por foto.\nSelo: \"Com IA\"\nPontos: \"Chegou caixa de mercadoria?\" | \"Tira a foto do produto\" | \"A IA preenche o cadastro\"\nImagem:\n- Foto: Foto grande ocupando boa parte da arte, nunca ícone. Loja de celular fechada à noite, com a porta de enrolar meio abaixada ao fundo. O dono está sentado no balcão, com cara de cansado e a mão na testa, digitando num notebook. Ao lado tem uma caixa de papelão aberta e transbordando de capinhas, películas e carregadores ainda no plástico. Em volta ficam pilhas de produtos esperando cadastro e um copo de café pela metade. A câmera pega de lado, na altura do balcão. A única luz é a de uma luminária quente em cima do balcão, com sombra forte no rosto e no resto da loja.\n- Solução: solução em faixa\n- Posição da foto: foto em arco\n- Tratamento da foto: foto com contraste forte\n- Fundo: faixa lateral\n- Luz: brilho no canto\n- Sombra: sombra forte\n- Destaque: sublinhado no título\n- Enfeite: seta desenhada\n- Desenho: pedestal de produto\n- Texto: texto centralizado\n- Clima: cansaço: o dono perdendo a noite digitando o que a IA faria por ele\n- Na faixa lateral, um pedestal de produto desenhado com uma capinha em cima e o contorno de uma câmera de celular 'fotografando', mostrando o caminho foto → cadastro preenchido\n- A seta sai da caixa de papelão da foto e aponta para o pedestal, ficando só no espaço livre, sem cobrir o rosto do dono nem a logo\n- A solução vai numa faixa larga ao lado do desenho, ligada a ele, e não num bloquinho no rodapé\n- Os 3 pontos aparecem em sequência, como passos 1, 2 e 3, ao longo da faixa lateral\n- Sublinhado só na palavra 'digitador' do título; letra limpa, sem sombra nas letras e sem título extra forte\n- Não inventar número de produtos nem tempo economizado\n- Sem vinheta escura, sem degradê e sem faixa diagonal",
+  "bom": false,
+  "motivo": "Esta a mesma coisa que a imagem 1 so mudou a foto e nao quero isso sempre yem que yer um formato ou uma edição diferente",
+  "origem": "arte",
+  "versao": 2,
+  "texto_da_versao": "Erro comum: o dono vira digitador da loja | No AlvoManage, você tira a foto do produto e a IA preenche o cadastro.",
+  "arte": [
+   {
+    "n": 2,
+    "tema": "marca",
+    "decoracao": "produto",
+    "fundo_estilo": "faixa_lateral",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "linha",
+    "icone_estilo": "selo_quadrado",
+    "enfeite": "seta",
+    "luz": "brilho_canto",
+    "sombra": "nenhuma",
+    "solucao": "faixa",
+    "composicao": "visual_lateral",
+    "foto_layout": "arco",
+    "foto_efeito": "contraste",
+    "destaque": "linha",
+    "slides": [
+     {
+      "decoracao": "produto",
+      "fundo_estilo": "faixa_lateral",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "linha",
+      "icone_estilo": "selo_quadrado",
+      "enfeite": "seta",
+      "luz": "brilho_canto",
+      "sombra": "nenhuma",
+      "solucao": "faixa",
+      "composicao": "visual_lateral",
+      "foto_layout": "arco",
+      "foto_efeito": "contraste",
+      "destaque": "linha"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Erro comum: o dono vira digitador da loja\"\nSubtítulo: \"No AlvoManage, você tira a foto do produto e a IA preenche o cadastro.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre cadastro de produto por foto.\nSelo: \"Com IA\"\nPontos: \"Chegou caixa de mercadoria?\" | \"Tira a foto do produto\" | \"A IA preenche o cadastro\"\nImagem:\n- Foto: Foto grande ocupando boa parte da arte, nunca ícone. Loja de celular fechada à noite, com a porta de enrolar meio abaixada ao fundo. O dono está sentado no balcão, com cara de cansado e a mão na testa, digitando num notebook. Ao lado tem uma caixa de papelão aberta e transbordando de capinhas, películas e carregadores ainda no plástico. Em volta ficam pilhas de produtos esperando cadastro e um copo de café pela metade. A câmera pega de lado, na altura do balcão. A única luz é a de uma luminária quente em cima do balcão, com sombra forte no rosto e no resto da loja.\n- Solução: solução em faixa\n- Posição da foto: foto em arco\n- Tratamento da foto: foto com contraste forte\n- Fundo: faixa lateral\n- Luz: brilho no canto\n- Sombra: sombra forte\n- Destaque: sublinhado no título\n- Enfeite: seta desenhada\n- Desenho: pedestal de produto\n- Texto: texto centralizado\n- Clima: cansaço: o dono perdendo a noite digitando o que a IA faria por ele\n- Na faixa lateral, um pedestal de produto desenhado com uma capinha em cima e o contorno de uma câmera de celular 'fotografando', mostrando o caminho foto → cadastro preenchido\n- A seta sai da caixa de papelão da foto e aponta para o pedestal, ficando só no espaço livre, sem cobrir o rosto do dono nem a logo\n- A solução vai numa faixa larga ao lado do desenho, ligada a ele, e não num bloquinho no rodapé\n- Os 3 pontos aparecem em sequência, como passos 1, 2 e 3, ao longo da faixa lateral\n- Sublinhado só na palavra 'digitador' do título; letra limpa, sem sombra nas letras e sem título extra forte\n- Não inventar número de produtos nem tempo economizado\n- Sem vinheta escura, sem degradê e sem faixa diagonal",
+  "bom": false,
+  "motivo": "Imagem de um velho nao cabe legal para representar nosso sistema",
+  "origem": "arte",
+  "versao": 3,
+  "texto_da_versao": "Erro comum: o dono vira digitador da loja | No AlvoManage, você tira a foto do produto e a IA preenche o cadastro.",
+  "arte": [
+   {
+    "n": 3,
+    "tema": "marca",
+    "decoracao": "produto",
+    "fundo_estilo": "faixa_lateral",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "linha",
+    "icone_estilo": "preenchido",
+    "enfeite": "seta",
+    "luz": "brilho_canto",
+    "sombra": "nenhuma",
+    "solucao": "faixa",
+    "composicao": "visual_lateral",
+    "foto_layout": "arco",
+    "foto_efeito": "contraste",
+    "destaque": "linha",
+    "slides": [
+     {
+      "decoracao": "produto",
+      "fundo_estilo": "faixa_lateral",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "linha",
+      "icone_estilo": "preenchido",
+      "enfeite": "seta",
+      "luz": "brilho_canto",
+      "sombra": "nenhuma",
+      "solucao": "faixa",
+      "composicao": "visual_lateral",
+      "foto_layout": "arco",
+      "foto_efeito": "contraste",
+      "destaque": "linha"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Sabia que dá pra perguntar quanto vendeu?\"\nSubtítulo: \"No AlvoManage, você pergunta sobre as vendas da sua loja e a IA te responde.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre IA responde números da loja.\nSelo: \"Você sabia?\"\nPontos: \"Pergunta como numa conversa\" | \"A IA responde suas vendas\" | \"Plano Controle e Comando\"\nImagem:\n- Foto: Foto grande e cheia de vida, nunca ícone. O dono de uma loja de celular está em pé no meio da loja, de manhã antes de abrir, olhando o celular com uma cara de surpresa boa e meio sorriso, como quem acabou de descobrir algo. Atrás dele aparecem vitrines iluminadas com celulares, fones e capinhas, um balcão com maquininha de cartão e a porta de vidro com a rua clara. A câmera fica um pouco abaixo da altura do peito. A luz é clara e natural e as luzes da vitrine viram bolinhas desfocadas ao fundo.\n- Solução: solução grande\n- Posição da foto: foto polaroide\n- Tratamento da foto: foto nas cores da marca\n- Fundo: fundo com brilho no centro\n- Luz: bolinhas de luz\n- Sombra: sombra suave\n- Destaque: subtítulo em etiqueta\n- Enfeite: ondas embaixo\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: curiosidade: o dono descobre que pode conversar com os números da própria loja\n- A polaroide fica levemente inclinada de um lado; do outro, um celular desenhado com uma conversa: um balão do dono com a pergunta 'Quanto vendi esta semana?' e outro balão da IA respondendo, com a resposta escondida ou em linhas, sem nenhum número inventado\n- A solução aparece grande, perto do celular desenhado e ligada a ele, e não num bloco no rodapé\n- O selo 'Você sabia?' fica numa etiqueta no canto de cima, sem encostar na logo\n- O nome 'Mythos' pode aparecer pequeno no topo da conversa desenhada, como nome do assistente\n- Letra limpa, sem sombra nas letras; só a frase 'quanto vendeu' do título na cor da marca\n- Bolinhas de luz e ondas só no espaço livre, nunca em cima da logo, da polaroide ou do rosto do dono\n- Sem vinheta escura e sem degradê",
+  "bom": false,
+  "motivo": "Esta crotando a imagem e sempre esta seguindo o formato de bolhas com OK pode ter mais nao toda hora e outra a imagem esta cortanda nunca deixe isso",
+  "origem": "arte",
+  "versao": 1,
+  "texto_da_versao": "Sabia que dá pra perguntar quanto vendeu? | No AlvoManage, você pergunta sobre as vendas da sua loja e a IA te responde.",
+  "arte": [
+   {
+    "n": 1,
+    "tema": "marca",
+    "decoracao": "celular",
+    "fundo_estilo": "brilho",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque_estilo": "selo",
+    "icone_estilo": "brilho",
+    "enfeite": "ondas",
+    "luz": "bokeh",
+    "sombra": "nenhuma",
+    "solucao": "grande",
+    "composicao": "icone_topo",
+    "foto_layout": "polaroid",
+    "foto_efeito": "duotone_marca",
+    "destaque": "selo",
+    "slides": [
+     {
+      "decoracao": "celular",
+      "fundo_estilo": "brilho",
+      "alinhamento": "centro",
+      "densidade": "expressiva",
+      "destaque_estilo": "selo",
+      "icone_estilo": "brilho",
+      "enfeite": "ondas",
+      "luz": "bokeh",
+      "sombra": "nenhuma",
+      "solucao": "grande",
+      "composicao": "icone_topo",
+      "foto_layout": "polaroid",
+      "foto_efeito": "duotone_marca",
+      "destaque": "selo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Sabia que dá pra perguntar quanto vendeu?\"\nSubtítulo: \"No AlvoManage, você pergunta sobre as vendas da sua loja e a IA te responde.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre IA responde números da loja.\nSelo: \"Você sabia?\"\nPontos: \"Pergunta como numa conversa\" | \"A IA responde suas vendas\" | \"Plano Controle e Comando\"\nImagem:\n- Foto: Foto grande e cheia de vida, nunca ícone. O dono de uma loja de celular está em pé no meio da loja, de manhã antes de abrir, olhando o celular com uma cara de surpresa boa e meio sorriso, como quem acabou de descobrir algo. Atrás dele aparecem vitrines iluminadas com celulares, fones e capinhas, um balcão com maquininha de cartão e a porta de vidro com a rua clara. A câmera fica um pouco abaixo da altura do peito. A luz é clara e natural e as luzes da vitrine viram bolinhas desfocadas ao fundo.\n- Solução: solução grande\n- Posição da foto: foto polaroide\n- Tratamento da foto: foto nas cores da marca\n- Fundo: fundo com brilho no centro\n- Luz: bolinhas de luz\n- Sombra: sombra suave\n- Destaque: subtítulo em etiqueta\n- Enfeite: ondas embaixo\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: curiosidade: o dono descobre que pode conversar com os números da própria loja\n- A polaroide fica levemente inclinada de um lado; do outro, um celular desenhado com uma conversa: um balão do dono com a pergunta 'Quanto vendi esta semana?' e outro balão da IA respondendo, com a resposta escondida ou em linhas, sem nenhum número inventado\n- A solução aparece grande, perto do celular desenhado e ligada a ele, e não num bloco no rodapé\n- O selo 'Você sabia?' fica numa etiqueta no canto de cima, sem encostar na logo\n- O nome 'Mythos' pode aparecer pequeno no topo da conversa desenhada, como nome do assistente\n- Letra limpa, sem sombra nas letras; só a frase 'quanto vendeu' do título na cor da marca\n- Bolinhas de luz e ondas só no espaço livre, nunca em cima da logo, da polaroide ou do rosto do dono\n- Sem vinheta escura e sem degradê",
+  "bom": false,
+  "motivo": "ficou muit ruim esse fundo",
+  "origem": "arte",
+  "versao": 2,
+  "texto_da_versao": "Sabia que dá pra perguntar quanto vendeu? | No AlvoManage, você pergunta sobre as vendas da sua loja e a IA te responde.",
+  "arte": [
+   {
+    "n": 2,
+    "tema": "marca",
+    "decoracao": "celular",
+    "fundo_estilo": "brilho",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque_estilo": "selo",
+    "icone_estilo": "mancha",
+    "enfeite": "ondas",
+    "luz": "bokeh",
+    "sombra": "nenhuma",
+    "solucao": "grande",
+    "composicao": "icone_topo",
+    "foto_layout": "polaroid",
+    "foto_efeito": "duotone_marca",
+    "destaque": "selo",
+    "slides": [
+     {
+      "decoracao": "celular",
+      "fundo_estilo": "brilho",
+      "alinhamento": "centro",
+      "densidade": "expressiva",
+      "destaque_estilo": "selo",
+      "icone_estilo": "mancha",
+      "enfeite": "ondas",
+      "luz": "bokeh",
+      "sombra": "nenhuma",
+      "solucao": "grande",
+      "composicao": "icone_topo",
+      "foto_layout": "polaroid",
+      "foto_efeito": "duotone_marca",
+      "destaque": "selo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Sabia que dá pra perguntar quanto vendeu?\"\nSubtítulo: \"No AlvoManage, você pergunta sobre as vendas da sua loja e a IA te responde.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre IA responde números da loja.\nSelo: \"Você sabia?\"\nPontos: \"Pergunta como numa conversa\" | \"A IA responde suas vendas\" | \"Plano Controle e Comando\"\nImagem:\n- Foto: Foto grande e cheia de vida, nunca ícone. O dono de uma loja de celular está em pé no meio da loja, de manhã antes de abrir, olhando o celular com uma cara de surpresa boa e meio sorriso, como quem acabou de descobrir algo. Atrás dele aparecem vitrines iluminadas com celulares, fones e capinhas, um balcão com maquininha de cartão e a porta de vidro com a rua clara. A câmera fica um pouco abaixo da altura do peito. A luz é clara e natural e as luzes da vitrine viram bolinhas desfocadas ao fundo.\n- Solução: solução grande\n- Posição da foto: foto polaroide\n- Tratamento da foto: foto nas cores da marca\n- Fundo: fundo com brilho no centro\n- Luz: bolinhas de luz\n- Sombra: sombra suave\n- Destaque: subtítulo em etiqueta\n- Enfeite: ondas embaixo\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: curiosidade: o dono descobre que pode conversar com os números da própria loja\n- A polaroide fica levemente inclinada de um lado; do outro, um celular desenhado com uma conversa: um balão do dono com a pergunta 'Quanto vendi esta semana?' e outro balão da IA respondendo, com a resposta escondida ou em linhas, sem nenhum número inventado\n- A solução aparece grande, perto do celular desenhado e ligada a ele, e não num bloco no rodapé\n- O selo 'Você sabia?' fica numa etiqueta no canto de cima, sem encostar na logo\n- O nome 'Mythos' pode aparecer pequeno no topo da conversa desenhada, como nome do assistente\n- Letra limpa, sem sombra nas letras; só a frase 'quanto vendeu' do título na cor da marca\n- Bolinhas de luz e ondas só no espaço livre, nunca em cima da logo, da polaroide ou do rosto do dono\n- Sem vinheta escura e sem degradê",
+  "bom": false,
+  "motivo": "Imagem cortada so aparece o peito",
+  "origem": "arte",
+  "versao": 3,
+  "texto_da_versao": "Sabia que dá pra perguntar quanto vendeu? | No AlvoManage, você pergunta sobre as vendas da sua loja e a IA te responde.",
+  "arte": [
+   {
+    "n": 3,
+    "tema": "marca",
+    "decoracao": "celular",
+    "fundo_estilo": "brilho",
+    "alinhamento": "centro",
+    "densidade": "expressiva",
+    "destaque_estilo": "selo",
+    "icone_estilo": "circulo_suave",
+    "enfeite": "ondas",
+    "luz": "bokeh",
+    "sombra": "nenhuma",
+    "solucao": "grande",
+    "composicao": "icone_topo",
+    "foto_layout": "polaroid",
+    "foto_efeito": "duotone_marca",
+    "destaque": "selo",
+    "slides": [
+     {
+      "decoracao": "celular",
+      "fundo_estilo": "brilho",
+      "alinhamento": "centro",
+      "densidade": "expressiva",
+      "destaque_estilo": "selo",
+      "icone_estilo": "circulo_suave",
+      "enfeite": "ondas",
+      "luz": "bokeh",
+      "sombra": "nenhuma",
+      "solucao": "grande",
+      "composicao": "icone_topo",
+      "foto_layout": "polaroid",
+      "foto_efeito": "duotone_marca",
+      "destaque": "selo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Quanto tempo você perde caçando a tela certa?\"\nSubtítulo: \"No AlvoManage, você escreve o que quer fazer e a IA mostra a tela certa.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre busca por IA no sistema.\nSelo: \"Busca com IA\"\nPontos: \"Escreve o que quer fazer\" | \"A IA aponta a tela certa\" | \"Cliente não fica esperando\"\nImagem:\n- Foto: Foto grande, com a cena cheia, nunca ícone. Balcão de uma assistência técnica na hora do movimento. Em primeiro plano, o cliente está de braços cruzados e batendo o pé, com o celular quebrado em cima do balcão. Atrás do balcão, o atendente olha o monitor perdido, com a mão no mouse e a testa franzida, procurando onde clicar. Atrás deles aparecem outro cliente na porta esperando, prateleiras com aparelhos etiquetados e ferramentas na bancada. A câmera fica na altura do balcão e pega os dois. A luz é fria de fluorescente vindo de cima, com sombra forte embaixo dos olhos.\n- Composição: imagem acima do texto\n- Solução: solução em faixa\n- Posição da foto: foto em círculo\n- Tratamento da foto: foto escurecida\n- Fundo: fundo de bolinhas\n- Luz: luz de holofote\n- Sombra: sombra forte\n- Destaque: subtítulo colorido\n- Enfeite: textura granulada\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: tenso: cliente esperando e você perdido no meio dos menus\n- Ao lado do círculo da foto, uma tela de sistema desenhada com uma barra de busca grande no topo e a frase digitada 'abrir uma OS nova', com uma marcação apontando para o botão certo\n- A solução vai numa faixa que sai da barra de busca desenhada, ligada a ela, e não num bloquinho no rodapé\n- O holofote ilumina a tela desenhada, para ela ser o centro da solução\n- Os 3 pontos ficam embaixo da tela desenhada, como resultados da busca\n- Só a palavra 'tela certa' do título na cor da marca; letra limpa, sem sombra nas letras e sem título extra forte\n- Nenhum desenho, granulado ou bolinha em cima da logo do AlvoManage, do círculo da foto ou do rosto das pessoas\n- Sem vinheta escura, sem degradê e sem faixa diagonal\nImagem versão 2:\n- Foto: Foto grande, com a cena cheia, nunca ícone. Balcão de uma assistência técnica na hora do movimento. Em primeiro plano, o cliente está de braços cruzados e batendo o pé, com o celular quebrado em cima do balcão. Atrás do balcão, o atendente olha o monitor perdido, com a mão no mouse e a testa franzida, procurando onde clicar. Atrás deles aparecem outro cliente na porta esperando, prateleiras com aparelhos etiquetados e ferramentas na bancada. A câmera fica na altura do balcão e pega os dois. A luz é fria de fluorescente vindo de cima, com sombra forte embaixo dos olhos.\n- Composição: imagem ao lado da solução\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto escurecida\n- Fundo: fundo de bolinhas\n- Luz: luz de holofote\n- Sombra: sombra forte\n- Destaque: subtítulo em etiqueta\n- Enfeite: textura granulada\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: tenso: cliente esperando e você perdido no meio dos menus\n- A solução vai numa faixa que sai da barra de busca desenhada, ligada a ela, e não num bloquinho no rodapé\n- Só a palavra 'tela certa' do título na cor da marca; letra limpa, sem sombra nas letras e sem título extra forte\n- Sem vinheta escura, sem degradê e sem faixa diagonal\nImagem versão 3:\n- Foto: Foto grande, com a cena cheia, nunca ícone. Balcão de uma assistência técnica na hora do movimento. Em primeiro plano, o cliente está de braços cruzados e batendo o pé, com o celular quebrado em cima do balcão. Atrás do balcão, o atendente olha o monitor perdido, com a mão no mouse e a testa franzida, procurando onde clicar. Atrás deles aparecem outro cliente na porta esperando, prateleiras com aparelhos etiquetados e ferramentas na bancada. A câmera fica na altura do balcão e pega os dois. A luz é fria de fluorescente vindo de cima, com sombra forte embaixo dos olhos.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto escurecida\n- Fundo: fundo de bolinhas\n- Luz: luz de holofote\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: textura granulada\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: tenso: cliente esperando e você perdido no meio dos menus\n- A solução vai numa faixa que sai da barra de busca desenhada, ligada a ela, e não num bloquinho no rodapé\n- Só a palavra 'tela certa' do título na cor da marca; letra limpa, sem sombra nas letras e sem título extra forte\n- Sem vinheta escura, sem degradê e sem faixa diagonal",
+  "bom": false,
+  "motivo": "O titulo sempre e assim No alvo manage ....... eu quero que muda sempre nunca e o mesmo todo o ptompt"
+ },
+ {
+  "texto": "Título: \"Você na bancada. A loja continua.\"\nSubtítulo: \"AlvoManage reúne IA, consulta da OS por link e entrada no caixa ao entregar o serviço.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Bastidor da bancada.\nSelo: \"Bastidor\"\nPontos: \"IA nas etapas da rotina\" | \"Cliente consulta pelo link\" | \"Entrega lança no caixa\"\nImagem:\n- Foto: Foto grande de dono adulto, sem aparência idosa, consertando um celular numa bancada de assistência. Rosto concentrado, mãos e ferramentas visíveis. Um notebook aberto fica ao lado; balcão de atendimento e prateleiras aparecem ao fundo. Enquadramento lateral, luz natural da janela e iluminação da bancada. Não substituir por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto natural\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Concentração: o dono cuida do conserto enquanto outras etapas têm apoio do sistema.\n- Imagem: primeira direção igual à principal. Foto em cartão numa coluna; solução em faixa larga na outra. Título fora da foto e pontos ligados ao fluxo do mesmo serviço.\n- Desenhar respostas do cliente → OS preenchida com Zen → consulta de status por link → entrega da OS com entrada no caixa. Não mostrar dinheiro entrando durante o conserto.\n- Kronos oferece ajuda de uso; Mythos responde sobre o negócio. IA nos planos com IA; Mythos no Controle e Comando. Não sugerir ações autônomas desses assistentes.\n- Cores da logo, letras sem sombra, sombra suave apenas nos elementos da arte. Rosto, mãos e ferramentas inteiros; logo, selo e texto sem sobreposição.\nImagem versão 2:\n- Foto: Foto ampla de técnico adulto trabalhando numa assistência, vista de frente pela bancada. Ele segura o aparelho aberto com atenção; notebook e luminária ficam ao lado, com gavetas de ferramentas ao fundo. Luz da bancada, pele e objetos com contraste bem definido. Foto grande, nunca ícone.\n- Composição: imagem acima do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: seta desenhada\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Rotina produtiva: o conserto exige atenção, mas não precisa concentrar todas as tarefas no dono.\n- Imagem: cena grande na metade superior; título em área própria fora da foto. Solução grande abaixo, ligada a uma sequência horizontal do mesmo serviço, sem faixa lateral.\n- Sublinhar somente ‘bancada’. Não aplicar sombra às letras nem simular movimentação financeira antes da entrega.\n- IA nos planos com IA; Mythos no Controle e Comando. Não apresentar Kronos ou Mythos como executores automáticos. Manter rosto, mãos e aparelho inteiros e margem de leitura.\nImagem versão 3:\n- Foto: Foto grande de dono adulto sentado à bancada, visto em três quartos, examinando uma placa de celular com ferramenta na mão. Notebook aberto próximo, peças organizadas e balcão ao fundo. Iluminação uniforme de oficina, enquadramento com cabeça e mãos inteiras. Não substituir por ícone.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo claro\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: título extra forte\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Tranquilidade prática: a atenção fica no aparelho e o sistema apoia o restante da rotina.\n- Imagem: título e solução em cartão amplo na área superior; foto grande em arco abaixo. O cartão inclui uma linha do tempo do serviço, com os pontos junto de cada etapa, sem reproduzir as colunas da primeira direção.\n- A linha do tempo mostra apoio da IA, acompanhamento pelo cliente e entrada no caixa somente quando a OS é entregue. Ilustração explicativa, sem valores ou telas inventadas.\n- Foto em preto e branco contrastando com os elementos nas cores da logo. Sombra suave no cartão, nunca nas letras.\n- IA nos planos com IA; Mythos no Controle e Comando. Não prometer decisões autônomas. O arco comporta rosto, gesto, aparelho e notebook sem cortes; reservar espaço exclusivo para a logo.",
+  "bom": true,
+  "motivo": "Ficou bem informativo bem enquadrado gostei mais pode ter mais variedades tambem nao se agarra a esse leaty",
+  "origem": "arte",
+  "versao": 1,
+  "texto_da_versao": "Você na bancada. A loja continua. | AlvoManage reúne IA, consulta da OS por link e entrada no caixa ao entregar o serviço.",
+  "arte": [
+   {
+    "n": 1,
+    "tema": "marca",
+    "decoracao": "interface_saas",
+    "fundo_estilo": "faixa_lateral",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "cor",
+    "icone_estilo": "circulo_suave",
+    "enfeite": "nenhum",
+    "luz": "nenhuma",
+    "sombra": "nenhuma",
+    "solucao": "faixa",
+    "composicao": "visual_lateral",
+    "foto_layout": "topo_cartao",
+    "foto_efeito": "nenhum",
+    "destaque": "cor",
+    "slides": [
+     {
+      "decoracao": "interface_saas",
+      "fundo_estilo": "faixa_lateral",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "cor",
+      "icone_estilo": "circulo_suave",
+      "enfeite": "nenhum",
+      "luz": "nenhuma",
+      "sombra": "nenhuma",
+      "solucao": "faixa",
+      "composicao": "visual_lateral",
+      "foto_layout": "topo_cartao",
+      "foto_efeito": "nenhum",
+      "destaque": "cor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Você na bancada. A loja continua.\"\nSubtítulo: \"AlvoManage reúne IA, consulta da OS por link e entrada no caixa ao entregar o serviço.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Bastidor da bancada.\nSelo: \"Bastidor\"\nPontos: \"IA nas etapas da rotina\" | \"Cliente consulta pelo link\" | \"Entrega lança no caixa\"\nImagem:\n- Foto: Foto grande de dono adulto, sem aparência idosa, consertando um celular numa bancada de assistência. Rosto concentrado, mãos e ferramentas visíveis. Um notebook aberto fica ao lado; balcão de atendimento e prateleiras aparecem ao fundo. Enquadramento lateral, luz natural da janela e iluminação da bancada. Não substituir por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto natural\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Concentração: o dono cuida do conserto enquanto outras etapas têm apoio do sistema.\n- Imagem: primeira direção igual à principal. Foto em cartão numa coluna; solução em faixa larga na outra. Título fora da foto e pontos ligados ao fluxo do mesmo serviço.\n- Desenhar respostas do cliente → OS preenchida com Zen → consulta de status por link → entrega da OS com entrada no caixa. Não mostrar dinheiro entrando durante o conserto.\n- Kronos oferece ajuda de uso; Mythos responde sobre o negócio. IA nos planos com IA; Mythos no Controle e Comando. Não sugerir ações autônomas desses assistentes.\n- Cores da logo, letras sem sombra, sombra suave apenas nos elementos da arte. Rosto, mãos e ferramentas inteiros; logo, selo e texto sem sobreposição.\nImagem versão 2:\n- Foto: Foto ampla de técnico adulto trabalhando numa assistência, vista de frente pela bancada. Ele segura o aparelho aberto com atenção; notebook e luminária ficam ao lado, com gavetas de ferramentas ao fundo. Luz da bancada, pele e objetos com contraste bem definido. Foto grande, nunca ícone.\n- Composição: imagem acima do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: seta desenhada\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Rotina produtiva: o conserto exige atenção, mas não precisa concentrar todas as tarefas no dono.\n- Imagem: cena grande na metade superior; título em área própria fora da foto. Solução grande abaixo, ligada a uma sequência horizontal do mesmo serviço, sem faixa lateral.\n- Sublinhar somente ‘bancada’. Não aplicar sombra às letras nem simular movimentação financeira antes da entrega.\n- IA nos planos com IA; Mythos no Controle e Comando. Não apresentar Kronos ou Mythos como executores automáticos. Manter rosto, mãos e aparelho inteiros e margem de leitura.\nImagem versão 3:\n- Foto: Foto grande de dono adulto sentado à bancada, visto em três quartos, examinando uma placa de celular com ferramenta na mão. Notebook aberto próximo, peças organizadas e balcão ao fundo. Iluminação uniforme de oficina, enquadramento com cabeça e mãos inteiras. Não substituir por ícone.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo claro\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: título extra forte\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Tranquilidade prática: a atenção fica no aparelho e o sistema apoia o restante da rotina.\n- Imagem: título e solução em cartão amplo na área superior; foto grande em arco abaixo. O cartão inclui uma linha do tempo do serviço, com os pontos junto de cada etapa, sem reproduzir as colunas da primeira direção.\n- A linha do tempo mostra apoio da IA, acompanhamento pelo cliente e entrada no caixa somente quando a OS é entregue. Ilustração explicativa, sem valores ou telas inventadas.\n- Foto em preto e branco contrastando com os elementos nas cores da logo. Sombra suave no cartão, nunca nas letras.\n- IA nos planos com IA; Mythos no Controle e Comando. Não prometer decisões autônomas. O arco comporta rosto, gesto, aparelho e notebook sem cortes; reservar espaço exclusivo para a logo.",
+  "bom": false,
+  "motivo": "Nao gostei desse branco e sem ediçoes",
+  "origem": "arte",
+  "versao": 3,
+  "texto_da_versao": "Você na bancada. A loja continua. | AlvoManage reúne IA, consulta da OS por link e entrada no caixa ao entregar o serviço.",
+  "arte": [
+   {
+    "n": 3,
+    "tema": "marca",
+    "decoracao": "interface_saas",
+    "fundo_estilo": "invertido",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "peso",
+    "icone_estilo": "preenchido",
+    "enfeite": "nenhum",
+    "luz": "nenhuma",
+    "sombra": "suave",
+    "solucao": "grande",
+    "composicao": "icone_baixo",
+    "foto_layout": "topo_cartao",
+    "foto_efeito": "contraste",
+    "destaque": "peso",
+    "slides": [
+     {
+      "decoracao": "interface_saas",
+      "fundo_estilo": "invertido",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "peso",
+      "icone_estilo": "preenchido",
+      "enfeite": "nenhum",
+      "luz": "nenhuma",
+      "sombra": "suave",
+      "solucao": "grande",
+      "composicao": "icone_baixo",
+      "foto_layout": "topo_cartao",
+      "foto_efeito": "contraste",
+      "destaque": "peso"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"O cliente respondeu. Você copia tudo?\"\nSubtítulo: \"Zen, a IA do AlvoManage, preenche a OS a partir das respostas do cliente.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Respostas viram OS.\nSelo: \"Com IA\"\nPontos: \"O cliente responde\" | \"Zen preenche a OS\" | \"Respostas viram registro\"\nImagem:\n- Foto: Foto grande de dono adulto numa assistência, sentado diante de notebook com as mãos no teclado. Um cliente está do outro lado do balcão com celular apoiado entre eles. Expressão de atenção, sem discussão. Ferramentas e luminária ao fundo, câmera em três quartos e luz clara de loja. Não substituir por ícone.\n- Composição: imagem acima do texto\n- Solução: solução grande\n- Posição da foto: foto em arco\n- Tratamento da foto: foto natural\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: sublinhado no título\n- Enfeite: seta desenhada\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Descoberta: o dono percebe que não precisa tratar cada resposta como mais uma tarefa de digitação.\n- Imagem: primeira direção igual à principal. Foto grande em arco acima, título fora da foto e solução grande com respostas do cliente ligadas à ficha da OS por Zen.\n- Os três pontos seguem esse caminho. Não criar canal de resposta, captura de voz ou integração não fornecida.\n- Sublinhar ‘copia tudo’; letras sem sombra. Informar ‘Nos planos com IA’ junto do selo.\n- Cabeças, mãos, notebook e aparelho inteiros; seta e desenho fora da logo e dos rostos. Cores da logo e sombra suave apenas nos elementos gráficos.\nImagem versão 2:\n- Foto: Foto grande de atendente adulto em perfil, digitando em notebook no balcão de assistência. Um celular repousa ao lado do computador; ferramentas e prateleiras aparecem desfocadas ao fundo. Rosto e mãos visíveis, luz lateral suave. Não substituir por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Clareza: uma etapa repetida ganha outro jeito de funcionar.\n- Imagem: foto em cartão numa coluna; solução antes e depois na outra. Título fora da imagem. Moldura fina nas cores da logo, sem arco ou faixa lateral.\n- O antes mostra ‘Copiar as respostas’; o depois, ‘Zen preenche a OS’. Em ambos, a origem é ‘Respostas do cliente’. Não sugerir que a IA adivinha o defeito ou realiza diagnóstico.\n- Pontos distribuídos junto da passagem entre respostas e registro. Usar uma ficha esquemática, sem inventar campos obrigatórios ou interface oficial.\n- Selo Com IA acompanhado de ‘Nos planos com IA’. Letra limpa sem sombra; destacar ‘respostas’ no subtítulo por cor.\n- Manter rosto, mãos e notebook dentro do cartão. Reservar margens para título e logo, sem elementos cruzando a foto.\nImagem versão 3:\n- Foto: Foto grande de dono adulto com expressão atenta diante de notebook numa bancada de assistência. Mãos próximas ao teclado, celular sobre o balcão e ferramentas organizadas ao fundo. Enquadramento frontal amplo e luz branca uniforme. Não substituir por ícone.\n- Composição: imagem abaixo do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo claro\n- Luz: sem luz\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Alívio prático: as respostas passam a alimentar o registro do serviço.\n- Imagem: solução em cartão amplo acima da foto, com título fora dele. Foto grande abaixo, tratada nas cores da marca. O cartão apresenta a passagem de respostas para OS, sem comparação antes e depois.\n- Não mostrar chat por canal específico, microfone ou preenchimento por foto. Incluir ‘Nos planos com IA’ perto do selo.\n- Cabeça, mãos e notebook completos; logo em área livre e desenhos inteiros, sem atravessar texto ou foto.",
+  "bom": false,
+  "motivo": "Eu gostei mais deixa de uma forma mais explicativo e outra tira esse selo vazio de com ia"
+ },
+ {
+  "texto": "Título: \"3 sinais de que o menu virou trabalho\"\nSubtítulo: \"Escreva o que quer fazer: a busca com IA do AlvoManage aponta a tela certa.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Atalho para trabalhar.\nSelo: \"Com IA\"\nPontos: \"Abre o menu errado\" | \"Volta para procurar\" | \"Pede ajuda para achar\"\nImagem:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, usando um notebook no balcão de uma loja de acessórios. Uma mão no mouse e outra próxima do teclado, expressão concentrada. Prateleiras de produtos e bancada organizada ao fundo. Câmera em três quartos, luz natural lateral, rosto, mãos e notebook inteiros. Preservar a fotografia na arte.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto natural\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: sublinhado no título\n- Enfeite: seta desenhada\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Reconhecimento: procurar onde clicar também ocupa o tempo do dono.\n- Imagem: primeira direção igual à principal. Foto grande em cartão numa coluna; subtítulo em faixa larga, três sinais e demonstração na outra. Título fora da foto, fundo com faixa lateral nas cores da logo.\n- Numerar os três pontos como sinais da rotina. Desenhar busca com 'Quero abrir uma OS' e resultado 'Tela de abertura de OS', conectados por seta. É uma explicação do funcionamento, sem inventar a aparência oficial do sistema.\n- A busca aponta a tela; não cria nem preenche a OS. Exibir 'Nos planos com IA' junto do selo. Sublinhar somente '3 sinais'. Sombra suave apenas nos elementos, letras sem sombra.\n- Preservar rosto, mãos e notebook com folga dentro do cartão. Logo e selo em áreas próprias; seta e interface restritas à coluna explicativa.\nImagem versão 2:\n- Foto: Foto real ampla de dono adulto e integrante da equipe olhando um monitor no balcão de uma assistência. O dono aponta para a tela, a outra pessoa acompanha com atenção. Ferramentas organizadas e acessórios expostos ao fundo. Câmera frontal ligeiramente lateral, luz branca suave do ambiente. Rostos, mãos e monitor inteiros. Manter a foto grande.\n- Composição: imagem acima do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Descoberta: escrever a intenção ajuda a encontrar onde trabalhar no sistema.\n- Imagem: título em área própria, fotografia ampla na metade superior e solução em cartão grande abaixo. Fundo em duas cores da logo, sem fundo branco. Moldura fina na foto; não repetir as colunas da primeira direção.\n- Dentro do cartão, distribuir os três sinais em uma sequência horizontal. Abaixo deles, mostrar a busca 'Quero abrir uma OS' seguida do resultado 'Tela de abertura de OS', separados por espaço e hierarquia, sem seta decorativa.\n- O subtítulo ocupa o cartão com presença, não um bloco pequeno de rodapé. Usar o destaque em etiqueta no subtítulo, sem acrescentar sublinhado. Selo 'Com IA' acompanhado de 'Nos planos com IA'.\n- Não desenhar criação automática da OS nem prometer ausência de espera. Interface apenas demonstrativa, sem botões ou funções adicionais. Letras sem sombra; sem efeitos gráficos de luz.\nImagem versão 3:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, usando um notebook numa bancada de loja, visto de lado. Rosto atento, mãos no teclado, computador e luminária inteiros. Prateleira de acessórios ao fundo. Luz quente suave da luminária, contraste definido sem escurecer a cena. Preservar a foto e toda a ação dentro de um arco amplo.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: cantoneiras\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Praticidade: a tarefa escrita vira o ponto de partida para encontrar a tela.\n- Imagem: título, três sinais e subtítulo grande acima da imagem; fotografia em arco amplo abaixo. Fundo sólido em cor da logo. A explicação é aberta no fundo, sem cartão nem faixa para a solução.\n- Na área explicativa, mostrar uma busca horizontal com 'Quero abrir uma OS' e, abaixo, o resultado 'Tela de abertura de OS'. Os três pontos aparecem como linhas curtas, sem acrescentar outros recursos.\n- Aplicar peso ao título, sem sublinhado. Cantoneiras discretas delimitam apenas a demonstração. Sombra forte somente sob a moldura do arco e a interface; nunca nas letras. O contraste da foto não elimina detalhes de rosto e mãos.\n- Exibir 'Nos planos com IA' junto do selo. A busca indica a tela, sem executar a tarefa. Não acrescentar bolhas de confirmação ou resultados de tempo economizado.\n- Arco com espaço para cabeça, mãos, notebook e luminária completos. Logo em área exclusiva, fora do arco e das cantoneiras. Sem sobreposição entre demonstração, texto e fotografia.",
+  "bom": false,
+  "motivo": "Esse tipo de informação nao e necessario para posta mds"
+ },
+ {
+  "texto": "Título: \"Antes: procurar. Depois: perguntar.\"\nSubtítulo: \"Com Mythos, a IA do AlvoManage, você pergunta sobre as vendas e recebe uma resposta.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Perguntar em vez de procurar.\nSelo: \"Com IA\"\nPontos: \"Antes: procurar nos números\" | \"Depois: perguntar ao Mythos\" | \"Plano Controle e Comando\"\nImagem:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, no escritório de uma loja de celulares. Notebook aberto e folhas de consulta sobre a mesa; ele segura uma caneta e olha os papéis com atenção. A porta ao fundo revela parte da loja. Câmera em três quartos, luz natural de janela. Rosto, mãos, folhas e notebook inteiros. Não substituir por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução antes e depois\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto natural\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Descoberta: o dono também pode consultar as vendas fazendo uma pergunta à IA.\n- Imagem: primeira direção igual à principal. Título fora da foto; fotografia em cartão na coluna do 'Antes' e demonstração na coluna do 'Depois'. Subtítulo integra a comparação. Fundo em duas cores da logo.\n- Identificar 'Antes: procurar nos números' e 'Depois: perguntar ao Mythos'. Painel demonstrativo com nome Mythos, pergunta 'Quanto vendi hoje?' e área de resposta em linhas neutras, sem inventar números ou reproduzir uma tela oficial.\n- Destacar por cor 'pergunta sobre as vendas' no subtítulo. Manter 'Plano Controle e Comando' legível junto da explicação e selo 'Com IA' separado da logo. Sombra suave nos cartões; letras sem sombra.\n- Não sugerir abandono dos relatórios nem ações autônomas da IA. Foto grande, cabeça, mãos, papéis e notebook inteiros. Margens protegem foto, pergunta, selo e logo.\nImagem versão 2:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, sentado no balcão de uma loja, usando notebook com expressão interessada. Folha de consulta e caneta ao lado, sem bagunça artificial. Vitrines de acessórios ao fundo. Câmera frontal em três quartos, iluminação natural de manhã. Cabeça, braços, mãos e computador completos. Preservar a foto na arte.\n- Composição: imagem acima do texto\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Clareza: consultar as vendas também pode começar com uma pergunta.\n- Imagem: título fora da cena, foto ampla na metade superior e subtítulo em faixa larga abaixo. Fundo sólido nas cores da logo, sem área branca dominante. Moldura fina preserva a fotografia inteira.\n- Contar o antes e depois em sequência vertical: junto da foto, 'Antes: procurar nos números'; abaixo da faixa, 'Depois: perguntar ao Mythos' e painel aberto de demonstração. Não repetir duas colunas.\n- O painel mostra apenas Mythos, 'Quanto vendi hoje?' e área de resposta sem valores. Não usar celular desenhado, polaroide, bolhas com 'OK' ou efeitos de brilho. Sublinhar somente 'perguntar' no título.\n- Exibir 'Plano Controle e Comando' como condição legível, próximo do selo 'Com IA'. Letras sem sombra. A comparação apresenta uma alternativa de consulta, sem prometer decisões ou ações da IA.\nImagem versão 3:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, no escritório de uma assistência. Notebook e folhas de consulta na mesa; uma mão repousa nas folhas enquanto ele olha o computador. Câmera lateral em plano médio aberto, luz suave de janela, cabeça, mãos e notebook completos. Preservar a fotografia dentro de um arco amplo.\n- Composição: imagem abaixo do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo com listras\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: título extra forte\n- Enfeite: cantoneiras\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Mudança de hábito: o dono leva sua dúvida sobre vendas diretamente ao Mythos.\n- Imagem: título e solução em cartão amplo acima; fotografia grande em arco abaixo. Fundo com listras discretas nas cores da logo, restritas às áreas livres. Foto em preto e branco, cartão nas cores da marca; sem fundo branco dominante.\n- O cartão contém o subtítulo e duas linhas sucessivas: 'Antes: procurar nos números' e 'Depois: perguntar ao Mythos'. Abaixo dessas linhas, mostrar Mythos com 'Quanto vendi hoje?' e uma área de resposta em linhas neutras. Não dividir a arte em colunas nem usar faixa.\n- Aplicar peso ao título. Cantoneiras discretas apenas no cartão, sombra suave sob cartão e arco, letras limpas sem sombra. A edição deve destacar a explicação sem invadir a fotografia.\n- Manter 'Plano Controle e Comando' legível junto do selo 'Com IA'. Não inventar valores, recomendações, comparação entre períodos ou tarefas executadas pelo assistente.\n- Arco com margem para cabeça, mãos, folhas e notebook inteiros. Listras não atravessam áreas de leitura. Logo em espaço próprio, livre de cartão, cantoneiras e foto.",
+  "bom": false,
+  "motivo": "Quando for assim explicar algo asssim seja mais amplo falando sobre a IA em geral do sistema"
+ },
+ {
+  "texto": "Título: \"\"Tem na outra loja de vocês?\"\"\nSubtítulo: \"AlvoManage mostra o estoque de cada loja e permite transferir o produto entre elas.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Produto em outra unidade.\nSelo: \"Entre lojas\"\nPontos: \"Consulta o estoque da outra\" | \"Encontra onde tem\" | \"Transfere entre lojas\"\nImagem:\n- Foto: Foto real grande de balcão de loja de acessórios. Um cliente adulto mostra uma embalagem de referência do carregador que procura e conversa com o dono adulto, sem aparência idosa, que consulta o notebook. Prateleiras de cabos e acessórios ao fundo. Expressões interessadas, sem discussão. Câmera de três quartos com os dois rostos, mãos, embalagem e notebook inteiros. Luz natural da vitrine. Preservar a cena grande na arte final, nunca substituir por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto natural\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: seta desenhada\n- Desenho: caixas de estoque desenhadas\n- Texto: texto à esquerda\n- Clima: Oportunidade: a falta naquela unidade pode virar uma consulta ao estoque da outra.\n- Imagem: primeira direção igual à principal. Duas colunas sobre fundo nas cores da logo. Foto grande em cartão numa coluna; subtítulo em faixa ampla e demonstração na outra. Título fora da foto. A embalagem serve de referência para a procura, sem sugerir disponibilidade nessa unidade.\n- Desenhar dois grupos de caixas identificados como 'Esta loja' e 'Outra loja', com um carregador junto do segundo grupo. A seta indica a possibilidade de transferência para a primeira loja. Não representar transporte automático, reserva ou entrega imediata.\n- Ligar os pontos às etapas de consulta, localização e transferência. Destacar 'transferir o produto' por cor no subtítulo. Foto natural e sombra suave apenas nos elementos da montagem; letras sem sombra.\n- Enquadramento e área segura: rostos, mãos, embalagem e notebook inteiros. Setas no espaço livre; logo e selo em áreas próprias. Não inventar quantidades, preços ou prazo de chegada.\nImagem versão 2:\n- Foto: Foto real ampla de cliente adulto no balcão de uma loja de acessórios, mostrando a embalagem de referência do carregador que procura enquanto o dono adulto, sem aparência idosa, consulta o computador. Vitrine, cabos e acessórios organizados contextualizam a cena. Câmera frontal ligeiramente lateral, com rostos, mãos, embalagem e monitor inteiros. Luz branca suave da loja. Preservar foto grande e informativa, nunca substituir por ícone.\n- Composição: imagem acima do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Possibilidade: o dono consulta outra unidade antes de encerrar a conversa no balcão.\n- Imagem: composição vertical sobre fundo liso nas cores da logo. Título em área própria fora da foto. Cena ampla na metade superior, com moldura fina; solução em cartão largo abaixo, sem coluna lateral. Manter a foto em cor natural dentro da moldura.\n- O cartão reúne o subtítulo em etiqueta legível e um painel demonstrativo do estoque por unidade. Identificar 'Carregador', 'Esta loja' e 'Outra loja'. Usar a indicação explicativa 'Produto na outra loja', sem quantidades, valores ou aparência de captura oficial do sistema.\n- Abaixo do painel, distribuir os três pontos numa sequência horizontal. 'Transferência entre lojas' aparece como função disponível, sem confirmação de operação concluída. A história continua sendo a procura do cliente, não uma comparação de desempenho das unidades.\n- Sem setas, caixas ilustradas ou efeitos de luz nesta direção. Moldura e cartão dão presença à solução. Letras sem sombra, alinhamento centralizado e espaço suficiente para leitura.\n- Enquadramento e área segura: manter os dois rostos, mãos, embalagem e computador inteiros na metade superior. Logo e selo separados do painel e da foto. Não sugerir venda garantida, reserva ou prazo de transporte.\nImagem versão 3:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, conversando com cliente adulto num balcão de acessórios. Notebook entre eles; embalagem de referência do carregador procurado sobre a mesa. O dono aponta para a tela e o cliente acompanha com atenção. Prateleiras de cabos e acessórios ao fundo. Câmera de três quartos em plano aberto, luz lateral suave. Preservar rostos, mãos, notebook e embalagem inteiros dentro de um arco amplo. Nunca substituir a foto por ícone.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra forte\n- Destaque: título extra forte\n- Enfeite: cantoneiras\n- Desenho: fachada de loja desenhada\n- Texto: texto à esquerda\n- Clima: Continuidade: a conversa no balcão pode seguir com o produto localizado em outra unidade.\n- Imagem: composição com texto e explicação acima, foto grande em arco abaixo. Fundo em duas cores da logo, sem branco dominante. Título fora da foto, com maior peso e letras limpas. Subtítulo grande diretamente na área superior, sem faixa ou cartão de solução.\n- Integrar à explicação duas fachadas desenhadas, identificadas como 'Esta loja' e 'Outra loja'. Um pequeno carregador junto da segunda fachada indica onde o produto foi localizado. Os pontos acompanham a leitura: consulta, localização e possibilidade de transferência. Não usar seta nem repetir o painel da segunda direção.\n- A foto em preto e branco contrasta com as fachadas e o fundo nas cores da marca. Sombra forte apenas sob o recorte da foto. Cantoneiras discretas delimitam a área da demonstração, sem cobrir palavras ou fachadas. Nenhuma sombra nas letras ou efeito adicional de luz.\n- Enquadramento e área segura: arco amplo com cabeça, mãos, gesto, notebook e embalagem completos. Não reduzir a cena a um recorte do peito. Reservar espaço exclusivo para logo e selo, longe das fachadas e da borda do arco.\n- A demonstração comunica consulta e transferência de estoque, sem representar transporte físico automático, reserva ou recebimento pelo cliente naquele momento. Não inventar quantidades, preços ou prazos.",
+  "bom": false,
+  "motivo": "Explica isso de forma mais interresante para o empresario"
+ },
+ {
+  "texto": "Título: \"A caixa chegou. O cadastro ficou pra depois.\"\nSubtítulo: \"Fotografe o produto: a IA do AlvoManage preenche o cadastro sem você digitar.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Mercadoria esperando cadastro.\nPontos: \"Produto esperando cadastro\" | \"Fotografe o produto\" | \"A IA preenche o cadastro\"\nImagem:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, sentado no balcão de uma loja de acessórios. Caixa aberta com carregadores embalados em primeiro plano; mão no teclado do notebook e olhar voltado para a mercadoria. Luz lateral de janela, rosto, mãos, notebook e caixa inteiros. Nunca substituir por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: sublinhado no título\n- Enfeite: seta desenhada\n- Desenho: pedestal de produto\n- Texto: texto à esquerda\n- Clima: Trabalho acumulado: a mercadoria chegou, mas ainda falta cadastrar.\n- Imagem: primeira direção igual à principal. Foto em cartão em uma coluna; solução em faixa na coluna vizinha, junto ao pedestal com carregador e contorno de câmera.\n- Distribuir os pontos pelo caminho produto → foto → cadastro. Representar cadastro apenas por linhas, sem inventar preenchimentos específicos.\n- Título fora da foto, sublinhado pontual e letras sem sombra. Condição legível: 'Disponível nos planos com IA'. Setas fora do rosto, dos objetos importantes e da logo; preservar margem em todo o recorte.\nImagem versão 2:\n- Foto: Foto real ampla de uma pessoa adulta fotografando um carregador embalado sobre o balcão de uma loja. Mostrar rosto concentrado, as duas mãos e o celular inteiro, com uma caixa de mercadoria ao lado e notebook ao fundo. Luz natural clara. Não substituir por ícone.\n- Composição: imagem acima do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo claro\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Mudança prática: a foto do produto passa a fazer parte do cadastro.\n- Imagem: cena ampla na metade superior; título fora da foto e solução grande na área de texto abaixo. Sem arco, pedestal ou faixa lateral.\n- Na área da solução, mostrar um desenho de cadastro com linhas e uma pequena imagem do mesmo carregador. Os pontos explicam a sequência, sem botão de ação nem campos presumidos.\n- Usar fundo claro nas cores da logo, letra limpa e destaque de cor em 'IA'. Informar 'Disponível nos planos com IA'. Preservar rosto, mãos e celular, sem sobrepor desenho ou logo à foto.\nImagem versão 3:\n- Foto: Foto real de dono adulto em loja de acessórios, segurando um carregador embalado próximo ao celular enquanto prepara uma fotografia. Caixa aberta e produtos embalados sobre o balcão. Câmera frontal, rosto e mãos completos, iluminação uniforme de loja. Nunca substituir por ícone.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: título extra forte\n- Enfeite: cantoneiras\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Alívio: o produto vira o ponto de partida do cadastro.\n- Imagem: título e solução em cartão na área superior; foto grande em cartão abaixo. Fundo em duas cores da marca, com divisão horizontal, sem diagonal.\n- Dentro do cartão da solução, organizar os três pontos como sequência de leitura e um cadastro ilustrativo preenchido por linhas. Não usar pedestal nem seta desta vez.\n- Cantoneiras discretas apenas na moldura da foto. Letras sem sombra; sombra suave nos cartões. Condição: 'Disponível nos planos com IA'. Manter logo em espaço próprio e não cortar pessoa ou produto.",
+  "bom": false,
+  "motivo": "Nao gostei que chegou mesmo padrão do outra imagem que fez eu quero que seja parecid mais desse jeito esta praticamente igual e outra melhora esse fundo coloca algo interesante que seja diferente",
+  "origem": "arte",
+  "versao": 1,
+  "texto_da_versao": "A caixa chegou. O cadastro ficou pra depois. | Fotografe o produto: a IA do AlvoManage preenche o cadastro sem você digitar.",
+  "arte": [
+   {
+    "n": 1,
+    "tema": "marca",
+    "decoracao": "produto",
+    "fundo_estilo": "faixa_lateral",
+    "alinhamento": "esquerda",
+    "densidade": "equilibrada",
+    "destaque_estilo": "linha",
+    "icone_estilo": "circulo_suave",
+    "enfeite": "seta",
+    "luz": "nenhuma",
+    "sombra": "nenhuma",
+    "solucao": "faixa",
+    "composicao": "visual_lateral",
+    "destaque": "linha",
+    "slides": [
+     {
+      "decoracao": "produto",
+      "fundo_estilo": "faixa_lateral",
+      "alinhamento": "esquerda",
+      "densidade": "equilibrada",
+      "destaque_estilo": "linha",
+      "icone_estilo": "circulo_suave",
+      "enfeite": "seta",
+      "luz": "nenhuma",
+      "sombra": "nenhuma",
+      "solucao": "faixa",
+      "composicao": "visual_lateral",
+      "foto_layout": null,
+      "foto_efeito": null,
+      "destaque": "linha"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"A caixa chegou. O cadastro ficou pra depois.\"\nSubtítulo: \"Fotografe o produto: a IA do AlvoManage preenche o cadastro sem você digitar.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Mercadoria esperando cadastro.\nPontos: \"Produto esperando cadastro\" | \"Fotografe o produto\" | \"A IA preenche o cadastro\"\nImagem:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, sentado no balcão de uma loja de acessórios. Caixa aberta com carregadores embalados em primeiro plano; mão no teclado do notebook e olhar voltado para a mercadoria. Luz lateral de janela, rosto, mãos, notebook e caixa inteiros. Nunca substituir por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: sublinhado no título\n- Enfeite: seta desenhada\n- Desenho: pedestal de produto\n- Texto: texto à esquerda\n- Clima: Trabalho acumulado: a mercadoria chegou, mas ainda falta cadastrar.\n- Imagem: primeira direção igual à principal. Foto em cartão em uma coluna; solução em faixa na coluna vizinha, junto ao pedestal com carregador e contorno de câmera.\n- Distribuir os pontos pelo caminho produto → foto → cadastro. Representar cadastro apenas por linhas, sem inventar preenchimentos específicos.\n- Título fora da foto, sublinhado pontual e letras sem sombra. Condição legível: 'Disponível nos planos com IA'. Setas fora do rosto, dos objetos importantes e da logo; preservar margem em todo o recorte.\nImagem versão 2:\n- Foto: Foto real ampla de uma pessoa adulta fotografando um carregador embalado sobre o balcão de uma loja. Mostrar rosto concentrado, as duas mãos e o celular inteiro, com uma caixa de mercadoria ao lado e notebook ao fundo. Luz natural clara. Não substituir por ícone.\n- Composição: imagem acima do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo claro\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Mudança prática: a foto do produto passa a fazer parte do cadastro.\n- Imagem: cena ampla na metade superior; título fora da foto e solução grande na área de texto abaixo. Sem arco, pedestal ou faixa lateral.\n- Na área da solução, mostrar um desenho de cadastro com linhas e uma pequena imagem do mesmo carregador. Os pontos explicam a sequência, sem botão de ação nem campos presumidos.\n- Usar fundo claro nas cores da logo, letra limpa e destaque de cor em 'IA'. Informar 'Disponível nos planos com IA'. Preservar rosto, mãos e celular, sem sobrepor desenho ou logo à foto.\nImagem versão 3:\n- Foto: Foto real de dono adulto em loja de acessórios, segurando um carregador embalado próximo ao celular enquanto prepara uma fotografia. Caixa aberta e produtos embalados sobre o balcão. Câmera frontal, rosto e mãos completos, iluminação uniforme de loja. Nunca substituir por ícone.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: título extra forte\n- Enfeite: cantoneiras\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Alívio: o produto vira o ponto de partida do cadastro.\n- Imagem: título e solução em cartão na área superior; foto grande em cartão abaixo. Fundo em duas cores da marca, com divisão horizontal, sem diagonal.\n- Dentro do cartão da solução, organizar os três pontos como sequência de leitura e um cadastro ilustrativo preenchido por linhas. Não usar pedestal nem seta desta vez.\n- Cantoneiras discretas apenas na moldura da foto. Letras sem sombra; sombra suave nos cartões. Condição: 'Disponível nos planos com IA'. Manter logo em espaço próprio e não cortar pessoa ou produto.",
+  "bom": false,
+  "motivo": "Mesma coisa da imagem 1 seguiu o mesmo padrão da imagem que voce ja criou e outra quero aumentar a logo que esta la em cima",
+  "origem": "arte",
+  "versao": 2,
+  "texto_da_versao": "A caixa chegou. O cadastro ficou pra depois. | Fotografe o produto: a IA do AlvoManage preenche o cadastro sem você digitar.",
+  "arte": [
+   {
+    "n": 2,
+    "tema": "marca",
+    "decoracao": "interface_saas",
+    "fundo_estilo": "invertido",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "selo",
+    "icone_estilo": "preenchido",
+    "enfeite": "nenhum",
+    "luz": "nenhuma",
+    "sombra": "nenhuma",
+    "solucao": "cartao",
+    "composicao": "icone_topo",
+    "foto_layout": "topo_cartao",
+    "foto_efeito": "moldura",
+    "destaque": "selo",
+    "slides": [
+     {
+      "decoracao": "interface_saas",
+      "fundo_estilo": "invertido",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "selo",
+      "icone_estilo": "preenchido",
+      "enfeite": "nenhum",
+      "luz": "nenhuma",
+      "sombra": "nenhuma",
+      "solucao": "cartao",
+      "composicao": "icone_topo",
+      "foto_layout": "topo_cartao",
+      "foto_efeito": "moldura",
+      "destaque": "selo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"A caixa chegou. O cadastro ficou pra depois.\"\nSubtítulo: \"Fotografe o produto: a IA do AlvoManage preenche o cadastro sem você digitar.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Mercadoria esperando cadastro.\nPontos: \"Produto esperando cadastro\" | \"Fotografe o produto\" | \"A IA preenche o cadastro\"\nImagem:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, sentado no balcão de uma loja de acessórios. Caixa aberta com carregadores embalados em primeiro plano; mão no teclado do notebook e olhar voltado para a mercadoria. Luz lateral de janela, rosto, mãos, notebook e caixa inteiros. Nunca substituir por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: sublinhado no título\n- Enfeite: seta desenhada\n- Desenho: pedestal de produto\n- Texto: texto à esquerda\n- Clima: Trabalho acumulado: a mercadoria chegou, mas ainda falta cadastrar.\n- Imagem: primeira direção igual à principal. Foto em cartão em uma coluna; solução em faixa na coluna vizinha, junto ao pedestal com carregador e contorno de câmera.\n- Distribuir os pontos pelo caminho produto → foto → cadastro. Representar cadastro apenas por linhas, sem inventar preenchimentos específicos.\n- Título fora da foto, sublinhado pontual e letras sem sombra. Condição legível: 'Disponível nos planos com IA'. Setas fora do rosto, dos objetos importantes e da logo; preservar margem em todo o recorte.\nImagem versão 2:\n- Foto: Foto real ampla de uma pessoa adulta fotografando um carregador embalado sobre o balcão de uma loja. Mostrar rosto concentrado, as duas mãos e o celular inteiro, com uma caixa de mercadoria ao lado e notebook ao fundo. Luz natural clara. Não substituir por ícone.\n- Composição: imagem acima do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: fundo claro\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Mudança prática: a foto do produto passa a fazer parte do cadastro.\n- Imagem: cena ampla na metade superior; título fora da foto e solução grande na área de texto abaixo. Sem arco, pedestal ou faixa lateral.\n- Na área da solução, mostrar um desenho de cadastro com linhas e uma pequena imagem do mesmo carregador. Os pontos explicam a sequência, sem botão de ação nem campos presumidos.\n- Usar fundo claro nas cores da logo, letra limpa e destaque de cor em 'IA'. Informar 'Disponível nos planos com IA'. Preservar rosto, mãos e celular, sem sobrepor desenho ou logo à foto.\nImagem versão 3:\n- Foto: Foto real de dono adulto em loja de acessórios, segurando um carregador embalado próximo ao celular enquanto prepara uma fotografia. Caixa aberta e produtos embalados sobre o balcão. Câmera frontal, rosto e mãos completos, iluminação uniforme de loja. Nunca substituir por ícone.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: título extra forte\n- Enfeite: cantoneiras\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Alívio: o produto vira o ponto de partida do cadastro.\n- Imagem: título e solução em cartão na área superior; foto grande em cartão abaixo. Fundo em duas cores da marca, com divisão horizontal, sem diagonal.\n- Dentro do cartão da solução, organizar os três pontos como sequência de leitura e um cadastro ilustrativo preenchido por linhas. Não usar pedestal nem seta desta vez.\n- Cantoneiras discretas apenas na moldura da foto. Letras sem sombra; sombra suave nos cartões. Condição: 'Disponível nos planos com IA'. Manter logo em espaço próprio e não cortar pessoa ou produto.",
+  "bom": true,
+  "motivo": "Eu gostei desse fundo bem diferente e interresante mais quebrou com esse icone parecido com a imagem de fundo",
+  "origem": "arte",
+  "versao": 3,
+  "texto_da_versao": "A caixa chegou. O cadastro ficou pra depois. | Fotografe o produto: a IA do AlvoManage preenche o cadastro sem você digitar.",
+  "arte": [
+   {
+    "n": 3,
+    "tema": "marca",
+    "decoracao": "interface_saas",
+    "fundo_estilo": "duas_cores",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "peso",
+    "icone_estilo": "marca_dagua",
+    "enfeite": "cantos",
+    "luz": "nenhuma",
+    "sombra": "nenhuma",
+    "solucao": "grande",
+    "composicao": "icone_baixo",
+    "destaque": "peso",
+    "slides": [
+     {
+      "decoracao": "interface_saas",
+      "fundo_estilo": "duas_cores",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "peso",
+      "icone_estilo": "marca_dagua",
+      "enfeite": "cantos",
+      "luz": "nenhuma",
+      "sombra": "nenhuma",
+      "solucao": "grande",
+      "composicao": "icone_baixo",
+      "foto_layout": null,
+      "foto_efeito": null,
+      "destaque": "peso"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"A ajuda fica no canto da tela\"\nSubtítulo: \"Kronos, a IA do AlvoManage, responde suas dúvidas de como usar o sistema.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Ajuda durante o trabalho.\nSelo: \"Ajuda integrada\"\nPontos: \"Pergunte como usar\" | \"Kronos explica\" | \"Você segue a orientação\"\nImagem:\n- Foto: Foto real grande de dono adulto, sem aparência idosa, usando notebook numa mesa ao lado da bancada de assistência técnica. Ele observa a tela com atenção tranquila, uma mão no mouse e outra apoiada perto do teclado. Ferramentas organizadas, tapete técnico e aparelhos contextualizam o negócio. Ângulo de três quartos, cabeça, mãos e notebook completos, com margem. Luz natural lateral e iluminação da bancada. Manter a fotografia grande, nunca substituir por ícone.\n- Composição: imagem acima do texto\n- Solução: solução grande\n- Posição da foto: foto na metade de cima\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Confiança: a orientação de uso está dentro do sistema que o dono está usando.\n- Imagem: primeira direção igual à principal. Fotografia ampla na metade superior e título fora da foto. Subtítulo grande abaixo, ligado à ilustração do canto da tela com Kronos. Fundo em duas cores da logo e fotografia com contraste definido.\n- Mostrar 'Como uso o sistema?' e linhas representando a orientação; identificar como 'Ilustração'. Não inventar menus, respostas técnicas ou ações executadas pelo assistente.\n- Os pontos explicam pergunta → explicação → ação do dono. Incluir 'Disponível nos planos com IA' junto do selo 'Ajuda integrada', sem selo vazio.\n- Subtítulo destacado por cor, letras sem sombra e sombra suave apenas na ilustração. Proteger cabeça, mãos e notebook; logo e condição em áreas próprias, sem sobreposição.\nImagem versão 2:\n- Foto: Foto real grande de dono adulto e uma pessoa da equipe olhando juntos para um notebook no balcão de assistência técnica. Ambos atentos, sem conflito; uma mão aponta discretamente para a tela, a outra repousa no balcão. Ferramentas e prateleiras ao fundo. Ângulo lateral aberto, com os dois rostos, mãos e notebook inteiros. Luz branca uniforme da loja. Manter a foto, nunca trocar por ícone.\n- Composição: imagem ao lado da solução\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: tela de sistema desenhada\n- Texto: texto à esquerda\n- Clima: Aprendizado compartilhado: a equipe consulta uma orientação durante o expediente.\n- Fotografia em preto e branco, contrastando com a faixa e a demonstração nas cores da marca. Não aplicar outro tratamento à foto nem acrescentar balão de solução.\n- O subtítulo ocupa uma etiqueta larga na faixa, sem virar descrição pequena no rodapé. Incluir 'Disponível nos planos com IA' junto do selo 'Ajuda integrada'. Não sugerir treinamento autônomo da equipe.\n- Texto sem sombra. Cartão fotográfico deve comportar os dois rostos, mãos e notebook com margem; nenhum elemento gráfico passa sobre a foto ou a logo.\nImagem versão 3:\n- Foto: Foto real grande de dono adulto usando notebook numa mesa de trabalho da assistência. Postura confortável, olhar atento e mãos próximas ao teclado. Prateleira de aparelhos e luminária ao fundo. Câmera frontal aberta, com cabeça, braços, mãos e computador completos. Luz ambiente suave e detalhes da bancada visíveis. Não substituir por ícone.\n- Composição: imagem abaixo do texto\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: título extra forte\n- Enfeite: cantoneiras\n- Desenho: tela de sistema desenhada\n- Texto: texto centralizado\n- Clima: Proximidade: o dono encontra ajuda no próprio ambiente de trabalho.\n- Imagem: título em área própria no alto; subtítulo em cartão amplo abaixo do título, seguido de foto grande em arco na área inferior. O cartão inclui uma demonstração do canto da tela com Kronos. Não repetir as colunas da segunda direção.\n- Foto em duotone da marca sobre fundo sólido, com separação nítida entre cartão e fotografia. O arco comporta cabeça, mãos e notebook completos, sem recorte restrito ao peito.\n- Mostrar a pergunta 'Como uso o sistema?' e linhas indicando orientação, com identificação 'Ilustração'. Pontos associados à sequência perguntar, receber explicação e seguir a orientação; não apresentar execução automática.\n- Sublinhar somente 'ajuda' no título. Cantoneiras discretas apenas nos limites do cartão; sombra suave no cartão, nunca nas letras. Incluir 'Disponível nos planos com IA' perto do selo 'Ajuda integrada'.\n- Reservar margem para logo e textos. Cantoneiras e desenho não invadem rosto, mãos, notebook ou condição de disponibilidade.",
+  "bom": false,
+  "motivo": "ja falei vai falar de ia seja mais amplo"
+ },
+ {
+  "texto": "Título: \"Sua loja também cabe no celular\"\nSubtítulo: \"O AlvoManage vira app no celular pelo navegador, sem passar pela loja de aplicativos.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Sistema além do balcão.\nSelo: \"No celular\"\nPontos: \"Abre no navegador\" | \"Instala como aplicativo\" | \"Acessa pelo celular\"\nImagem:\n- Foto: Foto grande de dona adulta, sem aparência idosa, na entrada de uma loja de celulares, olhando o próprio smartphone. Fachada, porta aberta e parte do balcão aparecem atrás, mostrando que ela está fora do posto de atendimento. Expressão atenta e postura natural. Luz diurna lateral, câmera em três quartos e plano aberto com cabeça, braços, mãos e celular inteiros.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em arco\n- Tratamento da foto: foto natural\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: sem enfeite\n- Desenho: celular desenhado\n- Texto: texto à esquerda\n- Clima: Descoberta: o dono pode acessar o sistema sem ficar diante do computador do balcão.\n- Primeira direção igual à imagem principal: título fora da foto, subtítulo grande e demonstração na área superior; fotografia ampla em arco abaixo. Fundo em duas áreas sólidas nas cores da logo, com contraste definido.\n- O celular desenhado explica navegador → aplicativo no celular. Pontos junto das etapas: Abre no navegador, Instala como aplicativo e Acessa pelo celular. Demonstração ilustrativa, sem menus, botões ou interface oficial inventados.\n- Selo No celular em área própria. Destacar vira app no celular por cor no subtítulo. Sombra suave apenas sob arco e desenho, nunca nas letras.\n- Preservar cabeça, braços, mãos, smartphone e contexto da fachada dentro do arco. Reservar margens generosas e espaço exclusivo para a logo. Texto, selo e desenho não atravessam a foto.\n- Não sugerir lançamento recente, notificações, acesso offline ou tarefas específicas não confirmadas.\n- Imagem: explicação aberta acima de uma cena real grande, com fotografia natural e fundo em duas cores. A solução tem presença sem depender de um bloco pequeno no rodapé.\nImagem versão 2:\n- Foto: Foto grande de dono adulto, sem aparência idosa, sentado numa mesa de café, usando o celular. Uma chave está sobre a mesa e a rua aparece pela janela ao fundo. Expressão concentrada, postura cotidiana e uma mão segurando o aparelho enquanto a outra toca a tela. Câmera lateral em três quartos, luz suave da janela, cabeça, braços, mãos, mesa e smartphone completos.\n- Composição: imagem acima do texto\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra forte\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: celular desenhado\n- Texto: texto à esquerda\n- Clima: Mobilidade: o dono encontra outra forma de acessar o sistema fora do balcão.\n- Título em área própria acima das duas colunas. Foto grande em cartão numa coluna; solução em faixa ampla na outra. A faixa lateral do fundo usa as cores da logo e sustenta a coluna explicativa, com acabamento sólido e sem degradê.\n- Subtítulo em etiqueta dentro da faixa, com espaço suficiente para leitura. Abaixo dele, dois estados ilustrativos do mesmo celular: acesso pelo navegador e acesso como aplicativo. Os pontos acompanham a sequência vertical, sem virar botões.\n- A moldura delimita a foto sem estreitar a cena. Sombra forte somente sob o cartão fotográfico; nenhuma sombra nas letras. Selo No celular separado do subtítulo e da logo.\n- Não desenhar vendas, saldos, tarefas remotas específicas ou tela oficial. Não inventar menus de instalação, notificações ou uso offline. A foto mostra acesso pelo celular, sem prometer que a loja funciona sozinha.\n- Área segura: cartão largo o suficiente para cabeça, braços, mãos e aparelho completos. Demonstração restrita à coluna explicativa. Margens próprias para título, logo e selo, sem sobreposição.\nImagem versão 3:\n- Foto: Foto ampla de dona adulta, sem aparência idosa, usando o smartphone numa mesa ao ar livre. Estabelecimentos comerciais aparecem ao fundo, mantendo o contexto de rua. Ela olha a tela com atenção, segurando o aparelho com as duas mãos. Câmera frontal ligeiramente lateral, luz diurna uniforme e enquadramento aberto com cabeça, braços, mãos, celular e mesa inteiros.\n- Composição: imagem ao lado da solução\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: título extra forte\n- Enfeite: seta desenhada\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: Praticidade: o acesso ao AlvoManage também cabe no celular do dono.\n- Título com maior peso em área própria no topo, fora da fotografia. Cena ampla na metade superior, sem arco nem coluna lateral. Foto em preto e branco com detalhes preservados, contrastando com o fundo sólido e a demonstração nas cores da logo.\n- Solução em cartão largo abaixo da foto. O subtítulo ocupa a parte principal do cartão; sob ele, os três pontos formam uma sequência horizontal acompanhada por um celular desenhado. Dar altura suficiente ao cartão para que a explicação não pareça uma nota de rodapé.\n- Uma seta curta entre Abre no navegador e Instala como aplicativo explica a passagem. Acessa pelo celular encerra o caminho. Desenho conceitual, sem inventar tela oficial, botão de instalação ou nomes de menus.\n- Destacar o título pelo peso, sem sublinhado nem sombra. Selo No celular próximo da explicação, em espaço próprio. Nenhum efeito gráfico de luz; a fotografia mantém a iluminação diurna da cena.\n- Área segura: preservar cabeça, mãos, smartphone e mesa com folga na metade superior. A seta fica dentro da demonstração, longe da logo, do selo e das palavras. Logo em área exclusiva; cartão e fotografia sem sobreposição.\n- Não atribuir lançamento recente, acesso offline, notificações ou funções remotas específicas ao aplicativo.",
+  "bom": true,
+  "motivo": "Gstei ficou bem informativo",
+  "origem": "arte",
+  "versao": 1,
+  "texto_da_versao": "Sua loja também cabe no celular | O AlvoManage vira app no celular pelo navegador, sem passar pela loja de aplicativos.",
+  "arte": [
+   {
+    "n": 1,
+    "tema": "marca",
+    "decoracao": "celular",
+    "fundo_estilo": "duas_cores",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "cor",
+    "icone_estilo": "circulo_suave",
+    "enfeite": "nenhum",
+    "luz": "nenhuma",
+    "sombra": "suave",
+    "solucao": "grande",
+    "composicao": "icone_baixo",
+    "foto_layout": "arco",
+    "foto_efeito": "nenhum",
+    "destaque": "cor",
+    "slides": [
+     {
+      "decoracao": "celular",
+      "fundo_estilo": "duas_cores",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "cor",
+      "icone_estilo": "circulo_suave",
+      "enfeite": "nenhum",
+      "luz": "nenhuma",
+      "sombra": "suave",
+      "solucao": "grande",
+      "composicao": "icone_baixo",
+      "foto_layout": "arco",
+      "foto_efeito": "nenhum",
+      "destaque": "cor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Sua loja também cabe no celular\"\nSubtítulo: \"O AlvoManage vira app no celular pelo navegador, sem passar pela loja de aplicativos.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Sistema além do balcão.\nSelo: \"No celular\"\nPontos: \"Abre no navegador\" | \"Instala como aplicativo\" | \"Acessa pelo celular\"\nImagem:\n- Foto: Foto grande de dona adulta, sem aparência idosa, na entrada de uma loja de celulares, olhando o próprio smartphone. Fachada, porta aberta e parte do balcão aparecem atrás, mostrando que ela está fora do posto de atendimento. Expressão atenta e postura natural. Luz diurna lateral, câmera em três quartos e plano aberto com cabeça, braços, mãos e celular inteiros.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em arco\n- Tratamento da foto: foto natural\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: sem enfeite\n- Desenho: celular desenhado\n- Texto: texto à esquerda\n- Clima: Descoberta: o dono pode acessar o sistema sem ficar diante do computador do balcão.\n- Primeira direção igual à imagem principal: título fora da foto, subtítulo grande e demonstração na área superior; fotografia ampla em arco abaixo. Fundo em duas áreas sólidas nas cores da logo, com contraste definido.\n- O celular desenhado explica navegador → aplicativo no celular. Pontos junto das etapas: Abre no navegador, Instala como aplicativo e Acessa pelo celular. Demonstração ilustrativa, sem menus, botões ou interface oficial inventados.\n- Selo No celular em área própria. Destacar vira app no celular por cor no subtítulo. Sombra suave apenas sob arco e desenho, nunca nas letras.\n- Preservar cabeça, braços, mãos, smartphone e contexto da fachada dentro do arco. Reservar margens generosas e espaço exclusivo para a logo. Texto, selo e desenho não atravessam a foto.\n- Não sugerir lançamento recente, notificações, acesso offline ou tarefas específicas não confirmadas.\n- Imagem: explicação aberta acima de uma cena real grande, com fotografia natural e fundo em duas cores. A solução tem presença sem depender de um bloco pequeno no rodapé.\nImagem versão 2:\n- Foto: Foto grande de dono adulto, sem aparência idosa, sentado numa mesa de café, usando o celular. Uma chave está sobre a mesa e a rua aparece pela janela ao fundo. Expressão concentrada, postura cotidiana e uma mão segurando o aparelho enquanto a outra toca a tela. Câmera lateral em três quartos, luz suave da janela, cabeça, braços, mãos, mesa e smartphone completos.\n- Composição: imagem acima do texto\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra forte\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: celular desenhado\n- Texto: texto à esquerda\n- Clima: Mobilidade: o dono encontra outra forma de acessar o sistema fora do balcão.\n- Título em área própria acima das duas colunas. Foto grande em cartão numa coluna; solução em faixa ampla na outra. A faixa lateral do fundo usa as cores da logo e sustenta a coluna explicativa, com acabamento sólido e sem degradê.\n- Subtítulo em etiqueta dentro da faixa, com espaço suficiente para leitura. Abaixo dele, dois estados ilustrativos do mesmo celular: acesso pelo navegador e acesso como aplicativo. Os pontos acompanham a sequência vertical, sem virar botões.\n- A moldura delimita a foto sem estreitar a cena. Sombra forte somente sob o cartão fotográfico; nenhuma sombra nas letras. Selo No celular separado do subtítulo e da logo.\n- Não desenhar vendas, saldos, tarefas remotas específicas ou tela oficial. Não inventar menus de instalação, notificações ou uso offline. A foto mostra acesso pelo celular, sem prometer que a loja funciona sozinha.\n- Área segura: cartão largo o suficiente para cabeça, braços, mãos e aparelho completos. Demonstração restrita à coluna explicativa. Margens próprias para título, logo e selo, sem sobreposição.\nImagem versão 3:\n- Foto: Foto ampla de dona adulta, sem aparência idosa, usando o smartphone numa mesa ao ar livre. Estabelecimentos comerciais aparecem ao fundo, mantendo o contexto de rua. Ela olha a tela com atenção, segurando o aparelho com as duas mãos. Câmera frontal ligeiramente lateral, luz diurna uniforme e enquadramento aberto com cabeça, braços, mãos, celular e mesa inteiros.\n- Composição: imagem ao lado da solução\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: título extra forte\n- Enfeite: seta desenhada\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: Praticidade: o acesso ao AlvoManage também cabe no celular do dono.\n- Título com maior peso em área própria no topo, fora da fotografia. Cena ampla na metade superior, sem arco nem coluna lateral. Foto em preto e branco com detalhes preservados, contrastando com o fundo sólido e a demonstração nas cores da logo.\n- Solução em cartão largo abaixo da foto. O subtítulo ocupa a parte principal do cartão; sob ele, os três pontos formam uma sequência horizontal acompanhada por um celular desenhado. Dar altura suficiente ao cartão para que a explicação não pareça uma nota de rodapé.\n- Uma seta curta entre Abre no navegador e Instala como aplicativo explica a passagem. Acessa pelo celular encerra o caminho. Desenho conceitual, sem inventar tela oficial, botão de instalação ou nomes de menus.\n- Destacar o título pelo peso, sem sublinhado nem sombra. Selo No celular próximo da explicação, em espaço próprio. Nenhum efeito gráfico de luz; a fotografia mantém a iluminação diurna da cena.\n- Área segura: preservar cabeça, mãos, smartphone e mesa com folga na metade superior. A seta fica dentro da demonstração, longe da logo, do selo e das palavras. Logo em área exclusiva; cartão e fotografia sem sobreposição.\n- Não atribuir lançamento recente, acesso offline, notificações ou funções remotas específicas ao aplicativo.",
+  "bom": false,
+  "motivo": "ficou bom os posicionamentos mais faltou fundo faltou imagem boa que essa esta muito ruim e nada aver com oque pedir e ja falei para na ter imagem de velho e outra dentro do bloco esta com letras com sombras horriveis que nem da para ler",
+  "origem": "arte",
+  "versao": 2,
+  "texto_da_versao": "Sua loja também cabe no celular | O AlvoManage vira app no celular pelo navegador, sem passar pela loja de aplicativos.",
+  "arte": [
+   {
+    "n": 2,
+    "tema": "marca",
+    "decoracao": "celular",
+    "fundo_estilo": "faixa_lateral",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "selo",
+    "icone_estilo": "selo_quadrado",
+    "enfeite": "nenhum",
+    "luz": "nenhuma",
+    "sombra": "forte",
+    "solucao": "faixa",
+    "composicao": "icone_topo",
+    "foto_layout": "topo_cartao",
+    "foto_efeito": "moldura",
+    "destaque": "selo",
+    "slides": [
+     {
+      "decoracao": "celular",
+      "fundo_estilo": "faixa_lateral",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "selo",
+      "icone_estilo": "selo_quadrado",
+      "enfeite": "nenhum",
+      "luz": "nenhuma",
+      "sombra": "forte",
+      "solucao": "faixa",
+      "composicao": "icone_topo",
+      "foto_layout": "topo_cartao",
+      "foto_efeito": "moldura",
+      "destaque": "selo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "texto": "Título: \"Sua loja também cabe no celular\"\nSubtítulo: \"O AlvoManage vira app no celular pelo navegador, sem passar pela loja de aplicativos.\"\nPost do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre Sistema além do balcão.\nSelo: \"No celular\"\nPontos: \"Abre no navegador\" | \"Instala como aplicativo\" | \"Acessa pelo celular\"\nImagem:\n- Foto: Foto grande de dona adulta, sem aparência idosa, na entrada de uma loja de celulares, olhando o próprio smartphone. Fachada, porta aberta e parte do balcão aparecem atrás, mostrando que ela está fora do posto de atendimento. Expressão atenta e postura natural. Luz diurna lateral, câmera em três quartos e plano aberto com cabeça, braços, mãos e celular inteiros.\n- Composição: imagem abaixo do texto\n- Solução: solução grande\n- Posição da foto: foto em arco\n- Tratamento da foto: foto natural\n- Fundo: fundo em duas cores\n- Luz: sem luz\n- Sombra: sombra suave\n- Destaque: subtítulo colorido\n- Enfeite: sem enfeite\n- Desenho: celular desenhado\n- Texto: texto à esquerda\n- Clima: Descoberta: o dono pode acessar o sistema sem ficar diante do computador do balcão.\n- Primeira direção igual à imagem principal: título fora da foto, subtítulo grande e demonstração na área superior; fotografia ampla em arco abaixo. Fundo em duas áreas sólidas nas cores da logo, com contraste definido.\n- O celular desenhado explica navegador → aplicativo no celular. Pontos junto das etapas: Abre no navegador, Instala como aplicativo e Acessa pelo celular. Demonstração ilustrativa, sem menus, botões ou interface oficial inventados.\n- Selo No celular em área própria. Destacar vira app no celular por cor no subtítulo. Sombra suave apenas sob arco e desenho, nunca nas letras.\n- Preservar cabeça, braços, mãos, smartphone e contexto da fachada dentro do arco. Reservar margens generosas e espaço exclusivo para a logo. Texto, selo e desenho não atravessam a foto.\n- Não sugerir lançamento recente, notificações, acesso offline ou tarefas específicas não confirmadas.\n- Imagem: explicação aberta acima de uma cena real grande, com fotografia natural e fundo em duas cores. A solução tem presença sem depender de um bloco pequeno no rodapé.\nImagem versão 2:\n- Foto: Foto grande de dono adulto, sem aparência idosa, sentado numa mesa de café, usando o celular. Uma chave está sobre a mesa e a rua aparece pela janela ao fundo. Expressão concentrada, postura cotidiana e uma mão segurando o aparelho enquanto a outra toca a tela. Câmera lateral em três quartos, luz suave da janela, cabeça, braços, mãos, mesa e smartphone completos.\n- Composição: imagem acima do texto\n- Solução: solução em faixa\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com moldura\n- Fundo: faixa lateral\n- Luz: sem luz\n- Sombra: sombra forte\n- Destaque: subtítulo em etiqueta\n- Enfeite: sem enfeite\n- Desenho: celular desenhado\n- Texto: texto à esquerda\n- Clima: Mobilidade: o dono encontra outra forma de acessar o sistema fora do balcão.\n- Título em área própria acima das duas colunas. Foto grande em cartão numa coluna; solução em faixa ampla na outra. A faixa lateral do fundo usa as cores da logo e sustenta a coluna explicativa, com acabamento sólido e sem degradê.\n- Subtítulo em etiqueta dentro da faixa, com espaço suficiente para leitura. Abaixo dele, dois estados ilustrativos do mesmo celular: acesso pelo navegador e acesso como aplicativo. Os pontos acompanham a sequência vertical, sem virar botões.\n- A moldura delimita a foto sem estreitar a cena. Sombra forte somente sob o cartão fotográfico; nenhuma sombra nas letras. Selo No celular separado do subtítulo e da logo.\n- Não desenhar vendas, saldos, tarefas remotas específicas ou tela oficial. Não inventar menus de instalação, notificações ou uso offline. A foto mostra acesso pelo celular, sem prometer que a loja funciona sozinha.\n- Área segura: cartão largo o suficiente para cabeça, braços, mãos e aparelho completos. Demonstração restrita à coluna explicativa. Margens próprias para título, logo e selo, sem sobreposição.\nImagem versão 3:\n- Foto: Foto ampla de dona adulta, sem aparência idosa, usando o smartphone numa mesa ao ar livre. Estabelecimentos comerciais aparecem ao fundo, mantendo o contexto de rua. Ela olha a tela com atenção, segurando o aparelho com as duas mãos. Câmera frontal ligeiramente lateral, luz diurna uniforme e enquadramento aberto com cabeça, braços, mãos, celular e mesa inteiros.\n- Composição: imagem ao lado da solução\n- Solução: solução em cartão\n- Posição da foto: foto em cartão\n- Tratamento da foto: foto com contraste forte\n- Fundo: fundo liso\n- Luz: sem luz\n- Sombra: sem sombra\n- Destaque: título extra forte\n- Enfeite: seta desenhada\n- Desenho: celular desenhado\n- Texto: texto centralizado\n- Clima: Praticidade: o acesso ao AlvoManage também cabe no celular do dono.\n- Título com maior peso em área própria no topo, fora da fotografia. Cena ampla na metade superior, sem arco nem coluna lateral. Foto em preto e branco com detalhes preservados, contrastando com o fundo sólido e a demonstração nas cores da logo.\n- Solução em cartão largo abaixo da foto. O subtítulo ocupa a parte principal do cartão; sob ele, os três pontos formam uma sequência horizontal acompanhada por um celular desenhado. Dar altura suficiente ao cartão para que a explicação não pareça uma nota de rodapé.\n- Uma seta curta entre Abre no navegador e Instala como aplicativo explica a passagem. Acessa pelo celular encerra o caminho. Desenho conceitual, sem inventar tela oficial, botão de instalação ou nomes de menus.\n- Destacar o título pelo peso, sem sublinhado nem sombra. Selo No celular próximo da explicação, em espaço próprio. Nenhum efeito gráfico de luz; a fotografia mantém a iluminação diurna da cena.\n- Área segura: preservar cabeça, mãos, smartphone e mesa com folga na metade superior. A seta fica dentro da demonstração, longe da logo, do selo e das palavras. Logo em área exclusiva; cartão e fotografia sem sobreposição.\n- Não atribuir lançamento recente, acesso offline, notificações ou funções remotas específicas ao aplicativo.",
+  "bom": false,
+  "motivo": "a imagem nao ficou ruim mais o fundo generico então imagem ruim",
+  "origem": "arte",
+  "versao": 3,
+  "texto_da_versao": "Sua loja também cabe no celular | O AlvoManage vira app no celular pelo navegador, sem passar pela loja de aplicativos.",
+  "arte": [
+   {
+    "n": 3,
+    "tema": "marca",
+    "decoracao": "celular",
+    "fundo_estilo": "solido",
+    "alinhamento": "centro",
+    "densidade": "equilibrada",
+    "destaque_estilo": "peso",
+    "icone_estilo": "preenchido",
+    "enfeite": "seta",
+    "luz": "nenhuma",
+    "sombra": "nenhuma",
+    "solucao": "cartao",
+    "composicao": "visual_lateral",
+    "foto_layout": "topo_cartao",
+    "foto_efeito": "contraste",
+    "destaque": "peso",
+    "slides": [
+     {
+      "decoracao": "celular",
+      "fundo_estilo": "solido",
+      "alinhamento": "centro",
+      "densidade": "equilibrada",
+      "destaque_estilo": "peso",
+      "icone_estilo": "preenchido",
+      "enfeite": "seta",
+      "luz": "nenhuma",
+      "sombra": "nenhuma",
+      "solucao": "cartao",
+      "composicao": "visual_lateral",
+      "foto_layout": "topo_cartao",
+      "foto_efeito": "contraste",
+      "destaque": "peso"
+     }
+    ]
+   }
+  ]
+ }
+]

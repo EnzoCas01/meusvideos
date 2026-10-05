@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostJay",
+ "sx": "afohpc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 295,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "E se você soubesse o que sai mais?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "linha",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "cantos",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.238,
+     "subtitulo": "Os relatórios do AlvoManage mostram o que sai mais, e quando.",
+     "icone": "chart-bar-popular"
+    }
+   }
+  }
+ ]
+}

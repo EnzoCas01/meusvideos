@@ -1,0 +1,41 @@
+{
+ "formato": "post",
+ "peca": "PostPr",
+ "sx": "fjmeca",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "O WhatsApp da loja dentro do sistema",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "nenhum",
+     "luz": "nenhuma",
+     "sombra": "suave",
+     "fundo_estilo": "solido",
+     "fundo_var": 0.939,
+     "subtitulo": "Conecte o WhatsApp ao AlvoManage e acompanhe as mensagens num só lugar.",
+     "icone": "messages"
+    }
+   }
+  }
+ ]
+}

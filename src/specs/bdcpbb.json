@@ -1,0 +1,35 @@
+{
+ "formato": "post",
+ "peca": "PostX",
+ "sx": "bdcpbb",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Quanto vendeu no mês?",
+     "receita": "editorial_organico",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "subtitulo": "Relatório de vendas do período, por operador, sem planilha",
+     "cta": "VEJA O SEU",
+     "icone": "receipt"
+    }
+   }
+  }
+ ]
+}

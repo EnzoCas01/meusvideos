@@ -1,0 +1,16 @@
+{
+  "id": "texto_cta",
+  "tipo": "cta",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["informacional", "motivacional", "cinematico"],
+  "descricao": "Botão de chamada para ação em pílula arredondada com seta, na cor accent do tema.",
+  "uso_recomendado": ["chamadas para ação", "fecho de post", "convite a comentar ou seguir"],
+  "duracao_recomendada": "2-4 s",
+  "parametros": {
+    "texto": {"tipo": "string", "descricao": "Texto do botão (ex.: Segue o canal)", "obrigatorio": true},
+    "posicao": {"tipo": "string", "descricao": "topo | centro | baixo", "obrigatorio": false},
+    "tamanho": {"tipo": "numero", "descricao": "Tamanho da fonte em px", "obrigatorio": false},
+    "cor_fundo": {"tipo": "cor", "descricao": "Cor da pílula", "obrigatorio": false},
+    "cor_texto": {"tipo": "cor", "descricao": "Cor do texto da pílula", "obrigatorio": false}
+  }
+}

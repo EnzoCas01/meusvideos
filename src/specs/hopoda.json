@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostZlf",
+ "sx": "hopoda",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 245,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Esse aparelho já passou por aqui?",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "cantos",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.213,
+     "subtitulo": "No AlvoManage, o histórico mostra cada conserto anterior do cliente.",
+     "icone": "devices-question"
+    }
+   }
+  }
+ ]
+}

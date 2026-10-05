@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "engine": "elevenlabs-george",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+10%",
+  "pitch": "-4Hz",
+  "ellipsisPauseMs": 0,
+  "language": "pt",
+  "volume": 1.0,
+  "duckMusicTo": 0.35,
+  "headFrames": 6,
+  "tailFrames": 45,
+  "note": "Fonte única da narração de 'MaquinaDinheiro' (modo livre: anúncio/promo do sistema de agentes, com CTA de engajamento). Voz George (ElevenLabs) por padrão. durationInFrames/words/frame preenchidos por tools/generate-narration-edge.py e tools/word-timings.py --edge. NÃO usar reticências no texto: o word-timings --edge pula linhas com '...'.",
+  "lines": [
+    {"id": "01-hook", "frame": 6, "gapAfter": 5, "text": "Já viu uma máquina de fazer dinheiro?"},
+    {"id": "02-assiste", "frame": 100, "gapAfter": 6, "text": "Assiste até o final, porque eu vou te mostrar como."},
+    {"id": "03-time", "frame": 200, "gapAfter": 6, "text": "Eu montei um time de agentes de inteligência artificial."},
+    {"id": "04-cada", "frame": 280, "gapAfter": 8, "text": "Cada um cuida de uma parte: Diretor, Motion, Revisor, Narração, Som, Imagem e Vídeo, e Render."},
+    {"id": "05-ideia", "frame": 440, "gapAfter": 5, "text": "E eu só dou uma ideia."},
+    {"id": "06-juntos", "frame": 510, "gapAfter": 6, "text": "E eles trabalham juntos para transformar isso em um vídeo completo."},
+    {"id": "07-tudo", "frame": 610, "gapAfter": 8, "text": "Narração, imagens, vídeos, efeitos, animações, música e edição."},
+    {"id": "08-esse", "frame": 730, "gapAfter": 8, "text": "Foi assim que eu criei esse vídeo que você está vendo agora."},
+    {"id": "09-dinheiro", "frame": 850, "gapAfter": 6, "text": "E se você usar isso para criar conteúdo, dá para buscar dinheiro com a monetização do TikTok, e também com outras formas de ganhar dinheiro usando conteúdo."},
+    {"id": "10-prova", "frame": 1050, "gapAfter": 6, "text": "E eu já vou ensinar uma pessoa que me seguiu e comentou nesse vídeo, como fazer isso."},
+    {"id": "11-cta1", "frame": 1180, "gapAfter": 5, "text": "Quer que eu te ensine também? Comenta EU QUERO aqui embaixo."},
+    {"id": "12-cta2", "frame": 1300, "gapAfter": 6, "text": "Eu vou mandar o próximo vídeo para quem comentar."},
+    {"id": "13-meta", "frame": 1400, "gapAfter": 8, "text": "E se esse vídeo bater cem mil visualizações, eu mostro o sistema inteiro, do zero."},
+    {"id": "14-fim", "frame": 1600, "gapAfter": 0, "text": "Então me segue e compartilha."}
+  ]
+}

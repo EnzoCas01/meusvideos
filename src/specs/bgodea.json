@@ -1,0 +1,152 @@
+{
+ "formato": "post",
+ "peca": "PostYxqn",
+ "sx": "bgodea",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 295,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Cliente jura que o risco não estava lá",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "cantos",
+     "fundo_estilo": "solido",
+     "fundo_var": 0.299,
+     "subtitulo": "Sem prova, vira a sua palavra contra a dele",
+     "composicao": "icone_topo",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuogyxqn2de0/fotos/ab4f8062db.jpg",
+     "foto_id": "ab4f8062db",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "escurecer"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Você recebeu o aparelho impecável",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "marca_dagua",
+     "enfeite": "confete",
+     "fundo_estilo": "circulos",
+     "fundo_var": 0.956,
+     "subtitulo": "Mas na hora de entregar, a conversa muda",
+     "icone": "truck-return",
+     "etiqueta": "2 / 5",
+     "composicao": "icone_baixo"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "No AlvoManage a foto fica na OS",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "cantos",
+     "fundo_estilo": "brilho",
+     "fundo_var": 0.527,
+     "subtitulo": "Registrada na entrada, com data e hora",
+     "icone": "photo-circle",
+     "etiqueta": "3 / 5",
+     "composicao": "icone_topo"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Risco, trinca e detalhe guardados",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "mancha",
+     "enfeite": "nenhum",
+     "fundo_estilo": "faixa_lateral",
+     "fundo_var": 0.37,
+     "subtitulo": "Abre a OS e mostra pro cliente na hora",
+     "etiqueta": "4 / 5",
+     "composicao": "icone_baixo",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuogyxqn2de0/fotos/98721390a1.jpg",
+     "foto_id": "98721390a1",
+     "foto_layout": "circulo",
+     "foto_efeito": "contraste"
+    }
+   }
+  },
+  {
+   "n": 5,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "A conversa resolve sem prejuízo",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "linha",
+     "icone_estilo": "aneis",
+     "enfeite": "brilhos",
+     "fundo_estilo": "dividido_topo",
+     "fundo_var": 0.287,
+     "subtitulo": "O conserto é seu, o estrago não era",
+     "etiqueta": "5 / 5",
+     "composicao": "lateral",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuogyxqn2de0/fotos/332ebe5f5a.jpg",
+     "foto_id": "332ebe5f5a",
+     "foto_layout": "circulo",
+     "foto_efeito": "nenhum"
+    }
+   }
+  }
+ ]
+}

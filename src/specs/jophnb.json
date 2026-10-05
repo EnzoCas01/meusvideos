@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostWoay",
+ "sx": "jophnb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Perdido no sistema? Tem ajuda na tela",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "cantos",
+     "fundo_estilo": "circulos",
+     "fundo_var": 0.527,
+     "subtitulo": "O assistente do AlvoManage responde suas dúvidas sem sair da tela.",
+     "icone": "message-chatbot"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "formato": "post",
+ "peca": "PostPg",
+ "sx": "lfohjb",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "verde_negocio",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Dúvida no meio do serviço?",
+     "receita": "frase_autoral",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "subtitulo": "O Assistente AlvoManage responde na própria tela",
+     "icone": "monitor"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Sem sair do sistema",
+     "receita": "frase_autoral",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "subtitulo": "Você pergunta ali e continua trabalhando",
+     "icone": "monitor"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Mais rápido",
+     "receita": "frase_autoral",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "subtitulo": "Menos tempo procurando como fazer",
+     "icone": "monitor"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Teste o AlvoManage",
+     "receita": "frase_autoral",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "subtitulo": "link na bio",
+     "icone": "monitor"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "formato": "post",
+ "peca": "PostJf",
+ "sx": "njonca",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Fim do mês e briga pela comissão?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "expressiva",
+     "hierarquia": "mensagem",
+     "decoracao": "clientes",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "preenchido",
+     "enfeite": "granulado",
+     "luz": "vinheta",
+     "sombra": "forte",
+     "fundo_estilo": "gradiente",
+     "fundo_var": 0.793,
+     "subtitulo": "No AlvoManage, cada venda fica no nome de quem vendeu e a comissão sai por operador.",
+     "icone": "user"
+    }
+   }
+  }
+ ]
+}

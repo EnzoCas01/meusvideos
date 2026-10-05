@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostJay",
+ "sx": "afohpa",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 295,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Descubra o que realmente vende",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "nenhum",
+     "fundo_estilo": "pontos",
+     "fundo_var": 0.609,
+     "subtitulo": "Os relatórios do AlvoManage mostram o que sai mais, e quando.",
+     "icone": "chart-bar-popular"
+    }
+   }
+  }
+ ]
+}

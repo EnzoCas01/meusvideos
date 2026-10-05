@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "engine": "edge-tts",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+8%",
+  "pitch": "-6Hz",
+  "ellipsisPauseMs": 380,
+  "language": "pt",
+  "volume": 0.95,
+  "duckMusicTo": 0.35,
+  "note": "Fonte única da narração de IFood. `frame` é onde a fala começa (30 fps) e é definido DEPOIS de medir as durações reais. Clipes em public/audio/vo-ifood/. Regerar com NARRATION_JSON=src/narration-ifood.json VO_DIR=public/audio/vo-ifood python3 -u tools/generate-narration-edge.py",
+  "lines": [
+    {"id": "01-gancho", "frame": 12, "text": "Antes de ser o aplicativo que você usa para pedir comida, o iFood era... um papel.", "durationInFrames": 219},
+    {"id": "02-2011", "frame": 239, "text": "Em dois mil e onze, a empresa começou com o Disk Cook, um guia impresso de cardápios. Os pedidos eram feitos por telefone.", "durationInFrames": 250},
+    {"id": "03-mudando", "frame": 497, "text": "Mas o mundo estava mudando. E eles perceberam que aquele modelo precisava sair do papel.", "durationInFrames": 189},
+    {"id": "04-2012", "frame": 694, "text": "Em dois mil e doze, chegaram o site e os aplicativos para Android e iPhone.", "durationInFrames": 146},
+    {"id": "05-2013", "frame": 848, "text": "E no ano seguinte veio uma decisão importante: a Movile investiu no negócio.", "durationInFrames": 149},
+    {"id": "06-desafio", "frame": 1005, "text": "Mas o grande desafio ainda estava pela frente: como fazer o pedido chegar até a porta do cliente?", "durationInFrames": 179},
+    {"id": "07-2018", "frame": 1192, "text": "Em dois mil e dezoito, o iFood consolidou seu modelo logístico e passou a conectar restaurantes, clientes e entregadores dentro da plataforma.", "durationInFrames": 258},
+    {"id": "08-transformacao", "frame": 1458, "text": "E aquilo que começou com um guia impresso havia se transformado em uma plataforma digital em rápida expansão.", "durationInFrames": 188},
+    {"id": "09-final-a", "frame": 1654, "text": "O iFood não começou grande. Ele começou mudando a forma como um pedido era feito.", "durationInFrames": 176},
+    {"id": "10-final-b", "frame": 1838, "text": "Essa foi a virada.", "durationInFrames": 59}
+  ]
+}

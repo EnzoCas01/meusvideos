@@ -11,4 +11,33 @@ tools/vs/
 
 # Imagens baixadas da web (origem registrada em cada manifest.json)
 public/images/
+
+# Logo da marca do Enzo (enviada pelo painel)
+public/brand/
 gen-comece-pequeno.log
+
+# Config da instância SearXNG local. O settings.yml carrega o `secret_key` da
+# instância, então fica fora do versionamento: segredo não entra em commit.
+# Para reproduzir a instância noutra máquina, copie o arquivo à mão.
+searxng/settings.yml
+searxng/teste-search.json
+searxng/list-engines.mjs
+.venv-whisper/
+vendor/
+
+# Clipes baixados da web (origem registrada em cada manifest.json); pesados demais
+public/videos/
+
+# Rascunhos, logs e caches locais
+.tmp-*
+tools/.tmp-*
+tmp-*
+tools/tmp-*
+__pycache__/
+*.log
+*.err
+eslint-dbg.txt
+
+# Estado de execução do painel/assessor
+painel/assessor/*.lock
+painel/assessor/provedor-*.json

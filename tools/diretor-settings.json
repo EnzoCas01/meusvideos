@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "deny": ["Agent", "Task"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit|NotebookEdit|WebSearch|WebFetch",
+        "hooks": [{ "type": "command", "command": "python3 /root/meusvideos/tools/diretor-guard.py" }]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+ "formato": "post",
+ "peca": "PostIhy",
+ "sx": "lchknb",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Seu cliente acompanha a OS sozinho",
+     "receita": "oferta_impacto",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "subtitulo": "Link mostra o status do aparelho em tempo real, sem ligar na loja",
+     "cta": "TESTE GRÁTIS",
+     "icone": "smartphone"
+    }
+   }
+  }
+ ]
+}

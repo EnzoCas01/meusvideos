@@ -1,0 +1,44 @@
+{
+ "formato": "post",
+ "peca": "PostVmej",
+ "sx": "opkhka",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Cadê a capinha que eu deixei aqui?",
+     "objetivo": "venda",
+     "receita": "editorial_organico",
+     "alinhamento": "centro",
+     "densidade": "expressiva",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "cantos_opostos",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "seta",
+     "luz": "brilho_canto",
+     "sombra": "forte",
+     "fundo_estilo": "dividido_baixo",
+     "fundo_var": 0.857,
+     "subtitulo": "No AlvoManage, a foto da entrada mostra como o aparelho chegou, com ou sem capinha.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuosvmejdfbf/fotos/1b247e68e5.jpg",
+     "foto_id": "1b247e68e5",
+     "foto_layout": "metade_superior",
+     "foto_efeito": "nenhum"
+    }
+   }
+  }
+ ]
+}

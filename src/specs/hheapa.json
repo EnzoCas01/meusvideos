@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostRz",
+ "sx": "hheapa",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Sua bancada inteira em uma tela",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "cantos",
+     "fundo_estilo": "listras",
+     "fundo_var": 0.019,
+     "subtitulo": "Em andamento, aguardando peça, pronto: o AlvoManage mostra onde cada aparelho está.",
+     "icone": "devices"
+    }
+   }
+  }
+ ]
+}

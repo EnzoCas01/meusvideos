@@ -39,3 +39,7 @@ Perdi tempo tentando deduzir se a geração em andamento tinha lido os campos `g
 ## 2026-09-17 — Imagem autêntica no lugar errado ainda é afirmação falsa
 Na peça do Nubank, um screenshot real do app (dez/2023) tinha sido arquivado na cena que exibe "2013", e a foto da sede atual na cena que narra "escritório pequeno". Ambas legítimas, ambas mentindo pelo contexto.
 **Por quê:** conferir licença e procedência não basta — o que a cena AFIRMA na tela também precisa bater com a imagem. O `fontes.json` ganhou um campo `epoca` justamente para essa pergunta ser respondível em dado, e não na memória de quem montou.
+
+## 2026-09-21 — Abertura precisa impactar, sem excesso de efeito
+O Enzo pediu que o começo de todo vídeo impacte na frase e no que se vê, usando a criatividade do diretor, e avisou para não se iludir: impacto não é colocar muitos efeitos; pode ser uma foto forte com a frase. A diretriz virou seção do `CLAUDE.md` e vai no texto de toda tarefa aos agentes.
+**Por quê:** os primeiros segundos decidem se a pessoa continua assistindo; efeito em excesso só polui.

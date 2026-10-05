@@ -1,0 +1,34 @@
+{
+ "formato": "post",
+ "peca": "PostEjl",
+ "sx": "jhomob",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "luxo_dourado",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "luxo_dourado",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "20% OFF",
+     "receita": "oferta_impacto",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "oferta",
+     "decoracao": "folhagem",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "subtitulo": "Condição especial",
+     "cta": "AGENDE SEU HORÁRIO"
+    }
+   }
+  }
+ ]
+}

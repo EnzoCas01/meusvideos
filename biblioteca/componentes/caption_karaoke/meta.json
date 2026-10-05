@@ -1,0 +1,14 @@
+{
+  "id": "caption_karaoke",
+  "tipo": "legenda",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["informacional", "motivacional", "cinematico"],
+  "descricao": "Legenda karaokê: a palavra falada ganha a caixa accent no instante em que a voz a diz. Frases de 3-5 palavras, na parte de baixo.",
+  "uso_recomendado": ["documentários", "vídeos com narração contínua", "conteúdo explicativo"],
+  "duracao_recomendada": "acompanha a fala",
+  "parametros": {
+    "lines": {"tipo": "lista", "descricao": "Falas com frame e words medidos (narration-*.json)", "obrigatorio": true},
+    "top": {"tipo": "numero", "descricao": "Topo da caixa de legenda em px (padrão: fundo do quadro)", "obrigatorio": false},
+    "accent": {"tipo": "cor", "descricao": "Cor da caixa da palavra ativa", "obrigatorio": false}
+  }
+}

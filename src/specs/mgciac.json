@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostE",
+ "sx": "mgciac",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 295,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "E se o caixa se atualizasse sozinho?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "linha",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "cantos",
+     "fundo_estilo": "brilho",
+     "fundo_var": 0.61,
+     "subtitulo": "Com AlvoManage, a entrada da OS cai automaticamente no caixa. Veja como.",
+     "icone": "tax"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "caption_simples",
+  "tipo": "legenda",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["informacional", "minimalista", "institucional"],
+  "descricao": "Legenda simples: frases limpas na parte de baixo, sem efeito por palavra. Identidade própria, sem cara de legenda automática.",
+  "uso_recomendado": ["conteúdo sério ou institucional", "texto que não pede efeito", "documentários sóbrios"],
+  "duracao_recomendada": "acompanha a fala",
+  "parametros": {
+    "lines": {"tipo": "lista", "descricao": "Falas com frame e words medidos (narration-*.json)", "obrigatorio": true},
+    "top": {"tipo": "numero", "descricao": "Topo da caixa de legenda em px", "obrigatorio": false}
+  }
+}

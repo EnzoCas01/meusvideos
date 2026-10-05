@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostZz",
+ "sx": "hpaahc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Antes: confusão. Depois: clareza.",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "preenchido",
+     "enfeite": "cantos",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.248,
+     "subtitulo": "Com o fluxo de caixa do AlvoManage, você vê o que entrou, o que saiu e para onde foi.",
+     "icone": "chart-sankey"
+    }
+   }
+  }
+ ]
+}

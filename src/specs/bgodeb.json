@@ -1,0 +1,143 @@
+{
+ "formato": "post",
+ "peca": "PostYxqn",
+ "sx": "bgodeb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 295,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Sem prova, você perde dinheiro",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "preenchido",
+     "enfeite": "nenhum",
+     "fundo_estilo": "dividido_topo",
+     "fundo_var": 0.006,
+     "subtitulo": "Cliente nega o risco e a conta sobra pra você",
+     "icone": "currency-real",
+     "composicao": "icone_topo"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Isso acaba com seu lucro",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "seta",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.315,
+     "subtitulo": "Conserto que não era seu, prejuízo garantido",
+     "icone": "currency",
+     "etiqueta": "2 / 5",
+     "composicao": "icone_baixo"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "A solução é registrar na entrada",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "brilho",
+     "enfeite": "brilhos",
+     "fundo_estilo": "dividido_baixo",
+     "fundo_var": 0.601,
+     "subtitulo": "No AlvoManage, a foto vai direto pra OS",
+     "icone": "photo-sensor",
+     "etiqueta": "3 / 5",
+     "composicao": "icone_topo"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Com data e hora automáticas",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "mancha",
+     "enfeite": "nenhum",
+     "fundo_estilo": "circulos",
+     "fundo_var": 0.466,
+     "subtitulo": "Cada detalhe documentado no sistema",
+     "icone": "automation",
+     "etiqueta": "4 / 5",
+     "composicao": "icone_baixo"
+    }
+   }
+  },
+  {
+   "n": 5,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Mostre na hora e resolva",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "marca_dagua",
+     "enfeite": "cantos",
+     "fundo_estilo": "gradiente",
+     "fundo_var": 0.931,
+     "subtitulo": "Sem discussão, sem perder dinheiro",
+     "icone": "clock-bolt",
+     "etiqueta": "5 / 5",
+     "composicao": "lateral"
+    }
+   }
+  }
+ ]
+}

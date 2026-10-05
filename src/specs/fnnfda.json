@@ -1,0 +1,134 @@
+{
+ "formato": "post",
+ "peca": "PostAoy",
+ "sx": "fnnfda",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Garantia sem briga",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "moldura",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "nenhum",
+     "luz": "nenhuma",
+     "sombra": "suave",
+     "fundo_estilo": "solido",
+     "fundo_var": 0.291,
+     "subtitulo": "Como o AlvoManage protege sua loja",
+     "icone": "shield",
+     "composicao": "icone_topo"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Tudo na OS",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "moldura",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "preenchido",
+     "enfeite": "ondas",
+     "luz": "nenhuma",
+     "sombra": "suave",
+     "fundo_estilo": "gradiente",
+     "fundo_var": 0.254,
+     "subtitulo": "O serviço feito e o prazo",
+     "etiqueta": "2 / 4",
+     "composicao": "lateral",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuora4oyd331/fotos/c66d90f502.jpg",
+     "foto_id": "c66d90f502",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "nenhum"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Voltou o aparelho?",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "moldura",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "brilho",
+     "enfeite": "brilhos",
+     "luz": "nenhuma",
+     "sombra": "suave",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.865,
+     "subtitulo": "O histórico mostra o que foi feito",
+     "etiqueta": "3 / 4",
+     "composicao": "icone_baixo",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuora4oyd331/fotos/b80ea1f935.jpg",
+     "foto_id": "b80ea1f935",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "nenhum"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Decisão rápida",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "moldura",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "ondas",
+     "luz": "nenhuma",
+     "sombra": "suave",
+     "fundo_estilo": "duas_cores",
+     "fundo_var": 0.56,
+     "subtitulo": "Sem achismo no balcão",
+     "etiqueta": "4 / 4",
+     "composicao": "lateral",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuora4oyd331/fotos/97a45ddff4.jpg",
+     "foto_id": "97a45ddff4",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "contraste"
+    }
+   }
+  }
+ ]
+}

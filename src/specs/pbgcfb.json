@@ -1,0 +1,36 @@
+{
+ "formato": "post",
+ "peca": "PostCxe",
+ "sx": "pbgcfb",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "E depois que o fornecedor responde?",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "estoque",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "dividido",
+     "subtitulo": "Dá para comparar preço e prazo e transformar a cotação em pedido de compra.",
+     "icone": "receipt",
+     "etiqueta": "DÚVIDA FREQUENTE"
+    }
+   }
+  }
+ ]
+}

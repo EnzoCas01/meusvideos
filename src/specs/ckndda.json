@@ -1,0 +1,35 @@
+{
+ "formato": "post",
+ "peca": "PostBxx",
+ "sx": "ckndda",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Venda em segundos no balcão",
+     "receita": "informativo_modular",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "subtitulo": "PDV com carrinho, desconto e forma de pagamento na mesma tela",
+     "cta": "COMECE AGORA",
+     "icone": "receipt"
+    }
+   }
+  }
+ ]
+}

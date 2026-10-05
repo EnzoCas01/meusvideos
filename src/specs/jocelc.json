@@ -1,0 +1,52 @@
+{
+ "formato": "post",
+ "peca": "PostLdf",
+ "sx": "jocelc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 275,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Sua loja também cabe no celular",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "cantos_opostos",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "preenchido",
+     "enfeite": "seta",
+     "luz": "nenhuma",
+     "sombra": "nenhuma",
+     "solucao": "cartao",
+     "composicao": "visual_lateral",
+     "selo": "No celular",
+     "pontos": [
+      "Abre no navegador",
+      "Instala como aplicativo",
+      "Acessa pelo celular"
+     ],
+     "fundo_estilo": "solido",
+     "fundo_var": 0.608,
+     "subtitulo": "O AlvoManage vira app no celular pelo navegador, sem passar pela loja de aplicativos.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuovl7df1dea/fotos/fd025bbedc.jpg",
+     "foto_id": "fd025bbedc",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "contraste"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostZz",
+ "sx": "hpaaha",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Faturou bem. Mas sobrou quanto?",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "financeiro",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "nenhum",
+     "fundo_estilo": "gradiente",
+     "fundo_var": 0.887,
+     "subtitulo": "O fluxo de caixa do AlvoManage mostra o que entrou, o que saiu e para onde foi.",
+     "icone": "chart-sankey"
+    }
+   }
+  }
+ ]
+}

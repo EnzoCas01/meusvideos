@@ -1,0 +1,46 @@
+{
+  "formato": "post",
+  "peca": "Piloto",
+  "sx": "pi",
+  "dims": [1080, 1080],
+  "fps": 30,
+  "tema": "escuro_clean",
+  "logo": false,
+  "cenas": [
+    {
+      "n": 1,
+      "layout": {
+        "componente": "post_layout_1",
+        "params": {
+          "titulo": "Você não está atrasado",
+          "subtitulo": "Cada fase da sua vida tem o próprio relógio.",
+          "cta": "Saiba mais",
+          "arquivo": "public/images/mq-dinheiro/03.jpg"
+        }
+      }
+    },
+    {
+      "n": 2,
+      "layout": {
+        "componente": "post_layout_2",
+        "params": {
+          "frase": "Começar pequeno também é começar.",
+          "destaque": "pequeno",
+          "autor": "Piloto"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "fundo": "#0E1116",
+      "texto": {
+        "componente": "texto_titulo",
+        "params": {"texto": "1928", "posicao": "centro"}
+      },
+      "cta": {
+        "componente": "texto_cta",
+        "params": {"texto": "Segue o canal"}
+      }
+    }
+  ]
+}

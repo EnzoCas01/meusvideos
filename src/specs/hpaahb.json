@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostZz",
+ "sx": "hpaahb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Você sabe para onde vai seu dinheiro?",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "seta",
+     "fundo_estilo": "duas_cores",
+     "fundo_var": 0.661,
+     "subtitulo": "O fluxo de caixa do AlvoManage revela entradas, saídas e o destino de cada centavo.",
+     "icone": "chart-sankey"
+    }
+   }
+  }
+ ]
+}

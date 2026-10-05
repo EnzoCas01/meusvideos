@@ -1,0 +1,15 @@
+{
+  "id": "midia_clipe",
+  "tipo": "midia",
+  "formatos": ["9:16", "16:9"],
+  "estilos": ["todos"],
+  "descricao": "Clipe de vídeo mudo ocupando o quadro (objectFit cover). Se o clipe for mais curto que a cena, acelere com playback_rate — nunca congele.",
+  "uso_recomendado": ["vídeo de fundo de cena", "cortes de ritmo rápido", "b-roll"],
+  "duracao_recomendada": "duração do clipe",
+  "parametros": {
+    "arquivo": {"tipo": "video", "descricao": "Caminho do clipe (relativo a public/)", "obrigatorio": true},
+    "start_from": {"tipo": "numero", "descricao": "Frame inicial do clipe", "obrigatorio": false},
+    "end_at": {"tipo": "numero", "descricao": "Frame final do clipe", "obrigatorio": false},
+    "playback_rate": {"tipo": "numero", "descricao": "Velocidade (acelere clipe curto)", "obrigatorio": false}
+  }
+}

@@ -1,0 +1,41 @@
+{
+ "formato": "post",
+ "peca": "PostZwvc",
+ "sx": "poncib",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Descubra qual loja realmente vende mais",
+     "objetivo": "venda",
+     "receita": "editorial_organico",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "brilho",
+     "enfeite": "nenhum",
+     "luz": "brilho_canto",
+     "sombra": "suave",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.205,
+     "subtitulo": "No AlvoManage, você compara cada loja separada ou todas juntas, sem achismo.",
+     "icone": "chart-histogram"
+    }
+   }
+  }
+ ]
+}

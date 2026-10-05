@@ -1,0 +1,52 @@
+{
+ "formato": "post",
+ "peca": "PostFhf",
+ "sx": "naehab",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 275,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Sabia que dá pra perguntar quanto vendeu?",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "expressiva",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "mancha",
+     "enfeite": "ondas",
+     "luz": "bokeh",
+     "sombra": "nenhuma",
+     "solucao": "grande",
+     "composicao": "icone_topo",
+     "selo": "Você sabia?",
+     "pontos": [
+      "Pergunta como numa conversa",
+      "A IA responde suas vendas",
+      "Plano Controle e Comando"
+     ],
+     "fundo_estilo": "brilho",
+     "fundo_var": 0.4,
+     "subtitulo": "No AlvoManage, você pergunta sobre as vendas da sua loja e a IA te responde.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuouf1hfb32b/fotos/25c9a697ab.jpg",
+     "foto_id": "25c9a697ab",
+     "foto_layout": "polaroid",
+     "foto_efeito": "duotone_marca"
+    }
+   }
+  }
+ ]
+}

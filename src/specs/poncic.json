@@ -1,0 +1,44 @@
+{
+ "formato": "post",
+ "peca": "PostZwvc",
+ "sx": "poncic",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Veja o desempenho de cada loja sem chutar",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "preenchido",
+     "enfeite": "nenhum",
+     "luz": "brilho_canto",
+     "sombra": "suave",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.205,
+     "subtitulo": "No AlvoManage, você acessa cada loja separada ou todas juntas, no mesmo sistema.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuoszwvc57df/fotos/3f95a71a3e.jpg",
+     "foto_id": "3f95a71a3e",
+     "foto_layout": "metade_superior",
+     "foto_efeito": "nenhum"
+    }
+   }
+  }
+ ]
+}

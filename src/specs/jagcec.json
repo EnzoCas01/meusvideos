@@ -1,0 +1,34 @@
+{
+ "formato": "post",
+ "peca": "PostK",
+ "sx": "jagcec",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Orçamento aprovado pelo link",
+     "receita": "energia_geometrica",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "subtitulo": "Cliente aprova ou recusa o serviço no celular, sem imprimir nada",
+     "cta": "APROVE JÁ"
+    }
+   }
+  }
+ ]
+}

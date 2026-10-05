@@ -1,0 +1,14 @@
+{
+  "id": "logo_marca",
+  "tipo": "logo",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["todos"],
+  "descricao": "Logo da marca sobreposta uma vez por peça, com sombra para ler sobre qualquer fundo. Entra quando a spec marca `logo: true`.",
+  "uso_recomendado": ["identidade da marca", "posts e carrosséis próprios", "fecho de vídeo"],
+  "duracao_recomendada": "peça inteira",
+  "parametros": {
+    "arquivo": {"tipo": "imagem", "descricao": "Caminho do logo (padrão: brand/logo.png)", "obrigatorio": false},
+    "posicao": {"tipo": "string", "descricao": "canto | topo | rodape", "obrigatorio": false},
+    "largura": {"tipo": "numero", "descricao": "Largura em px (padrão: 20% da largura)", "obrigatorio": false}
+  }
+}

@@ -1,0 +1,36 @@
+{
+ "formato": "post",
+ "peca": "PostSpw",
+ "sx": "pmdfhc",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Cliente manda a foto pelo link",
+     "receita": "energia_geometrica",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "media",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "invertido",
+     "subtitulo": "Frente, trás e etiqueta do aparelho chegam direto na OS",
+     "cta": "VEJA COMO",
+     "icone": "upload"
+    }
+   }
+  }
+ ]
+}

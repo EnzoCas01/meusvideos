@@ -1,0 +1,122 @@
+{
+ "formato": "post",
+ "peca": "PostAwci",
+ "sx": "jomhkb",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "verde_negocio",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Antes × depois na assistência",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "dividido",
+     "subtitulo": "O que muda quando tudo fica no sistema",
+     "icone": "vs"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Antes: OS no caderno",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "dividido",
+     "subtitulo": "Depois: OS digital e impressa",
+     "icone": "notebook",
+     "etiqueta": "2 / 5"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Antes: \"quanto ficou?\"",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "dividido",
+     "subtitulo": "Depois: orçamento aprovado pelo link",
+     "icone": "currency-real",
+     "etiqueta": "3 / 5"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Antes: caixa no chute",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "dividido",
+     "subtitulo": "Depois: abertura e fechamento registrados",
+     "icone": "history",
+     "etiqueta": "4 / 5"
+    }
+   }
+  },
+  {
+   "n": 5,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Menos papel, menos erro",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "dividido",
+     "subtitulo": "E mais tempo para consertar",
+     "icone": "file-shredder",
+     "etiqueta": "5 / 5"
+    }
+   }
+  }
+ ]
+}

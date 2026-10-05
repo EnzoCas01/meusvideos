@@ -1,0 +1,14 @@
+{
+  "id": "caption_rapido",
+  "tipo": "legenda",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["informacional", "motivacional", "jovem"],
+  "descricao": "Legenda rápida: 1-2 palavras por vez, enormes, centralizadas, com contorno forte. Estilo Reels/TikTok. Posição meio, baixo ou alto.",
+  "uso_recomendado": ["vídeos de ritmo rápido", "Reels e TikTok", "ganchos"],
+  "duracao_recomendada": "acompanha a fala",
+  "parametros": {
+    "lines": {"tipo": "lista", "descricao": "Falas com frame e words medidos (narration-*.json)", "obrigatorio": true},
+    "posicao": {"tipo": "string", "descricao": "meio | baixo | alto", "obrigatorio": false},
+    "accent": {"tipo": "cor", "descricao": "Cor da última palavra (padrão: tema)", "obrigatorio": false}
+  }
+}

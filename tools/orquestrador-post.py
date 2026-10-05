@@ -662,8 +662,25 @@ def outros_angulos(bs, quantos):
     return (vs + [bs] * quantos)[:quantos]
 
 
+def main_editorial(t0):
+    """Chave "✨ Editorial" do painel: motor novo (tools/design). O caminho clássico abaixo não muda."""
+    from design.editorial import executa
+    etapa("decisao", "post: Jev dirigindo a composição editorial")
+    jpgs = executa({"JOB": JOB, "PEDIDO": PEDIDO, "FORMATO": FORMATO, "DIMS": DIMS, "LOGO_PX": LOGO_PX, "TEXTO_POST": TEXTO_POST, "SELO": SELO,
+                    "PONTOS": PONTOS, "VERSOES": VERSOES, "REGISTRO": REGISTRO, "jev": jev, "status": status, "diz": diz, "grava_jev": grava_jev,
+                    "blocos": blocos, "conteudo_do_briefing": conteudo_do_briefing, "fotos_para": fotos_para})
+    if not jpgs:
+        raise RuntimeError("nenhuma imagem foi gerada")
+    peca = "Post" + "".join(c for c in JOB.name[-8:-4] if c.isalpha()).title() or "PostX"
+    (JOB / "entrega.json").write_text(json.dumps({"peca": peca, "sx": "", "formato": FORMATO, "versoes": VERSOES, "arquivos": jpgs, "motor": "editorial"}, ensure_ascii=False, indent=1))
+    print(f"**{peca}** · {FORMATO} · motor editorial · {len(jpgs)} imagem(ns) · {(time.time() - t0) / 60:.1f} min\n\n" + "\n".join(REGISTRO)
+          + f"\n\n{VERSOES} versões com estratégias visuais diferentes (tela em destaque · tipográfica · camadas), mesma mensagem.")
+
+
 def main():
     t0 = time.time()
+    if PEDIDO.get("motor") == "editorial":
+        return main_editorial(t0)
     briefing = PEDIDO["prompt"].strip()
     status("Jev lendo o pedido e decidindo a direção de arte")
     etapa("decisao", "post: Jev criando direção de arte completa")

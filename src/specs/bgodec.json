@@ -1,0 +1,152 @@
+{
+ "formato": "post",
+ "peca": "PostYxqn",
+ "sx": "bgodec",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 295,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "E se o cliente negar o risco?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "marca_dagua",
+     "enfeite": "seta",
+     "fundo_estilo": "pontos",
+     "fundo_var": 0.939,
+     "subtitulo": "Você tem como provar que ele já chegou assim?",
+     "composicao": "icone_topo",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuogyxqn2de0/fotos/13bec6e7d8.jpg",
+     "foto_id": "13bec6e7d8",
+     "foto_layout": "circulo",
+     "foto_efeito": "escurecer"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "O que você faz sem prova?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "brilho",
+     "enfeite": "cantos",
+     "fundo_estilo": "brilho",
+     "fundo_var": 0.867,
+     "subtitulo": "A palavra dele contra a sua, e você sai no prejuízo",
+     "icone": "contract",
+     "etiqueta": "2 / 5",
+     "composicao": "icone_baixo"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "O AlvoManage resolve isso",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "linha",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "confete",
+     "fundo_estilo": "dividido_baixo",
+     "fundo_var": 0.086,
+     "subtitulo": "A foto do aparelho fica registrada na OS",
+     "etiqueta": "3 / 5",
+     "composicao": "lateral",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuogyxqn2de0/fotos/0422926d03.jpg",
+     "foto_id": "0422926d03",
+     "foto_layout": "circulo",
+     "foto_efeito": "nenhum"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Na entrada, com data e hora",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "aneis",
+     "enfeite": "brilhos",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.627,
+     "subtitulo": "Risco, trinca e detalhe ficam guardados",
+     "icone": "door-enter",
+     "etiqueta": "4 / 5",
+     "composicao": "icone_topo"
+    }
+   }
+  },
+  {
+   "n": 5,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Quer ver como funciona?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "preenchido",
+     "enfeite": "cantos",
+     "fundo_estilo": "dividido_baixo",
+     "fundo_var": 0.543,
+     "subtitulo": "Abra a OS e mostre pro cliente na hora",
+     "etiqueta": "5 / 5",
+     "composicao": "lateral",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuogyxqn2de0/fotos/5fa76dfc7c.jpg",
+     "foto_id": "5fa76dfc7c",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "nenhum"
+    }
+   }
+  }
+ ]
+}

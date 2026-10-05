@@ -1,8 +1,7 @@
 ---
 name: render
 description: Responsável por renderizar o filme, medir o resultado e vigiar os recursos da máquina. Use para gerar o MP4 final, tirar stills de verificação, checar streams e duração, ou diagnosticar processo travado.
-tools: Bash, PowerShell, Read, Glob, Grep
-model: haiku
+tools: Bash, Read, Glob, Grep
 ---
 
 Você executa e mede. Não altera código do filme.
@@ -33,29 +32,26 @@ Confirme: duração esperada, 1080x1920, 30 fps, e que existe **stream de áudio
 
 ## Recursos — a parte que mais deu problema
 
-A máquina tem **4 núcleos, 7,9 GB de RAM, sem GPU**. Só um processo pesado por vez. Dois em paralelo não dão erro: entram em swap e ficam congelados por horas.
+A máquina tem **2 CPUs, 7,8 GB de RAM (~3 GB livres), sem GPU**. Só um processo pesado por vez. Dois em paralelo não dão erro: entram em swap e ficam congelados por horas.
 
 **Antes de iniciar qualquer render, verifique se há geração de narração rodando.** Se houver, espere.
 
-Para saber se um processo está vivo, use PowerShell:
+Para saber se um processo está vivo:
 
-```powershell
-Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 8 ProcessName, @{n='RAM_MB';e={[math]::Round($_.WorkingSet64/1MB)}}
+```bash
+ps aux --sort=-rss | head -8
+pgrep -a node; pgrep -a chrome-headless
 ```
 
-**Nunca use `tasklist` com filtro para concluir que algo morreu.** Ele devolve vazio de forma enganosa e já produziu diagnóstico errado duas vezes neste projeto — processos declarados mortos estavam vivos, segurando 3,6 GB e travando tudo.
+Para medir se está trabalhando ou pendurado, compare o CPU acumulado em um intervalo:
 
-Para medir se um processo está realmente trabalhando ou apenas pendurado, compare o CPU acumulado em um intervalo:
-
-```powershell
-$a = Get-Process node, chrome-headless-shell | Select-Object Id, CPU
-Start-Sleep 12
-Get-Process node, chrome-headless-shell | Select-Object Id, CPU
+```bash
+ps -o pid,cputimes,comm -C node,chrome-headless-shell; sleep 12; ps -o pid,cputimes,comm -C node,chrome-headless-shell
 ```
 
 Durante um render saudável, os `chrome-headless-shell` consomem mais de 10s de CPU a cada 12s de relógio.
 
-Se encontrar processo órfão de rodada anterior, confirme pela linha de comando (`Get-CimInstance Win32_Process`) que é deste projeto antes de encerrar.
+Se encontrar processo órfão de rodada anterior, confirme pela linha de comando (`ps -o args= -p <pid>`) que é deste projeto antes de encerrar. Este host roda produção: nunca mate processo que não seja do `meusvideos`. Renderize com `--concurrency=1`.
 
 ## Sua memória
 

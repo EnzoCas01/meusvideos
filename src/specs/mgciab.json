@@ -1,0 +1,42 @@
+{
+ "formato": "post",
+ "peca": "PostE",
+ "sx": "mgciab",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 295,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Cansado de lançar entrada manual?",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "preenchido",
+     "enfeite": "seta",
+     "fundo_estilo": "solido",
+     "fundo_var": 0.983,
+     "subtitulo": "No AlvoManage, ao entregar a OS, o caixa registra sozinho. Sem retrabalho.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuoh22e3e2e7/fotos/41309e665e.jpg",
+     "foto_id": "41309e665e",
+     "foto_layout": "circulo",
+     "foto_efeito": "contraste"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,162 @@
+{
+ "formato": "post",
+ "peca": "PostAoy",
+ "sx": "fnnfdb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Garantia vira dor de cabeça?",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "selo_quadrado",
+     "enfeite": "cantos",
+     "luz": "holofote",
+     "sombra": "nenhuma",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.422,
+     "subtitulo": "Cliente volta reclamando e você não sabe o que foi feito?",
+     "composicao": "icone_topo",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuora4oyd331/fotos/a212d6ff34.jpg",
+     "foto_id": "a212d6ff34",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "contraste"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Sem histórico, sem resposta",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "preenchido",
+     "enfeite": "seta",
+     "luz": "holofote",
+     "sombra": "nenhuma",
+     "fundo_estilo": "solido",
+     "fundo_var": 0.253,
+     "subtitulo": "Aí vem o prejuízo: refazer serviço de graça ou perder cliente.",
+     "etiqueta": "2 / 5",
+     "composicao": "lateral",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuora4oyd331/fotos/b8dbd31b14.jpg",
+     "foto_id": "b8dbd31b14",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "nenhum"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Com AlvoManage, sem briga",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "brilho",
+     "enfeite": "confete",
+     "luz": "holofote",
+     "sombra": "nenhuma",
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.258,
+     "subtitulo": "Tudo registrado na OS: serviço, prazo e responsável.",
+     "icone": "clipboard-check",
+     "etiqueta": "3 / 5",
+     "composicao": "icone_topo"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Histórico na hora",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "linha",
+     "icone_estilo": "preenchido",
+     "enfeite": "cantos",
+     "luz": "holofote",
+     "sombra": "nenhuma",
+     "fundo_estilo": "gradiente",
+     "fundo_var": 0.44,
+     "subtitulo": "Voltou o aparelho? Você mostra exatamente o que foi feito.",
+     "etiqueta": "4 / 5",
+     "composicao": "icone_baixo",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuora4oyd331/fotos/bde880034c.jpg",
+     "foto_id": "bde880034c",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "nenhum"
+    }
+   }
+  },
+  {
+   "n": 5,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Decisão rápida e justa",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "aneis",
+     "enfeite": "ondas",
+     "luz": "holofote",
+     "sombra": "nenhuma",
+     "fundo_estilo": "pontos",
+     "fundo_var": 0.229,
+     "subtitulo": "Sem achismo no balcão. Resolve e segue o jogo.",
+     "icone": "gavel",
+     "etiqueta": "5 / 5",
+     "composicao": "lateral"
+    }
+   }
+  }
+ ]
+}

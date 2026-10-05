@@ -1,0 +1,35 @@
+{
+ "formato": "post",
+ "peca": "PostOst",
+ "sx": "ienkg",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Mais controle. Menos preocupação.",
+     "receita": "informativo_modular",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "subtitulo": "Gerencie seus serviços, clientes e sua operação de forma simples e organizada.",
+     "cta": "Comece a organizar",
+     "icone": "monitor"
+    }
+   }
+  }
+ ]
+}

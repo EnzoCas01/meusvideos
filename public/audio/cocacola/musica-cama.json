@@ -1,0 +1,26 @@
+{
+ "arquivo": "musica-cama.wav",
+ "faixa": "Tranquility — Kevin MacLeod (incompetech.com), CC BY 4.0",
+ "trechoS": 556.0,
+ "duracaoFrames": 1920,
+ "ganhoBase": 1.0,
+ "duckSobVoz": 0.4,
+ "volumeCauda": 0.9,
+ "rampaDuckFrames": 10,
+ "fadeInFrames": 45,
+ "fadeOutFrames": 75,
+ "frames": {
+  "subidas": [
+   900
+  ],
+  "inicioDaSubida": 900,
+  "pico": 1455
+ },
+ "medido": {
+  "ganhoDb": -14.0,
+  "vozSobFalaLufsS": -21.1,
+  "camaSobFalaLufsS": -41.2,
+  "margemMinDb": 16.0,
+  "camaCaudaLufsS": -41.0
+ }
+}

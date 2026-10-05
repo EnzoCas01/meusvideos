@@ -1,0 +1,60 @@
+{
+  "_": "Pares tipográficos fechados: o Jev escolhe o PAR, nunca uma fonte solta. tracking em em (como letter-spacing do CSS); entrelinha = múltiplo do tamanho. caixa: 'alta' = título em maiúsculas. Fontes OFL (Google Fonts), arquivos estáticos em biblioteca/fontes.",
+  "saas_moderno": {
+    "descricao": "Inter heavy headline with tight tracking and Inter body. Clean modern SaaS / tech product.",
+    "titulo": {"familia": "Inter", "peso": 800, "tracking": -0.035, "entrelinha": 1.04},
+    "enfase_titulo": {"peso": 800},
+    "corpo": {"familia": "Inter", "peso": 400, "tracking": -0.01, "entrelinha": 1.38},
+    "enfase": {"peso": 700},
+    "apoio": {"familia": "Inter", "peso": 500, "tracking": 0.06, "entrelinha": 1.2, "caixa": "alta"}
+  },
+  "geometrico_forte": {
+    "descricao": "Montserrat black headline with Inter body. Confident, commercial, marketing.",
+    "titulo": {"familia": "Montserrat", "peso": 900, "tracking": -0.025, "entrelinha": 1.02},
+    "enfase_titulo": {"peso": 900},
+    "corpo": {"familia": "Inter", "peso": 400, "tracking": -0.005, "entrelinha": 1.4},
+    "enfase": {"peso": 700},
+    "apoio": {"familia": "Montserrat", "peso": 600, "tracking": 0.08, "entrelinha": 1.2, "caixa": "alta"}
+  },
+  "impacto_condensado": {
+    "descricao": "Bebas Neue tall condensed uppercase headline with Manrope body. Poster, promotion, bold statements.",
+    "titulo": {"familia": "Bebas Neue", "peso": 400, "tracking": 0.005, "entrelinha": 0.94, "caixa": "alta", "escala": 1.28},
+    "enfase_titulo": {"peso": 400},
+    "corpo": {"familia": "Manrope", "peso": 400, "tracking": 0, "entrelinha": 1.4},
+    "enfase": {"peso": 800},
+    "apoio": {"familia": "Manrope", "peso": 800, "tracking": 0.1, "entrelinha": 1.2, "caixa": "alta"}
+  },
+  "editorial_serifa": {
+    "descricao": "Playfair Display serif headline with italic emphasis and DM Sans body. Magazine, premium, editorial.",
+    "titulo": {"familia": "Playfair Display", "peso": 700, "tracking": -0.015, "entrelinha": 1.06},
+    "enfase_titulo": {"peso": 700, "italico": true},
+    "corpo": {"familia": "DM Sans", "peso": 400, "tracking": 0, "entrelinha": 1.42},
+    "enfase": {"peso": 700},
+    "apoio": {"familia": "DM Sans", "peso": 500, "tracking": 0.1, "entrelinha": 1.2, "caixa": "alta"}
+  },
+  "noticia_condensada": {
+    "descricao": "Oswald condensed uppercase headline with Inter body. News, data, direct and informative.",
+    "titulo": {"familia": "Oswald", "peso": 700, "tracking": 0, "entrelinha": 1.02, "caixa": "alta", "escala": 1.08},
+    "enfase_titulo": {"peso": 700},
+    "corpo": {"familia": "Inter", "peso": 400, "tracking": -0.005, "entrelinha": 1.4},
+    "enfase": {"peso": 700},
+    "apoio": {"familia": "Oswald", "peso": 600, "tracking": 0.06, "entrelinha": 1.2, "caixa": "alta"}
+  },
+  "amigavel_arredondado": {
+    "descricao": "Manrope extra bold headline and Manrope body. Friendly, approachable, small business.",
+    "titulo": {"familia": "Manrope", "peso": 800, "tracking": -0.03, "entrelinha": 1.05},
+    "enfase_titulo": {"peso": 800},
+    "corpo": {"familia": "Manrope", "peso": 400, "tracking": 0, "entrelinha": 1.42},
+    "enfase": {"peso": 800},
+    "apoio": {"familia": "Manrope", "peso": 600, "tracking": 0.08, "entrelinha": 1.2, "caixa": "alta"}
+  },
+  "limpo_dm": {
+    "descricao": "DM Sans bold headline and DM Sans body. Minimal, neutral, lots of whitespace.",
+    "titulo": {"familia": "DM Sans", "peso": 700, "tracking": -0.03, "entrelinha": 1.06},
+    "enfase_titulo": {"peso": 700},
+    "corpo": {"familia": "DM Sans", "peso": 400, "tracking": 0, "entrelinha": 1.42},
+    "enfase": {"peso": 700},
+    "apoio": {"familia": "DM Sans", "peso": 500, "tracking": 0.1, "entrelinha": 1.2, "caixa": "alta"}
+  },
+  "manuscrito": {"familia": "Caveat", "peso": 700, "tracking": 0, "entrelinha": 1.05}
+}

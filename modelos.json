@@ -10,7 +10,8 @@
     "olho": "deepseek-flash",
     "assistente": "glm-flash",
     "instagram-legenda": "deepseek-flash",
-    "assessor": "claude-opus"
+    "assessor": "claude-opus",
+    "treinador": "claude-opus"
   },
   "perfis": {
     "glm-flash": {

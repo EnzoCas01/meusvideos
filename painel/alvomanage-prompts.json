@@ -1,0 +1,271 @@
+{
+ "post": [
+  {
+   "contexto": "Acompanhamento da OS",
+   "tela": "",
+   "prompt": "Título: \"O cliente parou de ligar. E o conserto andou.\" Subtítulo: \"Com o link da OS do AlvoManage, ele acompanha tudo pelo celular.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre o link de acompanhamento da ordem de serviço."
+  },
+  {
+   "contexto": "Fotos na entrada",
+   "tela": "",
+   "prompt": "Título: \"A foto da entrada encerra a discussão\" Subtítulo: \"No AlvoManage, o estado do aparelho fica registrado na OS antes do conserto.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre fotos do aparelho na entrada."
+  },
+  {
+   "contexto": "Orçamento por link",
+   "tela": "",
+   "prompt": "Título: \"Orçamento aprovado enquanto você conserta\" Subtítulo: \"O cliente recebe o link do AlvoManage e aprova pelo celular, sem ligação.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre orçamento aprovado pelo link."
+  },
+  {
+   "contexto": "Garantias",
+   "tela": "",
+   "prompt": "Título: \"Garantia não é conversa, é registro\" Subtítulo: \"O AlvoManage guarda na OS o serviço feito e até quando ele está coberto.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre controle de garantia."
+  },
+  {
+   "contexto": "Status da bancada",
+   "tela": "",
+   "prompt": "Título: \"Sua bancada inteira em uma tela\" Subtítulo: \"Em andamento, aguardando peça, pronto: o AlvoManage mostra onde cada aparelho está.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre status das ordens de serviço."
+  },
+  {
+   "contexto": "OS digital",
+   "tela": "",
+   "prompt": "Título: \"Aposente o caderno de OS\" Subtítulo: \"A ordem de serviço do AlvoManage é digital e sai impressa com os dados da sua loja.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre ordem de serviço digital."
+  },
+  {
+   "contexto": "PDV",
+   "tela": "",
+   "prompt": "Título: \"Fila no balcão? Não na sua loja\" Subtítulo: \"O PDV do AlvoManage junta produto, desconto e pagamento em uma tela só.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre o PDV."
+  },
+  {
+   "contexto": "Caixa",
+   "tela": "",
+   "prompt": "Título: \"Fechar o caixa sem susto\" Subtítulo: \"O AlvoManage registra cada entrada e saída, da abertura ao fechamento.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre controle de caixa."
+  },
+  {
+   "contexto": "Fluxo de caixa",
+   "tela": "",
+   "prompt": "Título: \"Faturou bem. Mas sobrou quanto?\" Subtítulo: \"O fluxo de caixa do AlvoManage mostra o que entrou, o que saiu e para onde foi.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre fluxo de caixa."
+  },
+  {
+   "contexto": "Contas a receber",
+   "tela": "",
+   "prompt": "Título: \"Fiado no papel vira prejuízo\" Subtítulo: \"No AlvoManage, cada valor em aberto tem nome, data e vencimento.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre contas a receber."
+  },
+  {
+   "contexto": "Crédito na loja",
+   "tela": "",
+   "prompt": "Título: \"Devolução que vira venda\" Subtítulo: \"Com o crédito na loja do AlvoManage, o dinheiro fica e o cliente volta.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre crédito na loja."
+  },
+  {
+   "contexto": "Estoque",
+   "tela": "",
+   "prompt": "Título: \"Estoque em que você confia\" Subtítulo: \"Com cada entrada e saída registrada, o AlvoManage bate com a prateleira.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre controle de estoque."
+  },
+  {
+   "contexto": "Cotação",
+   "tela": "",
+   "prompt": "Título: \"Pague menos pela mesma peça\" Subtítulo: \"Compare fornecedores na cotação do AlvoManage antes de fechar o pedido.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre cotação de peças."
+  },
+  {
+   "contexto": "Importar produtos",
+   "tela": "",
+   "prompt": "Título: \"Seus produtos entram de uma vez\" Subtítulo: \"Importe o cadastro para o AlvoManage e comece a vender sem digitar item por item.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre importação de produtos."
+  },
+  {
+   "contexto": "Várias lojas",
+   "tela": "",
+   "prompt": "Título: \"Duas lojas, um só lugar para olhar\" Subtítulo: \"No AlvoManage você vê cada loja separada ou todas juntas.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre gestão de várias lojas."
+  },
+  {
+   "contexto": "Transferência entre lojas",
+   "tela": "",
+   "prompt": "Título: \"Faltou numa loja, sobrou na outra?\" Subtítulo: \"Transfira pelo AlvoManage e o estoque das duas se ajusta sozinho.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre transferência entre lojas."
+  },
+  {
+   "contexto": "Comissão",
+   "tela": "",
+   "prompt": "Título: \"Comissão calculada, conversa resolvida\" Subtítulo: \"O AlvoManage soma o que cada operador vendeu, sem planilha no fim do mês.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre comissão por operador."
+  },
+  {
+   "contexto": "Agenda",
+   "tela": "",
+   "prompt": "Título: \"Saiba o que chega em cada horário\" Subtítulo: \"A agenda do AlvoManage organiza os atendimentos do dia da bancada.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre agendamento."
+  },
+  {
+   "contexto": "Lembrete",
+   "tela": "",
+   "prompt": "Título: \"Menos cliente esquecendo o horário\" Subtítulo: \"O AlvoManage envia lembrete do agendamento para o cliente.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre lembrete de agendamento."
+  },
+  {
+   "contexto": "Aparelho por foto",
+   "tela": "",
+   "prompt": "Título: \"Tire a foto, o sistema reconhece o aparelho\" Subtítulo: \"O AlvoManage identifica o modelo pela foto e ajuda a preencher a OS.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre identificar aparelho por foto."
+  },
+  {
+   "contexto": "Assistente",
+   "tela": "",
+   "prompt": "Título: \"Ajuda dentro do sistema, a qualquer hora\" Subtítulo: \"O assistente do AlvoManage tira suas dúvidas na própria tela.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre o assistente do sistema."
+  },
+  {
+   "contexto": "Aplicativo",
+   "tela": "",
+   "prompt": "Título: \"Sua loja no bolso\" Subtítulo: \"Instale o AlvoManage no celular direto pelo navegador, sem loja de apps.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre instalar como aplicativo."
+  },
+  {
+   "contexto": "Relatórios",
+   "tela": "",
+   "prompt": "Título: \"Descubra o que realmente vende\" Subtítulo: \"Os relatórios do AlvoManage mostram o que sai mais, e quando.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre relatórios de vendas."
+  },
+  {
+   "contexto": "Histórico",
+   "tela": "",
+   "prompt": "Título: \"Esse aparelho já passou por aqui?\" Subtítulo: \"O AlvoManage mostra cada conserto anterior do cliente em segundos.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre histórico de ordens de serviço."
+  },
+  {
+   "contexto": "Entrega integrada",
+   "tela": "",
+   "prompt": "Título: \"Entregou o aparelho, o caixa já sabe\" Subtítulo: \"Ao entregar a OS no AlvoManage, a entrada cai no caixa sozinha.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre entrega da OS ligada ao caixa."
+  },
+  {
+   "contexto": "Tudo conectado",
+   "tela": "",
+   "prompt": "Título: \"OS, PDV, estoque e caixa conversando\" Subtítulo: \"No AlvoManage, uma venda ou entrega atualiza tudo de uma vez.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre o sistema integrado."
+  },
+  {
+   "contexto": "Troca e devolução",
+   "tela": "",
+   "prompt": "Título: \"Troca no balcão sem bagunça\" Subtítulo: \"No AlvoManage, a devolução volta ao estoque e acerta o caixa.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre troca e devolução."
+  },
+  {
+   "contexto": "WhatsApp",
+   "tela": "",
+   "prompt": "Título: \"O WhatsApp da loja dentro do sistema\" Subtítulo: \"Conecte o WhatsApp ao AlvoManage e acompanhe as mensagens num só lugar.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre WhatsApp conectado."
+  },
+  {
+   "contexto": "Desconto",
+   "tela": "",
+   "prompt": "Título: \"Desconto dado é desconto registrado\" Subtítulo: \"No AlvoManage, todo desconto fica na venda e aparece no relatório.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre desconto controlado."
+  },
+  {
+   "contexto": "Feito para você",
+   "tela": "",
+   "prompt": "Título: \"Feito para quem conserta e vende\" Subtítulo: \"O AlvoManage nasceu para a rotina da assistência técnica e da loja.\" Post do Instagram do AlvoManage apresentando o app para donos de assistência técnica e lojas, sobre o AlvoManage."
+  },
+  {
+   "contexto": "caneta e papel na bancada",
+   "tela": "",
+   "prompt": "Título: \"Anotou o conserto no papel de novo?\" Subtítulo: \"No AlvoManage, a OS sai impressa com os dados da sua loja, sem caderninho.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre caneta e papel na bancada."
+  },
+  {
+   "contexto": "cliente ligando o dia todo",
+   "tela": "",
+   "prompt": "Título: \"Cliente liga o dia inteiro: 'já ficou?'\" Subtítulo: \"No AlvoManage, o cliente vê o andamento da OS pelo celular, sem te ligar.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre cliente ligando o dia todo."
+  },
+  {
+   "contexto": "orçamento esperando resposta",
+   "tela": "",
+   "prompt": "Título: \"Orçamento parado esperando o cliente\" Subtítulo: \"No AlvoManage, o cliente aprova ou recusa o orçamento pelo celular na hora.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre orçamento esperando resposta."
+  },
+  {
+   "contexto": "aparelho entregue sem prova",
+   "tela": "",
+   "prompt": "Título: \"Cliente diz que o risco não estava lá?\" Subtítulo: \"No AlvoManage, as fotos do aparelho ficam salvas na OS desde a entrada.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre aparelho entregue sem prova."
+  },
+  {
+   "contexto": "fiado anotado no caderno",
+   "tela": "",
+   "prompt": "Título: \"O fiado tá no caderno e ninguém acha?\" Subtítulo: \"No AlvoManage, contas a receber ficam com vencimento e valor anotados certinho.\" Post do Instagram do AlvoManage para donos de assistência técnica e lojas, sobre fiado anotado no caderno."
+  }
+ ],
+ "carrossel": [
+  {
+   "contexto": "Conheça o AlvoManage",
+   "tela": "",
+   "prompt": "Conheça o AlvoManage | O sistema da sua assistência, do balcão à bancada || Ordem de serviço | Digital, com fotos e impressa || Orçamento por link | O cliente aprova pelo celular || Caixa e PDV | Venda e fechamento sem susto || Estoque | Número que bate com a prateleira"
+  },
+  {
+   "contexto": "Caminho do aparelho",
+   "tela": "",
+   "prompt": "O caminho de um conserto | Do balcão à entrega, no AlvoManage || Chegou | OS aberta com fotos do aparelho || Orçou | O cliente aprova pelo link || Consertou | Status atualizado na bancada || Entregou | A entrada já cai no caixa"
+  },
+  {
+   "contexto": "Sinais",
+   "tela": "",
+   "prompt": "4 sinais de que sua loja precisa de sistema | Quantos você reconhece? || O telefone não para | Cliente perguntando do conserto || O caderno some | E a OS vai junto || O caixa não fecha | E ninguém sabe o porquê || O estoque engana | A peça não está onde devia"
+  },
+  {
+   "contexto": "Dinheiro que escapa",
+   "tela": "",
+   "prompt": "Onde sua loja perde dinheiro sem ver | 4 vazamentos comuns || Fiado esquecido | Contas a receber lembram por você || Desconto sem controle | Tudo registrado na venda || Peça sumida | Movimentações de estoque || Caixa com diferença | Abertura e fechamento registrados"
+  },
+  {
+   "contexto": "O cliente percebe",
+   "tela": "",
+   "prompt": "O que seu cliente percebe | Quando a loja usa o AlvoManage || Transparência | Ele acompanha o conserto pelo link || Agilidade | Orçamento aprovado sem ligação || Segurança | Fotos e garantia registradas na OS || Confiança | E ele volta na próxima"
+  },
+  {
+   "contexto": "Antes e depois",
+   "tela": "",
+   "prompt": "Antes e depois do AlvoManage | Na rotina de uma assistência || Antes: caderno de OS | Depois: OS digital e impressa || Antes: orçamento no telefone | Depois: aprovado pelo link || Antes: caixa no chute | Depois: tudo registrado || Antes: estoque no olho | Depois: número que bate"
+  },
+  {
+   "contexto": "Rotina do dono",
+   "tela": "",
+   "prompt": "Sua rotina de dono em 4 telas | O que importa, no AlvoManage || Bancada | O que está em andamento || Caixa | O dia em números || Contas a receber | Quem deve e quando || Relatórios | O que mais vende"
+  },
+  {
+   "contexto": "Para quem é",
+   "tela": "",
+   "prompt": "O AlvoManage é para a sua loja? | Veja se você se encaixa || Assistência técnica | OS, orçamento e garantia || Loja de balcão | PDV, cupom e estoque || Mais de uma loja | Separadas ou todas juntas || Equipe | Comissão de cada operador"
+  },
+  {
+   "contexto": "Estoque",
+   "tela": "",
+   "prompt": "Estoque sem surpresa | 4 recursos do AlvoManage || Movimentações | Cada entrada e saída registrada || Cotação | O melhor preço dos fornecedores || Importação | Todos os produtos de uma vez || Transferência | Entre as suas lojas"
+  },
+  {
+   "contexto": "Orçamento por link",
+   "tela": "",
+   "prompt": "Orçamento sem ficar no telefone | Como funciona no AlvoManage || Monte o orçamento | Serviços e peças com valores || Envie o link | O cliente abre no celular || Ele decide | Aprova ou recusa na hora || Aprovou, virou OS | E a bancada já começa"
+  },
+  {
+   "contexto": "Você sabia",
+   "tela": "",
+   "prompt": "Você sabia? | 4 coisas que o AlvoManage faz || Reconhece o aparelho pela foto | E ajuda a preencher a OS || Vira aplicativo | Instalado pelo navegador || Lembra o cliente | Do horário agendado || Calcula comissão | De cada operador"
+  },
+  {
+   "contexto": "Várias lojas",
+   "tela": "",
+   "prompt": "Mais de uma loja, uma só visão | Como o AlvoManage organiza || Estoque por loja | Cada uma com o seu || Transferência | Produto vai de uma para outra || Visão do dono | Todas as lojas juntas"
+  },
+  {
+   "contexto": "Troca e devolução",
+   "tela": "",
+   "prompt": "Troca no balcão sem bagunça | O que o AlvoManage faz sozinho || O produto volta | Direto para o estoque || O caixa se acerta | Sem conta de cabeça || Ou vira crédito | Para a próxima compra"
+  },
+  {
+   "contexto": "Garantia",
+   "tela": "",
+   "prompt": "Garantia sem briga | Como o AlvoManage protege sua loja || Tudo na OS | O serviço feito e o prazo || Voltou o aparelho? | O histórico mostra o que foi feito || Decisão rápida | Sem achismo no balcão"
+  },
+  {
+   "contexto": "Começar",
+   "tela": "",
+   "prompt": "Começar é mais simples do que parece | 5 passos no AlvoManage || Dados da loja | Saem na OS e no cupom || Abrir o caixa | Com o valor inicial || Importar produtos | Tudo de uma vez || Primeira OS | E a loja já está rodando"
+  },
+  {
+   "contexto": "Cliente ligando o dia todo",
+   "tela": "",
+   "prompt": "Cliente liga o dia inteiro: 'já ficou?' | Você para o serviço pra atender. || A bancada trava com tanta ligação | Quem conserta não pode virar telefone. || No AlvoManage o cliente vê o status | Link de acompanhamento no celular dele. || Você trabalha sem interrupção | Pronto, aguardando peça, em andamento. || O telefone volta a tocar só pra vender | Dia mais rendido na bancada."
+  },
+  {
+   "contexto": "Aparelho sem prova na entrega",
+   "tela": "",
+   "prompt": "Cliente diz que o risco não estava lá? | Sem foto, vira palavra contra palavra. || Você jura que entrou impecável | Mas não tem como provar. || No AlvoManage a foto fica na OS | Registrada na hora da entrada. || Risco, trinca e detalhe tudo guardado | Abre a OS e mostra pro cliente. || Conversa resolve na hora | Sem prejuízo que não era seu."
+  },
+  {
+   "contexto": "Aparelho igual e OS trocada",
+   "tela": "",
+   "prompt": "Dois aparelhos iguais e a OS trocada? | Você olha e não sabe qual é de quem. || Entrega errada e cliente irritado | Prejuízo e fama ruim na loja. || No AlvoManage a foto identifica a OS | Bate o olho e sabe qual aparelho é. || Entrada, conserto e entrega certos | Sem confundir o do vizinho. || Cliente leva o dele, sem erro | Confiança que faz voltar."
+  }
+ ]
+}

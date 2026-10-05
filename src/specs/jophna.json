@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostWoay",
+ "sx": "jophna",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Ajuda dentro do sistema, a qualquer hora",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "nenhum",
+     "fundo_estilo": "pontos",
+     "fundo_var": 0.703,
+     "subtitulo": "O assistente do AlvoManage tira suas dúvidas na própria tela.",
+     "icone": "help-circle"
+    }
+   }
+  }
+ ]
+}

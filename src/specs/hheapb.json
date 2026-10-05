@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostRz",
+ "sx": "hheapb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Perdeu o controle dos aparelhos?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "nenhum",
+     "fundo_estilo": "brilho",
+     "fundo_var": 0.304,
+     "subtitulo": "AlvoManage mostra status de cada um: em andamento, aguardando peça ou pronto.",
+     "icone": "devices-check"
+    }
+   }
+  }
+ ]
+}

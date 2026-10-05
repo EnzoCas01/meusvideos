@@ -1,0 +1,128 @@
+{
+ "formato": "post",
+ "peca": "PostAoy",
+ "sx": "fnnfdc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Você sabe o que foi feito?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "linha",
+     "icone_estilo": "preenchido",
+     "enfeite": "seta",
+     "luz": "brilho_canto",
+     "sombra": "forte",
+     "fundo_estilo": "pontos",
+     "fundo_var": 0.53,
+     "subtitulo": "Se um cliente perguntar, você consegue responder na hora?",
+     "icone": "message-question",
+     "composicao": "icone_topo"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Onde está o histórico?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "aneis",
+     "enfeite": "cantos",
+     "luz": "brilho_canto",
+     "sombra": "forte",
+     "fundo_estilo": "duas_cores",
+     "fundo_var": 0.852,
+     "subtitulo": "Se não está na OS, vira dúvida, atraso e desconfiança.",
+     "icone": "archive",
+     "etiqueta": "2 / 4",
+     "composicao": "lateral"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "E se o aparelho voltar?",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "brilho",
+     "enfeite": "nenhum",
+     "luz": "brilho_canto",
+     "sombra": "forte",
+     "fundo_estilo": "pontos",
+     "fundo_var": 0.882,
+     "subtitulo": "Com AlvoManage, você consulta tudo em segundos.",
+     "icone": "device-airtag",
+     "etiqueta": "3 / 4",
+     "composicao": "icone_baixo"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Decisão sem achismo",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "brilhos",
+     "luz": "brilho_canto",
+     "sombra": "forte",
+     "fundo_estilo": "faixa_lateral",
+     "fundo_var": 0.326,
+     "subtitulo": "O balcão fica ágil e a garantia deixa de ser briga.",
+     "etiqueta": "4 / 4",
+     "composicao": "lateral",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuora4oyd331/fotos/d2528dde6a.jpg",
+     "foto_id": "d2528dde6a",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "nenhum"
+    }
+   }
+  }
+ ]
+}

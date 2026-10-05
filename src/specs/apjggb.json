@@ -1,0 +1,36 @@
+{
+ "formato": "post",
+ "peca": "PostUtg",
+ "sx": "apjggb",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Notinha impressa na hora",
+     "receita": "informativo_modular",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "dividido",
+     "subtitulo": "Cupom não fiscal sai direto do PDV, sem caderninho",
+     "cta": "QUERO ESSA",
+     "icone": "receipt"
+    }
+   }
+  }
+ ]
+}

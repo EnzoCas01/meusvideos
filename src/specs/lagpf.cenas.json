@@ -1,0 +1,26 @@
+[
+ {
+  "n": 1,
+  "from": 0,
+  "durationInFrames": 60,
+  "visual": "layout post_design"
+ },
+ {
+  "n": 2,
+  "from": 60,
+  "durationInFrames": 60,
+  "visual": "layout post_design"
+ },
+ {
+  "n": 3,
+  "from": 120,
+  "durationInFrames": 60,
+  "visual": "layout post_design"
+ },
+ {
+  "n": 4,
+  "from": 180,
+  "durationInFrames": 60,
+  "visual": "layout post_design"
+ }
+]

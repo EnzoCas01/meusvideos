@@ -1,0 +1,13 @@
+{
+  "id": "midia_foto_kenburns",
+  "tipo": "midia",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["todos"],
+  "descricao": "Foto ocupando o quadro inteiro com movimento Ken Burns (zoom/pan lento e suave). Nítida sempre; nunca embaçada.",
+  "uso_recomendado": ["foto como fundo de cena", "documentários", "qualquer cena com foto"],
+  "duracao_recomendada": "3-7 s",
+  "parametros": {
+    "arquivo": {"tipo": "imagem", "descricao": "Caminho da foto (relativo a public/)", "obrigatorio": true},
+    "movimento": {"tipo": "string", "descricao": "zoom-in | zoom-out | pan-l | pan-r | nenhum", "obrigatorio": false}
+  }
+}

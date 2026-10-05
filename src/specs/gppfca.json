@@ -1,0 +1,35 @@
+{
+ "formato": "post",
+ "peca": "PostGor",
+ "sx": "gppfca",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "azul_amarelo",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Preciso abrir o caixa para vender?",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "cor",
+     "fundo_estilo": "gradiente",
+     "subtitulo": "Sim. Sem caixa aberto não dá pra vender no PDV nem entregar OS.",
+     "etiqueta": "DÚVIDA FREQUENTE"
+    }
+   }
+  }
+ ]
+}

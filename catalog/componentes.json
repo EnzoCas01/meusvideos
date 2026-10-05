@@ -1,0 +1,610 @@
+{
+ "gerado_em": "2026-09-29T13:30:56.848Z",
+ "projeto": "meusvideos",
+ "componentes": [
+  {
+   "id": "caption_karaoke",
+   "tipo": "legenda",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "cinematico"
+   ],
+   "descricao": "Legenda karaokê: a palavra falada ganha a caixa accent no instante em que a voz a diz. Frases de 3-5 palavras, na parte de baixo.",
+   "uso_recomendado": [
+    "documentários",
+    "vídeos com narração contínua",
+    "conteúdo explicativo"
+   ],
+   "duracao_recomendada": "acompanha a fala",
+   "parametros": {
+    "lines": {
+     "tipo": "lista",
+     "descricao": "Falas com frame e words medidos (narration-*.json)",
+     "obrigatorio": true
+    },
+    "top": {
+     "tipo": "numero",
+     "descricao": "Topo da caixa de legenda em px (padrão: fundo do quadro)",
+     "obrigatorio": false
+    },
+    "accent": {
+     "tipo": "cor",
+     "descricao": "Cor da caixa da palavra ativa",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "caption_rapido",
+   "tipo": "legenda",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "jovem"
+   ],
+   "descricao": "Legenda rápida: 1-2 palavras por vez, enormes, centralizadas, com contorno forte. Estilo Reels/TikTok. Posição meio, baixo ou alto.",
+   "uso_recomendado": [
+    "vídeos de ritmo rápido",
+    "Reels e TikTok",
+    "ganchos"
+   ],
+   "duracao_recomendada": "acompanha a fala",
+   "parametros": {
+    "lines": {
+     "tipo": "lista",
+     "descricao": "Falas com frame e words medidos (narration-*.json)",
+     "obrigatorio": true
+    },
+    "posicao": {
+     "tipo": "string",
+     "descricao": "meio | baixo | alto",
+     "obrigatorio": false
+    },
+    "accent": {
+     "tipo": "cor",
+     "descricao": "Cor da última palavra (padrão: tema)",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "caption_simples",
+   "tipo": "legenda",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "informacional",
+    "minimalista",
+    "institucional"
+   ],
+   "descricao": "Legenda simples: frases limpas na parte de baixo, sem efeito por palavra. Identidade própria, sem cara de legenda automática.",
+   "uso_recomendado": [
+    "conteúdo sério ou institucional",
+    "texto que não pede efeito",
+    "documentários sóbrios"
+   ],
+   "duracao_recomendada": "acompanha a fala",
+   "parametros": {
+    "lines": {
+     "tipo": "lista",
+     "descricao": "Falas com frame e words medidos (narration-*.json)",
+     "obrigatorio": true
+    },
+    "top": {
+     "tipo": "numero",
+     "descricao": "Topo da caixa de legenda em px",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "icone",
+   "tipo": "icone",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "todos"
+   ],
+   "descricao": "Ícone de traço (lucide, licença ISC) do catálogo embutido. O nome é escolhido pelo Jev; a lista completa de nomes e categorias está em icones.json na pasta do componente.",
+   "uso_recomendado": [
+    "elemento decorativo do post",
+    "ícone que representa a ideia do texto",
+    "acento visual"
+   ],
+   "duracao_recomendada": "peça inteira",
+   "parametros": {
+    "nome": {
+     "tipo": "string",
+     "descricao": "Nome do ícone (ver icones.json)",
+     "obrigatorio": true
+    },
+    "cor": {
+     "tipo": "cor",
+     "descricao": "Cor do traço (padrão: accent do tema)",
+     "obrigatorio": false
+    },
+    "tamanho": {
+     "tipo": "numero",
+     "descricao": "Largura em px",
+     "obrigatorio": false
+    },
+    "grossura": {
+     "tipo": "numero",
+     "descricao": "Espessura do traço (padrão 1.8)",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "logo_marca",
+   "tipo": "logo",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "todos"
+   ],
+   "descricao": "Logo da marca sobreposta uma vez por peça, com sombra para ler sobre qualquer fundo. Entra quando a spec marca `logo: true`.",
+   "uso_recomendado": [
+    "identidade da marca",
+    "posts e carrosséis próprios",
+    "fecho de vídeo"
+   ],
+   "duracao_recomendada": "peça inteira",
+   "parametros": {
+    "arquivo": {
+     "tipo": "imagem",
+     "descricao": "Caminho do logo (padrão: brand/logo.png)",
+     "obrigatorio": false
+    },
+    "posicao": {
+     "tipo": "string",
+     "descricao": "canto | topo | rodape",
+     "obrigatorio": false
+    },
+    "largura": {
+     "tipo": "numero",
+     "descricao": "Largura em px (padrão: 20% da largura)",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "midia_clipe",
+   "tipo": "midia",
+   "formatos": [
+    "9:16",
+    "16:9"
+   ],
+   "estilos": [
+    "todos"
+   ],
+   "descricao": "Clipe de vídeo mudo ocupando o quadro (objectFit cover). Se o clipe for mais curto que a cena, acelere com playback_rate — nunca congele.",
+   "uso_recomendado": [
+    "vídeo de fundo de cena",
+    "cortes de ritmo rápido",
+    "b-roll"
+   ],
+   "duracao_recomendada": "duração do clipe",
+   "parametros": {
+    "arquivo": {
+     "tipo": "video",
+     "descricao": "Caminho do clipe (relativo a public/)",
+     "obrigatorio": true
+    },
+    "start_from": {
+     "tipo": "numero",
+     "descricao": "Frame inicial do clipe",
+     "obrigatorio": false
+    },
+    "end_at": {
+     "tipo": "numero",
+     "descricao": "Frame final do clipe",
+     "obrigatorio": false
+    },
+    "playback_rate": {
+     "tipo": "numero",
+     "descricao": "Velocidade (acelere clipe curto)",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "midia_foto_kenburns",
+   "tipo": "midia",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "todos"
+   ],
+   "descricao": "Foto ocupando o quadro inteiro com movimento Ken Burns (zoom/pan lento e suave). Nítida sempre; nunca embaçada.",
+   "uso_recomendado": [
+    "foto como fundo de cena",
+    "documentários",
+    "qualquer cena com foto"
+   ],
+   "duracao_recomendada": "3-7 s",
+   "parametros": {
+    "arquivo": {
+     "tipo": "imagem",
+     "descricao": "Caminho da foto (relativo a public/)",
+     "obrigatorio": true
+    },
+    "movimento": {
+     "tipo": "string",
+     "descricao": "zoom-in | zoom-out | pan-l | pan-r | nenhum",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "post_design",
+   "tipo": "layout_post",
+   "formatos": [
+    "1:1",
+    "4:5"
+   ],
+   "estilos": [
+    "motivacional",
+    "luxo",
+    "informacional",
+    "cinematico"
+   ],
+   "descricao": "Post de design puro, SEM foto: fundo da paleta do tema com luz suave, ícone escolhido pelo Jev dentro de um anel accent, as palavras do Enzo como título, subtítulo e botão opcionais. O logo (quando ativo) entra por cima, pelo motor.",
+   "uso_recomendado": [
+    "frases e citações",
+    "posts motivacionais",
+    "dicas rápidas",
+    "identidade de marca"
+   ],
+   "duracao_recomendada": "post estático",
+   "parametros": {
+    "frase": {
+     "tipo": "string",
+     "descricao": "A frase principal (palavras do Enzo)",
+     "obrigatorio": true
+    },
+    "subtitulo": {
+     "tipo": "string",
+     "descricao": "Linha de apoio",
+     "obrigatorio": false
+    },
+    "cta": {
+     "tipo": "string",
+     "descricao": "Texto do botão",
+     "obrigatorio": false
+    },
+    "icone": {
+     "tipo": "string",
+     "descricao": "Nome do ícone (ver componente icone / icones.json)",
+     "obrigatorio": false
+    },
+    "fundo": {
+     "tipo": "cor",
+     "descricao": "Cor de fundo (padrão: tema)",
+     "obrigatorio": false
+    },
+    "cor_botao": {
+     "tipo": "cor",
+     "descricao": "Cor do botão",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "post_layout_1",
+   "tipo": "layout_post",
+   "formatos": [
+    "1:1",
+    "4:5"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "cinematico"
+   ],
+   "descricao": "Post completo: título grande no topo, subtítulo, botão de CTA e imagem cobrindo a metade de baixo com gradiente de legibilidade.",
+   "uso_recomendado": [
+    "posts de anúncio",
+    "dicas",
+    "chamadas para ação",
+    "posts institucionais"
+   ],
+   "duracao_recomendada": "post estático",
+   "parametros": {
+    "titulo": {
+     "tipo": "string",
+     "descricao": "Título principal",
+     "obrigatorio": true
+    },
+    "subtitulo": {
+     "tipo": "string",
+     "descricao": "Linha de apoio sob o título",
+     "obrigatorio": false
+    },
+    "cta": {
+     "tipo": "string",
+     "descricao": "Texto do botão (ex.: Saiba mais)",
+     "obrigatorio": false
+    },
+    "arquivo": {
+     "tipo": "imagem",
+     "descricao": "Imagem da metade de baixo (relativo a public/)",
+     "obrigatorio": true
+    },
+    "cor_botao": {
+     "tipo": "cor",
+     "descricao": "Cor do botão (padrão: tema)",
+     "obrigatorio": false
+    },
+    "cor_botao_texto": {
+     "tipo": "cor",
+     "descricao": "Cor do texto do botão",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "post_layout_2",
+   "tipo": "layout_post",
+   "formatos": [
+    "1:1",
+    "4:5",
+    "9:16"
+   ],
+   "estilos": [
+    "motivacional",
+    "luxo",
+    "cinematico"
+   ],
+   "descricao": "Frase grande centralizada na fonte display, com trecho destacado na cor do tema e autor opcional. Sem foto: tipografia e cor carregam o momento.",
+   "uso_recomendado": [
+    "citações",
+    "frases de impacto",
+    "posts motivacionais",
+    "autoridade"
+   ],
+   "duracao_recomendada": "post estático",
+   "parametros": {
+    "frase": {
+     "tipo": "string",
+     "descricao": "A frase completa",
+     "obrigatorio": true
+    },
+    "destaque": {
+     "tipo": "string",
+     "descricao": "Trecho da frase a destacar na cor accent",
+     "obrigatorio": false
+    },
+    "autor": {
+     "tipo": "string",
+     "descricao": "Assinatura no rodapé (ex.: — Nome)",
+     "obrigatorio": false
+    },
+    "fundo": {
+     "tipo": "cor",
+     "descricao": "Cor de fundo (padrão: tema)",
+     "obrigatorio": false
+    },
+    "cor_destaque": {
+     "tipo": "cor",
+     "descricao": "Cor do destaque",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "slide_carrossel",
+   "tipo": "layout_carrossel",
+   "formatos": [
+    "4:5"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "cinematico"
+   ],
+   "descricao": "Slide de carrossel 4:5 com título, linha de apoio, imagem na metade de baixo e contador de página. Ritmo visual igual entre slides.",
+   "uso_recomendado": [
+    "carrosséis",
+    "sequências de dicas",
+    "passo a passo",
+    "antes e depois"
+   ],
+   "duracao_recomendada": "1 slide por cena",
+   "parametros": {
+    "titulo": {
+     "tipo": "string",
+     "descricao": "Título do slide",
+     "obrigatorio": true
+    },
+    "subtitulo": {
+     "tipo": "string",
+     "descricao": "Linha de apoio",
+     "obrigatorio": false
+    },
+    "arquivo": {
+     "tipo": "imagem",
+     "descricao": "Imagem da metade de baixo",
+     "obrigatorio": false
+    },
+    "pagina": {
+     "tipo": "numero",
+     "descricao": "Número deste slide",
+     "obrigatorio": false
+    },
+    "total": {
+     "tipo": "numero",
+     "descricao": "Total de slides do carrossel",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "texto_cta",
+   "tipo": "cta",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "cinematico"
+   ],
+   "descricao": "Botão de chamada para ação em pílula arredondada com seta, na cor accent do tema.",
+   "uso_recomendado": [
+    "chamadas para ação",
+    "fecho de post",
+    "convite a comentar ou seguir"
+   ],
+   "duracao_recomendada": "2-4 s",
+   "parametros": {
+    "texto": {
+     "tipo": "string",
+     "descricao": "Texto do botão (ex.: Segue o canal)",
+     "obrigatorio": true
+    },
+    "posicao": {
+     "tipo": "string",
+     "descricao": "topo | centro | baixo",
+     "obrigatorio": false
+    },
+    "tamanho": {
+     "tipo": "numero",
+     "descricao": "Tamanho da fonte em px",
+     "obrigatorio": false
+    },
+    "cor_fundo": {
+     "tipo": "cor",
+     "descricao": "Cor da pílula",
+     "obrigatorio": false
+    },
+    "cor_texto": {
+     "tipo": "cor",
+     "descricao": "Cor do texto da pílula",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "texto_titulo",
+   "tipo": "texto_impacto",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "cinematico",
+    "luxo",
+    "motivacional",
+    "informacional"
+   ],
+   "descricao": "Texto de impacto curto (data, nome, número), grande, centralizado no terço escolhido, com sombra para ler sobre qualquer foto.",
+   "uso_recomendado": [
+    "frases de impacto",
+    "gancho inicial",
+    "datas e números-chave",
+    "nomes"
+   ],
+   "duracao_recomendada": "1-3 s",
+   "parametros": {
+    "texto": {
+     "tipo": "string",
+     "descricao": "O texto (1-3 palavras)",
+     "obrigatorio": true
+    },
+    "posicao": {
+     "tipo": "string",
+     "descricao": "topo | centro | baixo",
+     "obrigatorio": false
+    },
+    "tamanho": {
+     "tipo": "numero",
+     "descricao": "Tamanho da fonte em px",
+     "obrigatorio": false
+    },
+    "cor": {
+     "tipo": "cor",
+     "descricao": "Cor do texto (padrão: tema)",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  },
+  {
+   "id": "transicao_fade",
+   "tipo": "transicao",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "cinematico",
+    "luxo",
+    "minimalista"
+   ],
+   "descricao": "Fade suave com leve desfoque nas bordas da cena: o corte vira dissolvência. Aplicada entre cenas.",
+   "uso_recomendado": [
+    "troca de cena em documentário",
+    "mudança de assunto",
+    "ritmo calmo"
+   ],
+   "duracao_recomendada": "0,5-1 s",
+   "parametros": {
+    "duracao": {
+     "tipo": "numero",
+     "descricao": "Frames do fade (padrão: 24)",
+     "obrigatorio": false
+    }
+   },
+   "registrado": true
+  }
+ ]
+}

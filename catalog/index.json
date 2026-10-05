@@ -1,0 +1,314 @@
+{
+ "gerado_em": "2026-09-29T13:30:56.848Z",
+ "projeto": "meusvideos",
+ "total_componentes": 14,
+ "total_temas": 4,
+ "componentes": [
+  {
+   "id": "caption_karaoke",
+   "tipo": "legenda",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "cinematico"
+   ],
+   "uso_recomendado": [
+    "documentários",
+    "vídeos com narração contínua",
+    "conteúdo explicativo"
+   ]
+  },
+  {
+   "id": "caption_rapido",
+   "tipo": "legenda",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "jovem"
+   ],
+   "uso_recomendado": [
+    "vídeos de ritmo rápido",
+    "Reels e TikTok",
+    "ganchos"
+   ]
+  },
+  {
+   "id": "caption_simples",
+   "tipo": "legenda",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "informacional",
+    "minimalista",
+    "institucional"
+   ],
+   "uso_recomendado": [
+    "conteúdo sério ou institucional",
+    "texto que não pede efeito",
+    "documentários sóbrios"
+   ]
+  },
+  {
+   "id": "icone",
+   "tipo": "icone",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "todos"
+   ],
+   "uso_recomendado": [
+    "elemento decorativo do post",
+    "ícone que representa a ideia do texto",
+    "acento visual"
+   ]
+  },
+  {
+   "id": "logo_marca",
+   "tipo": "logo",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "todos"
+   ],
+   "uso_recomendado": [
+    "identidade da marca",
+    "posts e carrosséis próprios",
+    "fecho de vídeo"
+   ]
+  },
+  {
+   "id": "midia_clipe",
+   "tipo": "midia",
+   "formatos": [
+    "9:16",
+    "16:9"
+   ],
+   "estilos": [
+    "todos"
+   ],
+   "uso_recomendado": [
+    "vídeo de fundo de cena",
+    "cortes de ritmo rápido",
+    "b-roll"
+   ]
+  },
+  {
+   "id": "midia_foto_kenburns",
+   "tipo": "midia",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "todos"
+   ],
+   "uso_recomendado": [
+    "foto como fundo de cena",
+    "documentários",
+    "qualquer cena com foto"
+   ]
+  },
+  {
+   "id": "post_design",
+   "tipo": "layout_post",
+   "formatos": [
+    "1:1",
+    "4:5"
+   ],
+   "estilos": [
+    "motivacional",
+    "luxo",
+    "informacional",
+    "cinematico"
+   ],
+   "uso_recomendado": [
+    "frases e citações",
+    "posts motivacionais",
+    "dicas rápidas",
+    "identidade de marca"
+   ]
+  },
+  {
+   "id": "post_layout_1",
+   "tipo": "layout_post",
+   "formatos": [
+    "1:1",
+    "4:5"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "cinematico"
+   ],
+   "uso_recomendado": [
+    "posts de anúncio",
+    "dicas",
+    "chamadas para ação",
+    "posts institucionais"
+   ]
+  },
+  {
+   "id": "post_layout_2",
+   "tipo": "layout_post",
+   "formatos": [
+    "1:1",
+    "4:5",
+    "9:16"
+   ],
+   "estilos": [
+    "motivacional",
+    "luxo",
+    "cinematico"
+   ],
+   "uso_recomendado": [
+    "citações",
+    "frases de impacto",
+    "posts motivacionais",
+    "autoridade"
+   ]
+  },
+  {
+   "id": "slide_carrossel",
+   "tipo": "layout_carrossel",
+   "formatos": [
+    "4:5"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "cinematico"
+   ],
+   "uso_recomendado": [
+    "carrosséis",
+    "sequências de dicas",
+    "passo a passo",
+    "antes e depois"
+   ]
+  },
+  {
+   "id": "texto_cta",
+   "tipo": "cta",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "informacional",
+    "motivacional",
+    "cinematico"
+   ],
+   "uso_recomendado": [
+    "chamadas para ação",
+    "fecho de post",
+    "convite a comentar ou seguir"
+   ]
+  },
+  {
+   "id": "texto_titulo",
+   "tipo": "texto_impacto",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "cinematico",
+    "luxo",
+    "motivacional",
+    "informacional"
+   ],
+   "uso_recomendado": [
+    "frases de impacto",
+    "gancho inicial",
+    "datas e números-chave",
+    "nomes"
+   ]
+  },
+  {
+   "id": "transicao_fade",
+   "tipo": "transicao",
+   "formatos": [
+    "9:16",
+    "1:1",
+    "4:5",
+    "16:9"
+   ],
+   "estilos": [
+    "cinematico",
+    "luxo",
+    "minimalista"
+   ],
+   "uso_recomendado": [
+    "troca de cena em documentário",
+    "mudança de assunto",
+    "ritmo calmo"
+   ]
+  }
+ ],
+ "temas": [
+  {
+   "id": "editorial_claro",
+   "estilos": [
+    "informacional",
+    "minimalista",
+    "institucional"
+   ],
+   "descricao": "Fundo claro de papel, tinta escura e um vermelho sóbrio de destaque. Estilo revista, informativo e confiável."
+  },
+  {
+   "id": "energia_viva",
+   "estilos": [
+    "motivacional",
+    "jovem",
+    "tecnologia"
+   ],
+   "descricao": "Azul profundo com ciano elétrico e tipografia pesada. Energia, tecnologia, conteúdo jovem."
+  },
+  {
+   "id": "escuro_clean",
+   "estilos": [
+    "informacional",
+    "cinematico",
+    "motivacional"
+   ],
+   "descricao": "Fundo escuro neutro, texto claro e um amarelo forte de destaque. Seguro para qualquer assunto."
+  },
+  {
+   "id": "luxo_dourado",
+   "estilos": [
+    "luxo",
+    "premium"
+   ],
+   "descricao": "Preto profundo com dourado e fonte display art déco (Limelight). Sofisticado, para marca premium e celebração."
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "formato": "post",
+ "peca": "PostPr",
+ "sx": "fjmecb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Cansado de perder mensagens?",
+     "objetivo": "venda",
+     "receita": "frase_autoral",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "celular",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "cantos",
+     "luz": "brilho_canto",
+     "sombra": "nenhuma",
+     "fundo_estilo": "pontos",
+     "fundo_var": 0.656,
+     "subtitulo": "Conecte o WhatsApp ao AlvoManage e centralize o atendimento da loja.",
+     "icone": "messages"
+    }
+   }
+  }
+ ]
+}

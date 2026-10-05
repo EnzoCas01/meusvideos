@@ -1,0 +1,13 @@
+{
+  "voice": "pt-BR-AntonioNeural",
+  "lines": [
+    {"id": "01-gancho", "text": "Cair não é o fim. É só a parte que ninguém mostra.", "gapAfter": 3, "frame": 6, "durationInFrames": 102, "words": [{"w": "Cair", "s": 0, "e": 11}, {"w": "não", "s": 11, "e": 16}, {"w": "é", "s": 16, "e": 20}, {"w": "o", "s": 20, "e": 22}, {"w": "fim.", "s": 22, "e": 29}, {"w": "É", "s": 41, "e": 44}, {"w": "só", "s": 44, "e": 52}, {"w": "a", "s": 52, "e": 58}, {"w": "parte", "s": 58, "e": 65}, {"w": "que", "s": 65, "e": 70}, {"w": "ninguém", "s": 70, "e": 78}, {"w": "mostra.", "s": 78, "e": 92}], "wordsMatched": "12/12", "wordsEngine": "faster-whisper small int8"},
+    {"id": "02-decisao", "text": "O que separa quem desiste de quem continua é uma decisão pequena: levantar mais uma vez.", "gapAfter": 3, "frame": 111, "durationInFrames": 163, "words": [{"w": "O", "s": 0, "e": 4}, {"w": "que", "s": 4, "e": 6}, {"w": "separa", "s": 6, "e": 19}, {"w": "quem", "s": 19, "e": 22}, {"w": "desiste", "s": 22, "e": 39}, {"w": "de", "s": 39, "e": 44}, {"w": "quem", "s": 44, "e": 47}, {"w": "continua", "s": 47, "e": 64}, {"w": "é", "s": 64, "e": 71}, {"w": "uma", "s": 71, "e": 75}, {"w": "decisão", "s": 75, "e": 86}, {"w": "pequena:", "s": 86, "e": 103}, {"w": "levantar", "s": 115, "e": 131}, {"w": "mais", "s": 131, "e": 137}, {"w": "uma", "s": 137, "e": 143}, {"w": "vez.", "s": 143, "e": 153}], "wordsMatched": "16/16", "wordsEngine": "faster-whisper small int8"},
+    {"id": "03-recomecar", "text": "Recomeçar também é vencer.", "gapAfter": 3, "frame": 277, "durationInFrames": 45, "words": [{"w": "Recomeçar", "s": 0, "e": 14}, {"w": "também", "s": 14, "e": 23}, {"w": "é", "s": 23, "e": 28}, {"w": "vencer.", "s": 28, "e": 38}], "wordsMatched": "4/4", "wordsEngine": "faster-whisper small int8"}
+  ],
+  "engine": "edge-tts",
+  "headFrames": 6,
+  "tailFrames": 12,
+  "ellipsisPauseMs": 0,
+  "rate": "+10%"
+}

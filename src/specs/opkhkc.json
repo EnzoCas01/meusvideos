@@ -1,0 +1,41 @@
+{
+ "formato": "post",
+ "peca": "PostVmej",
+ "sx": "opkhkc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Proteja-se com a foto de entrada",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "expressiva",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "cantos_opostos",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "brilho",
+     "enfeite": "seta",
+     "luz": "brilho_canto",
+     "sombra": "forte",
+     "fundo_estilo": "dividido_baixo",
+     "fundo_var": 0.462,
+     "subtitulo": "No AlvoManage, a foto da entrada mostra como o aparelho chegou, com ou sem capinha.",
+     "icone": "device-mobile"
+    }
+   }
+  }
+ ]
+}

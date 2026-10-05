@@ -1,0 +1,41 @@
+{
+ "formato": "post",
+ "peca": "PostBbo",
+ "sx": "gnfima",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 320,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Cliente nem sabe o modelo do celular?",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "celular",
+     "decoracao_posicao": "cantos_opostos",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "brilho",
+     "enfeite": "brilhos",
+     "luz": "holofote",
+     "sombra": "suave",
+     "fundo_estilo": "brilho",
+     "fundo_var": 0.664,
+     "subtitulo": "No AlvoManage, uma foto do aparelho identifica o modelo e já preenche a OS.",
+     "icone": "device-mobile-search"
+    }
+   }
+  }
+ ]
+}

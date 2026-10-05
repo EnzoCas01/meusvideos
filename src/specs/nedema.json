@@ -1,0 +1,52 @@
+{
+ "formato": "post",
+ "peca": "PostFqc",
+ "sx": "nedema",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 275,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Você na bancada. A loja continua.",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "lateral",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "cor",
+     "icone_estilo": "circulo_suave",
+     "enfeite": "nenhum",
+     "luz": "nenhuma",
+     "sombra": "nenhuma",
+     "solucao": "faixa",
+     "composicao": "visual_lateral",
+     "selo": "Bastidor",
+     "pontos": [
+      "IA nas etapas da rotina",
+      "Cliente consulta pelo link",
+      "Entrega lança no caixa"
+     ],
+     "fundo_estilo": "faixa_lateral",
+     "fundo_var": 0.008,
+     "subtitulo": "AlvoManage reúne IA, consulta da OS por link e entrada no caixa ao entregar o serviço.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuov2fqc8e66/fotos/51ff485c79.jpg",
+     "foto_id": "51ff485c79",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "nenhum"
+    }
+   }
+  }
+ ]
+}

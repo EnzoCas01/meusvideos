@@ -1,0 +1,37 @@
+{
+ "formato": "post",
+ "peca": "PostYdr",
+ "sx": "idnmjc",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "marca",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "Venda no balcão em segundos",
+     "objetivo": "venda",
+     "receita": "energia_geometrica",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "bancada_tecnica",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "invertido",
+     "foto": "/root/documentos/projetos/meusvideos/public/fotos/d435ebe37e.jpg",
+     "foto_layout": "recorte_diagonal",
+     "foto_efeito": "nenhum",
+     "subtitulo": "PDV do AlvoManage: carrinho, desconto e pagamento na mesma tela."
+    }
+   }
+  }
+ ]
+}

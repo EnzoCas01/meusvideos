@@ -1,0 +1,64 @@
+{
+ "formato": "post",
+ "peca": "ConstanciaDourada",
+ "sx": "cdd",
+ "dims": [
+  1080,
+  1350
+ ],
+ "fps": 30,
+ "tema": "luxo_dourado",
+ "logo": true,
+ "cenas": [
+  {
+   "n": 1,
+   "layout": {
+    "componente": "post_layout_2",
+    "params": {
+     "frase": "Quem aparece todos os dias vence.",
+     "destaque": "todos os dias",
+     "fundo": "#0B0907",
+     "cor_destaque": "#D9A24B"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "layout": {
+    "componente": "post_layout_1",
+    "params": {
+     "titulo": "Todo dia conta",
+     "subtitulo": "A constância vence o talento.",
+     "cta": "Segue o canal",
+     "arquivo": "public/images/recomecar/13.jpg",
+     "cor_botao": "#D9A24B",
+     "cor_botao_texto": "#1A1208"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "fundo": "#0B0907",
+   "midia": {
+    "arquivo": "public/images/ct-praia/09.jpg",
+    "movimento": "zoom-in"
+   },
+   "texto": {
+    "componente": "texto_titulo",
+    "params": {
+     "texto": "Apareça hoje",
+     "posicao": "centro"
+    }
+   },
+   "cta": {
+    "componente": "texto_cta",
+    "params": {
+     "texto": "Segue o canal",
+     "posicao": "baixo",
+     "cor_fundo": "#D9A24B",
+     "cor_texto": "#1A1208"
+    }
+   }
+  }
+ ]
+}

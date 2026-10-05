@@ -1,0 +1,12 @@
+{
+  "id": "transicao_fade",
+  "tipo": "transicao",
+  "formatos": ["9:16", "1:1", "4:5", "16:9"],
+  "estilos": ["cinematico", "luxo", "minimalista"],
+  "descricao": "Fade suave com leve desfoque nas bordas da cena: o corte vira dissolvência. Aplicada entre cenas.",
+  "uso_recomendado": ["troca de cena em documentário", "mudança de assunto", "ritmo calmo"],
+  "duracao_recomendada": "0,5-1 s",
+  "parametros": {
+    "duracao": {"tipo": "numero", "descricao": "Frames do fade (padrão: 24)", "obrigatorio": false}
+  }
+}

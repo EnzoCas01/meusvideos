@@ -1,0 +1,35 @@
+{
+ "formato": "post",
+ "peca": "PostRakh",
+ "sx": "camlda",
+ "dims": [
+  1080,
+  1350
+ ],
+ "tema": "preto_branco",
+ "logo": false,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "preto_branco",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "20% OFF",
+     "receita": "premium_moldura",
+     "alinhamento": "esquerda",
+     "densidade": "equilibrada",
+     "hierarquia": "oferta",
+     "decoracao": "moldura",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "discreta",
+     "icone_escala": "discreto",
+     "destaque_estilo": "peso",
+     "subtitulo": "Condição especial",
+     "cta": "AGENDE SEU HORÁRIO",
+     "icone": "percent"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "formato": "post",
+ "peca": "PostGp",
+ "sx": "iacmpb",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 275,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "A caixa chegou. O cadastro ficou pra depois.",
+     "objetivo": "venda",
+     "receita": "editorial_organico",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "lateral",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "selo",
+     "icone_estilo": "preenchido",
+     "enfeite": "nenhum",
+     "luz": "nenhuma",
+     "sombra": "nenhuma",
+     "solucao": "cartao",
+     "composicao": "icone_topo",
+     "pontos": [
+      "Produto esperando cadastro",
+      "Fotografe o produto",
+      "A IA preenche o cadastro"
+     ],
+     "fundo_estilo": "invertido",
+     "fundo_var": 0.667,
+     "subtitulo": "Fotografe o produto: a IA do AlvoManage preenche o cadastro sem você digitar.",
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuovg11pa7ae/fotos/c1c5e618f0.jpg",
+     "foto_id": "c1c5e618f0",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "moldura"
+    }
+   }
+  }
+ ]
+}

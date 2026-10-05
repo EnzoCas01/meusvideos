@@ -1,0 +1,13 @@
+{
+  "voice": "pt-BR-AntonioNeural",
+  "lines": [
+    {"id": "01-gancho", "text": "Tem dias em que tudo parece parado, como se o mundo esperasse por você.", "gapAfter": 3, "frame": 6, "durationInFrames": 126, "words": [{"w": "Tem", "s": 0, "e": 4}, {"w": "dias", "s": 4, "e": 14}, {"w": "em", "s": 14, "e": 19}, {"w": "que", "s": 19, "e": 22}, {"w": "tudo", "s": 22, "e": 29}, {"w": "parece", "s": 29, "e": 38}, {"w": "parado,", "s": 38, "e": 57}, {"w": "como", "s": 61, "e": 70}, {"w": "se", "s": 70, "e": 75}, {"w": "o", "s": 75, "e": 77}, {"w": "mundo", "s": 77, "e": 86}, {"w": "esperasse", "s": 86, "e": 103}, {"w": "por", "s": 103, "e": 109}, {"w": "você.", "s": 109, "e": 118}], "wordsMatched": "14/14", "wordsEngine": "faster-whisper small int8"},
+    {"id": "02-virada", "text": "Mas o tempo não para, e aos poucos a luz encontra um jeito de voltar.", "gapAfter": 3, "frame": 288, "durationInFrames": 126, "words": [{"w": "Mas", "s": 0, "e": 5}, {"w": "o", "s": 5, "e": 8}, {"w": "tempo", "s": 8, "e": 15}, {"w": "não", "s": 15, "e": 20}, {"w": "para,", "s": 20, "e": 32}, {"w": "e", "s": 43, "e": 46}, {"w": "aos", "s": 46, "e": 49}, {"w": "poucos", "s": 49, "e": 65}, {"w": "a", "s": 65, "e": 68}, {"w": "luz", "s": 68, "e": 73}, {"w": "encontra", "s": 73, "e": 88}, {"w": "um", "s": 88, "e": 95}, {"w": "jeito", "s": 95, "e": 102}, {"w": "de", "s": 102, "e": 109}, {"w": "voltar.", "s": 109, "e": 116}], "wordsMatched": "15/15", "wordsEngine": "faster-whisper small int8"},
+    {"id": "03-fecho", "text": "Quem se foi não te deixou sozinho, te deixou mais forte para seguir.", "gapAfter": 3, "frame": 588, "durationInFrames": 120, "words": [{"w": "Quem", "s": 0, "e": 5}, {"w": "se", "s": 5, "e": 10}, {"w": "foi", "s": 10, "e": 20}, {"w": "não", "s": 20, "e": 26}, {"w": "te", "s": 26, "e": 31}, {"w": "deixou", "s": 31, "e": 41}, {"w": "sozinho,", "s": 41, "e": 56}, {"w": "te", "s": 63, "e": 65}, {"w": "deixou", "s": 65, "e": 75}, {"w": "mais", "s": 75, "e": 81}, {"w": "forte", "s": 81, "e": 95}, {"w": "para", "s": 95, "e": 101}, {"w": "seguir.", "s": 101, "e": 110}], "wordsMatched": "13/13", "wordsEngine": "faster-whisper small int8"}
+  ],
+  "engine": "edge-tts",
+  "headFrames": 6,
+  "tailFrames": 12,
+  "ellipsisPauseMs": 0,
+  "rate": "+10%"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "slide_carrossel",
+  "tipo": "layout_carrossel",
+  "formatos": ["4:5"],
+  "estilos": ["informacional", "motivacional", "cinematico"],
+  "descricao": "Slide de carrossel 4:5 com título, linha de apoio, imagem na metade de baixo e contador de página. Ritmo visual igual entre slides.",
+  "uso_recomendado": ["carrosséis", "sequências de dicas", "passo a passo", "antes e depois"],
+  "duracao_recomendada": "1 slide por cena",
+  "parametros": {
+    "titulo": {"tipo": "string", "descricao": "Título do slide", "obrigatorio": true},
+    "subtitulo": {"tipo": "string", "descricao": "Linha de apoio", "obrigatorio": false},
+    "arquivo": {"tipo": "imagem", "descricao": "Imagem da metade de baixo", "obrigatorio": false},
+    "pagina": {"tipo": "numero", "descricao": "Número deste slide", "obrigatorio": false},
+    "total": {"tipo": "numero", "descricao": "Total de slides do carrossel", "obrigatorio": false}
+  }
+}

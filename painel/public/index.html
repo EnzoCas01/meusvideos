@@ -314,6 +314,9 @@ pre { white-space:pre-wrap; font:12.5px/1.55 var(--f-mono); margin:8px 0 0; colo
   </header>
   <div class="layout">
     <aside class="side">
+    <section class="card" id="tr-box"><header><span>🎓 Assistente de prompts</span><button type="button" id="tr-novo" title="Começar outra conversa">🗑️</button><button type="button" id="tr-x" title="Fechar (a conversa fica guardada)">✕</button></header>
+    <div id="tr-msgs"></div>
+    <form id="tr-form"><textarea id="tr-in" placeholder="Diga sobre o que os posts devem ser, o que evitar, ou peça para criar um post ou carrossel…"></textarea><button type="submit" class="mini">Enviar</button></form></section>
       <section class="card logo-card">
         <div class="logo-row">
           <div class="logo-prev"><span class="ph">◎</span><img id="logoImg" alt="logo" style="display:none"></div>
@@ -425,6 +428,21 @@ pre { white-space:pre-wrap; font:12.5px/1.55 var(--f-mono); margin:8px 0 0; colo
   </div>
 </div>
 </main>
+<style>
+#tr-fab{position:fixed;right:16px;bottom:16px;z-index:60;width:52px;height:52px;border-radius:50%;border:1px solid var(--line2);background:var(--ac);color:#111;font-size:22px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.45)}
+#tr-box{display:none;flex-direction:column;height:calc(100vh - 96px);min-height:420px;padding:0;overflow:hidden}
+.side.chat-on > :not(#tr-box){display:none !important} .side.chat-on #tr-box{display:flex}
+#tr-box header{padding:10px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;font-weight:600}
+#tr-box header span{flex:1} #tr-box header button{background:none;border:0;color:var(--mut);font-size:16px;cursor:pointer}
+#tr-msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.tr-m{max-width:92%;padding:8px 11px;border-radius:11px;font-size:13px;line-height:1.4;white-space:pre-wrap}
+.tr-m.enzo{align-self:flex-end;background:var(--acbg);border:1px solid var(--ac)} .tr-m.ia{align-self:flex-start;background:var(--card2);border:1px solid var(--line)}
+.tr-prop{max-width:100%} .tr-txt{margin-top:6px;padding:8px;background:var(--bg);border:1px solid var(--line);border-radius:8px;font-size:12px;max-height:200px;overflow:auto}
+.tr-m.feito{align-self:flex-start;font-size:12px;color:var(--mut);background:none;padding:0 4px}
+#tr-box form{display:flex;gap:6px;padding:10px;border-top:1px solid var(--line)}
+#tr-in{flex:1;resize:none;height:42px;background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:8px;font:inherit;font-size:13px}
+</style>
+<button id="tr-fab" type="button" title="Conversar com o assistente de prompts">💬</button>
 <script>
 const $ = (s, r = document) => r.querySelector(s);
 const LS = { get: (k) => { try { return localStorage.getItem(k); } catch { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch {} } };
@@ -470,11 +488,12 @@ $("#igAtualizar").onclick = carregaInstagram;
 function addPrompt() {
   const n = $("#prompts").children.length + 1;
   const w = document.createElement("div");
-  w.className = "prompt-block"; w.dataset.style = "karaoke"; w.dataset.modo = "post"; w.dataset.estilo = "bold_pop"; w.dataset.formato = "feed";
+  w.className = "prompt-block"; w.dataset.style = "karaoke"; w.dataset.modo = "post"; w.dataset.estilo = "bold_pop"; w.dataset.formato = "feed"; w.dataset.motor = "classico";
   w.innerHTML = `<div class="modos"><span class="chip sel" data-modo="post">🖼️ Post</span><span class="chip" data-modo="carrossel">🎠 Carrossel</span><span class="chip" data-modo="video">🎬 Vídeo</span><span class="chip" data-modo="cortes">✂️ Cortes de live</span></div>
     <div class="row"><span class="mut sp">Pedido ${n}</span><button type="button" class="sec mini alvo-btn so-post">🎯 AlvoManage</button><button type="button" class="sec mini ia-abrir so-video">✨ Montar com IA</button></div>
     <div class="mut alvo-ctx so-post" style="margin:-2px 0 6px"></div>
     <div class="chips so-post formatos" style="margin:0 0 8px"><span class="chip sel" data-formato="feed">⬜ Feed 1:1</span><span class="chip" data-formato="stories">📱 Stories 9:16</span></div>
+    <div class="chips so-post motores" style="margin:0 0 8px"><span class="chip sel" data-motor="classico">🧩 Clássico</span><span class="chip" data-motor="editorial" title="Motor novo: fontes profissionais, grid, tela do sistema, setas e anotações, 3 estratégias visuais">✨ Editorial</span></div>
     <label class="lbl so-post">Projeto do Instagram</label><select class="ig-project so-post" style="width:100%;padding:9px;margin-bottom:8px;background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:9px"><option value="">Sem projeto do Instagram</option>${igProjects.map((p) => `<option value="${esc(p.project)}">${esc(p.project)}${p.hasAccountId ? "" : " (falta ID)"}</option>`).join("")}</select>
     <div class="ia-box so-video"></div>
     <textarea class="so-texto" placeholder="O que você quer no vídeo ${n}? (com vídeo anexado, pode deixar em branco)"></textarea>
@@ -504,6 +523,10 @@ function addPrompt() {
   w.querySelectorAll(`.chip[data-formato]`).forEach((c) => (c.onclick = () => {
     w.dataset.formato = c.dataset.formato;
     w.querySelectorAll(`.chip[data-formato]`).forEach((o) => o.classList.toggle("sel", o === c));
+  }));
+  w.querySelectorAll(`.chip[data-motor]`).forEach((c) => (c.onclick = () => {
+    w.dataset.motor = c.dataset.motor;
+    w.querySelectorAll(`.chip[data-motor]`).forEach((o) => o.classList.toggle("sel", o === c));
   }));
   w.querySelectorAll(`.chip[data-estilo]`).forEach((c) => (c.onclick = () => {
     w.dataset.estilo = c.dataset.estilo;
@@ -672,7 +695,7 @@ $("#gerar").onclick = async () => {
   if (blocks.some((w) => (w.dataset.modo === "post" || w.dataset.modo === "carrossel") && !w.querySelector(":scope > textarea").value.trim())) return alert("Escreva o que você quer no post/carrossel.");
   const items = blocks.map((w) => w.dataset.modo === "cortes"
     ? { modo: "cortes", prompt: $(".cortes-nome", w).value.trim(), cortes: { estilo: w.dataset.estilo }, brutos: [w.dataset.bruto] }
-    : { modo: w.dataset.modo, prompt: w.querySelector(":scope > textarea").value.trim(), captionStyle: w.dataset.style, brutos: w.dataset.bruto ? [w.dataset.bruto] : [], ...(w.dataset.alvo?.startsWith(w.dataset.modo + ":") ? { alvo: w.dataset.alvo } : {}), formato: w.dataset.formato, project: $(".ig-project", w).value })
+    : { modo: w.dataset.modo, prompt: w.querySelector(":scope > textarea").value.trim(), captionStyle: w.dataset.style, brutos: w.dataset.bruto ? [w.dataset.bruto] : [], ...(w.dataset.alvo?.startsWith(w.dataset.modo + ":") ? { alvo: w.dataset.alvo } : {}), formato: w.dataset.formato, motor: w.dataset.motor, project: $(".ig-project", w).value })
     .filter((it) => it.prompt || it.brutos.length);
   if (!items.length) return;
   const faltando = items.flatMap((it) => it.prompt.match(/\[[^\]\n]{2,40}\]/g) || []);
@@ -1147,6 +1170,69 @@ function start() { $("#login").hidden = true; $("#app").hidden = false; if (!$("
 setInterval(poll, 3000);
 setInterval(() => document.querySelectorAll("[data-desde]").forEach((e) => (e.textContent = dur(+e.dataset.desde))), 1000);
 (async () => { try { await api("api/jobs"); start(); } catch { showLogin(); } })();
+
+// ---------- chat de treino (ocupa a coluna esquerda; a conversa fica guardada no navegador) ----------
+(() => {
+  const side = $(".side"), box = $("#tr-box"), msgs = $("#tr-msgs"), inp = $("#tr-in"), CH = "painel.chat.v1";
+  let itens = [];  // o que aparece na tela: {t:"msg",cls,texto} | {t:"prop",pr,estado}
+  const conv = () => itens.filter((i) => i.t === "msg" && (i.cls === "enzo" || i.cls === "ia")).map((i) => ({ de: i.cls, texto: i.texto }));
+  const salva = () => LS.set(CH, JSON.stringify(itens.slice(-80)));
+  const ROT = { assunto: "📌 Salvei como assunto", regra: "🧠 Salvei como regra", capturar: "📸 Tirando print de", usar: "🖼️ Telas dos posts" };
+  const rola = () => (msgs.scrollTop = msgs.scrollHeight);
+  const bolha = (cls, texto) => { const d = document.createElement("div"); d.className = "tr-m " + cls; d.textContent = texto; msgs.appendChild(d); rola(); return d; };
+  const nota = (texto) => { itens.push({ t: "msg", cls: "feito", texto }); salva(); return bolha("feito", texto); };
+  const digita = (el, t) => new Promise((ok) => {
+    el.textContent = ""; let i = 0; const passo = Math.max(1, Math.ceil(t.length / 220));
+    const iv = setInterval(() => { i = Math.min(t.length, i + passo); el.textContent = t.slice(0, i) + (i < t.length ? "▌" : ""); rola(); if (i >= t.length) { clearInterval(iv); ok(); } }, 22);
+  });
+  function cartao(it) {
+    const pr = it.pr, d = document.createElement("div"); d.className = "tr-m ia tr-prop";
+    d.innerHTML = `<b>${pr.modo === "carrossel" ? "🎠 Carrossel" : "🖼️ Post"} · ${pr.motor === "editorial" ? "✨ Editorial" : "🧩 Clássico"} · ${pr.formato === "stories" ? "Stories 9:16" : "Feed 1:1"}</b><div class="tr-txt">${esc(pr.prompt)}</div><div class="tr-acao"></div>`;
+    const acao = $(".tr-acao", d);
+    if (it.estado !== "pendente") acao.innerHTML = `<div class="mut" style="margin-top:6px;font-size:12px">${it.estado === "criada" ? "✅ Aprovado e enviado para criar" : "✏️ Ajuste pedido"}</div>`;
+    else {
+      acao.innerHTML = `<div class="row" style="margin-top:8px;gap:6px"><button type="button" class="mini tr-ok">✅ Aprovar e criar</button><button type="button" class="sec mini tr-no">✏️ Ajustar</button></div>`;
+      $(".tr-no", d).onclick = () => { it.estado = "ajustar"; salva(); acao.innerHTML = '<div class="mut" style="margin-top:6px;font-size:12px">✏️ Ajuste pedido</div>'; nota("Ok, me diga o que mudar."); inp.focus(); };
+      $(".tr-ok", d).onclick = async () => {
+        it.estado = "criada"; salva(); acao.innerHTML = '<div class="mut" style="margin-top:6px;font-size:12px">✅ Aprovado e enviado para criar</div>';
+        nota("🎬 Criando… as imagens aparecem ao lado, na aba Criar.");
+        try {
+          const ids = (await api("api/posts/direto", { method: "POST", body: JSON.stringify({ items: [pr] }) })).ids || [];
+          if (ids.length) guardaMesa(ids);
+          document.querySelector('.aba[data-aba="criar"]').click(); poll(true);
+        } catch { it.estado = "pendente"; salva(); cartao_refaz(); nota("Não consegui criar agora. Aprove de novo."); }
+      };
+    }
+    return d;
+  }
+  const cartao_refaz = () => desenha();
+  function desenha() {
+    msgs.innerHTML = "";
+    if (!itens.length) bolha("ia", "Oi! Me diga sobre o que os prompts devem ser, o que evitar, ou qual tela do sistema você quer nos posts. Também posso propor um post ou carrossel para você aprovar e criar.");
+    for (const it of itens) it.t === "prop" ? msgs.appendChild(cartao(it)) : bolha(it.cls, it.texto);
+    rola();
+  }
+  try { itens = JSON.parse(LS.get(CH) || "[]").filter((i) => i && (i.t === "msg" || i.t === "prop")); } catch { itens = []; }
+  desenha();
+  const abre = (v) => { side.classList.toggle("chat-on", v); box.classList.toggle("on", v); if (v) { rola(); inp.focus(); } };
+  $("#tr-fab").onclick = () => abre(!side.classList.contains("chat-on"));
+  $("#tr-x").onclick = () => abre(false);
+  $("#tr-novo").onclick = () => { if (itens.length && !confirm("Apagar esta conversa e começar outra?")) return; itens = []; salva(); desenha(); };
+  inp.onkeydown = (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("#tr-form").requestSubmit(); } };
+  $("#tr-form").onsubmit = async (e) => {
+    e.preventDefault(); const t = inp.value.trim(); if (!t) return;
+    inp.value = ""; itens.push({ t: "msg", cls: "enzo", texto: t }); salva(); bolha("enzo", t);
+    const espera = bolha("ia", "digitando"); let n = 0;
+    const pontos = setInterval(() => { espera.textContent = "digitando" + ".".repeat(++n % 4); }, 350);
+    try {
+      const r = await api("api/treino", { method: "POST", body: JSON.stringify({ mensagens: conv() }) });
+      const texto = r.resposta || "(sem resposta)"; itens.push({ t: "msg", cls: "ia", texto }); salva();
+      clearInterval(pontos); await digita(espera, texto);
+      (r.feito || []).forEach((f) => nota(`${ROT[f.tipo] || f.tipo}: ${f.texto}`));
+      if (r.proposta) { const it = { t: "prop", pr: r.proposta, estado: "pendente" }; itens.push(it); salva(); msgs.appendChild(cartao(it)); rola(); }
+    } catch { clearInterval(pontos); espera.textContent = "Não consegui responder agora. Tente de novo."; salva(); }
+  };
+})();
 </script>
 </body>
 </html>

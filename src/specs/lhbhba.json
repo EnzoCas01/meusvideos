@@ -1,0 +1,39 @@
+{
+ "formato": "post",
+ "peca": "PostIbkh",
+ "sx": "lhbhba",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "azul_amarelo",
+ "logo": false,
+ "logo_px": 90,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "azul_amarelo",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "O WhatsApp da loja junto com o sistema",
+     "objetivo": "venda",
+     "receita": "informativo_modular",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "assunto",
+     "decoracao": "moldura",
+     "decoracao_posicao": "fundo",
+     "decoracao_intensidade": "media",
+     "destaque_estilo": "peso",
+     "fundo_estilo": "dividido_topo",
+     "fundo_var": 0.519,
+     "foto": "/root/documentos/projetos/meusvideos/out/painel/vmuoeibkh3d71/fotos/6265275b31.jpg",
+     "foto_layout": "topo_cartao",
+     "foto_efeito": "escurecer",
+     "subtitulo": "Conecte o WhatsApp da sua loja ao AlvoManage."
+    }
+   }
+  }
+ ]
+}

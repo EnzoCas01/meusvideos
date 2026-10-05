@@ -1,0 +1,49 @@
+{
+ "formato": "post",
+ "peca": "PostWhu",
+ "sx": "pomebc",
+ "dims": [
+  1080,
+  1080
+ ],
+ "tema": "marca",
+ "logo": true,
+ "logo_px": 275,
+ "cenas": [
+  {
+   "n": 1,
+   "tema": "marca",
+   "layout": {
+    "componente": "post_design",
+    "params": {
+     "frase": "“Posso acompanhar pelo celular?",
+     "objetivo": "venda",
+     "receita": "oferta_impacto",
+     "alinhamento": "centro",
+     "densidade": "equilibrada",
+     "hierarquia": "mensagem",
+     "decoracao": "interface_saas",
+     "decoracao_posicao": "cantos_opostos",
+     "decoracao_intensidade": "discreta",
+     "destaque_estilo": "peso",
+     "icone_estilo": "preenchido",
+     "enfeite": "cantos",
+     "luz": "nenhuma",
+     "sombra": "suave",
+     "solucao": "grande",
+     "composicao": "icone_baixo",
+     "selo": "Já existe",
+     "pontos": [
+      "Cliente acompanha pelo link",
+      "IA ajuda a registrar e achar",
+      "Mythos responde os números"
+     ],
+     "fundo_estilo": "circulos",
+     "fundo_var": 0.834,
+     "subtitulo": "Pode. O AlvoManage dá link ao cliente e IA para ajudar a loja por dentro.",
+     "icone": "device-mobile-question"
+    }
+   }
+  }
+ ]
+}

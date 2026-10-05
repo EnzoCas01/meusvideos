@@ -1,0 +1,16 @@
+{
+  "id": "post_layout_2",
+  "tipo": "layout_post",
+  "formatos": ["1:1", "4:5", "9:16"],
+  "estilos": ["motivacional", "luxo", "cinematico"],
+  "descricao": "Frase grande centralizada na fonte display, com trecho destacado na cor do tema e autor opcional. Sem foto: tipografia e cor carregam o momento.",
+  "uso_recomendado": ["citações", "frases de impacto", "posts motivacionais", "autoridade"],
+  "duracao_recomendada": "post estático",
+  "parametros": {
+    "frase": {"tipo": "string", "descricao": "A frase completa", "obrigatorio": true},
+    "destaque": {"tipo": "string", "descricao": "Trecho da frase a destacar na cor accent", "obrigatorio": false},
+    "autor": {"tipo": "string", "descricao": "Assinatura no rodapé (ex.: — Nome)", "obrigatorio": false},
+    "fundo": {"tipo": "cor", "descricao": "Cor de fundo (padrão: tema)", "obrigatorio": false},
+    "cor_destaque": {"tipo": "cor", "descricao": "Cor do destaque", "obrigatorio": false}
+  }
+}
