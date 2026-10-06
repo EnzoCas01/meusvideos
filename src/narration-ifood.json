@@ -1,0 +1,124 @@
+{
+  "enabled": false,
+  "voice": "male, middle-aged, low pitch",
+  "language": "pt",
+  "speed": 1.1,
+  "referenceText": "Cada pessoa vive o seu próprio tempo, e nenhum caminho precisa ser igual ao outro.",
+  "volume": 0.95,
+  "duckMusicTo": 0.3,
+  "note": "Fonte única da narração de Ifood. `frame` é onde a fala começa (30 fps, total 1890). A voz é clonada de public/audio/vo/_voice-ref.wav — a MESMA referência de LifePhases e ComecePequeno: um só locutor no projeto inteiro. NUNCA gerar com instruct puro. Clipes em public/audio/vo-ifood/. Regerar com NARRATION_JSON=src/narration-ifood.json VO_DIR=public/audio/vo-ifood tools/vs/.venv/Scripts/python.exe -u tools/generate-narration.py",
+  "lines": [
+    {
+      "id": "01-antes-de-ser",
+      "frame": 8,
+      "text": "Antes de ser o aplicativo que você usa para pedir comida, o iFood era...",
+      "durationInFrames": 114,
+      "grupo": "g1-gancho-origem"
+    },
+    {
+      "id": "02-um-papel",
+      "frame": 142,
+      "text": "Um papel.",
+      "durationInFrames": 37,
+      "grupo": "g1-gancho-origem"
+    },
+    {
+      "id": "03-disk-cook",
+      "frame": 190,
+      "text": "Em dois mil e onze, a empresa começou com o Disk Cook, um guia impresso de cardápios.",
+      "durationInFrames": 136,
+      "grupo": "g1-gancho-origem"
+    },
+    {
+      "id": "04-por-telefone",
+      "frame": 319,
+      "text": "Os pedidos eram feitos por telefone.",
+      "durationInFrames": 62,
+      "grupo": "g1-gancho-origem"
+    },
+    {
+      "id": "05-mundo-mudando",
+      "frame": 400,
+      "text": "Mas o mundo estava mudando.",
+      "durationInFrames": 53,
+      "grupo": "g2-virada-digital"
+    },
+    {
+      "id": "06-sair-do-papel",
+      "frame": 448,
+      "text": "E eles perceberam que aquele modelo precisava sair do papel.",
+      "durationInFrames": 98,
+      "grupo": "g2-virada-digital"
+    },
+    {
+      "id": "07-site-e-apps",
+      "frame": 541,
+      "text": "Em dois mil e doze, chegaram o site e os aplicativos para Android e iPhone.",
+      "durationInFrames": 128,
+      "grupo": "g2-virada-digital"
+    },
+    {
+      "id": "08-decisao",
+      "frame": 667,
+      "text": "E no ano seguinte veio uma decisão importante.",
+      "durationInFrames": 72,
+      "grupo": "g2-virada-digital"
+    },
+    {
+      "id": "09-movile",
+      "frame": 735,
+      "text": "A Movile investiu no negócio.",
+      "durationInFrames": 51,
+      "grupo": "g2-virada-digital"
+    },
+    {
+      "id": "10-desafio",
+      "frame": 920,
+      "text": "Mas o grande desafio ainda estava pela frente.",
+      "durationInFrames": 82,
+      "grupo": "g3-logistica-plataforma"
+    },
+    {
+      "id": "11-ate-a-porta",
+      "frame": 1016,
+      "text": "Como fazer o pedido chegar até a porta do cliente?",
+      "durationInFrames": 92,
+      "grupo": "g3-logistica-plataforma"
+    },
+    {
+      "id": "12-modelo-logistico",
+      "frame": 1186,
+      "text": "Em dois mil e dezoito, o iFood consolidou seu modelo logístico e passou a conectar restaurantes, clientes e entregadores dentro da plataforma.",
+      "durationInFrames": 189,
+      "grupo": "g3-logistica-plataforma"
+    },
+    {
+      "id": "13-plataforma-digital",
+      "frame": 1452,
+      "text": "E aquilo que começou com um guia impresso havia se transformado em uma plataforma digital em rápida expansão.",
+      "durationInFrames": 158,
+      "grupo": "g3-logistica-plataforma"
+    },
+    {
+      "id": "14-nao-comecou-grande",
+      "frame": 1666,
+      "text": "O iFood não começou grande.",
+      "durationInFrames": 51,
+      "grupo": "g4-fechamento"
+    },
+    {
+      "id": "15-mudando-a-forma",
+      "frame": 1728,
+      "text": "Ele começou mudando a forma como um pedido era feito.",
+      "durationInFrames": 92,
+      "grupo": "g4-fechamento"
+    },
+    {
+      "id": "16-a-virada",
+      "frame": 1844,
+      "text": "Essa foi a virada.",
+      "durationInFrames": 44,
+      "grupo": "g4-fechamento"
+    }
+  ]
+}

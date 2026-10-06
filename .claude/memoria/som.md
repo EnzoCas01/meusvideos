@@ -19,9 +19,21 @@ As cues em `src/utils/audio.ts` usam o frame do filme inteiro. É preciso somar 
 `ambient-piano.wav` tem ~10 MB e o conjunto passa de 20 MB em `public/audio/`. Nada disso entra no MP4 final, que sai com AAC comprimido.
 **Por quê:** já pensei em converter para MP3 por peso. Não vale a perda de qualidade na mixagem; se incomodar, o caminho é ignorar no git e manter o script gerador versionado.
 
-## 2026-09-17 — Duas peças, dois namespaces de áudio, um só gerador
-"Comece Pequeno" é peça separada do LifePhases mas usa o mesmo `tools/generate-audio.mjs`, estendido por alvo: `node tools/generate-audio.mjs comece-pequeno` escreve em `public/audio/cp/`, `all`/`sfx`/`music` continuam intocados escrevendo na raiz de `public/audio/`. `writeWav` ganhou um 4º parâmetro `outDir` (default a raiz) para isso — sem essa mudança teria que duplicar o gerador inteiro.
-**Por quê:** o usuário quer as duas peças integradas ao mesmo projeto, não scripts paralelos que divergem.
+## 2026-09-17 — Três peças, três namespaces de áudio, um só gerador
+Cada peça é um alvo do mesmo `tools/generate-audio.mjs`: `comece-pequeno` escreve em `public/audio/cp/`, `ifood` em `public/audio/ifood/`, e `all`/`sfx`/`music` continuam escrevendo na raiz de `public/audio/` (LifePhases). `writeWav` tem um 4º parâmetro `outDir` (default a raiz) para isso — sem ele seria preciso duplicar o gerador inteiro.
+**Por quê:** o usuário quer as peças integradas ao mesmo projeto, não scripts paralelos que divergem.
+
+## 2026-09-17 — Ifood: proibido piano e proibido sino em qualquer lugar
+O usuário rejeitou explicitamente "piano lento, sino" para o iFood. A trilha é grave discreto + textura eletrônica + pulsação constante a 100 BPM. Por isso **nenhuma função da seção ifood do gerador chama `bell()`**: todo som percutido ali é `tickIF()` (parciais harmônicos, decaimento de 35 ms) ou ruído filtrado. Nada fica ressoando.
+**Por quê:** `bell()` tem parciais inarmônicos e cauda longa — é literalmente o timbre recusado. Usá-lo "só como pulso" reintroduz o sino pela porta dos fundos.
+
+## 2026-09-17 — Cue de SFX não pode apontar para arquivo que ainda não existe
+Em `audio-if.ts` deixei `music.enabled` e `sfx.enabled` ambos `false` enquanto os WAV não foram sintetizados. `<Audio src>` com arquivo ausente quebra o preview de quem está construindo as cenas.
+**Por quê:** o `motion` trabalha na mesma peça em paralelo; cue órfã derruba o Studio dele sem que a causa seja óbvia.
+
+## 2026-09-17 — Síntese e narração não podem rodar juntas
+O gerador de áudio é pesado e a máquina só aguenta um processo por vez. Quando a narração estiver rodando, escreva o código e pare — não rode `node tools/generate-audio.mjs`.
+**Por quê:** os dois juntos entram em swap e congelam sem erro nenhum.
 
 ## 2026-09-17 — Cue de SFX derivada da voz precisa ser getter, não array estático
 Em `audio-cp.ts`, `AUDIO_CP.sfx.cues` é um `get cues()` que chama uma função computando as cues a partir de `line(id)` (narration-cp.ts) e `SCENE_STARTS_CP` (ComecePequeno.tsx) — não um array fixo. `audio-cp.ts` importa `SCENE_STARTS_CP` de `ComecePequeno.tsx`, que importa as cenas, que importam `cue-cp.ts`, que importa `audio-cp.ts` de volta (via SoundtrackCP) — ciclo. Um array calculado no topo do módulo cairia na temporal dead zone. `cue-cp.ts` já resolve isso com uma factory só lida em render-time; copiei o mesmo padrão para `audio-cp.ts`. `SoundtrackCP.tsx` não precisou mudar porque `obj.cues` com getter se comporta como array normal ao iterar.

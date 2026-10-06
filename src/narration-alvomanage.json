@@ -1,0 +1,127 @@
+{
+  "provider": "elevenlabs",
+  "voice": "Lucas - Social Media Voice",
+  "voice_id": "7lu3ze7orhWaNeSPowWx",
+  "language_code": "pt",
+  "model_id": "eleven_multilingual_v2",
+  "output_format": "mp3_44100_128",
+  "voice_settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "style": 0.25,
+    "use_speaker_boost": true
+  },
+  "fps": 30,
+  "dir": "public/audio/vo-alvomanage",
+  "enabled": true,
+  "lines": [
+    {
+      "id": "am01",
+      "file": "am01.mp3",
+      "text": "Sabe quando o cliente deixa o iPhone com a tela trincada, e dois dias depois liga. E aí, ficou pronto?",
+      "frame": 0,
+      "durationInFrames": 143,
+      "duration_s": 4.737
+    },
+    {
+      "id": "am02",
+      "file": "am02.mp3",
+      "text": "Aí você para tudo, procura o papel, pergunta pro técnico... e o cliente esperando na linha.",
+      "frame": 155,
+      "durationInFrames": 129,
+      "duration_s": 4.272
+    },
+    {
+      "id": "am03",
+      "file": "am03.mp3",
+      "text": "No AlvoManage, cada conserto vira uma ordem de serviço. E toda OS tem um link só dela.",
+      "frame": 296,
+      "durationInFrames": 126,
+      "duration_s": 4.18
+    },
+    {
+      "id": "am04",
+      "file": "am04.mp3",
+      "text": "Você manda esse link pro cliente, e ele acompanha o conserto pelo celular, em tempo real. Sem baixar aplicativo, sem senha.",
+      "alt": "Você manda esse link pro cliente, e ele acompanha o conserto pelo celular, a hora que quiser. Sem baixar aplicativo, sem senha.",
+      "useAlt": true,
+      "frame": 434,
+      "durationInFrames": 182,
+      "duration_s": 6.037
+    },
+    {
+      "id": "am05",
+      "file": "am05.mp3",
+      "text": "Ele vê se tá em aberto, pronto ou entregue. O defeito, o valor, a garantia. E assina o recebimento ali mesmo.",
+      "frame": 628,
+      "durationInFrames": 162,
+      "duration_s": 5.387
+    },
+    {
+      "id": "am06",
+      "file": "am06.mp3",
+      "text": "E com o plano de WhatsApp, quando a OS fica pronta, o aviso chega sozinho no celular do cliente.",
+      "frame": 802,
+      "durationInFrames": 141,
+      "duration_s": 4.69
+    },
+    {
+      "id": "am07",
+      "file": "am07.mp3",
+      "text": "Resultado? O telefone toca bem menos.",
+      "pauseBefore": 0.6,
+      "frame": 973,
+      "durationInFrames": 70,
+      "duration_s": 2.322
+    },
+    {
+      "id": "am08",
+      "file": "am08.mp3",
+      "text": "Mas o AlvoManage não é só OS. É o sistema da loja inteira.",
+      "frame": 1055,
+      "durationInFrames": 98,
+      "duration_s": 3.251
+    },
+    {
+      "id": "am09",
+      "file": "am09.mp3",
+      "text": "No painel você vê o que tá em andamento, e ele te avisa quando tem OS parada há mais de cinco dias.",
+      "frame": 1165,
+      "durationInFrames": 137,
+      "duration_s": 4.551
+    },
+    {
+      "id": "am10",
+      "file": "am10.mp3",
+      "text": "Tem o PDV pro balcão. Produtos com preço, custo, lucro e estoque na mesma tela.",
+      "frame": 1314,
+      "durationInFrames": 147,
+      "duration_s": 4.876
+    },
+    {
+      "id": "am11",
+      "file": "am11.mp3",
+      "text": "Financeiro também: caixa, contas a pagar e a receber, fluxo de caixa.",
+      "frame": 1473,
+      "durationInFrames": 131,
+      "duration_s": 4.365
+    },
+    {
+      "id": "am12",
+      "file": "am12.mp3",
+      "text": "Tem mais de uma loja? Cuida de todas no mesmo lugar.",
+      "frame": 1616,
+      "durationInFrames": 91,
+      "duration_s": 3.019
+    },
+    {
+      "id": "am13",
+      "file": "am13.mp3",
+      "text": "AlvoManage. Pra você cuidar do conserto, e não da bagunça.",
+      "pauseAfterFirstSentence": 0.4,
+      "frame": 1719,
+      "durationInFrames": 94,
+      "duration_s": 3.111
+    }
+  ]
+}

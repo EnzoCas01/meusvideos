@@ -106,6 +106,13 @@ PAD_SECONDS = 0.04
 SPLIT_MIN_SILENCE_MS = [150, 200, 100, 250, 80, 300, 60, 350, 50]
 SPLIT_SILENCE_THRESHOLDS = [0.004, 0.003, 0.005, 0.002, 0.006, 0.0015, 0.008, 0.001, 0.01, 0.012]
 
+# No spoken sub-line is shorter than this. At the loud end of the threshold
+# grid a single stray sample (a click, a breath) becomes a zero-length
+# "segment" that pads the count up to n_parts for the wrong reason — and it is
+# stable under a nudge of min_silence_ms, so `_stable_match` alone does not
+# catch it. Requiring every segment to carry real speech does.
+MIN_SEGMENT_MS = 120
+
 
 def trim_bounds(arr, threshold: float = LOUD_THRESHOLD, pad_seconds: float = PAD_SECONDS, sample_rate: int = 24000):
     """Returns (start, end) sample indices of the loud region of `arr`, padded
@@ -195,6 +202,16 @@ def find_speech_segments(arr, sample_rate: int, threshold: float, min_silence_ms
     return segments
 
 
+def _segments_plausible(segments, sample_rate: int, n_parts: int) -> bool:
+    """True when `segments` could really be `n_parts` spoken sub-lines: the
+    right count, and every one of them long enough to be speech rather than a
+    click or a breath (see MIN_SEGMENT_MS)."""
+    if len(segments) != n_parts:
+        return False
+    min_samples = int(sample_rate * MIN_SEGMENT_MS / 1000)
+    return all((end - start) >= min_samples for start, end in segments)
+
+
 def _stable_match(arr, sample_rate: int, threshold: float, min_silence_ms: float, n_parts: int) -> bool:
     """A count match at one exact (threshold, min_silence_ms) can be a fluke —
     e.g. a sentence-internal comma pause happening to push the total segment
@@ -204,7 +221,7 @@ def _stable_match(arr, sample_rate: int, threshold: float, min_silence_ms: float
     coincidental match usually is."""
     for offset in (-30, 30):
         ms = max(20, min_silence_ms + offset)
-        if len(find_speech_segments(arr, sample_rate, threshold, ms)) != n_parts:
+        if not _segments_plausible(find_speech_segments(arr, sample_rate, threshold, ms), sample_rate, n_parts):
             return False
     return True
 
@@ -230,7 +247,9 @@ def split_group_audio(arr, sample_rate: int, n_parts: int):
     for min_silence_ms in SPLIT_MIN_SILENCE_MS:
         for threshold in SPLIT_SILENCE_THRESHOLDS:
             segments = find_speech_segments(arr, sample_rate, threshold, min_silence_ms)
-            if len(segments) == n_parts and _stable_match(arr, sample_rate, threshold, min_silence_ms, n_parts):
+            if _segments_plausible(segments, sample_rate, n_parts) and _stable_match(
+                arr, sample_rate, threshold, min_silence_ms, n_parts
+            ):
                 cuts = [0]
                 for (_, end_i), (start_next, _) in zip(segments, segments[1:]):
                     cuts.append((end_i + start_next) // 2)

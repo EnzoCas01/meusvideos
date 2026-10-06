@@ -5,6 +5,7 @@
  *   node tools/generate-audio.mjs sfx           # LifePhases: just the sound design
  *   node tools/generate-audio.mjs music         # LifePhases: just the score
  *   node tools/generate-audio.mjs comece-pequeno  # "Comece Pequeno": score + sfx
+ *   node tools/generate-audio.mjs ifood          # "iFood — a virada": score + sfx
  *
  * Each effect is designed against a specific thing happening on screen (sand
  * running, a column climbing, a moon completing a phase, a bloom opening, the
@@ -812,6 +813,517 @@ const buildCutBlackCP = () => {
 	writeWav("cut-black.wav", wl, wr, OUT_CP);
 };
 
+/* =====================================================================
+ * "iFood — a virada" (public/audio/ifood/) — third film, third namespace.
+ *
+ * The brief here is different from the other two and the constraints are
+ * hard, straight from the client:
+ *
+ *   - Modern cinematic / minimal / tech: discreet low end, light electronic
+ *     texture, a CONSTANT pulse, tension rising gradually. No vocals, no
+ *     emotional melody, always under the voice.
+ *   - NO piano as a lead instrument and NO bell / chime ANYWHERE. That is
+ *     why nothing in this section calls bell(): every struck sound below is
+ *     a harmonic tone with a 30-60 ms decay (an electronic tick), or filtered
+ *     noise. Nothing is left ringing.
+ *   - Few effects, each one locked to a VISUAL EVENT, never to a cut.
+ *
+ * Intensity arc (see INTENSITY_IF): low in scenes 1-2, climbing through
+ * 3-5, clear tension in scene 6 (the logistics problem), PEAK in scene 7
+ * (the 2018 turn), sustained in 8, clean resolution in 9.
+ * ===================================================================== */
+
+const OUT_IF = path.join(process.cwd(), "public", "audio", "ifood");
+
+/** Frame -> seconds at 30 fps. Scene starts mirror SCENE_STARTS_IF in src/Ifood.tsx. */
+const secIF = (f) => f / 30;
+const SCENE_IF = [0, 115, 290, 495, 700, 905, 1170, 1435, 1700].map(secIF);
+const TOTAL_IF = secIF(1890); // 63.0s
+const BEAT_IF = 0.6; // 100 BPM — the constant pulse the brief asks for
+
+/** Bb3: the minor second against A3 that makes scene 6 uncomfortable. */
+const BB3 = 233.08;
+
+/** Piecewise-linear curve, read at an arbitrary time. */
+const curveAt = (pts, t) => {
+	if (t <= pts[0][0]) return pts[0][1];
+	for (let i = 1; i < pts.length; i++) {
+		if (t <= pts[i][0]) {
+			const [t0, v0] = pts[i - 1];
+			const [t1, v1] = pts[i];
+			return v0 + ((v1 - v0) * (t - t0)) / (t1 - t0);
+		}
+	}
+	return pts[pts.length - 1][1];
+};
+
+/**
+ * The tension curve of the whole film, in seconds. Every level decision in
+ * buildScoreIF() reads this, so reshaping the arc is a one-place edit.
+ */
+const INTENSITY_IF = [
+	[0.0, 0.1], // sc1 hook — almost nothing
+	[SCENE_IF[1], 0.16], // sc2 Disk Cook
+	[SCENE_IF[2], 0.3], // sc3 paper -> digital: the pulse arrives
+	[SCENE_IF[3], 0.44], // sc4 site + app
+	[SCENE_IF[4], 0.56], // sc5 investment
+	[SCENE_IF[5], 0.64], // sc6 logistics: tension starts
+	[36.0, 0.84], // ...and keeps climbing inside scene 6
+	[41.0, 1.0], // sc7 THE 2018 TURN — peak of the film
+	[SCENE_IF[7], 0.92], // sc8 growth, sustained
+	[53.0, 0.86],
+	[SCENE_IF[8], 0.5], // sc9 close: everything clears out
+	[61.0, 0.2],
+	[TOTAL_IF, 0.0],
+];
+
+/** Soft detuned pad built from band-limited harmonics — a bed, never a melody. */
+const epad = (L, R, start, freqs, dur, gain, nh = 5) => {
+	const n = Math.round(dur * SR);
+	const rise = Math.min(2.6, dur * 0.3);
+	const fall = Math.min(3.2, dur * 0.36);
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const env = padEnv(t, dur, rise, fall);
+		if (env <= 0) continue;
+		let l = 0;
+		let r = 0;
+		for (let k = 0; k < freqs.length; k++) {
+			const f = freqs[k];
+			const amp = 1 / (k + 1.5);
+			for (let h = 1; h <= nh; h++) {
+				const ha = amp / (h * h * 0.55 + h * 0.45);
+				const d = (k + h) % 2 === 0 ? 1 : -1;
+				l += ha * Math.sin(2 * Math.PI * f * h * (1 + 0.0009 * d) * t);
+				r += ha * Math.sin(2 * Math.PI * f * h * (1 - 0.0011 * d) * t);
+			}
+		}
+		add(L, start, i, l * env * gain);
+		add(R, start, i, r * env * gain);
+	}
+};
+
+/** Sub bass with an optional beat-synced pump — where "pulsação" lives low. */
+const subIF = (L, R, start, freq, dur, gain, pump = 0) => {
+	const n = Math.round(dur * SR);
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const env = padEnv(t, dur, Math.min(2.0, dur * 0.25), Math.min(2.4, dur * 0.3));
+		if (env <= 0) continue;
+		const p = (t / BEAT_IF) % 1;
+		const duck = 1 - pump + pump * Math.min(1, p / 0.38);
+		const v = (Math.sin(2 * Math.PI * freq * t) + 0.12 * Math.sin(2 * Math.PI * freq * 2 * t)) * env * gain * duck;
+		add(L, start, i, v);
+		add(R, start, i, v);
+	}
+};
+
+/**
+ * The pulse itself: harmonic partials with a 35 ms decay. Deliberately NOT
+ * bell() — nothing inharmonic, nothing that rings. This is a tick, not a chime.
+ */
+const tickIF = (L, R, start, freq, gain, pan = 0.5, bright = 0.4) => {
+	const n = Math.round(0.2 * SR);
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const env = pluckEnv(t, 0.003, 0.035);
+		if (t > 0.01 && env < 0.0002) break; // the attack ramps from 0, so only cut after it
+		const v =
+			(Math.sin(2 * Math.PI * freq * t) +
+				0.5 * Math.sin(2 * Math.PI * freq * 2 * t) +
+				0.22 * bright * Math.sin(2 * Math.PI * freq * 3 * t)) *
+			env *
+			gain;
+		add(L, start, i, v * (1 - pan));
+		add(R, start, i, v * pan);
+	}
+};
+
+/** Sine dropping in pitch: the body of every impact in this film. */
+const boomIF = (L, R, start, f0, f1, dur, gain, tau) => {
+	const n = Math.round(dur * SR);
+	let phase = 0;
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const f = f1 + (f0 - f1) * Math.exp(-t * 3.2);
+		phase += (2 * Math.PI * f) / SR;
+		const v = Math.sin(phase) * pluckEnv(t, 0.004, tau ?? dur * 0.3) * gain;
+		add(L, start, i, v);
+		add(R, start, i, v);
+	}
+};
+
+/** Noise moving from dark to bright (or back), panned across the stereo field. */
+const whooshIF = (dur, seed, curve, panSweep) => {
+	const n = Math.round(dur * SR);
+	const nz = noise(n, seed);
+	const dark = lowpass(nz, 480);
+	const air = highpass(lowpass(nz, 7200), 900);
+	const [L, R] = buf(dur);
+	for (let i = 0; i < n; i++) {
+		const k = i / n;
+		const m = curve(k);
+		const env = Math.pow(Math.sin(Math.PI * k), 1.4);
+		const v = (dark[i] * (1 - m) * 1.6 + air[i] * m) * env;
+		const pan = Math.max(0, Math.min(1, 0.5 + panSweep * (k - 0.5)));
+		L[i] = v * (1 - pan);
+		R[i] = v * pan;
+	}
+	return [L, R];
+};
+
+/** The 63s score. */
+const buildScoreIF = () => {
+	const DUR = TOTAL_IF + 0.25;
+	const [L, R] = buf(DUR);
+
+	// --- harmonic bed: one block per beat of the story, overlapping ---
+	const CHORDS_IF = [
+		{at: 0.0, len: 4.4, pad: [N.A3, N.E4], bass: N.A2, g: 0.1, pump: 0.0},
+		{at: 3.4, len: 6.8, pad: [N.A3, N.C4, N.E4], bass: N.A2, g: 0.13, pump: 0.0},
+		{at: 9.3, len: 7.6, pad: [N.A3, N.C4, N.E4], bass: N.A2, g: 0.16, pump: 0.25},
+		{at: 16.2, len: 7.6, pad: [N.F3, N.A3, N.C4], bass: N.F2, g: 0.18, pump: 0.3},
+		{at: 23.0, len: 7.6, pad: [N.A3, N.C4, N.E4, N.G4], bass: N.A2, g: 0.2, pump: 0.34},
+		// scene 6: Bb3 rubbing against A3 — the logistics problem, harmonically
+		{at: 29.8, len: 9.8, pad: [N.A3, BB3, N.C4, N.E4], bass: N.A2, g: 0.22, pump: 0.4},
+		// scene 7: the lift to C major — the 2018 turn
+		{at: 38.6, len: 9.8, pad: [N.C4, N.E4, N.G4, N.C5], bass: N.C3, g: 0.26, pump: 0.42},
+		{at: 47.4, len: 9.6, pad: [N.F3, N.C4, N.F4, N.A4], bass: N.F2, g: 0.22, pump: 0.36},
+		// scene 9: open fifth, no third — clean, unsentimental resolution
+		{at: 56.2, len: 7.0, pad: [N.A3, N.E4, N.A4], bass: N.A2, g: 0.2, pump: 0.0},
+	];
+	for (const c of CHORDS_IF) {
+		epad(L, R, c.at, c.pad, c.len, c.g);
+		subIF(L, R, c.at, c.bass, c.len, 0.1 + c.g * 0.25, c.pump);
+	}
+
+	// --- the constant pulse, from scene 3 to the close ---
+	const hatN = Math.round(0.1 * SR);
+	const hatSrc = highpass(lowpass(noise(hatN, 4242), 9500), 3600);
+	const hat = (start, gain) => {
+		for (let i = 0; i < hatN; i++) {
+			const t = i / SR;
+			const env = pluckEnv(t, 0.0008, 0.012);
+			add(L, start, i, hatSrc[i] * env * gain);
+			add(R, start, i, hatSrc[Math.max(0, i - 24)] * env * gain);
+		}
+	};
+
+	let t = SCENE_IF[2] + 0.07;
+	let beat = 0;
+	while (t < SCENE_IF[8]) {
+		const v = curveAt(INTENSITY_IF, t);
+		const accent = beat % 4 === 0;
+		tickIF(L, R, t, accent ? 82.41 : 110.0, 0.1 + v * 0.16, accent ? 0.5 : beat % 8 < 4 ? 0.38 : 0.62, v);
+
+		// light electronic texture: 16th hats once the product exists (scene 4)
+		if (t >= SCENE_IF[3]) {
+			for (let s = 0; s < 4; s++) hat(t + (s * BEAT_IF) / 4, (0.035 + v * 0.05) * (s % 2 ? 0.55 : 1));
+		}
+		// off-beat from scene 5: the machine gets busier
+		if (t >= SCENE_IF[4] && beat % 2 === 0) tickIF(L, R, t + BEAT_IF / 2, N.E3, 0.04 + v * 0.07, 0.64, v);
+		// scene 6 into scene 7: double time — pressure, not speed
+		if (t >= 34.0 && t < SCENE_IF[7]) {
+			tickIF(L, R, t + BEAT_IF / 2, 110.0, (0.05 + v * 0.09) * 0.8, 0.44, v);
+		}
+		t += BEAT_IF;
+		beat++;
+	}
+
+	// --- scene 6: a noise floor rising for 8.8s straight into the 2018 reveal ---
+	{
+		const start = SCENE_IF[5];
+		const span = SCENE_IF[6] + 0.6 - start;
+		const n = Math.round(span * SR);
+		const nz = noise(n, 31337);
+		const band = highpass(lowpass(nz, 2600), 260);
+		for (let i = 0; i < n; i++) {
+			const k = i / n;
+			const env = Math.pow(k, 2.1) * 0.5;
+			add(L, start, i, band[i] * env * 0.3);
+			add(R, start, i, band[Math.max(0, i - 130)] * env * 0.3);
+		}
+	}
+
+	// --- scene 7: the low swell under the turn (the SFX impact sits on top) ---
+	subIF(L, R, SCENE_IF[6] - 0.4, N.C2, 4.0, 0.16, 0.0);
+	epad(L, R, SCENE_IF[6] + 0.2, [N.C5, N.G4], 6.0, 0.08, 3);
+
+	// --- overall texture: an airy bed that tracks the intensity curve ---
+	{
+		const n = Math.round(DUR * SR);
+		const nz = noise(n, 8081);
+		const band = highpass(lowpass(nz, 5200), 1400);
+		for (let i = 0; i < n; i++) {
+			const ts = i / SR;
+			const v = curveAt(INTENSITY_IF, ts);
+			L[i] += band[i] * v * 0.05;
+			R[i] += band[Math.max(0, i - 200)] * v * 0.05;
+		}
+	}
+
+	const wetL = reverb(lowpass(L, 6200), 0.26, 0.8);
+	const wetR = reverb(lowpass(R, 6000), 0.26, 0.795);
+	normalize([wetL, wetR], 0.72);
+	edgeFade([wetL, wetR], 0.5);
+	writeWav("score.wav", wetL, wetR, OUT_IF);
+};
+
+/**
+ * SCENE 1 — the word "PAPEL" landing. Cinematic, discreet, and explicitly
+ * NOT a bell: a low sine drop plus a dry paper-ish transient.
+ */
+const buildPaperImpactIF = () => {
+	const DUR = 2.0;
+	const n = Math.round(DUR * SR);
+	const [L, R] = buf(DUR);
+	boomIF(L, R, 0.0, 78, 44, DUR, 0.55, 0.42);
+	const rustle = highpass(lowpass(noise(n, 1201), 5200), 1100);
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const env = pluckEnv(t, 0.002, 0.06);
+		L[i] += rustle[i] * env * 0.3;
+		R[i] += rustle[Math.max(0, i - 70)] * env * 0.3;
+	}
+	const wl = reverb(lowpass(L, 3800), 0.3, 0.8);
+	const wr = reverb(lowpass(R, 3700), 0.3, 0.795);
+	normalize([wl, wr], 0.62);
+	edgeFade([wl, wr], 0.02);
+	writeWav("paper-impact.wav", wl, wr, OUT_IF);
+};
+
+/** SCENES 2/4/5 — a soft impact for a date appearing (2011, 2012, 2013). */
+const buildDateImpactIF = () => {
+	const DUR = 1.6;
+	const n = Math.round(DUR * SR);
+	const [L, R] = buf(DUR);
+	boomIF(L, R, 0.0, 96, 52, DUR, 0.5, 0.3);
+	const air = highpass(lowpass(noise(n, 1301), 6400), 1800);
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const env = pluckEnv(t, 0.0015, 0.03);
+		L[i] += air[i] * env * 0.2;
+		R[i] += air[Math.max(0, i - 50)] * env * 0.2;
+	}
+	const wl = reverb(lowpass(L, 4200), 0.28, 0.78);
+	const wr = reverb(lowpass(R, 4100), 0.28, 0.775);
+	normalize([wl, wr], 0.55);
+	edgeFade([wl, wr], 0.02);
+	writeWav("date-impact.wav", wl, wr, OUT_IF);
+};
+
+/**
+ * SCENE 7 — the 2018 reveal. The single strongest sound in the film: a short
+ * rising swell, then a deep drop with a wide burst and a long sub tail.
+ */
+const buildReveal2018IF = () => {
+	const DUR = 3.4;
+	const n = Math.round(DUR * SR);
+	const [L, R] = buf(DUR);
+	const HIT = 0.9;
+
+	// pre-swell into the hit
+	const sw = Math.round(HIT * SR);
+	const swn = highpass(lowpass(noise(sw, 1401), 4200), 400);
+	for (let i = 0; i < sw; i++) {
+		const k = i / sw;
+		const env = Math.pow(k, 2.4);
+		L[i] += swn[i] * env * 0.34;
+		R[i] += swn[Math.max(0, i - 110)] * env * 0.34;
+	}
+
+	// the hit
+	boomIF(L, R, HIT, 128, 36, DUR - HIT, 0.85, 0.75);
+	const burstN = Math.round(1.4 * SR);
+	const burst = highpass(lowpass(noise(burstN, 1402), 5200), 220);
+	for (let i = 0; i < burstN; i++) {
+		const t = i / SR;
+		const env = Math.pow(Math.min(1, t / 0.012), 2) * Math.exp(-t / 0.38);
+		add(L, HIT, i, burst[i] * env * 0.34);
+		add(R, HIT, i, burst[Math.max(0, i - 150)] * env * 0.34);
+	}
+	// the tail: the network is alive after the hit
+	subIF(L, R, HIT, N.C2, DUR - HIT - 0.15, 0.3, 0.0);
+	epad(L, R, HIT + 0.05, [N.C4, N.G4], DUR - HIT - 0.2, 0.09, 4);
+
+	const wl = reverb(lowpass(L, 5000), 0.4, 0.85);
+	const wr = reverb(lowpass(R, 4900), 0.4, 0.845);
+	normalize([wl, wr], 0.78); // loudest file of the set, on purpose
+	edgeFade([wl, wr], 0.02);
+	writeWav("reveal-2018.wav", wl, wr, OUT_IF);
+};
+
+/** Motivated transitions only — a pass-by (dark -> bright -> dark), L to R. */
+const buildWhooshIF = () => {
+	const [L, R] = whooshIF(1.0, 2201, (k) => Math.sin(Math.PI * k), 0.9);
+	const wl = reverb(L, 0.24, 0.7);
+	const wr = reverb(R, 0.24, 0.695);
+	normalize([wl, wr], 0.45);
+	edgeFade([wl, wr], 0.02);
+	writeWav("whoosh.wav", wl, wr, OUT_IF);
+};
+
+/** A rising whoosh, for a transition that climbs into something (sc3, sc7). */
+const buildWhooshUpIF = () => {
+	const [L, R] = whooshIF(1.3, 2202, (k) => Math.pow(k, 1.6), -0.5);
+	const wl = reverb(L, 0.3, 0.76);
+	const wr = reverb(R, 0.3, 0.755);
+	normalize([wl, wr], 0.48);
+	edgeFade([wl, wr], 0.02);
+	writeWav("whoosh-up.wav", wl, wr, OUT_IF);
+};
+
+/**
+ * SCENE 4 — interface clicks. Three near-identical variants so a burst of
+ * taps never machine-guns. 120 ms, nothing rings.
+ */
+const buildUiClicksIF = () => {
+	[880, 1040, 1220].forEach((f, i) => {
+		const DUR = 0.14;
+		const n = Math.round(DUR * SR);
+		const [L, R] = buf(DUR);
+		const tap = highpass(lowpass(noise(n, 1501 + i), 8200), 2600);
+		for (let s = 0; s < n; s++) {
+			const t = s / SR;
+			const env = pluckEnv(t, 0.0008, 0.011);
+			const tone = Math.sin(2 * Math.PI * f * t) * pluckEnv(t, 0.001, 0.014) * 0.35;
+			L[s] = tap[s] * env * 0.4 + tone;
+			R[s] = tap[Math.max(0, s - 12)] * env * 0.4 + tone;
+		}
+		normalize([L, R], 0.34);
+		edgeFade([L, R], 0.004);
+		writeWav(`ui-click-${i + 1}.wav`, L, R, OUT_IF);
+	});
+};
+
+/**
+ * SCENES 1-2 — the room the whole thing started in: a phone-order operation.
+ * Room tone, mains hum, two distant landline rings (a buzzy 425 Hz tone pair,
+ * heavily filtered — a telephone, never a bell) and a few keypad clicks.
+ * 9.84s = exactly 295 frames, the length of scenes 1+2.
+ */
+const buildPhoneRoomIF = () => {
+	const DUR = 9.84;
+	const n = Math.round(DUR * SR);
+	const [L, R] = buf(DUR);
+
+	const room = lowpass(noise(n, 1601), 420);
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const drift = 0.8 + 0.2 * Math.sin(2 * Math.PI * 0.07 * t);
+		L[i] += room[i] * drift * 0.5;
+		R[i] += room[Math.max(0, i - 400)] * drift * 0.5;
+		L[i] += Math.sin(2 * Math.PI * 60 * t) * 0.012;
+		R[i] += Math.sin(2 * Math.PI * 60 * t) * 0.012;
+	}
+
+	// two distant rings, off to one side
+	for (const at of [2.1, 6.3]) {
+		const rn = Math.round(1.05 * SR);
+		for (let i = 0; i < rn; i++) {
+			const t = i / SR;
+			const buzz = 0.6 + 0.4 * Math.sin(2 * Math.PI * 25 * t);
+			const gate = padEnv(t, 1.05, 0.05, 0.12) * (t < 0.45 || t > 0.6 ? 1 : 0.15);
+			const v = (Math.sin(2 * Math.PI * 425 * t) + 0.3 * Math.sin(2 * Math.PI * 850 * t)) * buzz * gate * 0.09;
+			add(L, at, i, v * 0.7);
+			add(R, at, i, v * 0.3);
+		}
+	}
+
+	// keypad / handset clicks
+	[1.2, 4.6, 5.1, 5.35, 8.4].forEach((at, k) => {
+		const cn = Math.round(0.08 * SR);
+		const tap = highpass(lowpass(noise(cn, 1650 + k), 5200), 1500);
+		for (let i = 0; i < cn; i++) {
+			const t = i / SR;
+			const env = pluckEnv(t, 0.001, 0.008);
+			add(L, at, i, tap[i] * env * 0.16);
+			add(R, at, i, tap[i] * env * 0.14);
+		}
+	});
+
+	const wl = reverb(lowpass(L, 2600), 0.34, 0.8);
+	const wr = reverb(lowpass(R, 2500), 0.34, 0.795);
+	normalize([wl, wr], 0.4);
+	edgeFade([wl, wr], 0.5);
+	writeWav("phone-room.wav", wl, wr, OUT_IF);
+};
+
+/**
+ * SCENES 6-7 — subtle map / technology texture: filtered air sweeping slowly,
+ * sparse data clicks, and a faint high drone that beats against itself.
+ * 9.0s = 270 frames, the length of scene 6 and of scene 7.
+ */
+const buildMapTextureIF = () => {
+	const DUR = 9.0;
+	const n = Math.round(DUR * SR);
+	const [L, R] = buf(DUR);
+
+	const nz = noise(n, 1701);
+	const lo = lowpass(nz, 900);
+	const hi = highpass(lowpass(nz, 7800), 2400);
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const m = 0.5 + 0.5 * Math.sin(2 * Math.PI * 0.11 * t);
+		const v = lo[i] * (1 - m) * 1.3 + hi[i] * m;
+		L[i] += v * 0.26;
+		R[i] += (lo[Math.max(0, i - 300)] * (1 - m) * 1.3 + hi[Math.max(0, i - 90)] * m) * 0.26;
+	}
+
+	// a faint pair of high sines beating slowly — data, not melody
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const env = padEnv(t, DUR, 2.0, 2.4);
+		L[i] += Math.sin(2 * Math.PI * 1318.5 * t) * env * 0.022;
+		R[i] += Math.sin(2 * Math.PI * 1321.7 * t) * env * 0.022;
+	}
+
+	// sparse data clicks, seeded so the texture is reproducible
+	let s = 12345;
+	for (let k = 0; k < 22; k++) {
+		s = (s * 16807) % 2147483647;
+		const at = (s / 2147483647) * (DUR - 0.4);
+		const cn = Math.round(0.05 * SR);
+		const tap = highpass(lowpass(noise(cn, 1750 + k), 9000), 4200);
+		for (let i = 0; i < cn; i++) {
+			const t = i / SR;
+			const env = pluckEnv(t, 0.0006, 0.006);
+			add(L, at, i, tap[i] * env * 0.1 * (k % 2 ? 1 : 0.5));
+			add(R, at, i, tap[i] * env * 0.1 * (k % 2 ? 0.5 : 1));
+		}
+	}
+
+	const wl = reverb(L, 0.34, 0.82);
+	const wr = reverb(R, 0.34, 0.815);
+	normalize([wl, wr], 0.38);
+	edgeFade([wl, wr], 0.6);
+	writeWav("map-texture.wav", wl, wr, OUT_IF);
+};
+
+/** SCENE 7 — one node joining the network. Short, electronic, reusable. */
+const buildNetPulseIF = () => {
+	const DUR = 0.55;
+	const n = Math.round(DUR * SR);
+	const [L, R] = buf(DUR);
+	const tap = highpass(lowpass(noise(n, 1801), 7200), 2200);
+	for (let i = 0; i < n; i++) {
+		const t = i / SR;
+		const env = pluckEnv(t, 0.001, 0.014);
+		L[i] += tap[i] * env * 0.3;
+		R[i] += tap[Math.max(0, i - 30)] * env * 0.3;
+		// a short upward blip: 220 -> 330 Hz in 60 ms, then gone
+		const k = Math.min(1, t / 0.06);
+		const f = 220 + 110 * k;
+		L[i] += Math.sin(2 * Math.PI * f * t) * pluckEnv(t, 0.002, 0.05) * 0.3;
+		R[i] += Math.sin(2 * Math.PI * f * t) * pluckEnv(t, 0.002, 0.05) * 0.28;
+	}
+	const wl = reverb(L, 0.3, 0.76);
+	const wr = reverb(R, 0.3, 0.755);
+	normalize([wl, wr], 0.42);
+	edgeFade([wl, wr], 0.01);
+	writeWav("net-pulse.wav", wl, wr, OUT_IF);
+};
+
 /* ---------- entry ---------- */
 
 const what = process.argv[2] ?? "all";
@@ -852,6 +1364,21 @@ if (what === "comece-pequeno") {
 	buildTickCP();
 	buildPeakCP();
 	buildCutBlackCP();
+}
+
+if (what === "ifood") {
+	console.log("ifood score:");
+	buildScoreIF();
+	console.log("ifood sound design:");
+	buildPaperImpactIF();
+	buildDateImpactIF();
+	buildReveal2018IF();
+	buildWhooshIF();
+	buildWhooshUpIF();
+	buildUiClicksIF();
+	buildPhoneRoomIF();
+	buildMapTextureIF();
+	buildNetPulseIF();
 }
 
 console.log("done ->", OUT);

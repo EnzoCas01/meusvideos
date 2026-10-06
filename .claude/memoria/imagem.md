@@ -31,3 +31,16 @@ Sem Docker disponível nesta máquina, subir o SearXNG não foi possível. `comm
 ## 2026-09-17 — Imagem "publicada pelo próprio Nubank" nem sempre é foto real
 No site oficial (nu.com/pt/sala-de-imprensa, nu.com/pt/quem-somos) há ilustrações estilizadas misturadas com fotos reais do escritório. Uma imagem de podcast ("nu videocast") mostrava um homem grisalho que não bate com as fotos confirmadas de David Vélez — descartada por não dar para confirmar identidade, mesmo vindo do domínio oficial.
 **Por quê:** vir do site da empresa não faz a imagem virar "registro" automaticamente — abra e compare rosto/legenda antes de classificar. Metadado que não dá para confirmar não entra no manifesto.
+
+## 2026-09-18 — `--fonte=commons` existe e funciona (e o `--help` não lista)
+`node tools/fetch-images.mjs "consulta" --n=1 --pasta=x --fonte=commons` responde `fonte: wikimedia commons`, devolve 8 candidatos e baixa só o pedido. O texto de uso impresso ao errar argumento mostra apenas `--engines=...`.
+**Por quê:** é o atalho para ir direto ao Commons (licença já preenchida no manifest) sem depender do SearXNG, que nesta máquina não está de pé.
+
+## 2026-09-18 — Consulta de veículo traz marca de terceiros no quadro
+"delivery motorcycle city" no Commons devolveu foto de moto de entrega em Londres com logo **HONDA** legível no tanque, logotipo azul de uma empresa de entrega e placa de matrícula legível, além de dimensões 1486x1366 (não vertical, exigiria recorte em 1080x1920).
+**Por quê:** termos de veículo/objeto levam quase sempre a produto de marca reconhecível — mesmo em acervo livre. Peça ao Commons termos de cena (luz, silhueta, rua à noite) ou conte com recorte fechado que deixe a marca fora do quadro.
+
+
+## 2026-09-18 — Commons: a busca funciona, o download é que toma 429
+`--fonte=commons` respondeu normalmente ("16 resultados", "5 resultados"), mas **toda** tentativa de baixar voltou `HTTP 429` — 6 consultas seguidas, ~20 arquivos, nenhum baixado. O manifest sai com `imagens: []` e **sem as URLs dos candidatos**, então não sobra nada para reusar depois.
+**Por quê:** a busca (api.php) e o arquivo (upload.wikimedia.org) têm limites separados — "achou resultados" não quer dizer "conseguiu baixar". Quando isso acontecer, não adianta trocar as palavras da consulta: o gargalo está no download. E como o manifest não guarda a lista de candidatos, também não dá para tentar de novo mais tarde pelo mesmo caminho — é perder o lote. Vale pedir ao usuário para repetir a busca em outra janela de tempo (ou de outra máquina/rede) em vez de insistir.

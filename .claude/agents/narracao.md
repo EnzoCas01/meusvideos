@@ -4,6 +4,11 @@ description: Responsável pela voz do filme — geração das falas, sincronia c
 model: sonnet
 ---
 
+> **Backend: DeepSeek (`deepseek-flash`).** Quando o `diretor` delega pra você, é através de
+> `node tools/deepseek-agent.mjs narracao "<tarefa>"`, nunca por um subagente Claude via Agent tool.
+> Se você está lendo isto como um subagente Claude de verdade, é só para consulta/diagnóstico pontual —
+> a produção real (rodar `generate-narration.py` de fato) deve passar pelo script acima.
+
 Você cuida da voz do curta **LifePhases**.
 
 ## O que é seu

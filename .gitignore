@@ -12,3 +12,7 @@ tools/vs/
 # Imagens baixadas da web (origem registrada em cada manifest.json)
 public/images/
 gen-comece-pequeno.log
+
+# HyperFrames: snapshots de conferência e temporários de render
+hf-alvomanage-3/qc/
+hf-alvomanage-3/renders/

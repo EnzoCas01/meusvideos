@@ -144,12 +144,42 @@ const buscar = async () => {
 	return dados.results ?? [];
 };
 
-/** Baixa uma imagem, recusando o que não for imagem ou for grande demais. */
+const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Intervalo mínimo entre dois downloads.
+ *
+ * O upload.wikimedia.org corta em 429 quando os arquivos são pedidos em
+ * rajada — e o corte é do servidor de arquivos, não da busca: a consulta
+ * continua devolvendo resultados normalmente enquanto TODOS os downloads
+ * falham. Trocar as palavras da consulta não resolve nada nesse estado.
+ */
+const INTERVALO_MS = 1500;
+const TENTATIVAS = 3;
+
+/**
+ * Baixa uma imagem, recusando o que não for imagem ou for grande demais.
+ *
+ * O user-agent é descritivo de propósito. A política do Wikimedia recusa
+ * user-agent genérico de navegador ("Mozilla/5.0 (compatible; ...)"), que é
+ * exatamente o que esta função mandava antes e o que provocava os 429 em massa.
+ */
 const baixar = async (url, base) => {
-	const resposta = await fetch(url, {
-		signal: AbortSignal.timeout(TIMEOUT_MS),
-		headers: {"user-agent": "Mozilla/5.0 (compatible; LifePhases/1.0)"},
-	});
+	let resposta;
+	for (let tentativa = 1; tentativa <= TENTATIVAS; tentativa++) {
+		resposta = await fetch(url, {
+			signal: AbortSignal.timeout(TIMEOUT_MS),
+			headers: {"user-agent": "LifePhases/1.0 (projeto Remotion local; contato via repositório)"},
+		});
+		if (resposta.status !== 429) break;
+		// Backoff: 3s, 6s. O servidor devolve Retry-After às vezes; respeite-o.
+		const sugerido = Number(resposta.headers.get("retry-after"));
+		const espera = Number.isFinite(sugerido) && sugerido > 0 ? sugerido * 1000 : 3000 * tentativa;
+		if (tentativa < TENTATIVAS) {
+			console.log(`  429, esperando ${(espera / 1000).toFixed(0)}s antes de tentar de novo...`);
+			await dormir(espera);
+		}
+	}
 	if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
 
 	const tipo = (resposta.headers.get("content-type") ?? "").split(";")[0].trim();
@@ -208,6 +238,8 @@ const main = async () => {
 		i++;
 
 		const base = String(i).padStart(2, "0");
+		// Espaça os pedidos: sem isso o lote inteiro volta 429 (ver INTERVALO_MS).
+		if (i > 1) await dormir(INTERVALO_MS);
 		try {
 			const {arquivo, bytes} = await baixar(origem, base);
 			manifest.push({
