@@ -1,0 +1,635 @@
+{
+ "total": 1714,
+ "starts": [
+  0,
+  131,
+  262,
+  417,
+  534,
+  664,
+  788,
+  890,
+  993,
+  1127,
+  1233,
+  1392,
+  1485,
+  1585
+ ],
+ "ends": [
+  131,
+  262,
+  417,
+  534,
+  664,
+  788,
+  890,
+  993,
+  1127,
+  1233,
+  1392,
+  1485,
+  1585,
+  1714
+ ],
+ "cues": [
+  {
+   "frame": 3,
+   "file": "toc.wav",
+   "vol": 0.504,
+   "name": "toc no balcão"
+  },
+  {
+   "frame": 90,
+   "file": "pop.wav",
+   "vol": 0.252,
+   "name": "balão"
+  },
+  {
+   "frame": 115,
+   "file": "led-off.wav",
+   "vol": 0.392,
+   "name": "LED apaga"
+  },
+  {
+   "frame": 119,
+   "file": "pop.wav",
+   "vol": 0.168,
+   "name": "x vermelho"
+  },
+  {
+   "frame": 130,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 2"
+  },
+  {
+   "frame": 148,
+   "file": "whoosh-soft.wav",
+   "vol": 0.168,
+   "name": "quebrado vai pro lado"
+  },
+  {
+   "frame": 181,
+   "file": "whoosh-soft.wav",
+   "vol": 0.168,
+   "name": "mão do dono entra"
+  },
+  {
+   "frame": 193,
+   "file": "toc.wav",
+   "vol": 0.308,
+   "name": "novo no balcão"
+  },
+  {
+   "frame": 209,
+   "file": "pop.wav",
+   "vol": 0.196,
+   "name": "cliente pega"
+  },
+  {
+   "frame": 227,
+   "file": "whoosh.wav",
+   "vol": 0.168,
+   "name": "cliente sai"
+  },
+  {
+   "frame": 261,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 3"
+  },
+  {
+   "frame": 293,
+   "file": "click.wav",
+   "vol": 0.392,
+   "name": "clique Devolução"
+  },
+  {
+   "frame": 357,
+   "file": "whoosh.wav",
+   "vol": 0.196,
+   "name": "volta pra prateleira"
+  },
+  {
+   "frame": 371,
+   "file": "count-up.wav",
+   "vol": 0.28,
+   "name": "estoque +1"
+  },
+  {
+   "frame": 402,
+   "file": "pop.wav",
+   "vol": 0.196,
+   "name": "x some"
+  },
+  {
+   "frame": 421,
+   "file": "flip.wav",
+   "vol": 0.28,
+   "name": "folha 1"
+  },
+  {
+   "frame": 430,
+   "file": "flip.wav",
+   "vol": 0.252,
+   "name": "folha 2"
+  },
+  {
+   "frame": 447,
+   "file": "whoosh-soft.wav",
+   "vol": 0.168,
+   "name": "mão pega"
+  },
+  {
+   "frame": 461,
+   "file": "bag.wav",
+   "vol": 0.28,
+   "name": "sacola"
+  },
+  {
+   "frame": 476,
+   "file": "pop.wav",
+   "vol": 0.224,
+   "name": "x pisca"
+  },
+  {
+   "frame": 511,
+   "file": "sale.wav",
+   "vol": 0.252,
+   "name": "venda"
+  },
+  {
+   "frame": 533,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 5"
+  },
+  {
+   "frame": 574,
+   "file": "tick.wav",
+   "vol": 0.224,
+   "name": "+1 na tela"
+  },
+  {
+   "frame": 604,
+   "file": "pop.wav",
+   "vol": 0.28,
+   "name": "? grande"
+  },
+  {
+   "frame": 634,
+   "file": "scratch.wav",
+   "vol": 0.28,
+   "name": "coça a cabeça"
+  },
+  {
+   "frame": 664,
+   "file": "whoosh-up.wav",
+   "vol": 0.196,
+   "name": "prateleira vira PDV"
+  },
+  {
+   "frame": 691,
+   "file": "click.wav",
+   "vol": 0.42,
+   "name": "clique Troca"
+  },
+  {
+   "frame": 697,
+   "file": "pop.wav",
+   "vol": 0.168,
+   "name": "modal"
+  },
+  {
+   "frame": 719,
+   "file": "key.wav",
+   "vol": 0.336,
+   "name": "digita 1"
+  },
+  {
+   "frame": 741,
+   "file": "click.wav",
+   "vol": 0.42,
+   "name": "clique Verificar"
+  },
+  {
+   "frame": 787,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 7"
+  },
+  {
+   "frame": 802,
+   "file": "tick.wav",
+   "vol": 0.336,
+   "name": "check defeito"
+  },
+  {
+   "frame": 861,
+   "file": "key.wav",
+   "vol": 0.252,
+   "name": "digita"
+  },
+  {
+   "frame": 864,
+   "file": "key.wav",
+   "vol": 0.224,
+   "name": "digita"
+  },
+  {
+   "frame": 874,
+   "file": "click.wav",
+   "vol": 0.336,
+   "name": "escolhe o cabo"
+  },
+  {
+   "frame": 889,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 8"
+  },
+  {
+   "frame": 932,
+   "file": "tick.wav",
+   "vol": 0.308,
+   "name": "Diferença"
+  },
+  {
+   "frame": 965,
+   "file": "tick.wav",
+   "vol": 0.308,
+   "name": "Valor original"
+  },
+  {
+   "frame": 978,
+   "file": "tick.wav",
+   "vol": 0.308,
+   "name": "Novos produtos"
+  },
+  {
+   "frame": 992,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 9"
+  },
+  {
+   "frame": 1016,
+   "file": "pen.wav",
+   "vol": 0.28,
+   "name": "sublinha"
+  },
+  {
+   "frame": 1050,
+   "file": "whoosh.wav",
+   "vol": 0.196,
+   "name": "passa reto"
+  },
+  {
+   "frame": 1066,
+   "file": "thud.wav",
+   "vol": 0.364,
+   "name": "cai na caixa"
+  },
+  {
+   "frame": 1105,
+   "file": "tick.wav",
+   "vol": 0.196,
+   "name": "à venda"
+  },
+  {
+   "frame": 1126,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 10"
+  },
+  {
+   "frame": 1147,
+   "file": "whoosh.wav",
+   "vol": 0.224,
+   "name": "novo sai"
+  },
+  {
+   "frame": 1168,
+   "file": "count-down.wav",
+   "vol": 0.308,
+   "name": "contador -1"
+  },
+  {
+   "frame": 1209,
+   "file": "whoosh-soft.wav",
+   "vol": 0.168,
+   "name": "mão desiste"
+  },
+  {
+   "frame": 1232,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 11"
+  },
+  {
+   "frame": 1255,
+   "file": "whoosh-soft.wav",
+   "vol": 0.168,
+   "name": "linhas entram"
+  },
+  {
+   "frame": 1342,
+   "file": "tick.wav",
+   "vol": 0.336,
+   "name": "linha venda"
+  },
+  {
+   "frame": 1369,
+   "file": "tick.wav",
+   "vol": 0.336,
+   "name": "linha troca"
+  },
+  {
+   "frame": 1391,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 12"
+  },
+  {
+   "frame": 1432,
+   "file": "tick.wav",
+   "vol": 0.168,
+   "name": "conta 1"
+  },
+  {
+   "frame": 1436,
+   "file": "tick.wav",
+   "vol": 0.168,
+   "name": "conta 2"
+  },
+  {
+   "frame": 1440,
+   "file": "tick.wav",
+   "vol": 0.168,
+   "name": "conta 3"
+  },
+  {
+   "frame": 1444,
+   "file": "tick.wav",
+   "vol": 0.168,
+   "name": "conta 4"
+  },
+  {
+   "frame": 1454,
+   "file": "pop.wav",
+   "vol": 0.196,
+   "name": "= verde"
+  },
+  {
+   "frame": 1467,
+   "file": "confirm.wav",
+   "vol": 0.28,
+   "name": "confere"
+  },
+  {
+   "frame": 1484,
+   "file": "whoosh-soft.wav",
+   "vol": 0.224,
+   "name": "corte 13"
+  },
+  {
+   "frame": 1535,
+   "file": "tick.wav",
+   "vol": 0.14,
+   "name": "conta 1"
+  },
+  {
+   "frame": 1538,
+   "file": "tick.wav",
+   "vol": 0.14,
+   "name": "conta 2"
+  },
+  {
+   "frame": 1541,
+   "file": "tick.wav",
+   "vol": 0.14,
+   "name": "conta 3"
+  },
+  {
+   "frame": 1544,
+   "file": "tick.wav",
+   "vol": 0.14,
+   "name": "conta 4"
+  },
+  {
+   "frame": 1547,
+   "file": "tick.wav",
+   "vol": 0.14,
+   "name": "conta 5"
+  },
+  {
+   "frame": 1557,
+   "file": "whoosh.wav",
+   "vol": 0.224,
+   "name": "separa"
+  },
+  {
+   "frame": 1569,
+   "file": "thud.wav",
+   "vol": 0.28,
+   "name": "na caixa"
+  },
+  {
+   "frame": 1588,
+   "file": "chord.wav",
+   "vol": 0.336,
+   "name": "acorde logo"
+  },
+  {
+   "frame": 1614,
+   "file": "pop.wav",
+   "vol": 0.168,
+   "name": "Troca certa"
+  },
+  {
+   "frame": 1639,
+   "file": "pop.wav",
+   "vol": 0.168,
+   "name": "Estoque certo"
+  }
+ ],
+ "lane": [
+  {
+   "t": 0,
+   "v": 0.141
+  },
+  {
+   "t": 4.1,
+   "v": 0.141
+  },
+  {
+   "t": 4.3,
+   "v": 0.302
+  },
+  {
+   "t": 4.5,
+   "v": 0.141
+  },
+  {
+   "t": 8.4667,
+   "v": 0.141
+  },
+  {
+   "t": 8.6667,
+   "v": 0.302
+  },
+  {
+   "t": 8.8667,
+   "v": 0.141
+  },
+  {
+   "t": 13.6333,
+   "v": 0.141
+  },
+  {
+   "t": 13.8333,
+   "v": 0.302
+  },
+  {
+   "t": 14.0333,
+   "v": 0.141
+  },
+  {
+   "t": 17.5333,
+   "v": 0.141
+  },
+  {
+   "t": 17.7333,
+   "v": 0.302
+  },
+  {
+   "t": 17.9333,
+   "v": 0.141
+  },
+  {
+   "t": 21.8667,
+   "v": 0.141
+  },
+  {
+   "t": 22.0667,
+   "v": 0.302
+  },
+  {
+   "t": 22.2667,
+   "v": 0.141
+  },
+  {
+   "t": 26,
+   "v": 0.141
+  },
+  {
+   "t": 26.2,
+   "v": 0.302
+  },
+  {
+   "t": 26.4,
+   "v": 0.141
+  },
+  {
+   "t": 29.4,
+   "v": 0.141
+  },
+  {
+   "t": 29.6,
+   "v": 0.302
+  },
+  {
+   "t": 29.8,
+   "v": 0.141
+  },
+  {
+   "t": 32.8333,
+   "v": 0.141
+  },
+  {
+   "t": 33.0333,
+   "v": 0.302
+  },
+  {
+   "t": 33.2333,
+   "v": 0.141
+  },
+  {
+   "t": 37.3,
+   "v": 0.141
+  },
+  {
+   "t": 37.5,
+   "v": 0.302
+  },
+  {
+   "t": 37.7,
+   "v": 0.141
+  },
+  {
+   "t": 40.8333,
+   "v": 0.141
+  },
+  {
+   "t": 41.0333,
+   "v": 0.302
+  },
+  {
+   "t": 41.2333,
+   "v": 0.141
+  },
+  {
+   "t": 46.1333,
+   "v": 0.141
+  },
+  {
+   "t": 46.3333,
+   "v": 0.302
+  },
+  {
+   "t": 46.5333,
+   "v": 0.141
+  },
+  {
+   "t": 49.2333,
+   "v": 0.141
+  },
+  {
+   "t": 49.4333,
+   "v": 0.302
+  },
+  {
+   "t": 49.6333,
+   "v": 0.141
+  },
+  {
+   "t": 52.5667,
+   "v": 0.141
+  },
+  {
+   "t": 52.7667,
+   "v": 0.302
+  },
+  {
+   "t": 52.9667,
+   "v": 0.141
+  },
+  {
+   "t": 55.6333,
+   "v": 0.141
+  },
+  {
+   "t": 55.9,
+   "v": 0.403
+  },
+  {
+   "t": 56.3333,
+   "v": 0.403
+  },
+  {
+   "t": 57.1333,
+   "v": 0
+  }
+ ]
+}

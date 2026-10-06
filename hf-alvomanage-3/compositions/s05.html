@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>s05</title></head>
+<body>
+<template>
+<style>
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-800.woff2") format("woff2");font-weight:800;font-style:normal;font-display:block;}
+#s05{position:absolute;inset:0;overflow:hidden;font-family:"Inter",sans-serif;color:#EDEBE6;}
+#s05 .a{position:absolute;}
+#s05 .cam{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+#s05 .chg .xb{position:absolute;width:40%;height:28%;right:-14%;top:-4%;}
+#s05 .chg:not(.defect) .xb{opacity:0;}
+#s05 .chg.off .led{fill:#3A3F47;}
+#s05 .chg.off .ledglow{opacity:0;}
+#s05 .chg svg{filter:drop-shadow(0 10px 14px rgba(0,0,0,.45));}
+#s05 .shelf .back{position:absolute;left:0;right:0;top:0;bottom:20px;background:linear-gradient(#1A202A,#151A22);border-radius:10px;}
+#s05 .shelf .board{position:absolute;left:-14px;right:-14px;bottom:0;height:28px;background:linear-gradient(#6A7384,#4A5262);border-radius:6px;box-shadow:0 14px 24px rgba(0,0,0,.5);}
+#s05 .shelf .post{position:absolute;top:0;bottom:0;width:14px;background:#2B323E;}
+#s05 .shelf .post.l{left:0;} #s05 .shelf .post.r{right:0;}
+#s05 .shelf .tag{position:absolute;left:50%;bottom:-62px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#EDEBE6;border-radius:10px;padding:6px 0;}
+#s05 .box .btag{position:absolute;left:50%;bottom:-58px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#F5B800;border-radius:10px;padding:6px 0;}
+#s05 .win{background:#232A35;border:2px solid #394150;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.5);overflow:hidden;}
+#s05 .win .tb{height:58px;background:#2C3442;display:flex;align-items:center;gap:12px;padding:0 22px;}
+#s05 .win .tb i{width:16px;height:16px;border-radius:50%;background:#4A5364;display:block;}
+#s05 .win .tb span{margin-left:14px;font-size:26px;font-weight:600;color:#9AA3B2;}
+#s05 .field{height:64px;border-radius:12px;background:#1A2029;border:2px solid #343C4A;display:flex;align-items:center;padding:0 22px;font-size:30px;color:#EDEBE6;font-weight:500;}
+#s05 .flabel{font-size:24px;color:#9AA3B2;font-weight:600;margin:0 0 10px 4px;}
+#s05 .btn{height:72px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700;}
+#s05 .mon{background:#0B0E13;border:14px solid #2A313D;border-radius:26px;box-shadow:0 30px 60px rgba(0,0,0,.5);}
+#s05 .shot{background:#1A1A1A;border:2px solid #2E3440;border-radius:30px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.55);}
+#s05 .shot .img{position:absolute;left:0;top:0;background-repeat:no-repeat;transform-origin:0 0;}
+#s05 .cap{left:60px;width:960px;text-align:center;font-size:62px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;}
+#s05 .crop{background-repeat:no-repeat;}
+
+</style>
+<div data-hf-id="hf-3zdt" id="s05" data-composition-id="s05" data-width="1080" data-height="1920" data-duration="4.3333">
+<div data-hf-id="hf-1wq3" class="a mon m" style="left:470px;top:410px;width:560px;height:330px"><div data-hf-id="hf-37ft" class="a" style="left:30px;top:24px;font-size:26px;font-weight:700;color:#9AA3B2;letter-spacing:.08em">ESTOQUE</div>
+<div data-hf-id="hf-5r0s" class="a" style="left:30px;top:80px;font-size:44px;font-weight:800;color:#EDEBE6">Carregador</div>
+<div data-hf-id="hf-qrrl" class="a" style="left:30px;top:160px;font-size:34px;font-weight:600;color:#9AA3B2">em estoque:</div>
+<div data-hf-id="hf-dklf" class="a num" style="left:250px;top:142px;font-size:72px;font-weight:800;color:#EDEBE6">5</div>
+<div data-hf-id="hf-hut5" class="a plus" style="left:330px;top:152px;padding:4px 18px;border-radius:30px;background:#F5B800;color:#0E1116;font-size:44px;font-weight:800">+1</div></div>
+<div data-hf-id="hf-at86" class="a" style="left:720px;top:754px;width:80px;height:40px;background:#2A313D"></div>
+<div data-hf-id="hf-5cup" class="a shelf sh" style="left:500px;top:1110px;width:530px;height:270px"><div data-hf-id="hf-q64h" class="back"></div><div data-hf-id="hf-9jqq" class="post l"></div><div data-hf-id="hf-fpkk" class="post r"></div><div data-hf-id="hf-vhiw" class="board"></div></div>
+<div data-hf-id="hf-e41j" class="a chg g0" style="left:520px;top:1226px;width:92px;height:130px"><svg data-hf-id="hf-aj2k" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-cga2" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-4fvz" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-virr" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-xvcz" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-qang" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-6av3" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-3fnk" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-v559" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-wlas" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-90ya" class="xb"><svg data-hf-id="hf-mtyq" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-qy9j" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-5jvn" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-pzyb" class="a chg g1" style="left:615px;top:1226px;width:92px;height:130px"><svg data-hf-id="hf-b2n8" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-abzi" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-gp73" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-6qcn" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-7e6b" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-8z5w" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-2xrz" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-myns" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-rt35" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-gxyk" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-rvpy" class="xb"><svg data-hf-id="hf-1tyu" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-rson" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-qpk3" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-u7no" class="a chg g2" style="left:710px;top:1226px;width:92px;height:130px"><svg data-hf-id="hf-5tr1" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-aqaj" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-gaw2" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-6c1m" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-6zva" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-7s8t" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-2jgy" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-lrqp" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-t008" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-fr1h" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-sa0z" class="xb"><svg data-hf-id="hf-289v" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-redm" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-qb92" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-r4cy" class="a chg g3" style="left:805px;top:1226px;width:92px;height:130px"><svg data-hf-id="hf-6822" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-b4lk" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-fwl1" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-5xql" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-6lk9" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-86ju" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-255x" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-m61q" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-slp7" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-g5ci" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-soc0" class="xb"><svg data-hf-id="hf-2mkw" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-r02l" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-pwy1" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-aa7l" class="a chg g4" style="left:900px;top:1226px;width:92px;height:130px"><svg data-hf-id="hf-c9kb" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-8cgd" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-ioq8" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-8pvs" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-6798" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-a62z" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-4xb4" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-kz4n" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-qm62" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-i4vn" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-pw6t" class="xb"><svg data-hf-id="hf-zufp" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-ts7s" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-pin0" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div>
+<div data-hf-id="hf-4lsq" class="a qm" style="left:620px;top:780px;width:240px;height:260px;font-size:250px;line-height:260px;font-weight:800;color:#F5B800;text-align:center;text-shadow:0 10px 40px rgba(245,184,0,.35)">?</div>
+<div data-hf-id="hf-a3hg" class="a ger" style="left:0;top:0;width:1080px;height:1920px"><div data-hf-id="hf-a6to" class="a person gbody" style="left:20px;top:1000px;width:440px;height:660px"><svg data-hf-id="hf-30rf" viewBox="0 0 400 600" width="100%" height="100%" overflow="visible">
+<path data-hf-id="hf-kdpk" d="M28 600 C28 395 84 288 200 288 C316 288 372 395 372 600 Z" fill="#2E3A52" />
+
+
+
+<path data-hf-id="hf-34rc" d="M28 600 C28 395 84 288 200 288" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="6" />
+</svg></div>
+<div data-hf-id="hf-o9dr" class="a" style="left:198px;top:1317px;width:84px;height:120px;background:#E9E6DF;clip-path:polygon(0 0,100% 0,50% 100%)"></div>
+<div data-hf-id="hf-4lbb" class="a" style="left:228px;top:1336px;width:24px;height:120px;background:#E5484D;border-radius:6px"></div>
+<div data-hf-id="hf-la5f" class="a head" style="left:135px;top:1076px;width:210px;height:210px;border-radius:50%;background:#2E3A52;box-shadow:inset 6px 6px 0 rgba(255,255,255,.08)"></div>
+<div data-hf-id="hf-ehfq" class="a arm" style="left:330px;top:1340px;width:64px;height:330px;background:#2E3A52;border-radius:32px;transform-origin:32px 32px"><div data-hf-id="hf-ofz2" class="a" style="left:-4px;top:280px;width:72px;height:72px;border-radius:50%;background:#D9A97F"></div></div></div>
+</div>
+<script>
+(() => {
+const S="#s05 ";const $=(s)=>S+s;const tl=gsap.timeline({paused:true});
+tl.fromTo($(".m"),{opacity:.5,filter:"blur(8px)",y:-20},{opacity:1,filter:"blur(0px)",y:0,duration:0.2667},0);
+tl.fromTo($(".ger"),{x:-120},{x:0,duration:0.4,ease:"power3.out"},0);
+tl.fromTo($(".head"),{x:0,y:0},{x:14,y:-14,duration:0.2667,ease:"power2.out"},0.3667);
+tl.fromTo($(".plus"),{opacity:0,scale:.3},{opacity:1,scale:1,duration:0.2333,ease:"back.out(3)"},1.3333);
+tl.to($(".head"),{x:22,y:8,duration:0.2667,ease:"power2.inOut"},2.1333);
+tl.fromTo($(".qm"),{opacity:0,scale:.3,rotation:-20},{opacity:1,scale:1,rotation:0,duration:0.3,ease:"back.out(2.5)"},2.3333);
+tl.to($(".qm"),{rotation:8,duration:0.2,yoyo:true,repeat:3,ease:"sine.inOut"},2.6667);
+// scratching the head
+tl.fromTo($(".arm"),{rotation:0},{rotation:168,duration:0.2667,ease:"power2.out"},3.1);
+tl.to($(".arm"),{rotation:158,duration:0.1,yoyo:true,repeat:5,ease:"sine.inOut"},3.3667);
+tl.to($(".head"),{x:4,y:-6,duration:0.2667,ease:"power2.inOut"},3.4333);
+window.__timelines["s05"]=tl;
+})();
+</script>
+</template>
+</body>
+</html>

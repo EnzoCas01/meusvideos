@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>s03</title></head>
+<body>
+<template>
+<style>
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-800.woff2") format("woff2");font-weight:800;font-style:normal;font-display:block;}
+#s03{position:absolute;inset:0;overflow:hidden;font-family:"Inter",sans-serif;color:#EDEBE6;}
+#s03 .a{position:absolute;}
+#s03 .cam{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+#s03 .chg .xb{position:absolute;width:40%;height:28%;right:-14%;top:-4%;}
+#s03 .chg:not(.defect) .xb{opacity:0;}
+#s03 .chg.off .led{fill:#3A3F47;}
+#s03 .chg.off .ledglow{opacity:0;}
+#s03 .chg svg{filter:drop-shadow(0 10px 14px rgba(0,0,0,.45));}
+#s03 .shelf .back{position:absolute;left:0;right:0;top:0;bottom:20px;background:linear-gradient(#1A202A,#151A22);border-radius:10px;}
+#s03 .shelf .board{position:absolute;left:-14px;right:-14px;bottom:0;height:28px;background:linear-gradient(#6A7384,#4A5262);border-radius:6px;box-shadow:0 14px 24px rgba(0,0,0,.5);}
+#s03 .shelf .post{position:absolute;top:0;bottom:0;width:14px;background:#2B323E;}
+#s03 .shelf .post.l{left:0;} #s03 .shelf .post.r{right:0;}
+#s03 .shelf .tag{position:absolute;left:50%;bottom:-62px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#EDEBE6;border-radius:10px;padding:6px 0;}
+#s03 .box .btag{position:absolute;left:50%;bottom:-58px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#F5B800;border-radius:10px;padding:6px 0;}
+#s03 .win{background:#232A35;border:2px solid #394150;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.5);overflow:hidden;}
+#s03 .win .tb{height:58px;background:#2C3442;display:flex;align-items:center;gap:12px;padding:0 22px;}
+#s03 .win .tb i{width:16px;height:16px;border-radius:50%;background:#4A5364;display:block;}
+#s03 .win .tb span{margin-left:14px;font-size:26px;font-weight:600;color:#9AA3B2;}
+#s03 .field{height:64px;border-radius:12px;background:#1A2029;border:2px solid #343C4A;display:flex;align-items:center;padding:0 22px;font-size:30px;color:#EDEBE6;font-weight:500;}
+#s03 .flabel{font-size:24px;color:#9AA3B2;font-weight:600;margin:0 0 10px 4px;}
+#s03 .btn{height:72px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700;}
+#s03 .mon{background:#0B0E13;border:14px solid #2A313D;border-radius:26px;box-shadow:0 30px 60px rgba(0,0,0,.5);}
+#s03 .shot{background:#1A1A1A;border:2px solid #2E3440;border-radius:30px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.55);}
+#s03 .shot .img{position:absolute;left:0;top:0;background-repeat:no-repeat;transform-origin:0 0;}
+#s03 .cap{left:60px;width:960px;text-align:center;font-size:62px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;}
+#s03 .crop{background-repeat:no-repeat;}
+
+</style>
+<div data-hf-id="hf-swuu" id="s03" data-composition-id="s03" data-width="1080" data-height="1920" data-duration="5.1667">
+<div data-hf-id="hf-r2lf" class="a win w" style="left:110px;top:420px;width:860px;height:470px"><div data-hf-id="hf-ash2" class="tb"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i><span data-hf-id="hf-c489">Lançamento</span></div>
+<div data-hf-id="hf-p765" class="a" style="left:40px;top:96px;width:780px"><div data-hf-id="hf-w36h" class="flabel">Produto</div><div data-hf-id="hf-748r" class="field">Carregador 20W</div></div>
+<div data-hf-id="hf-z9zf" class="a" style="left:40px;top:236px;width:360px"><div data-hf-id="hf-1i66" class="flabel">Tipo</div></div>
+<div data-hf-id="hf-qse6" class="a btn dev" style="left:40px;top:278px;width:360px;background:#3A4354;color:#EDEBE6">Devolução</div>
+<div data-hf-id="hf-6vn6" class="a btn" style="left:420px;top:278px;width:360px;background:#262D39;color:#6B7486">Cancelar</div>
+<div data-hf-id="hf-oupn" class="a ok" style="left:40px;top:378px;width:780px;font-size:28px;font-weight:600;color:#3DDC84">✓ Devolvido ao estoque</div>
+<div data-hf-id="hf-04xk" class="a cursor cur" style="left:600px;top:420px;width:40px;height:58px"><svg data-hf-id="hf-lpfk" viewBox="0 0 24 35" width="100%" height="100%"><path data-hf-id="hf-ovr0" d="M2 2 L2 28 L8.5 22 L13 32.5 L17.5 30.5 L13 20.5 L21.5 20.5 Z" fill="#fff" stroke="#111" stroke-width="1.8" stroke-linejoin="round" /></svg></div></div>
+<div data-hf-id="hf-mot4" class="a shelf sh" style="left:150px;top:1180px;width:780px;height:290px"><div data-hf-id="hf-q64h" class="back"></div><div data-hf-id="hf-9jqq" class="post l"></div><div data-hf-id="hf-fpkk" class="post r"></div><div data-hf-id="hf-vhiw" class="board"></div><div data-hf-id="hf-rw96" class="tag">estoque</div></div>
+<div data-hf-id="hf-qt0n" class="a chg g1" style="left:200px;top:1262px;width:130px;height:184px"><svg data-hf-id="hf-aj2k" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-cga2" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-4fvz" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-virr" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-xvcz" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-qang" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-6av3" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-3fnk" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-v559" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-wlas" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-90ya" class="xb"><svg data-hf-id="hf-mtyq" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-qy9j" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-5jvn" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-qi8u" class="a chg g2" style="left:370px;top:1262px;width:130px;height:184px"><svg data-hf-id="hf-b2n8" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-abzi" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-gp73" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-6qcn" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-7e6b" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-8z5w" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-2xrz" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-myns" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-rt35" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-gxyk" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-rvpy" class="xb"><svg data-hf-id="hf-1tyu" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-rson" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-qpk3" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-m97e" class="a chg g3" style="left:540px;top:1262px;width:130px;height:184px"><svg data-hf-id="hf-5tr1" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-aqaj" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-gaw2" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-6c1m" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-6zva" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-7s8t" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-2jgy" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-lrqp" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-t008" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-fr1h" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-sa0z" class="xb"><svg data-hf-id="hf-289v" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-redm" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-qb92" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div>
+<div data-hf-id="hf-ziii" class="a cnt" style="left:820px;top:1060px;width:150px;height:150px;border-radius:50%;background:#F5B800;color:#0E1116;display:flex;align-items:center;justify-content:center;font-size:84px;font-weight:800"><span data-hf-id="hf-eatd" class="n3">3</span><span data-hf-id="hf-odzv" class="a n4" style="opacity:0">4</span></div>
+<div data-hf-id="hf-580o" class="a chg bad defect off" style="left:120px;top:930px;width:130px;height:184px"><svg data-hf-id="hf-6822" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-b4lk" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-fwl1" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-5xql" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-6lk9" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-86ju" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-255x" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-m61q" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-slp7" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-g5ci" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-soc0" class="xb"><svg data-hf-id="hf-2mkw" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-r02l" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-pwy1" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div>
+</div>
+<script>
+(() => {
+const S="#s03 ";const $=(s)=>S+s;const tl=gsap.timeline({paused:true});
+tl.fromTo($(".w"),{y:30,opacity:.4,filter:"blur(10px)"},{y:0,opacity:1,filter:"blur(0px)",duration:0.3,ease:"power2.out"},0);
+tl.fromTo($(".cur"),{x:0,y:0},{x:-330,y:-110,duration:0.5333,ease:"power2.inOut"},0.4667);
+tl.fromTo($(".cur"),{scale:1},{scale:.82,duration:0.0667,yoyo:true,repeat:1},1.0333);
+tl.fromTo($(".dev"),{backgroundColor:"#3A4354"},{backgroundColor:"#3B6FF0",duration:0.0667},1.0333);
+tl.fromTo($(".ok"),{opacity:0},{opacity:1,duration:0.2},1.2333);
+tl.fromTo($(".bad"),{scale:1},{scale:1.12,duration:0.1667,yoyo:true,repeat:1,ease:"sine.inOut"},2.0667);
+// slides into the 4th slot on the shelf
+tl.to($(".bad"),{x:590,duration:0.4,ease:"power2.inOut"},3.1667);
+tl.to($(".bad"),{y:332,duration:0.4,ease:"back.in(1.2)"},3.1667);
+tl.to($(".n3"),{opacity:0,y:-40,duration:0.1667},3.6333);
+tl.fromTo($(".n4"),{opacity:0,y:40},{opacity:1,y:0,duration:0.2,ease:"back.out(2)"},3.6333);
+tl.fromTo($(".cnt"),{scale:1},{scale:1.15,duration:0.1333,yoyo:true,repeat:1},3.6333);
+// "como se fosse bom": the x goes away, LED back on — indistinguishable
+tl.to($(".bad .xb"),{scale:0,opacity:0,duration:0.2,ease:"back.in(2)"},4.6667);
+tl.to($(".bad .led"),{fill:"#3DDC84",duration:0.1333},4.7333);
+tl.to($(".bad .ledglow"),{opacity:.35,duration:0.1333},4.7333);
+window.__timelines["s03"]=tl;
+})();
+</script>
+</template>
+</body>
+</html>

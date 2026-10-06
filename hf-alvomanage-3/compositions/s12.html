@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>s12</title></head>
+<body>
+<template>
+<style>
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-800.woff2") format("woff2");font-weight:800;font-style:normal;font-display:block;}
+#s12{position:absolute;inset:0;overflow:hidden;font-family:"Inter",sans-serif;color:#EDEBE6;}
+#s12 .a{position:absolute;}
+#s12 .cam{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+#s12 .chg .xb{position:absolute;width:40%;height:28%;right:-14%;top:-4%;}
+#s12 .chg:not(.defect) .xb{opacity:0;}
+#s12 .chg.off .led{fill:#3A3F47;}
+#s12 .chg.off .ledglow{opacity:0;}
+#s12 .chg svg{filter:drop-shadow(0 10px 14px rgba(0,0,0,.45));}
+#s12 .shelf .back{position:absolute;left:0;right:0;top:0;bottom:20px;background:linear-gradient(#1A202A,#151A22);border-radius:10px;}
+#s12 .shelf .board{position:absolute;left:-14px;right:-14px;bottom:0;height:28px;background:linear-gradient(#6A7384,#4A5262);border-radius:6px;box-shadow:0 14px 24px rgba(0,0,0,.5);}
+#s12 .shelf .post{position:absolute;top:0;bottom:0;width:14px;background:#2B323E;}
+#s12 .shelf .post.l{left:0;} #s12 .shelf .post.r{right:0;}
+#s12 .shelf .tag{position:absolute;left:50%;bottom:-62px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#EDEBE6;border-radius:10px;padding:6px 0;}
+#s12 .box .btag{position:absolute;left:50%;bottom:-58px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#F5B800;border-radius:10px;padding:6px 0;}
+#s12 .win{background:#232A35;border:2px solid #394150;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.5);overflow:hidden;}
+#s12 .win .tb{height:58px;background:#2C3442;display:flex;align-items:center;gap:12px;padding:0 22px;}
+#s12 .win .tb i{width:16px;height:16px;border-radius:50%;background:#4A5364;display:block;}
+#s12 .win .tb span{margin-left:14px;font-size:26px;font-weight:600;color:#9AA3B2;}
+#s12 .field{height:64px;border-radius:12px;background:#1A2029;border:2px solid #343C4A;display:flex;align-items:center;padding:0 22px;font-size:30px;color:#EDEBE6;font-weight:500;}
+#s12 .flabel{font-size:24px;color:#9AA3B2;font-weight:600;margin:0 0 10px 4px;}
+#s12 .btn{height:72px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700;}
+#s12 .mon{background:#0B0E13;border:14px solid #2A313D;border-radius:26px;box-shadow:0 30px 60px rgba(0,0,0,.5);}
+#s12 .shot{background:#1A1A1A;border:2px solid #2E3440;border-radius:30px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.55);}
+#s12 .shot .img{position:absolute;left:0;top:0;background-repeat:no-repeat;transform-origin:0 0;}
+#s12 .cap{left:60px;width:960px;text-align:center;font-size:62px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;}
+#s12 .crop{background-repeat:no-repeat;}
+
+</style>
+<div data-hf-id="hf-ij6x" id="s12" data-composition-id="s12" data-width="1080" data-height="1920" data-duration="3.1">
+<div data-hf-id="hf-658m" class="a mon m" style="left:150px;top:410px;width:780px;height:330px"><div data-hf-id="hf-tv67" class="a" style="left:36px;top:26px;font-size:28px;font-weight:700;color:#9AA3B2;letter-spacing:.08em">ESTOQUE</div>
+<div data-hf-id="hf-hvfz" class="a" style="left:36px;top:84px;font-size:50px;font-weight:800">Carregador</div>
+<div data-hf-id="hf-fvvw" class="a" style="left:36px;top:178px;font-size:38px;font-weight:600;color:#9AA3B2">em estoque:</div>
+<div data-hf-id="hf-n7hn" class="a num" style="left:300px;top:150px;font-size:96px;font-weight:800">4</div>
+<div data-hf-id="hf-j7ws" class="a ok" style="left:620px;top:150px;width:100px;height:100px;border-radius:50%;background:#3DDC84;color:#0E1116;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;opacity:0">✓</div></div>
+<div data-hf-id="hf-qwjj" class="a eq" style="left:390px;top:770px;width:300px;text-align:center;font-size:150px;line-height:150px;font-weight:800;color:#9AA3B2">=</div>
+<div data-hf-id="hf-qxhp" class="a shelf sh" style="left:90px;top:1040px;width:640px;height:300px"><div data-hf-id="hf-q64h" class="back"></div><div data-hf-id="hf-9jqq" class="post l"></div><div data-hf-id="hf-fpkk" class="post r"></div><div data-hf-id="hf-vhiw" class="board"></div><div data-hf-id="hf-ftpu" class="tag">à venda</div></div>
+<div data-hf-id="hf-sd36" class="a chg g0" style="left:130px;top:1160px;width:110px;height:156px"><svg data-hf-id="hf-aj2k" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-cga2" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-4fvz" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-virr" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-xvcz" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-qang" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-6av3" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-3fnk" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-v559" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-wlas" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-90ya" class="xb"><svg data-hf-id="hf-mtyq" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-qy9j" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-5jvn" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-g73z" class="a chg g1" style="left:280px;top:1160px;width:110px;height:156px"><svg data-hf-id="hf-b2n8" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-abzi" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-gp73" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-6qcn" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-7e6b" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-8z5w" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-2xrz" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-myns" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-rt35" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-gxyk" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-rvpy" class="xb"><svg data-hf-id="hf-1tyu" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-rson" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-qpk3" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-xea5" class="a chg g2" style="left:430px;top:1160px;width:110px;height:156px"><svg data-hf-id="hf-5tr1" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-aqaj" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-gaw2" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-6c1m" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-6zva" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-7s8t" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-2jgy" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-lrqp" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-t008" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-fr1h" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-sa0z" class="xb"><svg data-hf-id="hf-289v" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-redm" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-qb92" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div><div data-hf-id="hf-vlou" class="a chg g3" style="left:580px;top:1160px;width:110px;height:156px"><svg data-hf-id="hf-6822" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-b4lk" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-fwl1" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-5xql" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-6lk9" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-86ju" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-255x" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-m61q" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-slp7" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-g5ci" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-soc0" class="xb"><svg data-hf-id="hf-2mkw" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-r02l" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-pwy1" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div>
+<div data-hf-id="hf-crn9" class="a nb nb0" style="left:160px;top:1090px;width:54px;height:54px;border-radius:50%;background:#EDEBE6;color:#0E1116;font-size:32px;font-weight:800;display:flex;align-items:center;justify-content:center;opacity:0">1</div><div data-hf-id="hf-doy0" class="a nb nb1" style="left:310px;top:1090px;width:54px;height:54px;border-radius:50%;background:#EDEBE6;color:#0E1116;font-size:32px;font-weight:800;display:flex;align-items:center;justify-content:center;opacity:0">2</div><div data-hf-id="hf-80m0" class="a nb nb2" style="left:460px;top:1090px;width:54px;height:54px;border-radius:50%;background:#EDEBE6;color:#0E1116;font-size:32px;font-weight:800;display:flex;align-items:center;justify-content:center;opacity:0">3</div><div data-hf-id="hf-qzzl" class="a nb nb3" style="left:610px;top:1090px;width:54px;height:54px;border-radius:50%;background:#EDEBE6;color:#0E1116;font-size:32px;font-weight:800;display:flex;align-items:center;justify-content:center;opacity:0">4</div>
+<div data-hf-id="hf-k9jy" class="a box bx" style="left:790px;top:1150px;width:230px;height:198px"><svg data-hf-id="hf-7zbb" viewBox="0 0 300 258" width="100%" height="100%" overflow="visible">
+<path data-hf-id="hf-ke6u" d="M18 40 L282 40 L262 250 L38 250 Z" fill="#8C6A44" /><path data-hf-id="hf-st8e" d="M18 40 L-6 6 L120 14 L150 40 Z" fill="#A47E54" /><path data-hf-id="hf-7gtq" d="M282 40 L306 6 L180 14 L150 40 Z" fill="#9A754C" />
+<path data-hf-id="hf-qsg6" d="M38 250 L262 250 L270 160 L30 160 Z" fill="#7A5A38" opacity=".35" /></svg></div>
+<div data-hf-id="hf-rcau" class="a chg bad defect off" style="left:850px;top:1110px;width:100px;height:142px"><svg data-hf-id="hf-c9kb" viewBox="0 0 120 170" width="100%" height="100%" aria-hidden="true">
+<rect data-hf-id="hf-8cgd" x="36" y="0" width="11" height="32" rx="3" fill="#AEB6C2" /><rect data-hf-id="hf-ioq8" x="73" y="0" width="11" height="32" rx="3" fill="#AEB6C2" />
+<rect data-hf-id="hf-8pvs" x="6" y="24" width="108" height="142" rx="24" fill="#F1F2F4" />
+<path data-hf-id="hf-6798" d="M92 24 h-6 a24 24 0 0 1 24 24 v94 a24 24 0 0 1 -24 24 h6 a24 24 0 0 0 22 -24 v-94 a24 24 0 0 0 -22 -24z" fill="#D5DAE1" />
+<rect data-hf-id="hf-a62z" x="15" y="34" width="14" height="118" rx="7" fill="#FFFFFF" opacity=".7" />
+<path data-hf-id="hf-4xb4" d="M66 64 L50 96 H62 L55 124 L75 88 H63 Z" fill="#CBD1DA" />
+<rect data-hf-id="hf-kz4n" x="44" y="146" width="32" height="9" rx="4.5" fill="#2A2F38" />
+<circle data-hf-id="hf-qm62" class="ledglow" cx="93" cy="46" r="14" fill="#3DDC84" opacity=".35" />
+<circle data-hf-id="hf-i4vn" class="led" cx="93" cy="46" r="6.5" fill="#3DDC84" /></svg><div data-hf-id="hf-pw6t" class="xb"><svg data-hf-id="hf-zufp" viewBox="0 0 40 40" width="100%" height="100%"><circle data-hf-id="hf-ts7s" cx="20" cy="20" r="19" fill="#E5484D" stroke="#0E1116" stroke-width="2" /><path data-hf-id="hf-pin0" d="M13 13 L27 27 M27 13 L13 27" stroke="#fff" stroke-width="5" stroke-linecap="round" /></svg></div></div>
+<div data-hf-id="hf-to6u" class="a bxf" style="left:790px;top:1221px;width:230px;height:127px"><svg data-hf-id="hf-5qtu" viewBox="0 93 300 165" width="100%" height="100%" overflow="visible"><path data-hf-id="hf-i6cg" d="M10 93 L290 93 L262 250 L38 250 Z" fill="#9A754C" /><path data-hf-id="hf-faw4" d="M10 93 L290 93" stroke="#B48C60" stroke-width="6" /></svg></div>
+<div data-hf-id="hf-52hp" class="a fc" style="left:770px;top:1400px;width:270px;text-align:center;font-size:30px;font-weight:700;color:#9AA3B2">fora da conta</div>
+</div>
+<script>
+(() => {
+const S="#s12 ";const $=(s)=>S+s;const tl=gsap.timeline({paused:true});
+tl.fromTo($(".m"),{opacity:.4,y:-20,filter:"blur(8px)"},{opacity:1,y:0,filter:"blur(0px)",duration:0.2667},0);
+tl.fromTo([$(".sh"),$(".chg"),$(".bx"),$(".bxf")],{opacity:.4,y:30},{opacity:1,y:0,duration:0.2667},0);
+tl.fromTo($(".num"),{color:"#EDEBE6"},{color:"#F5B800",duration:0.1667},0.6);
+tl.fromTo($(".nb0"),{opacity:0,scale:.3},{opacity:1,scale:1,duration:0.1667,ease:"back.out(3)"},1.3333);
+tl.fromTo($(".nb1"),{opacity:0,scale:.3},{opacity:1,scale:1,duration:0.1667,ease:"back.out(3)"},1.4667);
+tl.fromTo($(".nb2"),{opacity:0,scale:.3},{opacity:1,scale:1,duration:0.1667,ease:"back.out(3)"},1.6);
+tl.fromTo($(".nb3"),{opacity:0,scale:.3},{opacity:1,scale:1,duration:0.1667,ease:"back.out(3)"},1.7333);
+tl.fromTo($(".fc"),{opacity:0},{opacity:1,duration:0.2},1.2667);
+tl.to($(".bad"),{opacity:.55,duration:0.2},1.2667);
+tl.to($(".eq"),{color:"#3DDC84",scale:1.15,duration:0.2,ease:"back.out(2)"},2.0667);
+tl.fromTo($(".ok"),{opacity:0,scale:.3},{opacity:1,scale:1,duration:0.2333,ease:"back.out(3)"},2.5);
+window.__timelines["s12"]=tl;
+})();
+</script>
+</template>
+</body>
+</html>

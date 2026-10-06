@@ -1,0 +1,131 @@
+{
+  "provider": "elevenlabs",
+  "voice": "Lucas - Social Media Voice",
+  "voice_id": "7lu3ze7orhWaNeSPowWx",
+  "language_code": "pt",
+  "model_id": "eleven_multilingual_v2",
+  "output_format": "mp3_44100_128",
+  "voice_settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "style": 0.25,
+    "use_speaker_boost": true
+  },
+  "fps": 30,
+  "dir": "public/audio/vo-alvomanage-3",
+  "enabled": true,
+  "lines": [
+    {
+      "id": "p01",
+      "file": "p01.mp3",
+      "text": "Cliente chega no balcão, põe o carregador na sua frente e fala: comprei ontem, já parou.",
+      "frame": 0,
+      "durationInFrames": 123,
+      "duration_s": 4.087
+    },
+    {
+      "id": "p02",
+      "file": "p02.mp3",
+      "text": "Normal, acontece. Você troca, entrega um novo, e ele vai embora feliz.",
+      "frame": 135,
+      "durationInFrames": 119,
+      "duration_s": 3.947
+    },
+    {
+      "id": "p03",
+      "file": "p03.mp3",
+      "text": "Aí você lança como devolução comum. E o carregador com defeito volta pro estoque, como se fosse bom.",
+      "frame": 266,
+      "durationInFrames": 143,
+      "duration_s": 4.737
+    },
+    {
+      "id": "p04",
+      "file": "p04.mp3",
+      "text": "Semana que vem, quem vende ele de novo? Você mesmo. Pra outro cliente.",
+      "frame": 421,
+      "durationInFrames": 105,
+      "duration_s": 3.483
+    },
+    {
+      "id": "p05",
+      "file": "p05.mp3",
+      "text": "Aí o gerente vê carregador sobrando no estoque. De onde veio esse? Ninguém sabe.",
+      "frame": 538,
+      "durationInFrames": 118,
+      "duration_s": 3.901
+    },
+    {
+      "id": "p06",
+      "file": "p06.mp3",
+      "text": "No AlvoManage, a troca sai do próprio PDV, puxando a venda que o cliente fez.",
+      "frame": 668,
+      "durationInFrames": 112,
+      "duration_s": 3.715
+    },
+    {
+      "id": "p07",
+      "file": "p07.mp3",
+      "text": "Você marca que o produto veio com defeito e escolhe o novo.",
+      "frame": 792,
+      "durationInFrames": 90,
+      "duration_s": 2.972
+    },
+    {
+      "id": "p08",
+      "file": "p08.mp3",
+      "text": "E a tela já faz a conta da diferença entre o que ele levou e o novo.",
+      "frame": 894,
+      "durationInFrames": 91,
+      "duration_s": 3.019
+    },
+    {
+      "id": "p09",
+      "file": "p09.mp3",
+      "text": "O defeituoso não volta pro estoque. Fica separado, fora do que tá à venda.",
+      "frame": 997,
+      "durationInFrames": 122,
+      "duration_s": 4.04
+    },
+    {
+      "id": "p10",
+      "file": "p10.mp3",
+      "text": "E o novo sai do estoque sozinho, sem ninguém dar baixa na mão.",
+      "frame": 1131,
+      "durationInFrames": 94,
+      "duration_s": 3.111
+    },
+    {
+      "id": "p11",
+      "file": "p11.mp3",
+      "text": "Depois, nas movimentações do produto, cada saída tem nome: essa foi venda, essa foi troca.",
+      "frame": 1237,
+      "durationInFrames": 147,
+      "duration_s": 4.876
+    },
+    {
+      "id": "p12",
+      "file": "p12.mp3",
+      "text": "Aí o que o sistema diz que tem é o que dá pra vender de verdade.",
+      "frame": 1396,
+      "durationInFrames": 81,
+      "duration_s": 2.694
+    },
+    {
+      "id": "p13",
+      "file": "p13.mp3",
+      "text": "Confiável é isso: nada se perde, nada se mistura.",
+      "frame": 1489,
+      "durationInFrames": 88,
+      "duration_s": 2.926
+    },
+    {
+      "id": "p14",
+      "file": "p14.mp3",
+      "text": "AlvoManage. Troca certa, estoque certo.",
+      "frame": 1589,
+      "durationInFrames": 80,
+      "duration_s": 2.647
+    }
+  ]
+}

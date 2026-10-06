@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>s07</title></head>
+<body>
+<template>
+<style>
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-800.woff2") format("woff2");font-weight:800;font-style:normal;font-display:block;}
+#s07{position:absolute;inset:0;overflow:hidden;font-family:"Inter",sans-serif;color:#EDEBE6;}
+#s07 .a{position:absolute;}
+#s07 .cam{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+#s07 .chg .xb{position:absolute;width:40%;height:28%;right:-14%;top:-4%;}
+#s07 .chg:not(.defect) .xb{opacity:0;}
+#s07 .chg.off .led{fill:#3A3F47;}
+#s07 .chg.off .ledglow{opacity:0;}
+#s07 .chg svg{filter:drop-shadow(0 10px 14px rgba(0,0,0,.45));}
+#s07 .shelf .back{position:absolute;left:0;right:0;top:0;bottom:20px;background:linear-gradient(#1A202A,#151A22);border-radius:10px;}
+#s07 .shelf .board{position:absolute;left:-14px;right:-14px;bottom:0;height:28px;background:linear-gradient(#6A7384,#4A5262);border-radius:6px;box-shadow:0 14px 24px rgba(0,0,0,.5);}
+#s07 .shelf .post{position:absolute;top:0;bottom:0;width:14px;background:#2B323E;}
+#s07 .shelf .post.l{left:0;} #s07 .shelf .post.r{right:0;}
+#s07 .shelf .tag{position:absolute;left:50%;bottom:-62px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#EDEBE6;border-radius:10px;padding:6px 0;}
+#s07 .box .btag{position:absolute;left:50%;bottom:-58px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#F5B800;border-radius:10px;padding:6px 0;}
+#s07 .win{background:#232A35;border:2px solid #394150;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.5);overflow:hidden;}
+#s07 .win .tb{height:58px;background:#2C3442;display:flex;align-items:center;gap:12px;padding:0 22px;}
+#s07 .win .tb i{width:16px;height:16px;border-radius:50%;background:#4A5364;display:block;}
+#s07 .win .tb span{margin-left:14px;font-size:26px;font-weight:600;color:#9AA3B2;}
+#s07 .field{height:64px;border-radius:12px;background:#1A2029;border:2px solid #343C4A;display:flex;align-items:center;padding:0 22px;font-size:30px;color:#EDEBE6;font-weight:500;}
+#s07 .flabel{font-size:24px;color:#9AA3B2;font-weight:600;margin:0 0 10px 4px;}
+#s07 .btn{height:72px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700;}
+#s07 .mon{background:#0B0E13;border:14px solid #2A313D;border-radius:26px;box-shadow:0 30px 60px rgba(0,0,0,.5);}
+#s07 .shot{background:#1A1A1A;border:2px solid #2E3440;border-radius:30px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.55);}
+#s07 .shot .img{position:absolute;left:0;top:0;background-repeat:no-repeat;transform-origin:0 0;}
+#s07 .cap{left:60px;width:960px;text-align:center;font-size:62px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;}
+#s07 .crop{background-repeat:no-repeat;}
+
+</style>
+<div data-hf-id="hf-24t4" id="s07" data-composition-id="s07" data-width="1080" data-height="1920" data-duration="3.4">
+<div data-hf-id="hf-rcvf" class="a shot sh" data-layout-allow-overflow="" style="left:60px;top:470px;width:960px;height:860px">
+<div data-hf-id="hf-ys92" class="img im" style="width:1366px;height:1066px">
+<div data-hf-id="hf-ai93" class="a i0" style="left:0;top:0;width:1351px;height:1066px;background-image:url(assets/img/form.png)"></div>
+<div data-hf-id="hf-jg9h" class="a i1" style="left:0;top:0;width:1366px;height:577px;background-image:url(assets/img/form-busca.png);opacity:0"></div>
+<div data-hf-id="hf-6nbs" class="a hide" data-layout-allow-overflow="" style="left:110px;top:470px;width:1200px;height:110px;background-image:url(assets/img/form.png);background-position:-110px -470px;opacity:0"></div>
+<div data-hf-id="hf-fdko" class="a ring r1" style="left:122px;top:385px;width:30px;height:30px;border:3px solid #F5B800;border-radius:6px;opacity:0"></div>
+<div data-hf-id="hf-vga8" class="a ring r2" style="left:144px;top:532px;width:1124px;height:38px;border:3px solid #F5B800;border-radius:8px;opacity:0"></div>
+<div data-hf-id="hf-8yj3" class="a cursor cur" style="left:600px;top:300px;width:22px;height:32px"><svg data-hf-id="hf-lpfk" viewBox="0 0 24 35" width="100%" height="100%"><path data-hf-id="hf-ovr0" d="M2 2 L2 28 L8.5 22 L13 32.5 L17.5 30.5 L13 20.5 L21.5 20.5 Z" fill="#fff" stroke="#111" stroke-width="1.8" stroke-linejoin="round" /></svg></div></div></div>
+<div data-hf-id="hf-bemn" class="a cap c1" style="top:1390px;opacity:0">veio com defeito</div>
+<div data-hf-id="hf-y5sa" class="a cap c2" style="top:1390px;opacity:0">escolhe o novo</div>
+</div>
+<script>
+(() => {
+const S="#s07 ";const $=(s)=>S+s;const tl=gsap.timeline({paused:true});
+gsap.set($(".im"),{transformOrigin:"0 0"});
+tl.fromTo($(".im"),{...{x:-320,y:-50,scale:1.6}},{...{x:-300,y:-506,scale:2.6},duration:0.4,ease:"power2.out"},0);
+tl.fromTo($(".sh"),{filter:"blur(10px)"},{filter:"blur(0px)",duration:0.2333},0);
+tl.fromTo($(".cur"),{x:0,y:0},{x:-460,y:96,duration:0.4,ease:"power2.inOut"},0.0333);
+tl.to($(".cur"),{scale:.8,duration:0.0667,yoyo:true,repeat:1},0.4667);
+tl.set($(".hide"),{opacity:1},0.4667);
+tl.fromTo($(".i1"),{opacity:0},{opacity:1,duration:0.0667},0.4667);
+tl.fromTo($(".r1"),{opacity:1,scale:1},{opacity:0,scale:2.2,duration:0.4},0.4667);
+tl.fromTo($(".c1"),{opacity:0,y:20},{opacity:1,y:0,duration:0.2333},1.5333);
+tl.to($(".im"),{...{x:-378,y:-792,scale:2.6},duration:0.4,ease:"power2.inOut"},2.1);
+tl.to($(".cur"),{x:-380,y:208,duration:0.3333,ease:"power2.inOut"},2.1);
+tl.to($(".hide"),{opacity:0,duration:0.0667},2.5667);
+tl.to($(".c1"),{opacity:0,y:-20,duration:0.1667},2.2333);
+tl.fromTo($(".c2"),{opacity:0,y:20},{opacity:1,y:0,duration:0.2333},2.3667);
+tl.to($(".cur"),{x:-420,y:250,duration:0.1667},2.7);
+tl.to($(".cur"),{scale:.8,duration:0.0667,yoyo:true,repeat:1},2.8667);
+tl.fromTo($(".r2"),{opacity:0},{opacity:1,duration:0.1},2.8667);
+window.__timelines["s07"]=tl;
+})();
+</script>
+</template>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>s06</title></head>
+<body>
+<template>
+<style>
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:block;}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-800.woff2") format("woff2");font-weight:800;font-style:normal;font-display:block;}
+#s06{position:absolute;inset:0;overflow:hidden;font-family:"Inter",sans-serif;color:#EDEBE6;}
+#s06 .a{position:absolute;}
+#s06 .cam{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+#s06 .chg .xb{position:absolute;width:40%;height:28%;right:-14%;top:-4%;}
+#s06 .chg:not(.defect) .xb{opacity:0;}
+#s06 .chg.off .led{fill:#3A3F47;}
+#s06 .chg.off .ledglow{opacity:0;}
+#s06 .chg svg{filter:drop-shadow(0 10px 14px rgba(0,0,0,.45));}
+#s06 .shelf .back{position:absolute;left:0;right:0;top:0;bottom:20px;background:linear-gradient(#1A202A,#151A22);border-radius:10px;}
+#s06 .shelf .board{position:absolute;left:-14px;right:-14px;bottom:0;height:28px;background:linear-gradient(#6A7384,#4A5262);border-radius:6px;box-shadow:0 14px 24px rgba(0,0,0,.5);}
+#s06 .shelf .post{position:absolute;top:0;bottom:0;width:14px;background:#2B323E;}
+#s06 .shelf .post.l{left:0;} #s06 .shelf .post.r{right:0;}
+#s06 .shelf .tag{position:absolute;left:50%;bottom:-62px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#EDEBE6;border-radius:10px;padding:6px 0;}
+#s06 .box .btag{position:absolute;left:50%;bottom:-58px;width:220px;margin-left:-110px;text-align:center;font-size:30px;font-weight:700;color:#0E1116;background:#F5B800;border-radius:10px;padding:6px 0;}
+#s06 .win{background:#232A35;border:2px solid #394150;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.5);overflow:hidden;}
+#s06 .win .tb{height:58px;background:#2C3442;display:flex;align-items:center;gap:12px;padding:0 22px;}
+#s06 .win .tb i{width:16px;height:16px;border-radius:50%;background:#4A5364;display:block;}
+#s06 .win .tb span{margin-left:14px;font-size:26px;font-weight:600;color:#9AA3B2;}
+#s06 .field{height:64px;border-radius:12px;background:#1A2029;border:2px solid #343C4A;display:flex;align-items:center;padding:0 22px;font-size:30px;color:#EDEBE6;font-weight:500;}
+#s06 .flabel{font-size:24px;color:#9AA3B2;font-weight:600;margin:0 0 10px 4px;}
+#s06 .btn{height:72px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700;}
+#s06 .mon{background:#0B0E13;border:14px solid #2A313D;border-radius:26px;box-shadow:0 30px 60px rgba(0,0,0,.5);}
+#s06 .shot{background:#1A1A1A;border:2px solid #2E3440;border-radius:30px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.55);}
+#s06 .shot .img{position:absolute;left:0;top:0;background-repeat:no-repeat;transform-origin:0 0;}
+#s06 .cap{left:60px;width:960px;text-align:center;font-size:62px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;}
+#s06 .crop{background-repeat:no-repeat;}
+
+</style>
+<div data-hf-id="hf-nb1t" id="s06" data-composition-id="s06" data-width="1080" data-height="1920" data-duration="4.1333">
+<div data-hf-id="hf-rcvf" class="a shot sh" data-layout-allow-overflow="" style="left:60px;top:470px;width:960px;height:860px">
+<div data-hf-id="hf-fhho" class="img im" style="width:1366px;height:577px">
+<div data-hf-id="hf-cgxz" class="a i0" style="left:0;top:0;width:1366px;height:577px;background-image:url(assets/img/pdv.png)"></div>
+<div data-hf-id="hf-egxi" class="a i1" style="left:0;top:0;width:1366px;height:577px;background-image:url(assets/img/pdv-modal.png);opacity:0"></div>
+<div data-hf-id="hf-4p4h" class="a i2" style="left:0;top:0;width:1366px;height:577px;background-image:url(assets/img/pdv-venda1.png);opacity:0"></div>
+<div data-hf-id="hf-8m0k" class="a ring r1" style="left:788px;top:85px;width:80px;height:34px;border:3px solid #F5B800;border-radius:8px;opacity:0"></div>
+<div data-hf-id="hf-30ol" class="a ring r2" style="left:760px;top:297px;width:94px;height:42px;border:3px solid #F5B800;border-radius:8px;opacity:0;box-shadow:0 0 18px rgba(245,184,0,.6)"></div>
+<div data-hf-id="hf-100k" class="a cursor cur" style="left:600px;top:420px;width:22px;height:32px"><svg data-hf-id="hf-lpfk" viewBox="0 0 24 35" width="100%" height="100%"><path data-hf-id="hf-ovr0" d="M2 2 L2 28 L8.5 22 L13 32.5 L17.5 30.5 L13 20.5 L21.5 20.5 Z" fill="#fff" stroke="#111" stroke-width="1.8" stroke-linejoin="round" /></svg></div></div></div>
+<div data-hf-id="hf-umye" class="a cap c1" style="top:1390px">troca pelo PDV</div>
+<div data-hf-id="hf-ml8b" class="a cap c2" style="top:1390px;opacity:0">puxa a venda</div>
+</div>
+<script>
+(() => {
+const S="#s06 ";const $=(s)=>S+s;const tl=gsap.timeline({paused:true});
+gsap.set($(".im"),{transformOrigin:"0 0"});
+tl.fromTo($(".sh"),{scale:.92,opacity:0,filter:"blur(14px)"},{scale:1,opacity:1,filter:"blur(0px)",duration:0.3,ease:"power2.out"},0);
+tl.fromTo($(".im"),{x:-850,y:-95,scale:1.75},{...{x:-1406,y:-99,scale:2.3},duration:0.6333,ease:"power2.inOut"},0.2);
+tl.fromTo($(".cur"),{x:0,y:0},{x:232,y:-318,duration:0.4667,ease:"power2.inOut"},0.4);
+tl.fromTo($(".cur"),{scale:1},{scale:.8,duration:0.0667,yoyo:true,repeat:1},0.9);
+tl.fromTo($(".r1"),{opacity:1,scale:1},{opacity:0,scale:1.6,duration:0.3333},0.9);
+tl.fromTo($(".c1"),{opacity:0,y:20},{opacity:1,y:0,duration:0.2333},0.7667);
+tl.fromTo($(".i1"),{opacity:0},{opacity:1,duration:0.1333},1.0667);
+tl.to($(".im"),{...{x:-920.1,y:-154.3,scale:2.05},duration:0.4,ease:"power2.inOut"},1.0667);
+tl.fromTo($(".i2"),{opacity:0},{opacity:1,duration:0.0667},1.8333);
+tl.to($(".cur"),{x:206,y:-102,duration:0.4,ease:"power2.inOut"},1.9);
+tl.to($(".cur"),{scale:.8,duration:0.0667,yoyo:true,repeat:1},2.5667);
+tl.fromTo($(".r2"),{opacity:0},{opacity:1,duration:0.1},2.5667);
+tl.to($(".im"),{...{x:-1222,y:-237,scale:2.3},duration:0.6667,ease:"power2.inOut"},2.5667);
+tl.to($(".c1"),{opacity:0,y:-20,duration:0.1667},2.0333);
+tl.fromTo($(".c2"),{opacity:0,y:20},{opacity:1,y:0,duration:0.2333},2.1);
+window.__timelines["s06"]=tl;
+})();
+</script>
+</template>
+</body>
+</html>
